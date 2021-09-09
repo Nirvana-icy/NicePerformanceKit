@@ -1,0 +1,6 @@
+framework module NicePerformanceKit {
+  umbrella header "NicePerformanceKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,26 @@
+PODS:
+  - NicePerformanceKit (0.0.1):
+    - NicePerformanceKit/Tool (= 0.0.1)
+  - NicePerformanceKit/Base (0.0.1)
+  - NicePerformanceKit/Tool (0.0.1):
+    - NicePerformanceKit/Tool/Image (= 0.0.1)
+    - NicePerformanceKit/Tool/LaunchManager (= 0.0.1)
+    - NicePerformanceKit/Tool/TimeProfile (= 0.0.1)
+  - NicePerformanceKit/Tool/Image (0.0.1)
+  - NicePerformanceKit/Tool/LaunchManager (0.0.1)
+  - NicePerformanceKit/Tool/TimeProfile (0.0.1):
+    - NicePerformanceKit/Base
+
+DEPENDENCIES:
+  - NicePerformanceKit (from `../`)
+
+EXTERNAL SOURCES:
+  NicePerformanceKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  NicePerformanceKit: acf6fef5b0a6ed4d07e9e87a607ea14866a65a22
+
+PODFILE CHECKSUM: f78d85a288060571f6f411d083035f5c15f4281c
+
+COCOAPODS: 1.8.4
