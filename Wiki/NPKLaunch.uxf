@@ -1,0 +1,35 @@
+<diagram program="umletino" version="14.4.0-SNAPSHOT"><zoom_level>10</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>120</x><y>180</y><w>210</w><h>80</h></coordinates><panel_attributes>NPKLaunchManager
+--
+- launchService: NPKLaunchTaskService
+--
++ sharedInstance
++ launchWithConfigure: appOptions
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>290</x><y>40</y><w>210</w><h>80</h></coordinates><panel_attributes>&lt;&lt;Protocol&gt;&gt;
+NPKLaunchProtocol
+--
+--
++ runWithOptions
++ runAfterPrepared</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>430</x><y>310</y><w>210</w><h>280</h></coordinates><panel_attributes>NPKLaunchTaskService
+--
+- globalCOnfig: NSDictionary
+- lifeCycle: NSDictionary
+- appOptions: NSDictionary
+- launchBlocks: NSMutableDictionary
+- launchTasks: NSMutableDictionary
+- launchLock: NSLock
+--
+- init
+- excuteInitTasks: forKey
+- startLaunchTask
+- addLaunchRunLoopObserver
+- appDidFinishLaunch
+- executeOnSecondLoop
+- excuteLaunchBlock
+- parseLaunchLifeCycle
++ startLaunchTasks: 
+withConfig: withAppOptions
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>580</x><y>40</y><w>210</w><h>70</h></coordinates><panel_attributes>NPKLaunchConfig
+--
+- configuration: NSDictionary
+--
++ defaultConfigure</panel_attributes><additional_attributes></additional_attributes></element></diagram>
