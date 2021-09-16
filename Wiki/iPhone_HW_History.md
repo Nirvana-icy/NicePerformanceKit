@@ -9,10 +9,16 @@
 | iPhone 8      | 2GB| 六核 A11| arm64 |2017|
 | iPhone 8+     | 3GB| 六核 A11| arm64 |2017|
 | iPhone X      | 3GB| 六核 A11| arm64 |2017|
-| iPhone XS     | 3GB| 六核 A12| arm64e |2018|
-| iPhone 11     | 4GB| 六核 A13| arm64e |2019|
+| iPhone XR     | 3GB| 六核 A12 @7nm | arm64e |2018|
+| iPhone XS     | 4GB| 六核 A12| arm64e |2018|
+| iPhone 11/Pro  | 4GB| 六核 A13 | arm64e |2019|
+| iPhone Pro Max | 6GB| 六核 A13| arm64e |2019|
 | iPhone SE 2020| 3GB| 六核 A13| arm64e |2020|
-| iPhone 12     | 4G| 六核 A14 | arm64e |2020|
-| iPhone 13     | -- |        | arm64e |2021|
+| iPhone 12(mini) | 4GB| 六核 A14 @5nm| arm64e |2020|
+| iPhone 12 Pro/Max | 6GB| 六核 A14 | arm64e |2020|
+| iPhone 13(mini) | 4GB |六核 A15 | arm64e |2021|
+| iPhone 13 Pro/Max | 6GB |六核 A15 | arm64e |2021|
+
+![image](https://mmbiz.qpic.cn/mmbiz_jpg/M54fjP2zXtFq85gb3JKkSUnK9FiaHgU02QkBsmXMWwv4D83jw7phSKA6iaJ39glwc67byFWhlJSPibAZqKkSSjCibg/0?wx_fmt=jpeg)
 
 [arm64e](https://developer.apple.com/documentation/security/preparing_your_app_to_work_with_pointer_authentication)
