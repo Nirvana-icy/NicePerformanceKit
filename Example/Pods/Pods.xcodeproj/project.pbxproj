@@ -7,26 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D17EBEFE57FFE134AA45AFF00E480AC /* NPKDispatchQueuePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F77B02156EB1D3D1D2189D4CF1491CB /* NPKDispatchQueuePool.m */; };
+		0F8BB8F4D197B2CF300B42E1B4EC44FF /* NPKDispatchQueuePool.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E080D105380027014765D70554EF45E /* NPKDispatchQueuePool.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		10D486A2DB6F6B14CD05835719C85091 /* appletrace.h in Headers */ = {isa = PBXBuildFile; fileRef = C0664B22E09D584C2D82D422E89A2BB5 /* appletrace.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		26BBE1C1AE27275D3CB473743821AEE0 /* NPKImageCompressTool.h in Headers */ = {isa = PBXBuildFile; fileRef = F4FC6FDBAC9058C39BBB725D2C7CE32A /* NPKImageCompressTool.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2997A45F8BCBA62F2AE7BED4BC7485E8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		336400EB0D73ED18864C04D48F423FD6 /* Pods-NPKitDemo_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C0FDEB4D898F61923F516B19474B1154 /* Pods-NPKitDemo_Example-dummy.m */; };
-		36BA61FE621267E498FBB8F2D1F89190 /* NPKImageCompressTool.h in Headers */ = {isa = PBXBuildFile; fileRef = 7678496F389FEFBB0AFB9A21B5C14439 /* NPKImageCompressTool.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		492E296207BC9E895EB58A3ACD31A742 /* NicePerformanceKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A2E679F314C499AA04EF540279D83BD6 /* NicePerformanceKit-dummy.m */; };
-		544A65323FA7179ED256AE4524C4F698 /* NPKSignpostLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 192FF4F5BC7F27E44751FBBD65D5B3DC /* NPKSignpostLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		34949A428AB652C4D987E9E6C567CEED /* NPKLaunchConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 96CB3ED08DF90AC7E0952DE183348ABF /* NPKLaunchConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		35D049950EAE11FD5320D7FF1AB5AA6E /* NicePerformanceKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B1FFDC3813BF8B4636D53C65268FED8 /* NicePerformanceKit-dummy.m */; };
+		494ABE7B87A8316B3A52B2AB43076484 /* NPKLaunchManager.h in Headers */ = {isa = PBXBuildFile; fileRef = F67E56E57299F345DF8E3D8036D5BF02 /* NPKLaunchManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4DEA50CDF7813B3DFCD7390BA18AA58D /* NPKLaunchConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F68EB7E825816C220E9ECA63747C65E /* NPKLaunchConfig.m */; };
+		55DE2D0353909372752A8F34FF567E12 /* NPKLaunchTaskService.m in Sources */ = {isa = PBXBuildFile; fileRef = 674CC402B39E08506B9B252457D0D739 /* NPKLaunchTaskService.m */; };
 		5C52ECAEF1B6E473739C9F5E39D99192 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		6E7B6CD271BC4AC5377A9583340CE74A /* NPKLaunchManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 79268C909891A27DB1374F176AB6FFB2 /* NPKLaunchManager.m */; };
-		74CB1B1BF6E2F1A738CC4897725BC042 /* NPKLaunchTaskService.h in Headers */ = {isa = PBXBuildFile; fileRef = 4FA35516EAF7B7DF2D07E1616452D6FD /* NPKLaunchTaskService.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9D4412E3E6A5142D4D5687A7899A6983 /* appletrace.h in Headers */ = {isa = PBXBuildFile; fileRef = 08447EC435EEDCD75E07191D76D41978 /* appletrace.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A3405FFB1838B9F07BFB950D44A81916 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		A6F862DB03B4DBD17124EFAE6B9BFAED /* NPKImageCompressTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BF7DF31CB0F0AFE0C140EDEE8B9255 /* NPKImageCompressTool.m */; };
-		ACA5420DB39E61C19653191EDD44FF83 /* NicePerformanceKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C2E15AC3B202B21CDC79D768C8A4313 /* NicePerformanceKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B327CAF4C919D5636B272067C7A6F996 /* NPKSignpostLog.mm in Sources */ = {isa = PBXBuildFile; fileRef = 45FFEC6BE7A7B7D14B3552651F368EB6 /* NPKSignpostLog.mm */; };
-		C0471F60CAEE6D53D17508BA56A6F840 /* NPKLaunchManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B67A8E57D292053B73D83346A289EA6 /* NPKLaunchManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		676A8203F31221244658955098862448 /* NPKLaunchTaskModel.h in Headers */ = {isa = PBXBuildFile; fileRef = A1D1C5041D83A2030F386DD1CFCEC057 /* NPKLaunchTaskModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		68C41AE348AD8227BD719E69E2FA81D8 /* NPKLaunchTaskService.h in Headers */ = {isa = PBXBuildFile; fileRef = E255472A8662A9EFF90598DBE8AEFE06 /* NPKLaunchTaskService.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6EB5C4DB3A4413CB367F57EE6C61F451 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		72D3F0EFF9EB2E48EF363150C60D2527 /* NPKSignpostLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 58D69AE68D5510BE29D483F617D084BA /* NPKSignpostLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		882D608F32722418C9A8444625E95077 /* NPKLaunchTaskModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FFF49D947EE5D0AE588D9D9AC5845D9C /* NPKLaunchTaskModel.m */; };
+		8B31608C0E353A36CE2D2106CB4183EA /* NPKLaunchConfigPluginDefinition.h in Headers */ = {isa = PBXBuildFile; fileRef = BB9D7A9EA2FD533E85A06CAF098AFB9E /* NPKLaunchConfigPluginDefinition.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9AA02C3AFCCDCAAE13069EC805358982 /* NPKLaunchManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 91AF0D433CD2D10BAF3455AF99DFDDE2 /* NPKLaunchManager.m */; };
+		9F142DDE0A4D48A2A9934EB6301F6372 /* appletrace.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2168D85AB242B5F3B91C10A02073C0B7 /* appletrace.mm */; };
+		BEA7AB8D3422CAB0A7AAFA00F8D5C537 /* NPKSignpostLog.mm in Sources */ = {isa = PBXBuildFile; fileRef = 09326F8AB83296DE2C680DDB5F72EACC /* NPKSignpostLog.mm */; };
 		C8ECE6809B6E3987B9CC64DABE97A60B /* Pods-NPKitDemo_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 66F37ECE0D4CBAE494420DF53C9E2C98 /* Pods-NPKitDemo_Tests-dummy.m */; };
 		C94A4B31E9D01D15C7BDC5E3B9A305BF /* Pods-NPKitDemo_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7105D90F396FBBF7EFA957336EB621F5 /* Pods-NPKitDemo_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E5F1C9C82F0702637FFDEE7597FFACC1 /* NPKLaunchTaskService.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B8B39EA10D6A8C0879C2F0A8D6D94D /* NPKLaunchTaskService.m */; };
-		EFD9B5A625EAAA187CB125667890E632 /* appletrace.mm in Sources */ = {isa = PBXBuildFile; fileRef = 75C4DB7AEC2DA018BEBB97150FE8492A /* appletrace.mm */; };
+		CA76D54E76479EAD558D8E682108B3FC /* NicePerformanceKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 90F10E5048310253A1FC640BEAB8EA70 /* NicePerformanceKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D24A2970748E50180EEFA53E34D0782F /* NPKImageCompressTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4012D70872A13E31B4C5971367300125 /* NPKImageCompressTool.m */; };
+		EC79B7E807CB7F1AE7DD925C0CA537BC /* NPKBaseDefine.h in Headers */ = {isa = PBXBuildFile; fileRef = 88AE04A311D4A1F01229D585644AD63A /* NPKBaseDefine.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F38DCFB77CB3352624FDB3C1CA8CC375 /* Pods-NPKitDemo_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 18CF0B6982ECFF92A51719B5A7BC4A8A /* Pods-NPKitDemo_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F4F84BABD74EAAD7A2F1A1F3497FC3D6 /* NPKBaseDefine.h in Headers */ = {isa = PBXBuildFile; fileRef = 833DA35353BE3FDC265F1A7A18FA8EE3 /* NPKBaseDefine.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,47 +54,54 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		08447EC435EEDCD75E07191D76D41978 /* appletrace.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = appletrace.h; path = NicePerformanceKit/Classes/Tool/TimeProfile/appletrace.h; sourceTree = "<group>"; };
-		09BF7DF31CB0F0AFE0C140EDEE8B9255 /* NPKImageCompressTool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NPKImageCompressTool.m; path = NicePerformanceKit/Classes/Tool/Image/NPKImageCompressTool.m; sourceTree = "<group>"; };
-		13250157B5F17B0CB99B650D597ACAED /* NicePerformanceKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NicePerformanceKit.xcconfig; sourceTree = "<group>"; };
+		07E27D7EAB57AE2CE17F4EE43EAADC15 /* NicePerformanceKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NicePerformanceKit-prefix.pch"; sourceTree = "<group>"; };
+		09326F8AB83296DE2C680DDB5F72EACC /* NPKSignpostLog.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = NPKSignpostLog.mm; path = NicePerformanceKit/Classes/Tool/TimeProfile/NPKSignpostLog.mm; sourceTree = "<group>"; };
+		13042FC103EEE38C754EA9A20B12A79C /* NicePerformanceKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "NicePerformanceKit-Info.plist"; sourceTree = "<group>"; };
+		1460AAC6D3290174C91A673E12C2EB59 /* NicePerformanceKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NicePerformanceKit.xcconfig; sourceTree = "<group>"; };
 		18CF0B6982ECFF92A51719B5A7BC4A8A /* Pods-NPKitDemo_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NPKitDemo_Tests-umbrella.h"; sourceTree = "<group>"; };
-		192FF4F5BC7F27E44751FBBD65D5B3DC /* NPKSignpostLog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NPKSignpostLog.h; path = NicePerformanceKit/Classes/Tool/TimeProfile/NPKSignpostLog.h; sourceTree = "<group>"; };
-		198BD06BB888AC3D708C9C891898BD8A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
-		226C92CD9A0B38E0E18187DEF66093E7 /* NicePerformanceKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = NicePerformanceKit.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		1F68EB7E825816C220E9ECA63747C65E /* NPKLaunchConfig.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NPKLaunchConfig.m; path = NicePerformanceKit/Classes/Tool/Launch/NPKLaunchConfig.m; sourceTree = "<group>"; };
+		2168D85AB242B5F3B91C10A02073C0B7 /* appletrace.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = appletrace.mm; path = NicePerformanceKit/Classes/Tool/TimeProfile/appletrace.mm; sourceTree = "<group>"; };
+		2D82834B12FA01791D01FCDCC7D80374 /* NicePerformanceKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = NicePerformanceKit.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		311F694F633D1AE0C6A42BDAAF6DC503 /* Pods_NPKitDemo_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_NPKitDemo_Example.framework; path = "Pods-NPKitDemo_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		31BD32171221A1787C4B6FA0D44C0C30 /* NicePerformanceKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = NicePerformanceKit.framework; path = NicePerformanceKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		32463F59CA93557167A7588E56DADD2C /* Pods-NPKitDemo_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NPKitDemo_Example.release.xcconfig"; sourceTree = "<group>"; };
+		4012D70872A13E31B4C5971367300125 /* NPKImageCompressTool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NPKImageCompressTool.m; path = NicePerformanceKit/Classes/Tool/Image/NPKImageCompressTool.m; sourceTree = "<group>"; };
 		41755246319CDCDD18A8398FC7B206A7 /* Pods-NPKitDemo_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-NPKitDemo_Example.modulemap"; sourceTree = "<group>"; };
 		42C1BE1C76FD2BDEAF3992643388EDA5 /* Pods-NPKitDemo_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NPKitDemo_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		45FFEC6BE7A7B7D14B3552651F368EB6 /* NPKSignpostLog.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = NPKSignpostLog.mm; path = NicePerformanceKit/Classes/Tool/TimeProfile/NPKSignpostLog.mm; sourceTree = "<group>"; };
-		4FA35516EAF7B7DF2D07E1616452D6FD /* NPKLaunchTaskService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NPKLaunchTaskService.h; path = NicePerformanceKit/Classes/Tool/Launch/NPKLaunchTaskService.h; sourceTree = "<group>"; };
+		58D69AE68D5510BE29D483F617D084BA /* NPKSignpostLog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NPKSignpostLog.h; path = NicePerformanceKit/Classes/Tool/TimeProfile/NPKSignpostLog.h; sourceTree = "<group>"; };
 		5BBD793DFF179C707492A8C53952D765 /* Pods-NPKitDemo_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NPKitDemo_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		61A5D85C2F00F47F903C2A2D635646EE /* Pods-NPKitDemo_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-NPKitDemo_Tests.modulemap"; sourceTree = "<group>"; };
+		63615B74F512D80973C11FA1547EE527 /* NicePerformanceKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = NicePerformanceKit.modulemap; sourceTree = "<group>"; };
 		66F37ECE0D4CBAE494420DF53C9E2C98 /* Pods-NPKitDemo_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NPKitDemo_Tests-dummy.m"; sourceTree = "<group>"; };
-		6B67A8E57D292053B73D83346A289EA6 /* NPKLaunchManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NPKLaunchManager.h; path = NicePerformanceKit/Classes/Tool/Launch/NPKLaunchManager.h; sourceTree = "<group>"; };
-		6C0EA10C24654B88A418CA9EFB462295 /* NicePerformanceKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = NicePerformanceKit.modulemap; sourceTree = "<group>"; };
+		674CC402B39E08506B9B252457D0D739 /* NPKLaunchTaskService.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NPKLaunchTaskService.m; path = NicePerformanceKit/Classes/Tool/Launch/NPKLaunchTaskService.m; sourceTree = "<group>"; };
 		6F682C5C0D9F143827144151E70C3529 /* Pods-NPKitDemo_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NPKitDemo_Example-Info.plist"; sourceTree = "<group>"; };
 		7105D90F396FBBF7EFA957336EB621F5 /* Pods-NPKitDemo_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NPKitDemo_Example-umbrella.h"; sourceTree = "<group>"; };
 		7347BEB25103D30A05B3AAAE8CADD09F /* Pods-NPKitDemo_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NPKitDemo_Example-frameworks.sh"; sourceTree = "<group>"; };
-		7574C62453CA9077B7514DBDEAF7662E /* NicePerformanceKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "NicePerformanceKit-Info.plist"; sourceTree = "<group>"; };
-		75C4DB7AEC2DA018BEBB97150FE8492A /* appletrace.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = appletrace.mm; path = NicePerformanceKit/Classes/Tool/TimeProfile/appletrace.mm; sourceTree = "<group>"; };
-		7678496F389FEFBB0AFB9A21B5C14439 /* NPKImageCompressTool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NPKImageCompressTool.h; path = NicePerformanceKit/Classes/Tool/Image/NPKImageCompressTool.h; sourceTree = "<group>"; };
 		77F930654D329E0454C63635AE0D1EA2 /* Pods-NPKitDemo_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NPKitDemo_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		79268C909891A27DB1374F176AB6FFB2 /* NPKLaunchManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NPKLaunchManager.m; path = NicePerformanceKit/Classes/Tool/Launch/NPKLaunchManager.m; sourceTree = "<group>"; };
-		833DA35353BE3FDC265F1A7A18FA8EE3 /* NPKBaseDefine.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NPKBaseDefine.h; path = NicePerformanceKit/Classes/Base/NPKBaseDefine.h; sourceTree = "<group>"; };
-		9C2E15AC3B202B21CDC79D768C8A4313 /* NicePerformanceKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NicePerformanceKit-umbrella.h"; sourceTree = "<group>"; };
+		88AE04A311D4A1F01229D585644AD63A /* NPKBaseDefine.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NPKBaseDefine.h; path = NicePerformanceKit/Classes/Base/NPKBaseDefine.h; sourceTree = "<group>"; };
+		8F77B02156EB1D3D1D2189D4CF1491CB /* NPKDispatchQueuePool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NPKDispatchQueuePool.m; path = NicePerformanceKit/Classes/Base/NPKDispatchQueuePool.m; sourceTree = "<group>"; };
+		90F10E5048310253A1FC640BEAB8EA70 /* NicePerformanceKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NicePerformanceKit-umbrella.h"; sourceTree = "<group>"; };
+		91AF0D433CD2D10BAF3455AF99DFDDE2 /* NPKLaunchManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NPKLaunchManager.m; path = NicePerformanceKit/Classes/Tool/Launch/NPKLaunchManager.m; sourceTree = "<group>"; };
+		96CB3ED08DF90AC7E0952DE183348ABF /* NPKLaunchConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NPKLaunchConfig.h; path = NicePerformanceKit/Classes/Tool/Launch/NPKLaunchConfig.h; sourceTree = "<group>"; };
+		9B1FFDC3813BF8B4636D53C65268FED8 /* NicePerformanceKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NicePerformanceKit-dummy.m"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9E080D105380027014765D70554EF45E /* NPKDispatchQueuePool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NPKDispatchQueuePool.h; path = NicePerformanceKit/Classes/Base/NPKDispatchQueuePool.h; sourceTree = "<group>"; };
 		A0C6580CE2E24DE38201C08D47457BC5 /* Pods-NPKitDemo_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NPKitDemo_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		A2E679F314C499AA04EF540279D83BD6 /* NicePerformanceKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NicePerformanceKit-dummy.m"; sourceTree = "<group>"; };
-		A8B8B39EA10D6A8C0879C2F0A8D6D94D /* NPKLaunchTaskService.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NPKLaunchTaskService.m; path = NicePerformanceKit/Classes/Tool/Launch/NPKLaunchTaskService.m; sourceTree = "<group>"; };
+		A1D1C5041D83A2030F386DD1CFCEC057 /* NPKLaunchTaskModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NPKLaunchTaskModel.h; path = NicePerformanceKit/Classes/Tool/Launch/NPKLaunchTaskModel.h; sourceTree = "<group>"; };
+		BB9D7A9EA2FD533E85A06CAF098AFB9E /* NPKLaunchConfigPluginDefinition.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NPKLaunchConfigPluginDefinition.h; path = NicePerformanceKit/Classes/Tool/Launch/NPKLaunchConfigPluginDefinition.h; sourceTree = "<group>"; };
 		BD97077EC018B1AA3E24F18FE1365F9B /* Pods-NPKitDemo_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NPKitDemo_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		C0664B22E09D584C2D82D422E89A2BB5 /* appletrace.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = appletrace.h; path = NicePerformanceKit/Classes/Tool/TimeProfile/appletrace.h; sourceTree = "<group>"; };
 		C0FDEB4D898F61923F516B19474B1154 /* Pods-NPKitDemo_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NPKitDemo_Example-dummy.m"; sourceTree = "<group>"; };
 		CB6843D4F8A025D2C222AB5205414096 /* Pods-NPKitDemo_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NPKitDemo_Tests-Info.plist"; sourceTree = "<group>"; };
+		E255472A8662A9EFF90598DBE8AEFE06 /* NPKLaunchTaskService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NPKLaunchTaskService.h; path = NicePerformanceKit/Classes/Tool/Launch/NPKLaunchTaskService.h; sourceTree = "<group>"; };
+		EF4F411C2B7E3F5F553E9170A215F797 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		F4FC6FDBAC9058C39BBB725D2C7CE32A /* NPKImageCompressTool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NPKImageCompressTool.h; path = NicePerformanceKit/Classes/Tool/Image/NPKImageCompressTool.h; sourceTree = "<group>"; };
+		F67E56E57299F345DF8E3D8036D5BF02 /* NPKLaunchManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NPKLaunchManager.h; path = NicePerformanceKit/Classes/Tool/Launch/NPKLaunchManager.h; sourceTree = "<group>"; };
 		F840F020AB51B451079589B8BDDA79B1 /* Pods-NPKitDemo_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NPKitDemo_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		F9BC353F9015EBDDFFF454AB53133512 /* Pods-NPKitDemo_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NPKitDemo_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		FA7ABD073C4C5E325766E2BE3F0E12A2 /* Pods_NPKitDemo_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_NPKitDemo_Tests.framework; path = "Pods-NPKitDemo_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FD4C33C72F1587E9FA9AFCF166F323B2 /* NicePerformanceKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NicePerformanceKit-prefix.pch"; sourceTree = "<group>"; };
+		FFF49D947EE5D0AE588D9D9AC5845D9C /* NPKLaunchTaskModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NPKLaunchTaskModel.m; path = NicePerformanceKit/Classes/Tool/Launch/NPKLaunchTaskModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,17 +121,40 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C479F7D99BA9CD9457DFECEA304945C2 /* Frameworks */ = {
+		E7FF0BAC8847438F7A67EB68B8CC52E1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3405FFB1838B9F07BFB950D44A81916 /* Foundation.framework in Frameworks */,
+				6EB5C4DB3A4413CB367F57EE6C61F451 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F327C55AE17F70A4BB8FD7A116EC21F /* TimeProfile */ = {
+			isa = PBXGroup;
+			children = (
+				C0664B22E09D584C2D82D422E89A2BB5 /* appletrace.h */,
+				2168D85AB242B5F3B91C10A02073C0B7 /* appletrace.mm */,
+				58D69AE68D5510BE29D483F617D084BA /* NPKSignpostLog.h */,
+				09326F8AB83296DE2C680DDB5F72EACC /* NPKSignpostLog.mm */,
+			);
+			name = TimeProfile;
+			sourceTree = "<group>";
+		};
+		2E51CB07285B24C0D3C22E3DD49185F2 /* NicePerformanceKit */ = {
+			isa = PBXGroup;
+			children = (
+				D149606F243B50568C9F2668FDA46A8D /* Base */,
+				71C2C6B2AC98A4B0F3EB2FA34C79A6EE /* Pod */,
+				83A0E002244DEC4DDBF52509BC1A4604 /* Support Files */,
+				47AF710C0D84436D9C8E886E6ADCEE7F /* Tool */,
+			);
+			name = NicePerformanceKit;
+			path = ../..;
+			sourceTree = "<group>";
+		};
 		310292C8749E841EFAE820F20E296B8F /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -128,12 +165,23 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		57B3947985292F3B46838C7420506EEB /* Base */ = {
+		3444486AC45B0E639DDA283AB5F8DEC4 /* Image */ = {
 			isa = PBXGroup;
 			children = (
-				833DA35353BE3FDC265F1A7A18FA8EE3 /* NPKBaseDefine.h */,
+				F4FC6FDBAC9058C39BBB725D2C7CE32A /* NPKImageCompressTool.h */,
+				4012D70872A13E31B4C5971367300125 /* NPKImageCompressTool.m */,
 			);
-			name = Base;
+			name = Image;
+			sourceTree = "<group>";
+		};
+		47AF710C0D84436D9C8E886E6ADCEE7F /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				3444486AC45B0E639DDA283AB5F8DEC4 /* Image */,
+				DE6E21A424D93FE580AD443B2F90C563 /* LaunchManager */,
+				1F327C55AE17F70A4BB8FD7A116EC21F /* TimeProfile */,
+			);
+			name = Tool;
 			sourceTree = "<group>";
 		};
 		5F8FCD1AB7817CC5B2AE8C355029CF88 /* Pods-NPKitDemo_Tests */ = {
@@ -152,64 +200,33 @@
 			path = "Target Support Files/Pods-NPKitDemo_Tests";
 			sourceTree = "<group>";
 		};
-		6514BB7C38959313520F2EC9D1FE7845 /* Support Files */ = {
+		71C2C6B2AC98A4B0F3EB2FA34C79A6EE /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				6C0EA10C24654B88A418CA9EFB462295 /* NicePerformanceKit.modulemap */,
-				13250157B5F17B0CB99B650D597ACAED /* NicePerformanceKit.xcconfig */,
-				A2E679F314C499AA04EF540279D83BD6 /* NicePerformanceKit-dummy.m */,
-				7574C62453CA9077B7514DBDEAF7662E /* NicePerformanceKit-Info.plist */,
-				FD4C33C72F1587E9FA9AFCF166F323B2 /* NicePerformanceKit-prefix.pch */,
-				9C2E15AC3B202B21CDC79D768C8A4313 /* NicePerformanceKit-umbrella.h */,
+				2D82834B12FA01791D01FCDCC7D80374 /* NicePerformanceKit.podspec */,
+				EF4F411C2B7E3F5F553E9170A215F797 /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		83A0E002244DEC4DDBF52509BC1A4604 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				63615B74F512D80973C11FA1547EE527 /* NicePerformanceKit.modulemap */,
+				1460AAC6D3290174C91A673E12C2EB59 /* NicePerformanceKit.xcconfig */,
+				9B1FFDC3813BF8B4636D53C65268FED8 /* NicePerformanceKit-dummy.m */,
+				13042FC103EEE38C754EA9A20B12A79C /* NicePerformanceKit-Info.plist */,
+				07E27D7EAB57AE2CE17F4EE43EAADC15 /* NicePerformanceKit-prefix.pch */,
+				90F10E5048310253A1FC640BEAB8EA70 /* NicePerformanceKit-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "Example/Pods/Target Support Files/NicePerformanceKit";
 			sourceTree = "<group>";
 		};
-		6CE25DF9AA1CD01C30FD886A900A3191 /* Tool */ = {
-			isa = PBXGroup;
-			children = (
-				884181C65F68799BA11D581A11830215 /* Image */,
-				C4FBB5E55627A06347FA8BC254BDD863 /* LaunchManager */,
-				C84A94B07200EE9B19474B836B2138CB /* TimeProfile */,
-			);
-			name = Tool;
-			sourceTree = "<group>";
-		};
-		884181C65F68799BA11D581A11830215 /* Image */ = {
-			isa = PBXGroup;
-			children = (
-				7678496F389FEFBB0AFB9A21B5C14439 /* NPKImageCompressTool.h */,
-				09BF7DF31CB0F0AFE0C140EDEE8B9255 /* NPKImageCompressTool.m */,
-			);
-			name = Image;
-			sourceTree = "<group>";
-		};
-		93D7012F2CBFE5B7340D928B583BFCBD /* NicePerformanceKit */ = {
-			isa = PBXGroup;
-			children = (
-				57B3947985292F3B46838C7420506EEB /* Base */,
-				ADE76A943019ADC27CB6F740C0ECA4E0 /* Pod */,
-				6514BB7C38959313520F2EC9D1FE7845 /* Support Files */,
-				6CE25DF9AA1CD01C30FD886A900A3191 /* Tool */,
-			);
-			name = NicePerformanceKit;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		ADE76A943019ADC27CB6F740C0ECA4E0 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				226C92CD9A0B38E0E18187DEF66093E7 /* NicePerformanceKit.podspec */,
-				198BD06BB888AC3D708C9C891898BD8A /* README.md */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
 		AFB3581E0E2A7F6B618BA9A4E2BD3B5B /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				93D7012F2CBFE5B7340D928B583BFCBD /* NicePerformanceKit */,
+				2E51CB07285B24C0D3C22E3DD49185F2 /* NicePerformanceKit */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
@@ -220,28 +237,6 @@
 				3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */,
 			);
 			name = iOS;
-			sourceTree = "<group>";
-		};
-		C4FBB5E55627A06347FA8BC254BDD863 /* LaunchManager */ = {
-			isa = PBXGroup;
-			children = (
-				6B67A8E57D292053B73D83346A289EA6 /* NPKLaunchManager.h */,
-				79268C909891A27DB1374F176AB6FFB2 /* NPKLaunchManager.m */,
-				4FA35516EAF7B7DF2D07E1616452D6FD /* NPKLaunchTaskService.h */,
-				A8B8B39EA10D6A8C0879C2F0A8D6D94D /* NPKLaunchTaskService.m */,
-			);
-			name = LaunchManager;
-			sourceTree = "<group>";
-		};
-		C84A94B07200EE9B19474B836B2138CB /* TimeProfile */ = {
-			isa = PBXGroup;
-			children = (
-				08447EC435EEDCD75E07191D76D41978 /* appletrace.h */,
-				75C4DB7AEC2DA018BEBB97150FE8492A /* appletrace.mm */,
-				192FF4F5BC7F27E44751FBBD65D5B3DC /* NPKSignpostLog.h */,
-				45FFEC6BE7A7B7D14B3552651F368EB6 /* NPKSignpostLog.mm */,
-			);
-			name = TimeProfile;
 			sourceTree = "<group>";
 		};
 		CA62F7311D0BF8D8D39A972438E92345 /* Pods-NPKitDemo_Example */ = {
@@ -272,12 +267,38 @@
 			);
 			sourceTree = "<group>";
 		};
+		D149606F243B50568C9F2668FDA46A8D /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				88AE04A311D4A1F01229D585644AD63A /* NPKBaseDefine.h */,
+				9E080D105380027014765D70554EF45E /* NPKDispatchQueuePool.h */,
+				8F77B02156EB1D3D1D2189D4CF1491CB /* NPKDispatchQueuePool.m */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
 		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				C0834CEBB1379A84116EF29F93051C60 /* iOS */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DE6E21A424D93FE580AD443B2F90C563 /* LaunchManager */ = {
+			isa = PBXGroup;
+			children = (
+				96CB3ED08DF90AC7E0952DE183348ABF /* NPKLaunchConfig.h */,
+				1F68EB7E825816C220E9ECA63747C65E /* NPKLaunchConfig.m */,
+				BB9D7A9EA2FD533E85A06CAF098AFB9E /* NPKLaunchConfigPluginDefinition.h */,
+				F67E56E57299F345DF8E3D8036D5BF02 /* NPKLaunchManager.h */,
+				91AF0D433CD2D10BAF3455AF99DFDDE2 /* NPKLaunchManager.m */,
+				A1D1C5041D83A2030F386DD1CFCEC057 /* NPKLaunchTaskModel.h */,
+				FFF49D947EE5D0AE588D9D9AC5845D9C /* NPKLaunchTaskModel.m */,
+				E255472A8662A9EFF90598DBE8AEFE06 /* NPKLaunchTaskService.h */,
+				674CC402B39E08506B9B252457D0D739 /* NPKLaunchTaskService.m */,
+			);
+			name = LaunchManager;
 			sourceTree = "<group>";
 		};
 		ECD43C23F08EF5E9EF3B6815629F836F /* Targets Support Files */ = {
@@ -300,17 +321,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B4628BBDA3D00C4C206C0A2A5C7D1DA3 /* Headers */ = {
+		C964F0E69D40F9CCA7FE0B4CA5B5304B /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D4412E3E6A5142D4D5687A7899A6983 /* appletrace.h in Headers */,
-				ACA5420DB39E61C19653191EDD44FF83 /* NicePerformanceKit-umbrella.h in Headers */,
-				F4F84BABD74EAAD7A2F1A1F3497FC3D6 /* NPKBaseDefine.h in Headers */,
-				36BA61FE621267E498FBB8F2D1F89190 /* NPKImageCompressTool.h in Headers */,
-				C0471F60CAEE6D53D17508BA56A6F840 /* NPKLaunchManager.h in Headers */,
-				74CB1B1BF6E2F1A738CC4897725BC042 /* NPKLaunchTaskService.h in Headers */,
-				544A65323FA7179ED256AE4524C4F698 /* NPKSignpostLog.h in Headers */,
+				10D486A2DB6F6B14CD05835719C85091 /* appletrace.h in Headers */,
+				CA76D54E76479EAD558D8E682108B3FC /* NicePerformanceKit-umbrella.h in Headers */,
+				EC79B7E807CB7F1AE7DD925C0CA537BC /* NPKBaseDefine.h in Headers */,
+				0F8BB8F4D197B2CF300B42E1B4EC44FF /* NPKDispatchQueuePool.h in Headers */,
+				26BBE1C1AE27275D3CB473743821AEE0 /* NPKImageCompressTool.h in Headers */,
+				34949A428AB652C4D987E9E6C567CEED /* NPKLaunchConfig.h in Headers */,
+				8B31608C0E353A36CE2D2106CB4183EA /* NPKLaunchConfigPluginDefinition.h in Headers */,
+				494ABE7B87A8316B3A52B2AB43076484 /* NPKLaunchManager.h in Headers */,
+				676A8203F31221244658955098862448 /* NPKLaunchTaskModel.h in Headers */,
+				68C41AE348AD8227BD719E69E2FA81D8 /* NPKLaunchTaskService.h in Headers */,
+				72D3F0EFF9EB2E48EF363150C60D2527 /* NPKSignpostLog.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,12 +371,12 @@
 		};
 		8327482FEEA7EEFF393684091BFCDF4C /* NicePerformanceKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3CB0EA9629E161929CE03658CE8C89EC /* Build configuration list for PBXNativeTarget "NicePerformanceKit" */;
+			buildConfigurationList = 8D403B697E79BF58EC1ED40B3CE0EE9F /* Build configuration list for PBXNativeTarget "NicePerformanceKit" */;
 			buildPhases = (
-				B4628BBDA3D00C4C206C0A2A5C7D1DA3 /* Headers */,
-				4A4F5AB7A1E9E416C5169813647AECFD /* Sources */,
-				C479F7D99BA9CD9457DFECEA304945C2 /* Frameworks */,
-				0CAFC25C884A720C44B7CB0165063E78 /* Resources */,
+				C964F0E69D40F9CCA7FE0B4CA5B5304B /* Headers */,
+				3184B93B6F49D2463C6D472617D80EC8 /* Sources */,
+				E7FF0BAC8847438F7A67EB68B8CC52E1 /* Frameworks */,
+				1B04B8C02917ED982DDDDB966DE0F1A5 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -411,14 +436,14 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		0CAFC25C884A720C44B7CB0165063E78 /* Resources */ = {
+		1464347D5E75AA43BA75B77AE47F81DA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1464347D5E75AA43BA75B77AE47F81DA /* Resources */ = {
+		1B04B8C02917ED982DDDDB966DE0F1A5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -443,24 +468,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3184B93B6F49D2463C6D472617D80EC8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F142DDE0A4D48A2A9934EB6301F6372 /* appletrace.mm in Sources */,
+				35D049950EAE11FD5320D7FF1AB5AA6E /* NicePerformanceKit-dummy.m in Sources */,
+				0D17EBEFE57FFE134AA45AFF00E480AC /* NPKDispatchQueuePool.m in Sources */,
+				D24A2970748E50180EEFA53E34D0782F /* NPKImageCompressTool.m in Sources */,
+				4DEA50CDF7813B3DFCD7390BA18AA58D /* NPKLaunchConfig.m in Sources */,
+				9AA02C3AFCCDCAAE13069EC805358982 /* NPKLaunchManager.m in Sources */,
+				882D608F32722418C9A8444625E95077 /* NPKLaunchTaskModel.m in Sources */,
+				55DE2D0353909372752A8F34FF567E12 /* NPKLaunchTaskService.m in Sources */,
+				BEA7AB8D3422CAB0A7AAFA00F8D5C537 /* NPKSignpostLog.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		490EACD2E0061D95026BB0A3F3E82258 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				336400EB0D73ED18864C04D48F423FD6 /* Pods-NPKitDemo_Example-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4A4F5AB7A1E9E416C5169813647AECFD /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EFD9B5A625EAAA187CB125667890E632 /* appletrace.mm in Sources */,
-				492E296207BC9E895EB58A3ACD31A742 /* NicePerformanceKit-dummy.m in Sources */,
-				A6F862DB03B4DBD17124EFAE6B9BFAED /* NPKImageCompressTool.m in Sources */,
-				6E7B6CD271BC4AC5377A9583340CE74A /* NPKLaunchManager.m in Sources */,
-				E5F1C9C82F0702637FFDEE7597FFACC1 /* NPKLaunchTaskService.m in Sources */,
-				B327CAF4C919D5636B272067C7A6F996 /* NPKSignpostLog.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -580,41 +608,9 @@
 			};
 			name = Debug;
 		};
-		2942A398F0E9E790C1AC9CBDD19D4D43 /* Debug */ = {
+		1A1C4E3E3A731873B47386F0AC5BC201 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 13250157B5F17B0CB99B650D597ACAED /* NicePerformanceKit.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/NicePerformanceKit/NicePerformanceKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/NicePerformanceKit/NicePerformanceKit-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/NicePerformanceKit/NicePerformanceKit.modulemap";
-				PRODUCT_MODULE_NAME = NicePerformanceKit;
-				PRODUCT_NAME = NicePerformanceKit;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		833563F0BF013D1F3A3A1760A7592547 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 13250157B5F17B0CB99B650D597ACAED /* NicePerformanceKit.xcconfig */;
+			baseConfigurationReference = 1460AAC6D3290174C91A673E12C2EB59 /* NicePerformanceKit.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -774,6 +770,38 @@
 			};
 			name = Release;
 		};
+		B56451BEC77DDAA38A4CB036B045A08D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1460AAC6D3290174C91A673E12C2EB59 /* NicePerformanceKit.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/NicePerformanceKit/NicePerformanceKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/NicePerformanceKit/NicePerformanceKit-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/NicePerformanceKit/NicePerformanceKit.modulemap";
+				PRODUCT_MODULE_NAME = NicePerformanceKit;
+				PRODUCT_NAME = NicePerformanceKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		C6DB3BF2A48E436A0424940E7066E550 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 32463F59CA93557167A7588E56DADD2C /* Pods-NPKitDemo_Example.release.xcconfig */;
@@ -812,15 +840,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3CB0EA9629E161929CE03658CE8C89EC /* Build configuration list for PBXNativeTarget "NicePerformanceKit" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2942A398F0E9E790C1AC9CBDD19D4D43 /* Debug */,
-				833563F0BF013D1F3A3A1760A7592547 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -835,6 +854,15 @@
 			buildConfigurations = (
 				0735D6774F919F637CC9D929C240E6BD /* Debug */,
 				C6DB3BF2A48E436A0424940E7066E550 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8D403B697E79BF58EC1ED40B3CE0EE9F /* Build configuration list for PBXNativeTarget "NicePerformanceKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B56451BEC77DDAA38A4CB036B045A08D /* Debug */,
+				1A1C4E3E3A731873B47386F0AC5BC201 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

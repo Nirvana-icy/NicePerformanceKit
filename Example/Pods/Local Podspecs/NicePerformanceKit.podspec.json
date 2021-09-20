@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "summary": "A short description of NicePerformanceKit.",
   "description": "One toolkit aim to keep nice performance.",
-  "homepage": "https://github.com/Nirvana-icy/NicePerformanceKit",
+  "homepage": "https://github.com/nirvana_icy/NicePerformanceKit/",
   "license": "BSD",
   "authors": {
     "Nirvana.icy": "jinglong.bi@me.com"
@@ -12,7 +12,7 @@
     "ios": "10.0"
   },
   "source": {
-    "git": "https://github.com/Nirvana-icy/NicePerformanceKit.git",
+    "git": "https://github.com/nirvana_icy/NicePerformanceKit/.git",
     "tag": "0.0.1"
   },
   "default_subspecs": "Tool",

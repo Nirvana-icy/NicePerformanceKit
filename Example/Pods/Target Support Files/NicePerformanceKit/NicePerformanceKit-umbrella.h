@@ -11,8 +11,12 @@
 #endif
 
 #import "NPKBaseDefine.h"
+#import "NPKDispatchQueuePool.h"
 #import "NPKImageCompressTool.h"
+#import "NPKLaunchConfig.h"
+#import "NPKLaunchConfigPluginDefinition.h"
 #import "NPKLaunchManager.h"
+#import "NPKLaunchTaskModel.h"
 #import "NPKLaunchTaskService.h"
 #import "appletrace.h"
 #import "NPKSignpostLog.h"

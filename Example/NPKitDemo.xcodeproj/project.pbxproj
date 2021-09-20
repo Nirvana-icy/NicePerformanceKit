@@ -24,6 +24,7 @@
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
+		E071D1FD26F86F640048321D /* NPKitDemoLaunchConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = E071D1FC26F86F640048321D /* NPKitDemoLaunchConfig.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,11 +63,13 @@
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		6363ACC0D105F53CCB262A29 /* Pods-NPKitDemo_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NPKitDemo_Tests.release.xcconfig"; path = "Target Support Files/Pods-NPKitDemo_Tests/Pods-NPKitDemo_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		65C69FA7A8A02BA4FBA2CDC0 /* Pods-NPKitDemo_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NPKitDemo_Example.debug.xcconfig"; path = "Target Support Files/Pods-NPKitDemo_Example/Pods-NPKitDemo_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		6A4D7EE2D0EDC0D2646EAB1F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		6A4D7EE2D0EDC0D2646EAB1F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		7DB635314BA005D1DA07A3E9 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		7DB635314BA005D1DA07A3E9 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		D3D16189AE5EA42AFBF9F11F /* NPKitDemo.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = NPKitDemo.podspec; path = ../NPKitDemo.podspec; sourceTree = "<group>"; };
+		D3D16189AE5EA42AFBF9F11F /* NPKitDemo.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; name = NPKitDemo.podspec; path = ../NPKitDemo.podspec; sourceTree = "<group>"; };
+		E071D1FB26F86F640048321D /* NPKitDemoLaunchConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NPKitDemoLaunchConfig.h; sourceTree = "<group>"; };
+		E071D1FC26F86F640048321D /* NPKitDemoLaunchConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NPKitDemoLaunchConfig.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +106,6 @@
 				47A218CD27A06782AABDD0DC /* Pods-NPKitDemo_Tests.debug.xcconfig */,
 				6363ACC0D105F53CCB262A29 /* Pods-NPKitDemo_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -144,6 +146,7 @@
 		6003F593195388D20070C39A /* Example for NPKitDemo */ = {
 			isa = PBXGroup;
 			children = (
+				E071D1F526F86C350048321D /* NPKLaunchBiz */,
 				6003F59C195388D20070C39A /* NPKAppDelegate.h */,
 				6003F59D195388D20070C39A /* NPKAppDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
@@ -197,6 +200,23 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
+		E071D1F526F86C350048321D /* NPKLaunchBiz */ = {
+			isa = PBXGroup;
+			children = (
+				E071D1F626F86C860048321D /* NPKitDemo */,
+			);
+			path = NPKLaunchBiz;
+			sourceTree = "<group>";
+		};
+		E071D1F626F86C860048321D /* NPKitDemo */ = {
+			isa = PBXGroup;
+			children = (
+				E071D1FB26F86F640048321D /* NPKitDemoLaunchConfig.h */,
+				E071D1FC26F86F640048321D /* NPKitDemoLaunchConfig.m */,
+			);
+			path = NPKitDemo;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -248,6 +268,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "jinglong.bi@me.com";
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = A83729LRD6;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -258,6 +281,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -366,6 +390,7 @@
 			files = (
 				6003F59E195388D20070C39A /* NPKAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* NPKViewController.m in Sources */,
+				E071D1FD26F86F640048321D /* NPKitDemoLaunchConfig.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -494,11 +519,13 @@
 			baseConfigurationReference = 65C69FA7A8A02BA4FBA2CDC0 /* Pods-NPKitDemo_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = A83729LRD6;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NPKitDemo/NPKitDemo-Prefix.pch";
 				INFOPLIST_FILE = "NPKitDemo/NPKitDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tangyuan.NPKitDemo-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				WRAPPER_EXTENSION = app;
@@ -510,11 +537,13 @@
 			baseConfigurationReference = 1C9601AE644C440AF84F8C6F /* Pods-NPKitDemo_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = A83729LRD6;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NPKitDemo/NPKitDemo-Prefix.pch";
 				INFOPLIST_FILE = "NPKitDemo/NPKitDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tangyuan.NPKitDemo-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				WRAPPER_EXTENSION = app;
