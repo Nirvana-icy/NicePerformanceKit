@@ -7,12 +7,16 @@
 //
 
 #import "NPKAppDelegate.h"
+#import "NPKLagMonitor.h"
+#import "NPKPerfMonitor.h"
 
 @implementation NPKAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [[NPKLagMonitor sharedInstance] start];
+    [[NPKPerfMonitor sharedInstance] start];
     return YES;
 }
 

@@ -95,6 +95,11 @@ Pod::Spec.new do |spec|
   end
   
   spec.subspec 'Tool' do |tool|
+    tool.subspec 'PerfMonitor' do |perf_monitor|
+      perf_monitor.dependency 'NicePerformanceKit/Base'
+      perf_monitor.public_header_files = 'NicePerformanceKit/Classes/Tool/PerfMonitor/**/*.h'
+      perf_monitor.source_files  = "NicePerformanceKit/Classes/Tool/PerfMonitor/**/*.{h,m,mm}"
+    end
     tool.subspec 'TimeProfile' do |time_profile|
       time_profile.dependency 'NicePerformanceKit/Base'
       time_profile.public_header_files = 'NicePerformanceKit/Classes/Tool/TimeProfile/**/*.h'

@@ -10,8 +10,6 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface NPKDispatchQueuePool : NSObject
-- (instancetype)init UNAVAILABLE_ATTRIBUTE;
-+ (instancetype)new UNAVAILABLE_ATTRIBUTE;
 
 - (instancetype)initWithName:(nullable NSString *)name queueCount:(NSUInteger)queueCount qos:(NSQualityOfService)qos;
 
@@ -22,6 +20,9 @@ NS_ASSUME_NONNULL_BEGIN
 - (dispatch_queue_t)queue;
 
 + (instancetype)defaultPoolForQOS:(NSQualityOfService)qos;
+
+- (instancetype)init NS_UNAVAILABLE;
++ (instancetype)new NS_UNAVAILABLE;
 
 @end
 

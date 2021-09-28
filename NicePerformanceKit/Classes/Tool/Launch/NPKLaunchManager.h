@@ -14,8 +14,11 @@ NS_ASSUME_NONNULL_BEGIN
 // 获取单例实例
 + (NPKLaunchManager *)sharedManager;
 
-// did_launch > root_onload > view_appear > idle_time
-//     first runloop        |  second runloop
+// did_launch    > root_onload       >   view_appear > idle_time
+//     first runloop                 |   second runloop
+//            syncTasks
+// headTasks             tailTasks   |         >  idleTasks
+//            asyncTasks
 - (void)startWithOptions:(NSDictionary *)options;
 
 @end

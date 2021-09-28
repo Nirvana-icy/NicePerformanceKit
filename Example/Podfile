@@ -3,7 +3,7 @@ use_frameworks!
 platform :ios, '10.0'
 
 target 'NPKitDemo_Example' do
-  pod 'NicePerformanceKit', :path => '../'
+  pod 'NicePerformanceKit', :path => '../', :subspecs => ['Tool', 'Test']
 
   target 'NPKitDemo_Tests' do
     inherit! :search_paths

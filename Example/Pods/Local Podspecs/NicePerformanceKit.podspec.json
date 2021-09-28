@@ -27,6 +27,16 @@
       "name": "Tool",
       "subspecs": [
         {
+          "name": "PerfMonitor",
+          "dependencies": {
+            "NicePerformanceKit/Base": [
+
+            ]
+          },
+          "public_header_files": "NicePerformanceKit/Classes/Tool/PerfMonitor/**/*.h",
+          "source_files": "NicePerformanceKit/Classes/Tool/PerfMonitor/**/*.{h,m,mm}"
+        },
+        {
           "name": "TimeProfile",
           "dependencies": {
             "NicePerformanceKit/Base": [

@@ -12,12 +12,18 @@
 
 #import "NPKBaseDefine.h"
 #import "NPKDispatchQueuePool.h"
+#import "NPKWeakProxy.h"
+#import "NPKTester.h"
 #import "NPKImageCompressTool.h"
 #import "NPKLaunchConfig.h"
 #import "NPKLaunchConfigPluginDefinition.h"
 #import "NPKLaunchManager.h"
 #import "NPKLaunchTaskModel.h"
 #import "NPKLaunchTaskService.h"
+#import "NPKLagMonitor.h"
+#import "NPKPerfEntryWindow.h"
+#import "NPKPerfMonitor.h"
+#import "NPKSysResCostInfo.h"
 #import "appletrace.h"
 #import "NPKSignpostLog.h"
 

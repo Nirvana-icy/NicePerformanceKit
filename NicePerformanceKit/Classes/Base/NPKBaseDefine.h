@@ -10,3 +10,6 @@
   }); \
   staticVar; \
 })
+
+#define NPKScreenWidth [UIScreen mainScreen].bounds.size.width
+#define NPKScreenHeight [UIScreen mainScreen].bounds.size.height

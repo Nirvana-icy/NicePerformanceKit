@@ -24,7 +24,7 @@
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
-		E071D1FD26F86F640048321D /* NPKitDemoLaunchConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = E071D1FC26F86F640048321D /* NPKitDemoLaunchConfig.m */; };
+		E020C01827035DEB00D7D446 /* NPKitDemoLaunchConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = E020C01727035DEB00D7D446 /* NPKitDemoLaunchConfig.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,8 +68,8 @@
 		7DB635314BA005D1DA07A3E9 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D3D16189AE5EA42AFBF9F11F /* NPKitDemo.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; name = NPKitDemo.podspec; path = ../NPKitDemo.podspec; sourceTree = "<group>"; };
-		E071D1FB26F86F640048321D /* NPKitDemoLaunchConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NPKitDemoLaunchConfig.h; sourceTree = "<group>"; };
-		E071D1FC26F86F640048321D /* NPKitDemoLaunchConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NPKitDemoLaunchConfig.m; sourceTree = "<group>"; };
+		E020C01627035DEB00D7D446 /* NPKitDemoLaunchConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NPKitDemoLaunchConfig.h; sourceTree = "<group>"; };
+		E020C01727035DEB00D7D446 /* NPKitDemoLaunchConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NPKitDemoLaunchConfig.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,18 +203,10 @@
 		E071D1F526F86C350048321D /* NPKLaunchBiz */ = {
 			isa = PBXGroup;
 			children = (
-				E071D1F626F86C860048321D /* NPKitDemo */,
+				E020C01627035DEB00D7D446 /* NPKitDemoLaunchConfig.h */,
+				E020C01727035DEB00D7D446 /* NPKitDemoLaunchConfig.m */,
 			);
 			path = NPKLaunchBiz;
-			sourceTree = "<group>";
-		};
-		E071D1F626F86C860048321D /* NPKitDemo */ = {
-			isa = PBXGroup;
-			children = (
-				E071D1FB26F86F640048321D /* NPKitDemoLaunchConfig.h */,
-				E071D1FC26F86F640048321D /* NPKitDemoLaunchConfig.m */,
-			);
-			path = NPKitDemo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -390,7 +382,7 @@
 			files = (
 				6003F59E195388D20070C39A /* NPKAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* NPKViewController.m in Sources */,
-				E071D1FD26F86F640048321D /* NPKitDemoLaunchConfig.m in Sources */,
+				E020C01827035DEB00D7D446 /* NPKitDemoLaunchConfig.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
