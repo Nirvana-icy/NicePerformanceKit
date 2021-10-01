@@ -9,6 +9,8 @@
 !default.perspectivev3
 xcuserdata
 
+Example/pods
+
 ## Other
 *.xccheckout
 *.moved-aside

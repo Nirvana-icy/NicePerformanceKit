@@ -11,7 +11,7 @@
 static CGFloat const kDefaultEntryWidth = 120;
 static CGFloat const kDefaultEntryHeight = 40;
 
-#define   kDefaultEntryStartPosition     CGPointMake(NPKScreenWidth - kDefaultEntryWidth - 10, 50)
+#define   kDefaultEntryStartPosition     CGPointMake(NPKScreenWidth - kDefaultEntryWidth - 10, 40)
 
 @interface NPKPerfEntryWindow ()
 
@@ -21,19 +21,20 @@ static CGFloat const kDefaultEntryHeight = 40;
 
 @implementation NPKPerfEntryWindow
 
-- (instancetype)initWithStartPosition:(CGPoint)position {
-    CGFloat startX = position.x;
-    CGFloat startY = position.y;
-    CGPoint defaultEntryPostion = kDefaultEntryStartPosition;
-    if (startX <= 0 || startX > (NPKScreenWidth - kDefaultEntryWidth)) {
-        startX = defaultEntryPostion.x;
-    }
-    if (startY <= 0 || startY > (NPKScreenHeight - kDefaultEntryHeight)) {
-        startY = defaultEntryPostion.y;
-    }
++ (instancetype)sharedInstance {
+    static NPKPerfEntryWindow *_sharedInstance;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _sharedInstance = [[NPKPerfEntryWindow alloc] init];
+    });
+    return _sharedInstance;
+}
+
+- (instancetype)init {
     self = [super init];
     if (self) {
-        self.frame = CGRectMake(startX, startY, kDefaultEntryWidth, kDefaultEntryHeight);
+        CGPoint defaultEntryPostion = kDefaultEntryStartPosition;
+        self.frame = CGRectMake(defaultEntryPostion.x, defaultEntryPostion.y, kDefaultEntryWidth, kDefaultEntryHeight);
         self.backgroundColor = [UIColor grayColor];
         self.windowLevel = UIWindowLevelStatusBar + 10.f;
         self.rootViewController = [UIViewController new];
@@ -50,6 +51,16 @@ static CGFloat const kDefaultEntryHeight = 40;
     self.perfInfoLabel.text = perfInfo;
 }
 
+- (void)updatePerfInfo:(NSString *)perfInfo withFlash:(BOOL)isNeedFlash {
+    self.perfInfoLabel.text = perfInfo;
+    if (isNeedFlash) {
+        self.perfInfoLabel.backgroundColor = [UIColor redColor];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            self.perfInfoLabel.backgroundColor = [UIColor grayColor];
+        });
+    }
+}
+
 - (void)pan:(UIPanGestureRecognizer *)pan {
     
 }
@@ -58,10 +69,12 @@ static CGFloat const kDefaultEntryHeight = 40;
 
 - (UILabel *)perfInfoLabel {
     if (!_perfInfoLabel) {
-        _perfInfoLabel = [[UILabel alloc] initWithFrame:CGRectMake(5, 0, kDefaultEntryWidth - 5, kDefaultEntryHeight)];
+        _perfInfoLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, kDefaultEntryWidth - 5, kDefaultEntryHeight)];
         _perfInfoLabel.backgroundColor = [UIColor grayColor];
         _perfInfoLabel.textColor = [UIColor whiteColor];
         _perfInfoLabel.font = [UIFont systemFontOfSize:11.f];
+        _perfInfoLabel.adjustsFontSizeToFitWidth = YES;
+        _perfInfoLabel.minimumScaleFactor = 0.6f;
         _perfInfoLabel.numberOfLines = 2;
     }
     return _perfInfoLabel;

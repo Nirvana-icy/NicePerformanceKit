@@ -1,0 +1,233 @@
+{
+    animationMetrics =     {
+        scrollHitchTimeRatio = "1,000 ms per s";
+    };
+    appVersion = "1.0";
+    applicationExitMetrics =     {
+        backgroundExitData =         {
+            cumulativeAbnormalExitCount = 1;
+            cumulativeAppWatchdogExitCount = 1;
+            cumulativeBackgroundFetchCompletionTimeoutExitCount = 1;
+            cumulativeBackgroundTaskAssertionTimeoutExitCount = 1;
+            cumulativeBackgroundURLSessionCompletionTimeoutExitCount = 1;
+            cumulativeBadAccessExitCount = 1;
+            cumulativeCPUResourceLimitExitCount = 1;
+            cumulativeIllegalInstructionExitCount = 1;
+            cumulativeMemoryPressureExitCount = 1;
+            cumulativeMemoryResourceLimitExitCount = 1;
+            cumulativeNormalAppExitCount = 1;
+            cumulativeSuspendedWithLockedFileExitCount = 1;
+        };
+        foregroundExitData =         {
+            cumulativeAbnormalExitCount = 1;
+            cumulativeAppWatchdogExitCount = 1;
+            cumulativeBadAccessExitCount = 1;
+            cumulativeCPUResourceLimitExitCount = 1;
+            cumulativeIllegalInstructionExitCount = 1;
+            cumulativeMemoryResourceLimitExitCount = 1;
+            cumulativeNormalAppExitCount = 1;
+        };
+    };
+    applicationLaunchMetrics =     {
+        histogrammedResumeTime =         {
+            histogramNumBuckets = 3;
+            histogramValue =             {
+                0 =                 {
+                    bucketCount = 60;
+                    bucketEnd = "210 ms";
+                    bucketStart = "200 ms";
+                };
+                1 =                 {
+                    bucketCount = 70;
+                    bucketEnd = "310 ms";
+                    bucketStart = "300 ms";
+                };
+                2 =                 {
+                    bucketCount = 80;
+                    bucketEnd = "510 ms";
+                    bucketStart = "500 ms";
+                };
+            };
+        };
+        histogrammedTimeToFirstDrawKey =         {
+            histogramNumBuckets = 3;
+            histogramValue =             {
+                0 =                 {
+                    bucketCount = 50;
+                    bucketEnd = "1,010 ms";
+                    bucketStart = "1,000 ms";
+                };
+                1 =                 {
+                    bucketCount = 60;
+                    bucketEnd = "2,010 ms";
+                    bucketStart = "2,000 ms";
+                };
+                2 =                 {
+                    bucketCount = 30;
+                    bucketEnd = "3,010 ms";
+                    bucketStart = "3,000 ms";
+                };
+            };
+        };
+    };
+    applicationResponsivenessMetrics =     {
+        histogrammedAppHangTime =         {
+            histogramNumBuckets = 3;
+            histogramValue =             {
+                0 =                 {
+                    bucketCount = 50;
+                    bucketEnd = "100 ms";
+                    bucketStart = "0 ms";
+                };
+                1 =                 {
+                    bucketCount = 60;
+                    bucketEnd = "400 ms";
+                    bucketStart = "100 ms";
+                };
+                2 =                 {
+                    bucketCount = 30;
+                    bucketEnd = "700 ms";
+                    bucketStart = "400 ms";
+                };
+            };
+        };
+    };
+    applicationTimeMetrics =     {
+        cumulativeBackgroundAudioTime = "30 sec";
+        cumulativeBackgroundLocationTime = "30 sec";
+        cumulativeBackgroundTime = "40 sec";
+        cumulativeForegroundTime = "700 sec";
+    };
+    cellularConditionMetrics =     {
+        cellConditionTime =         {
+            histogramNumBuckets = 3;
+            histogramValue =             {
+                0 =                 {
+                    bucketCount = 20;
+                    bucketEnd = "1 bars";
+                    bucketStart = "1 bars";
+                };
+                1 =                 {
+                    bucketCount = 30;
+                    bucketEnd = "2 bars";
+                    bucketStart = "2 bars";
+                };
+                2 =                 {
+                    bucketCount = 50;
+                    bucketEnd = "3 bars";
+                    bucketStart = "3 bars";
+                };
+            };
+        };
+    };
+    cpuMetrics =     {
+        cumulativeCPUInstructions = "100 kiloinstructions";
+        cumulativeCPUTime = "100 sec";
+    };
+    diskIOMetrics =     {
+        cumulativeLogicalWrites = "1,300 kB";
+    };
+    displayMetrics =     {
+        averagePixelLuminance =         {
+            averageValue = "50 apl";
+            sampleCount = 500;
+            standardDeviation = 0;
+        };
+    };
+    gpuMetrics =     {
+        cumulativeGPUTime = "20 sec";
+    };
+    locationActivityMetrics =     {
+        cumulativeBestAccuracyForNavigationTime = "20 sec";
+        cumulativeBestAccuracyTime = "30 sec";
+        cumulativeHundredMetersAccuracyTime = "30 sec";
+        cumulativeKilometerAccuracyTime = "20 sec";
+        cumulativeNearestTenMetersAccuracyTime = "30 sec";
+        cumulativeThreeKilometersAccuracyTime = "20 sec";
+    };
+    memoryMetrics =     {
+        averageSuspendedMemory =         {
+            averageValue = "100,000 kB";
+            sampleCount = 500;
+            standardDeviation = 0;
+        };
+        peakMemoryUsage = "200,000 kB";
+    };
+    metaData =     {
+        appBuildVersion = "1.0";
+        deviceType = "iPhone10,3";
+        osVersion = "iPhone OS 14.2 (18B92)";
+        platformArchitecture = arm64;
+        regionFormat = CN;
+    };
+    networkTransferMetrics =     {
+        cumulativeCellularDownload = "80,000 kB";
+        cumulativeCellularUpload = "70,000 kB";
+        cumulativeWifiDownload = "60,000 kB";
+        cumulativeWifiUpload = "50,000 kB";
+    };
+    signpostMetrics =     (
+                {
+            signpostCategory = TestSignpostCategory1;
+            signpostIntervalData =             {
+                histogrammedSignpostDurations =                 {
+                    histogramNumBuckets = 3;
+                    histogramValue =                     {
+                    0 =                         {
+                            bucketCount = 50;
+                            bucketEnd = "100 ms";
+                            bucketStart = "0 ms";
+                    };
+                        1 =                         {
+                            bucketCount = 60;
+                            bucketEnd = "400 ms";
+                            bucketStart = "100 ms";
+                    };
+                        2 =                         {
+                            bucketCount = 30;
+                            bucketEnd = "700 ms";
+                            bucketStart = "400 ms";
+                    };
+                };
+            };
+                signpostAverageMemory = "100,000 kB";
+                signpostCumulativeCPUTime = "30,000 ms";
+                signpostCumulativeLogicalWrites = "600 kB";
+        };
+            signpostName = TestSignpostName1;
+            totalSignpostCount = 30;
+    },
+    {
+            signpostCategory = TestSignpostCategory2;
+            signpostIntervalData =             {
+                histogrammedSignpostDurations =                 {
+                    histogramNumBuckets = 3;
+                    histogramValue =                     {
+                    0 =                         {
+                            bucketCount = 60;
+                            bucketEnd = "200 ms";
+                            bucketStart = "0 ms";
+                    };
+                        1 =                         {
+                            bucketCount = 70;
+                            bucketEnd = "300 ms";
+                            bucketStart = "201 ms";
+                    };
+                        2 =                         {
+                            bucketCount = 80;
+                            bucketEnd = "500 ms";
+                            bucketStart = "301 ms";
+                    };
+                };
+            };
+                signpostAverageMemory = "60,000 kB";
+                signpostCumulativeCPUTime = "50,000 ms";
+                signpostCumulativeLogicalWrites = "700 kB";
+        };
+            signpostName = TestSignpostName2;
+            totalSignpostCount = 40;
+    }
+    );
+    timeStampBegin = "2021-09-29 16:00:00 +0000";
+    timeStampEnd = "2021-09-30 15:59:00 +0000";
+}

@@ -1,18 +1,18 @@
 //
-//  NPKTester.m
+//  NPKBadPerfCase.m
 //  NicePerformanceKit
 //
 //  Created by JinglongBi on 2021/7/29.
 //
 
-#import "NPKTester.h"
-#import <NicePerformanceKit/NPKSignpostLog.h>
+#import "NPKBadPerfCase.h"
+#import "NPKSignpostLog.h"
 
-@implementation NPKTester
+@implementation NPKBadPerfCase
 
 + (void)generateMainThreadLag {
     dispatch_async(dispatch_get_main_queue(), ^{
-        NSLog(@"npk__Test Foreground Main Thread Lag...Lag with 5s...Begin.");
+        NPKLog(@"Test Foreground Main Thread Lag...Lag with 5s...Begin.");
         os_signpost_id_t spid = _npk_time_profile_spid_generate();
         npk_time_profile_begin("generateMainThreadLag", spid);
         NSDate *lastDate = [NSDate date];
@@ -23,7 +23,7 @@
             }
         }
         npk_time_profile_end("generateMainThreadLag", spid);
-        NSLog(@"npk__Test Foreground Main Thread Lag...Lag with 5s...End.");
+        NPKLog(@"Test Foreground Main Thread Lag...Lag with 5s...End.");
     });
 }
 

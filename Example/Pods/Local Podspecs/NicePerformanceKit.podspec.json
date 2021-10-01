@@ -59,9 +59,9 @@
       ]
     },
     {
-      "name": "Test",
-      "public_header_files": "NicePerformanceKit/Classes/Test/**/*.h",
-      "source_files": "NicePerformanceKit/Classes/Test/**/*.{h,m,mm}"
+      "name": "TestCase",
+      "public_header_files": "NicePerformanceKit/Classes/TestCase/**/*.h",
+      "source_files": "NicePerformanceKit/Classes/TestCase/**/*.{h,m,mm}"
     }
   ]
 }

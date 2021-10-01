@@ -14,8 +14,6 @@
 @property (nonatomic, strong) dispatch_source_t timer;
 @property (nonatomic, strong) dispatch_queue_t queue;
 
-@property (nonatomic, strong) NPKPerfEntryWindow *entryWindow;
-
 @property (nonatomic, assign, readwrite) float appCPU;
 @property (nonatomic, assign, readwrite) float systemCPU;
 @property (nonatomic, assign, readwrite) float appMemory;
@@ -45,7 +43,7 @@
             NSString *currentPerfInfo = [NSString stringWithFormat:@"%@\n%@", [NPKSysResCostInfo sysLoadInfo], [NPKSysResCostInfo appCostInfo]];
             
             dispatch_async(dispatch_get_main_queue(), ^{
-                [self.entryWindow updatePerfInfo:currentPerfInfo];
+                [[NPKPerfEntryWindow sharedInstance] updatePerfInfo:currentPerfInfo];
             });
         });
         
@@ -59,13 +57,6 @@
         _timer = nil;
         _queue = nil;
     }
-}
-
-- (NPKPerfEntryWindow *)entryWindow {
-    if (!_entryWindow) {
-        _entryWindow = [[NPKPerfEntryWindow alloc] initWithStartPosition:CGPointMake(0.f, 0.f)];
-    }
-    return _entryWindow;
 }
 
 @end

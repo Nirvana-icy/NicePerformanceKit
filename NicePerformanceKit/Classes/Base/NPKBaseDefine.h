@@ -13,3 +13,8 @@
 
 #define NPKScreenWidth [UIScreen mainScreen].bounds.size.width
 #define NPKScreenHeight [UIScreen mainScreen].bounds.size.height
+
+#define NPKLog(fmt, ...) \
+do { \
+    NSLog((@"npk__ %@:%d " fmt), [[NSString stringWithUTF8String:__FILE__] lastPathComponent], __LINE__, ## __VA_ARGS__); \
+} while (0)

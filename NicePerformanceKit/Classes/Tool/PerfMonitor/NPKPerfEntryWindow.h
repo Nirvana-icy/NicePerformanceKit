@@ -11,9 +11,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NPKPerfEntryWindow : UIWindow
 
-- (instancetype)initWithStartPosition:(CGPoint)position;
++ (instancetype)sharedInstance;
 
 - (void)updatePerfInfo:(NSString *)perfInfo;
+
+- (void)updatePerfInfo:(NSString *)perfInfo withFlash:(BOOL)isNeedFlash;
 
 @end
 

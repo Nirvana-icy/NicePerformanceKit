@@ -1,5 +1,5 @@
 //
-//  NPKViewController.h
+//  NPKDemoViewController.h
 //  NPKitDemo
 //
 //  Created by jinglong.bi@me.com on 09/09/2021.
@@ -8,6 +8,6 @@
 
 @import UIKit;
 
-@interface NPKViewController : UIViewController
+@interface NPKDemoViewController : UIViewController
 
 @end

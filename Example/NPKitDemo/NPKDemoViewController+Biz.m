@@ -1,86 +1,48 @@
 //
-//  NPKViewController.m
-//  NPKitDemo
+//  NPKDemoViewController+Biz.m
+//  NPKitDemo_Example
 //
-//  Created by jinglong.bi@me.com on 09/09/2021.
-//  Copyright (c) 2021 jinglong.bi@me.com. All rights reserved.
+//  Created by JinglongBi on 2021/10/1.
+//  Copyright © 2021 jinglong.bi@me.com. All rights reserved.
 //
 
-#import "NPKViewController.h"
-#import "NPKTester.h"
-#import "NPKSysResCostInfo.h"
-#import "NPKTester.h"
+#import "NPKDemoViewController+Biz.h"
+#import <MetricKit/MetricKit.h>
+#import <NicePerformanceKit/NPKBaseDefine.h>
+#import <NicePerformanceKit/NPKBadPerfCase.h>
+#import <NicePerformanceKit/NPKPerfEntryWindow.h>
 
-@interface NPKViewController ()
+@implementation NPKDemoViewController (Biz)
 
-@end
-
-@implementation NPKViewController
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-//    [self addMainObserver];
+- (void)lagDetectWithStackInfo:(NSString *)stackInfo
+                      lagCount:(NSUInteger)lagCount {
+    [[NPKPerfEntryWindow sharedInstance] updatePerfInfo:[NSString stringWithFormat:@"ANR: %lu", (unsigned long)lagCount] withFlash:YES];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-//    [self gcdDispatchSyncToSerialQueue];
-//    [self gcdDispatchAsyncToSerialQueue];
-    [self gcdDispatchAsyncToConcurrentQueue];
-    [NPKTester generateMainThreadLag];
-}
-
-- (void)gcdDispatchAsyncToConcurrentQueue {
-    dispatch_queue_t queue = dispatch_queue_create("com.npk.gcd.concureent.queue", DISPATCH_QUEUE_CONCURRENT);
-    NSLog(@"npk__执行前");
+// 3. 完善回调方法
+- (void)didReceiveMetricPayloads:(NSArray<MXMetricPayload *> *)payloads {
     
-    for (int i = 0; i < 1000; i++) {
-        NSLog(@"npk__调度");
-        
-        dispatch_async(queue, ^{
-            NSLog(@"npk__%@  %d   Thread Count:%lu", [NSThread currentThread], i, (unsigned long)[NPKSysResCostInfo currentAppThreadCount]);
-        });
+    if (@available(iOS 13.0, *)){
+        for (MXMetricPayload *payload in payloads) {
+            NPKLog(@"[payload cpuMetrics]; = %@", [payload cpuMetrics]);
+            
+            if (@available(iOS 14.0, *)) {
+                NPKLog(@"dictionaryRepresentation = %@", [payload dictionaryRepresentation]);
+            } else {
+                // Fallback on earlier versions
+            }
+            NPKLog(@"%@", payload);
+        }
+    }
+}
+
+- (void)didReceiveDiagnosticPayloads:(NSArray<MXDiagnosticPayload *> * _Nonnull)payloads API_AVAILABLE(ios(14.0)) {
+    
+    for (MXDiagnosticPayload *diagnosticPayload  in payloads) {
+        NSLog(@"diagnosticPayload = %@", [diagnosticPayload dictionaryRepresentation]);
     }
     
-    NSLog(@"npk__end");
-}
-
-- (void)gcdDispatchAsyncToSerialQueue {
-    dispatch_queue_t queue = dispatch_queue_create("com.npk.gcd.serial.queue", NULL);
-    NSLog(@"npk__执行前");
-    
-    for (int i = 0; i < 10; i++) {
-        NSLog(@"npk__调度");
-        
-        dispatch_async(queue, ^{
-            NSLog(@"npk__%@  %d", [NSThread currentThread], i);
-        });
-    }
-    
-    NSLog(@"npk__end");
-}
-
-- (void)gcdDispatchSyncToSerialQueue {
-    dispatch_queue_t queue = dispatch_queue_create("com.npk.gcd.serial.queue", NULL);
-    NSLog(@"npk__执行前");
-    
-    for (int i = 0; i < 10; i++) {
-        NSLog(@"npk__调度");
-        
-        dispatch_sync(queue, ^{
-            NSLog(@"npk__%@  %d", [NSThread currentThread], i);
-        });
-    }
-    
-    NSLog(@"npk__end");
+    NSLog(@"payloads = %@", payloads);  
 }
 
 - (void)runloopTest {
@@ -111,7 +73,7 @@
         NSLog(@"4th sleep(1) end");
     });
     
-    [NPKTester generateMainThreadLag];
+    [NPKBadPerfCase generateMainThreadLag];
     
     dispatch_async(dispatch_get_main_queue(), ^{
 //        CGFloat randomAlpha = (arc4random() % 100) * 0.01;

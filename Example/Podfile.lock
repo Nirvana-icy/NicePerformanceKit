@@ -1,6 +1,7 @@
 PODS:
+  - Masonry (1.1.0)
   - NicePerformanceKit/Base (0.0.1)
-  - NicePerformanceKit/Test (0.0.1)
+  - NicePerformanceKit/TestCase (0.0.1)
   - NicePerformanceKit/Tool (0.0.1):
     - NicePerformanceKit/Tool/Image (= 0.0.1)
     - NicePerformanceKit/Tool/LaunchManager (= 0.0.1)
@@ -14,16 +15,22 @@ PODS:
     - NicePerformanceKit/Base
 
 DEPENDENCIES:
-  - NicePerformanceKit/Test (from `../`)
+  - Masonry
+  - NicePerformanceKit/TestCase (from `../`)
   - NicePerformanceKit/Tool (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - Masonry
 
 EXTERNAL SOURCES:
   NicePerformanceKit:
     :path: "../"
 
 SPEC CHECKSUMS:
-  NicePerformanceKit: bd430eddee7d28d575a1760f206ef274db51b2b7
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  NicePerformanceKit: 05db45e6c5e3480fca7d1cfd88f1a846611ca6df
 
-PODFILE CHECKSUM: 0c94ede0d811f78277db1cd515a60dda06b6b227
+PODFILE CHECKSUM: 371e673b9e9b4971a753a6462800176acc8196b5
 
 COCOAPODS: 1.8.4

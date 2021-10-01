@@ -1,17 +1,17 @@
 //
-//  NPKTester.h
+//  NPKPerfTestCase.h
 //  NicePerformanceKit
 //
-//  Created by JinglongBi on 2021/7/29.
+//  Created by JinglongBi on 2021/9/29.
 //
 
 #import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NPKTester : NSObject
+@interface NPKPerfTestCase : NSObject
 
-+ (void)generateMainThreadLag;
++ (void)costCPUALot;
 
 @end
 

@@ -115,9 +115,9 @@ Pod::Spec.new do |spec|
     end
   end
   
-  spec.subspec 'Test' do |test|
-    test.public_header_files = 'NicePerformanceKit/Classes/Test/**/*.h'
-    test.source_files  = "NicePerformanceKit/Classes/Test/**/*.{h,m,mm}"
+  spec.subspec 'TestCase' do |test_case|
+    test_case.public_header_files = 'NicePerformanceKit/Classes/TestCase/**/*.h'
+    test_case.source_files  = "NicePerformanceKit/Classes/TestCase/**/*.{h,m,mm}"
   end
   
   # spec.exclude_files = "Classes/Exclude"
