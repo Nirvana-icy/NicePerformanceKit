@@ -173,61 +173,61 @@
                 histogrammedSignpostDurations =                 {
                     histogramNumBuckets = 3;
                     histogramValue =                     {
-                    0 =                         {
+                        0 =                         {
                             bucketCount = 50;
                             bucketEnd = "100 ms";
                             bucketStart = "0 ms";
-                    };
+                        };
                         1 =                         {
                             bucketCount = 60;
                             bucketEnd = "400 ms";
                             bucketStart = "100 ms";
-                    };
+                        };
                         2 =                         {
                             bucketCount = 30;
                             bucketEnd = "700 ms";
                             bucketStart = "400 ms";
+                        };
                     };
                 };
-            };
                 signpostAverageMemory = "100,000 kB";
                 signpostCumulativeCPUTime = "30,000 ms";
                 signpostCumulativeLogicalWrites = "600 kB";
-        };
+            };
             signpostName = TestSignpostName1;
             totalSignpostCount = 30;
-    },
-    {
+        },
+                {
             signpostCategory = TestSignpostCategory2;
             signpostIntervalData =             {
                 histogrammedSignpostDurations =                 {
                     histogramNumBuckets = 3;
                     histogramValue =                     {
-                    0 =                         {
+                        0 =                         {
                             bucketCount = 60;
                             bucketEnd = "200 ms";
                             bucketStart = "0 ms";
-                    };
+                        };
                         1 =                         {
                             bucketCount = 70;
                             bucketEnd = "300 ms";
                             bucketStart = "201 ms";
-                    };
+                        };
                         2 =                         {
                             bucketCount = 80;
                             bucketEnd = "500 ms";
                             bucketStart = "301 ms";
+                        };
                     };
                 };
-            };
                 signpostAverageMemory = "60,000 kB";
                 signpostCumulativeCPUTime = "50,000 ms";
                 signpostCumulativeLogicalWrites = "700 kB";
-        };
+            };
             signpostName = TestSignpostName2;
             totalSignpostCount = 40;
-    }
+        }
     );
-    timeStampBegin = "2021-09-29 16:00:00 +0000";
-    timeStampEnd = "2021-09-30 15:59:00 +0000";
+    timeStampBegin = "2021-10-06 16:00:00 +0000";
+    timeStampEnd = "2021-10-07 15:59:00 +0000";
 }

@@ -7,7 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import <os/signpost.h>
-#import "NPKBaseDefine.h"
+#import <NicePerformanceKit/NPKBaseDefine.h>
 
 // Profile 多行代码耗时：
 // npk_time_profile_begin("xxxxEvent", "begin");

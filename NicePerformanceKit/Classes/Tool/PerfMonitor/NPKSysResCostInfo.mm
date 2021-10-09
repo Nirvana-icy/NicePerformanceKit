@@ -52,7 +52,7 @@
     natural_t system = info.cpu_ticks[CPU_STATE_SYSTEM] - previous_info.cpu_ticks[CPU_STATE_SYSTEM];
     natural_t idle   = info.cpu_ticks[CPU_STATE_IDLE] - previous_info.cpu_ticks[CPU_STATE_IDLE];
     natural_t total  = user + nice + system + idle;
-    previous_info    = info;
+    previous_info   = info;
     system_cpu = (user + nice + system) * 100.0 / total;
     if (isnan(system_cpu)) {
         system_cpu = 0.0;

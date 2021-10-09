@@ -10,6 +10,7 @@
 #import <MetricKit/MetricKit.h>
 #import <NicePerformanceKit/NPKBaseDefine.h>
 #import <NicePerformanceKit/NPKBadPerfCase.h>
+#import <NicePerformanceKit/NPKPerfTestCase.h>
 #import <NicePerformanceKit/NPKPerfEntryWindow.h>
 
 @implementation NPKDemoViewController (Biz)

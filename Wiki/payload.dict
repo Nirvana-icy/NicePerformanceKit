@@ -1,0 +1,95 @@
+{
+    appVersion = "1.0";
+    applicationExitMetrics =     {
+        backgroundExitData =         {
+            cumulativeMemoryPressureExitCount = 1;
+        };
+        foregroundExitData =         {
+            cumulativeBadAccessExitCount = 6;
+            cumulativeNormalAppExitCount = 2;
+        };
+    };
+    applicationTimeMetrics =     {
+        cumulativeBackgroundAudioTime = "0 sec";
+        cumulativeBackgroundLocationTime = "0 sec";
+        cumulativeBackgroundTime = "0 sec";
+        cumulativeForegroundTime = "7,338 sec";
+    };
+    cellularConditionMetrics =     {
+        cellConditionTime =         {
+            histogramNumBuckets = 4;
+            histogramValue =             {
+                0 =                 {
+                    bucketCount = 1;
+                    bucketEnd = "0 bars";
+                    bucketStart = "0 bars";
+                };
+                1 =                 {
+                    bucketCount = 1;
+                    bucketEnd = "2 bars";
+                    bucketStart = "2 bars";
+                };
+                2 =                 {
+                    bucketCount = 32;
+                    bucketEnd = "3 bars";
+                    bucketStart = "3 bars";
+                };
+                3 =                 {
+                    bucketCount = 66;
+                    bucketEnd = "4 bars";
+                    bucketStart = "4 bars";
+                };
+            };
+        };
+    };
+    cpuMetrics =     {
+        cumulativeCPUInstructions = "1,150,251,918 kiloinstructions";
+        cumulativeCPUTime = "394 sec";
+    };
+    diskIOMetrics =     {
+        cumulativeLogicalWrites = "132 kB";
+    };
+    displayMetrics =     {
+        averagePixelLuminance =         {
+            averageValue = "75 apl";
+            sampleCount = 440071;
+            standardDeviation = "-1";
+        };
+    };
+    gpuMetrics =     {
+        cumulativeGPUTime = "0 sec";
+    };
+    locationActivityMetrics =     {
+        cumulativeBestAccuracyForNavigationTime = "0 sec";
+        cumulativeBestAccuracyTime = "0 sec";
+        cumulativeHundredMetersAccuracyTime = "0 sec";
+        cumulativeKilometerAccuracyTime = "0 sec";
+        cumulativeNearestTenMetersAccuracyTime = "0 sec";
+        cumulativeThreeKilometersAccuracyTime = "0 sec";
+    };
+    memoryMetrics =     {
+        averageSuspendedMemory =         {
+            averageValue = "5,544 kB";
+            sampleCount = 2;
+            standardDeviation = "23.94140625";
+        };
+        peakMemoryUsage = "5,888 kB";
+    };
+    metaData =     {
+        appBuildVersion = "1.0";
+        deviceType = "iPhone10,3";
+        osVersion = "iPhone OS 14.2 (18B92)";
+        platformArchitecture = arm64;
+        regionFormat = CN;
+    };
+    networkTransferMetrics =     {
+        cumulativeCellularDownload = "0 kB";
+        cumulativeCellularUpload = "0 kB";
+        cumulativeWifiDownload = "0 kB";
+        cumulativeWifiUpload = "0 kB";
+    };
+    signpostMetrics =     (
+    );
+    timeStampBegin = "2021-10-07 16:00:00 +0000";
+    timeStampEnd = "2021-10-08 15:59:00 +0000";
+}

@@ -24,6 +24,9 @@
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
+		E005B8E427116FCF000BDA26 /* SlowLargeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E005B8E327116FCE000BDA26 /* SlowLargeTableViewController.m */; };
+		E005B8EF27119F1A000BDA26 /* NPKitDemo_ExampleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E005B8EE27119F1A000BDA26 /* NPKitDemo_ExampleUITests.m */; };
+		E005B8F127119F1A000BDA26 /* NPKitDemo_ExampleUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E005B8F027119F1A000BDA26 /* NPKitDemo_ExampleUITestsLaunchTests.m */; };
 		E020C01827035DEB00D7D446 /* NPKitDemoLaunchConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = E020C01727035DEB00D7D446 /* NPKitDemoLaunchConfig.m */; };
 		E03640302706AB9D00BA1904 /* NPKDemoViewController+Biz.m in Sources */ = {isa = PBXBuildFile; fileRef = E036402F2706AB9D00BA1904 /* NPKDemoViewController+Biz.m */; };
 /* End PBXBuildFile section */
@@ -35,6 +38,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 6003F589195388D20070C39A;
 			remoteInfo = NPKitDemo;
+		};
+		E005B8F227119F1A000BDA26 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6003F582195388D10070C39A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6003F589195388D20070C39A;
+			remoteInfo = NPKitDemo_Example;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -69,6 +79,11 @@
 		7DB635314BA005D1DA07A3E9 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D3D16189AE5EA42AFBF9F11F /* NPKitDemo.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; name = NPKitDemo.podspec; path = ../NPKitDemo.podspec; sourceTree = "<group>"; };
+		E005B8E227116FCE000BDA26 /* SlowLargeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlowLargeTableViewController.h; sourceTree = "<group>"; };
+		E005B8E327116FCE000BDA26 /* SlowLargeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlowLargeTableViewController.m; sourceTree = "<group>"; };
+		E005B8EC27119F19000BDA26 /* NPKitDemo_ExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NPKitDemo_ExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E005B8EE27119F1A000BDA26 /* NPKitDemo_ExampleUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NPKitDemo_ExampleUITests.m; sourceTree = "<group>"; };
+		E005B8F027119F1A000BDA26 /* NPKitDemo_ExampleUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NPKitDemo_ExampleUITestsLaunchTests.m; sourceTree = "<group>"; };
 		E020C01627035DEB00D7D446 /* NPKitDemoLaunchConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NPKitDemoLaunchConfig.h; sourceTree = "<group>"; };
 		E020C01727035DEB00D7D446 /* NPKitDemoLaunchConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NPKitDemoLaunchConfig.m; sourceTree = "<group>"; };
 		E036402E2706AB9D00BA1904 /* NPKDemoViewController+Biz.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NPKDemoViewController+Biz.h"; sourceTree = "<group>"; };
@@ -98,6 +113,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E005B8E927119F19000BDA26 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -118,6 +140,7 @@
 				60FF7A9C1954A5C5007DD14C /* Podspec Metadata */,
 				6003F593195388D20070C39A /* Example for NPKitDemo */,
 				6003F5B5195388D20070C39A /* Tests */,
+				E005B8ED27119F1A000BDA26 /* NPKitDemo_ExampleUITests */,
 				6003F58C195388D20070C39A /* Frameworks */,
 				6003F58B195388D20070C39A /* Products */,
 				52CEE322CF165F266B67F388 /* Pods */,
@@ -129,6 +152,7 @@
 			children = (
 				6003F58A195388D20070C39A /* NPKitDemo_Example.app */,
 				6003F5AE195388D20070C39A /* NPKitDemo_Tests.xctest */,
+				E005B8EC27119F19000BDA26 /* NPKitDemo_ExampleUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -157,6 +181,8 @@
 				6003F5A6195388D20070C39A /* NPKDemoViewController.m */,
 				E036402E2706AB9D00BA1904 /* NPKDemoViewController+Biz.h */,
 				E036402F2706AB9D00BA1904 /* NPKDemoViewController+Biz.m */,
+				E005B8E227116FCE000BDA26 /* SlowLargeTableViewController.h */,
+				E005B8E327116FCE000BDA26 /* SlowLargeTableViewController.m */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
@@ -203,6 +229,15 @@
 				6A4D7EE2D0EDC0D2646EAB1F /* LICENSE */,
 			);
 			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		E005B8ED27119F1A000BDA26 /* NPKitDemo_ExampleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E005B8EE27119F1A000BDA26 /* NPKitDemo_ExampleUITests.m */,
+				E005B8F027119F1A000BDA26 /* NPKitDemo_ExampleUITestsLaunchTests.m */,
+			);
+			path = NPKitDemo_ExampleUITests;
 			sourceTree = "<group>";
 		};
 		E071D1F526F86C350048321D /* NPKLaunchBiz */ = {
@@ -255,6 +290,24 @@
 			productReference = 6003F5AE195388D20070C39A /* NPKitDemo_Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		E005B8EB27119F19000BDA26 /* NPKitDemo_ExampleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E005B8F427119F1A000BDA26 /* Build configuration list for PBXNativeTarget "NPKitDemo_ExampleUITests" */;
+			buildPhases = (
+				E005B8E827119F19000BDA26 /* Sources */,
+				E005B8E927119F19000BDA26 /* Frameworks */,
+				E005B8EA27119F19000BDA26 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E005B8F327119F1A000BDA26 /* PBXTargetDependency */,
+			);
+			name = NPKitDemo_ExampleUITests;
+			productName = NPKitDemo_ExampleUITests;
+			productReference = E005B8EC27119F19000BDA26 /* NPKitDemo_ExampleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -262,23 +315,29 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = NPK;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 1300;
 				ORGANIZATIONNAME = "jinglong.bi@me.com";
 				TargetAttributes = {
 					6003F589195388D20070C39A = {
 						DevelopmentTeam = A83729LRD6;
+						LastSwiftMigration = 1300;
 					};
 					6003F5AD195388D20070C39A = {
+						TestTargetID = 6003F589195388D20070C39A;
+					};
+					E005B8EB27119F19000BDA26 = {
+						CreatedOnToolsVersion = 13.0;
+						DevelopmentTeam = A83729LRD6;
+						ProvisioningStyle = Automatic;
 						TestTargetID = 6003F589195388D20070C39A;
 					};
 				};
 			};
 			buildConfigurationList = 6003F585195388D10070C39A /* Build configuration list for PBXProject "NPKitDemo" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
 				Base,
 			);
@@ -289,6 +348,7 @@
 			targets = (
 				6003F589195388D20070C39A /* NPKitDemo_Example */,
 				6003F5AD195388D20070C39A /* NPKitDemo_Tests */,
+				E005B8EB27119F19000BDA26 /* NPKitDemo_ExampleUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -310,6 +370,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E005B8EA27119F19000BDA26 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,6 +458,7 @@
 				6003F5A7195388D20070C39A /* NPKDemoViewController.m in Sources */,
 				E020C01827035DEB00D7D446 /* NPKitDemoLaunchConfig.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				E005B8E427116FCF000BDA26 /* SlowLargeTableViewController.m in Sources */,
 				E03640302706AB9D00BA1904 /* NPKDemoViewController+Biz.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -403,6 +471,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E005B8E827119F19000BDA26 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E005B8EF27119F1A000BDA26 /* NPKitDemo_ExampleUITests.m in Sources */,
+				E005B8F127119F1A000BDA26 /* NPKitDemo_ExampleUITestsLaunchTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -410,6 +487,11 @@
 			isa = PBXTargetDependency;
 			target = 6003F589195388D20070C39A /* NPKitDemo_Example */;
 			targetProxy = 6003F5B3195388D20070C39A /* PBXContainerItemProxy */;
+		};
+		E005B8F327119F1A000BDA26 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6003F589195388D20070C39A /* NPKitDemo_Example */;
+			targetProxy = E005B8F227119F1A000BDA26 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -445,23 +527,38 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -474,7 +571,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -485,29 +582,44 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -519,14 +631,18 @@
 			baseConfigurationReference = 65C69FA7A8A02BA4FBA2CDC0 /* Pods-NPKitDemo_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = A83729LRD6;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NPKitDemo/NPKitDemo-Prefix.pch";
 				INFOPLIST_FILE = "NPKitDemo/NPKitDemo-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tangyuan.NPKitDemo-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Tests/NPKitDemo_Example-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				WRAPPER_EXTENSION = app;
 			};
@@ -537,14 +653,17 @@
 			baseConfigurationReference = 1C9601AE644C440AF84F8C6F /* Pods-NPKitDemo_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = A83729LRD6;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NPKitDemo/NPKitDemo-Prefix.pch";
 				INFOPLIST_FILE = "NPKitDemo/NPKitDemo-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tangyuan.NPKitDemo-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Tests/NPKitDemo_Example-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				WRAPPER_EXTENSION = app;
 			};
@@ -596,6 +715,63 @@
 			};
 			name = Release;
 		};
+		E005B8F527119F1A000BDA26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = A83729LRD6;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tangyuan.npkit.demo.uitest.NPKitDemo-ExampleUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NPKitDemo_Example;
+			};
+			name = Debug;
+		};
+		E005B8F627119F1A000BDA26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = A83729LRD6;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tangyuan.npkit.demo.uitest.NPKitDemo-ExampleUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NPKitDemo_Example;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -622,6 +798,15 @@
 			buildConfigurations = (
 				6003F5C3195388D20070C39A /* Debug */,
 				6003F5C4195388D20070C39A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E005B8F427119F1A000BDA26 /* Build configuration list for PBXNativeTarget "NPKitDemo_ExampleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E005B8F527119F1A000BDA26 /* Debug */,
+				E005B8F627119F1A000BDA26 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
