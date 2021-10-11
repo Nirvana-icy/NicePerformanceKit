@@ -1,5 +1,5 @@
 //
-//  NPKDemoViewController+Biz.h
+//  NPKDemoViewController+Test.h
 //  NPKitDemo_Example
 //
 //  Created by JinglongBi on 2021/10/1.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NPKDemoViewController (Biz)
+@interface NPKDemoViewController (Test)
 
 @end
 

@@ -81,7 +81,7 @@ Pod::Spec.new do |spec|
 
   spec.source       = { :git => "https://github.com/nirvana_icy/NicePerformanceKit/.git", :tag => "#{spec.version}" }
 
-  spec.default_subspec = 'Tool'
+  spec.default_subspec = 'Service'
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
   #  CocoaPods is smart about how it includes source code. For source files
@@ -95,26 +95,34 @@ Pod::Spec.new do |spec|
   end
   
   spec.subspec 'Tool' do |tool|
-    tool.subspec 'PerfMonitor' do |perf_monitor|
-      perf_monitor.dependency 'NicePerformanceKit/Base'
-      perf_monitor.public_header_files = 'NicePerformanceKit/Classes/Tool/PerfMonitor/**/*.h'
-      perf_monitor.source_files  = "NicePerformanceKit/Classes/Tool/PerfMonitor/**/*.{h,m,mm}"
-    end
     tool.subspec 'TimeProfile' do |time_profile|
       time_profile.dependency 'NicePerformanceKit/Base'
       time_profile.public_header_files = 'NicePerformanceKit/Classes/Tool/TimeProfile/**/*.h'
       time_profile.source_files  = "NicePerformanceKit/Classes/Tool/TimeProfile/**/*.{h,m,mm}"
     end
-    tool.subspec 'LaunchManager' do |launch_manager|
-      launch_manager.public_header_files = 'NicePerformanceKit/Classes/Tool/Launch/**/*.h'
-      launch_manager.source_files  = "NicePerformanceKit/Classes/Tool/Launch/**/*.{h,m,mm}"
-    end
+    
     tool.subspec 'Image' do |image|
       image.public_header_files = 'NicePerformanceKit/Classes/Tool/Image/**/*.h'
       image.source_files  = "NicePerformanceKit/Classes/Tool/Image/**/*.{h,m,mm}"
     end
   end
-  
+
+  spec.subspec 'Service' do |service|
+    service.subspec 'LaunchManager' do |launch_manager|
+      launch_manager.public_header_files = 'NicePerformanceKit/Classes/Service/LaunchManager/**/*.h'
+      launch_manager.source_files  = "NicePerformanceKit/Classes/Service/LaunchManager/**/*.{h,m,mm}"
+    end
+    service.subspec 'MetricKitManager' do |metric_kit_manager|
+      metric_kit_manager.public_header_files = 'NicePerformanceKit/Classes/Service/MetricKitManager/**/*.h'
+      metric_kit_manager.source_files  = "NicePerformanceKit/Classes/Service/MetricKitManager/**/*.{h,m,mm}"
+    end
+    service.subspec 'PerfMonitor' do |perf_monitor|
+      perf_monitor.dependency 'NicePerformanceKit/Base'
+      perf_monitor.public_header_files = 'NicePerformanceKit/Classes/Service/PerfMonitor/**/*.h'
+      perf_monitor.source_files  = "NicePerformanceKit/Classes/Service/PerfMonitor/**/*.{h,m,mm}"
+    end
+  end
+
   spec.subspec 'TestCase' do |test_case|
     test_case.public_header_files = 'NicePerformanceKit/Classes/TestCase/**/*.h'
     test_case.source_files  = "NicePerformanceKit/Classes/TestCase/**/*.{h,m,mm}"

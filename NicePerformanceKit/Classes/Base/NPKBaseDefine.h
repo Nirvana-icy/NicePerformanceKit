@@ -18,3 +18,10 @@
 do { \
     NSLog((@"npk__ %@:%d " fmt), [[NSString stringWithUTF8String:__FILE__] lastPathComponent], __LINE__, ## __VA_ARGS__); \
 } while (0)
+
+// Whether MetricKit should be supported
+#if defined(__IPHONE_15_0)
+#define NPK_METRICKIT_SUPPORTED (__has_include(<MetricKit/MetricKit.h>) && TARGET_OS_IOS)
+#else
+#define NPK_METRICKIT_SUPPORTED 0
+#endif

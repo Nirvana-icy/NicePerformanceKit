@@ -15,21 +15,22 @@
 #import <NicePerformanceKit/NPKPerfTestCase+GCD.h>
 #import <NicePerformanceKit/NPKSysResCostInfo.h>
 #import <NicePerformanceKit/NPKLagMonitor.h>
+#import <NicePerformanceKit/NPKPerfEntryWindow.h>
 #import "SlowLargeTableViewController.h"
+#import "NPKMetricKitManager.h"
 
 @interface NPKDemoViewController ()
 
 <
-MXMetricManagerSubscriber,
 NPKLagMonitorDelegate
 >
 
-@property (nonatomic, strong) MXMetricManager *metricManager;
 @property (nonatomic, strong) UIButton *triggerLagBtn;
 @property (nonatomic, strong) UIButton *triggerGCDTestBtn;
 @property (nonatomic, strong) UIButton *costCPUAlotBtn;
-@property (nonatomic, strong) UIButton *makeCrashBtn;
 @property (nonatomic, strong) UIButton *slowLargeTableBtn;
+@property (nonatomic, strong) UIButton *makeCrashBtn;
+@property (nonatomic, strong) UIButton *mockMetricKitReportBtn;
 
 @end
 
@@ -40,31 +41,16 @@ NPKLagMonitorDelegate
 	// Do any additional setup after loading the view, typically from a nib.
     [self setupView];
     [NPKLagMonitor sharedInstance].delegatet = self;
-    
-    // 1. 获取MetricManager单例
-    if (@available(iOS 14.0, *)) {
-        self.metricManager = [MXMetricManager sharedManager];
-        MXDiagnosticPayload *diagnostic = [[MXDiagnosticPayload alloc] init];
-        NSArray *array = [diagnostic  crashDiagnostics];
-        NPKLog(@"%@", array);
-        // 2. 为MetricManager单例添加订阅者
-        [self.metricManager addSubscriber:self];
-    }
 }
 
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
+#pragma mark -- NPKLagMonitorDelegate
+
+- (void)lagDetectWithStackInfo:(NSString *)stackInfo
+                      lagCount:(NSUInteger)lagCount {
+    [[NPKPerfEntryWindow sharedInstance] updatePerfInfo:[NSString stringWithFormat:@"ANR: %lu", (unsigned long)lagCount] withFlash:YES];
 }
 
-// 4. 移除订阅者
-- (void)dealloc {
-    [self.metricManager removeSubscriber:self];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+#pragma mark -- Action
 
 - (void)triggerLagBtnTapped {
     [NPKBadPerfCase generateMainThreadLag];
@@ -88,12 +74,19 @@ NPKLagMonitorDelegate
     (void)*ptr;
 }
 
+- (void)mockMetricKitReportBtnTapped {
+    
+}
+
+#pragma mark -- UI
+
 - (void)setupView {
     [self.view addSubview:self.triggerLagBtn];
     [self.view addSubview:self.triggerGCDTestBtn];
     [self.view addSubview:self.costCPUAlotBtn];
     [self.view addSubview:self.slowLargeTableBtn];
     [self.view addSubview:self.makeCrashBtn];
+    [self.view addSubview:self.mockMetricKitReportBtn];
 
     [self.triggerLagBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.mas_topLayoutGuideBottom).offset(100);
@@ -121,6 +114,12 @@ NPKLagMonitorDelegate
     
     [self.makeCrashBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.slowLargeTableBtn.mas_bottom).offset(20);
+        make.centerX.equalTo(self.view);
+        make.size.mas_equalTo(CGSizeMake(300, 50));
+    }];
+    
+    [self.mockMetricKitReportBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.makeCrashBtn.mas_bottom).offset(20);
         make.centerX.equalTo(self.view);
         make.size.mas_equalTo(CGSizeMake(300, 50));
     }];
@@ -191,6 +190,19 @@ NPKLagMonitorDelegate
         [_makeCrashBtn addTarget:self action:@selector(makeCrashBtnTapped) forControlEvents:UIControlEventTouchUpInside];
     }
     return _makeCrashBtn;
+}
+
+- (UIButton *)mockMetricKitReportBtn {
+    if (!_mockMetricKitReportBtn) {
+        _mockMetricKitReportBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_mockMetricKitReportBtn setBackgroundColor:[UIColor blueColor]];
+        [_mockMetricKitReportBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [_mockMetricKitReportBtn setTitle:@"Mock MetricKit Report" forState:UIControlStateNormal];
+        _mockMetricKitReportBtn.layer.cornerRadius = 4.f;
+        _mockMetricKitReportBtn.clipsToBounds = YES;
+        [_mockMetricKitReportBtn addTarget:self action:@selector(mockMetricKitReportBtnTapped) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _mockMetricKitReportBtn;
 }
 
 @end

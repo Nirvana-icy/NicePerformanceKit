@@ -7,8 +7,19 @@
 //
 
 #import "NPKAppDelegate.h"
+#import <UserNotifications/UserNotifications.h>
 #import "NPKLagMonitor.h"
 #import "NPKPerfMonitor.h"
+#import "NPKMetricKitManager.h"
+
+@interface NPKAppDelegate ()
+
+<
+UNUserNotificationCenterDelegate,
+NPKMetricKitManagerDelegate
+>
+
+@end
 
 @implementation NPKAppDelegate
 
@@ -17,6 +28,17 @@
     // Override point for customization after application launch.
     [[NPKLagMonitor sharedInstance] start];
     [[NPKPerfMonitor sharedInstance] start];
+    
+    if (@available(iOS 14, *)) {
+        [[NPKMetricKitManager sharedInstance] bind:self];
+    }
+    
+    UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
+    center.delegate = self;
+    [center requestAuthorizationWithOptions:(UNAuthorizationOptionAlert + UNAuthorizationOptionSound)
+                          completionHandler:^(BOOL granted, NSError * _Nullable error) {
+        
+    }];
     return YES;
 }
 
@@ -45,6 +67,57 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+#pragma mark - NPKMetricKitManagerDelegate
+
+- (void)handleNPKMetricPayloads {
+    
+}
+
+- (void)handleNPKDiagnosticReport {
+    // 线下：本地通知/UI展示
+    [self sendLocalNotification];
+    // 线上：埋点上报/API上传
+}
+
+- (void)sendLocalNotification {
+    
+    UNMutableNotificationContent *content = [[UNMutableNotificationContent alloc] init];
+    content.title = @"[NPK]性能诊断报告";
+    content.subtitle = @"这是通知subtitle";
+    content.body = @"这是通知body这是通知body这是通知body这是通知body这是通知body这是通知body";
+    // 通知的提示声音，这里用的默认的声音
+    content.sound = [UNNotificationSound defaultSound];
+    // 标识符
+    content.categoryIdentifier = @"com.npk.mx.report";
+    // 2、创建通知触发
+    UNTimeIntervalNotificationTrigger *trigger = [UNTimeIntervalNotificationTrigger triggerWithTimeInterval:1.f repeats:NO];
+    
+    // 3、创建通知请求
+    UNNotificationRequest *notificationRequest = [UNNotificationRequest requestWithIdentifier:@"com.npk.mx.report.request" content:content trigger:trigger];
+    // 4、将请求加入通知中心
+    [[UNUserNotificationCenter currentNotificationCenter] addNotificationRequest:notificationRequest withCompletionHandler:^(NSError * _Nullable error) {
+        if (error == nil) {
+            NPKLog(@"已成功加推送%@", notificationRequest.identifier);
+        }
+    }];
+}
+
+#pragma mark - iOS10 推送代理
+
+//不实现，通知不会有提示
+- (void)userNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions))completionHandler {
+    completionHandler(UNNotificationPresentationOptionSound|UNNotificationPresentationOptionAlert);
+}
+
+// 对通知进行响应
+- (void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void(^)(void))completionHandler {
+    
+    if ([response.notification.request.content.categoryIdentifier isEqualToString:@"com.npk.mx.report"]) {
+//        [self handleResponse:response];
+    }
+    completionHandler();
 }
 
 @end

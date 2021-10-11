@@ -1,50 +1,17 @@
 //
-//  NPKDemoViewController+Biz.m
+//  NPKDemoViewController+Test.m
 //  NPKitDemo_Example
 //
 //  Created by JinglongBi on 2021/10/1.
 //  Copyright © 2021 jinglong.bi@me.com. All rights reserved.
 //
 
-#import "NPKDemoViewController+Biz.h"
-#import <MetricKit/MetricKit.h>
+#import "NPKDemoViewController+Test.h"
 #import <NicePerformanceKit/NPKBaseDefine.h>
 #import <NicePerformanceKit/NPKBadPerfCase.h>
 #import <NicePerformanceKit/NPKPerfTestCase.h>
-#import <NicePerformanceKit/NPKPerfEntryWindow.h>
 
-@implementation NPKDemoViewController (Biz)
-
-- (void)lagDetectWithStackInfo:(NSString *)stackInfo
-                      lagCount:(NSUInteger)lagCount {
-    [[NPKPerfEntryWindow sharedInstance] updatePerfInfo:[NSString stringWithFormat:@"ANR: %lu", (unsigned long)lagCount] withFlash:YES];
-}
-
-// 3. 完善回调方法
-- (void)didReceiveMetricPayloads:(NSArray<MXMetricPayload *> *)payloads {
-    
-    if (@available(iOS 13.0, *)){
-        for (MXMetricPayload *payload in payloads) {
-            NPKLog(@"[payload cpuMetrics]; = %@", [payload cpuMetrics]);
-            
-            if (@available(iOS 14.0, *)) {
-                NPKLog(@"dictionaryRepresentation = %@", [payload dictionaryRepresentation]);
-            } else {
-                // Fallback on earlier versions
-            }
-            NPKLog(@"%@", payload);
-        }
-    }
-}
-
-- (void)didReceiveDiagnosticPayloads:(NSArray<MXDiagnosticPayload *> * _Nonnull)payloads API_AVAILABLE(ios(14.0)) {
-    
-    for (MXDiagnosticPayload *diagnosticPayload  in payloads) {
-        NSLog(@"diagnosticPayload = %@", [diagnosticPayload dictionaryRepresentation]);
-    }
-    
-    NSLog(@"payloads = %@", payloads);  
-}
+@implementation NPKDemoViewController (Test)
 
 - (void)runloopTest {
     sleep(1);

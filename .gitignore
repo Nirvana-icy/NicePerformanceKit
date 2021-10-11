@@ -9,7 +9,8 @@
 !default.perspectivev3
 xcuserdata
 
-Example/pods
+Example/Pods
+Example/*.xcworkspace
 
 ## Other
 *.xccheckout

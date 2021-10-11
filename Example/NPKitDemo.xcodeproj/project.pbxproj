@@ -28,7 +28,7 @@
 		E005B8EF27119F1A000BDA26 /* NPKitDemo_ExampleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E005B8EE27119F1A000BDA26 /* NPKitDemo_ExampleUITests.m */; };
 		E005B8F127119F1A000BDA26 /* NPKitDemo_ExampleUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E005B8F027119F1A000BDA26 /* NPKitDemo_ExampleUITestsLaunchTests.m */; };
 		E020C01827035DEB00D7D446 /* NPKitDemoLaunchConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = E020C01727035DEB00D7D446 /* NPKitDemoLaunchConfig.m */; };
-		E03640302706AB9D00BA1904 /* NPKDemoViewController+Biz.m in Sources */ = {isa = PBXBuildFile; fileRef = E036402F2706AB9D00BA1904 /* NPKDemoViewController+Biz.m */; };
+		E03640302706AB9D00BA1904 /* NPKDemoViewController+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = E036402F2706AB9D00BA1904 /* NPKDemoViewController+Test.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,8 +86,8 @@
 		E005B8F027119F1A000BDA26 /* NPKitDemo_ExampleUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NPKitDemo_ExampleUITestsLaunchTests.m; sourceTree = "<group>"; };
 		E020C01627035DEB00D7D446 /* NPKitDemoLaunchConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NPKitDemoLaunchConfig.h; sourceTree = "<group>"; };
 		E020C01727035DEB00D7D446 /* NPKitDemoLaunchConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NPKitDemoLaunchConfig.m; sourceTree = "<group>"; };
-		E036402E2706AB9D00BA1904 /* NPKDemoViewController+Biz.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NPKDemoViewController+Biz.h"; sourceTree = "<group>"; };
-		E036402F2706AB9D00BA1904 /* NPKDemoViewController+Biz.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NPKDemoViewController+Biz.m"; sourceTree = "<group>"; };
+		E036402E2706AB9D00BA1904 /* NPKDemoViewController+Test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NPKDemoViewController+Test.h"; sourceTree = "<group>"; };
+		E036402F2706AB9D00BA1904 /* NPKDemoViewController+Test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NPKDemoViewController+Test.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,8 +179,8 @@
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				6003F5A5195388D20070C39A /* NPKDemoViewController.h */,
 				6003F5A6195388D20070C39A /* NPKDemoViewController.m */,
-				E036402E2706AB9D00BA1904 /* NPKDemoViewController+Biz.h */,
-				E036402F2706AB9D00BA1904 /* NPKDemoViewController+Biz.m */,
+				E036402E2706AB9D00BA1904 /* NPKDemoViewController+Test.h */,
+				E036402F2706AB9D00BA1904 /* NPKDemoViewController+Test.m */,
 				E005B8E227116FCE000BDA26 /* SlowLargeTableViewController.h */,
 				E005B8E327116FCE000BDA26 /* SlowLargeTableViewController.m */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
@@ -459,7 +459,7 @@
 				E020C01827035DEB00D7D446 /* NPKitDemoLaunchConfig.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 				E005B8E427116FCF000BDA26 /* SlowLargeTableViewController.m in Sources */,
-				E03640302706AB9D00BA1904 /* NPKDemoViewController+Biz.m in Sources */,
+				E03640302706AB9D00BA1904 /* NPKDemoViewController+Test.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
