@@ -6,7 +6,7 @@
 //
 
 #import "NPKMetricKitManager.h"
-#import "NPKCallStackTree.h"
+#import "NPKDiagnosticPayloadModel.h"
 
 #if NPK_METRICKIT_SUPPORTED
 
@@ -60,53 +60,31 @@
 }
 
 - (void)didReceiveDiagnosticPayloads:(NSArray<MXDiagnosticPayload *> *)payloads API_AVAILABLE(ios(14)) {
+    if (payloads.count <= 0) return;;
+    NSMutableArray<NPKDiagnosticPayloadModel *> *npkDiagnosticPayloadModelArr = [NSMutableArray array];
     for (MXDiagnosticPayload *diagnosticPayload in payloads) {
         // process payload
-        [self processMXDiagnosticPayload:diagnosticPayload];
+        NPKDiagnosticPayloadModel *npkDiagnosticPayloadModel = [[NPKDiagnosticPayloadModel alloc] initWithMXDiagnosticPayload:diagnosticPayload];
+        [npkDiagnosticPayloadModelArr addObject:npkDiagnosticPayloadModel];
     }
     
     [self.mxPayloadsHandlers enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        if ([(id<NPKMetricKitManagerDelegate>)obj respondsToSelector:@selector(handleNPKDiagnosticReport)]) {
-            [(id<NPKMetricKitManagerDelegate>)obj handleNPKDiagnosticReport];
+        if ([(id<NPKMetricKitManagerDelegate>)obj respondsToSelector:@selector(handleNPKDiagnosticPayloads:)]) {
+            [(id<NPKMetricKitManagerDelegate>)obj handleNPKDiagnosticPayloads:npkDiagnosticPayloadModelArr];
         }
     }];
 }
 
 # pragma mark -- helper
 
-- (void)processMXDiagnosticPayload:(MXDiagnosticPayload *)diagnosticPayload API_AVAILABLE(ios(14)) {
-    if (!diagnosticPayload) return;
-    // cpuException
-    // crash
-    // diskWriteException
-    // hang
-}
-
-/*
- * Helper method to convert threads for a MetricKit fatal diagnostic event to an array of threads.
- */
-- (NSArray *)convertThreadsToArray:(MXCallStackTree *)mxCallStackTree API_AVAILABLE(ios(14)) {
-    NPKCallStackTree *tree = [[NPKCallStackTree alloc] initWithMXCallStackTree:mxCallStackTree];
-    return [tree getArrayRepresentation];
-}
-
-/*
- * Helper method to convert threads for a MetricKit nonfatal diagnostic event to an array of frames.
- */
-- (NSArray *)convertThreadsToArrayForNonfatal:(MXCallStackTree *)mxCallStackTree
-API_AVAILABLE(ios(14)) {
-    NPKCallStackTree *tree = [[NPKCallStackTree alloc] initWithMXCallStackTree:mxCallStackTree];
-    return [tree getFramesOfBlamedThread];
-}
-
 /*
  * Helper method to convert metadata for a MetricKit diagnostic event to a dictionary. MXMetadata
  * has a dictionaryRepresentation method but it is deprecated.
  */
-- (NSDictionary *)convertMetadataToDictionary:(MXMetaData *)metadata API_AVAILABLE(ios(14)) {
+- (NSDictionary *)convertMetaDataToDictionary:(MXMetaData *)metaData API_AVAILABLE(ios(14)) {
     NSError *error = nil;
     NSDictionary *metaDataDictionary =
-    [NSJSONSerialization JSONObjectWithData:[metadata JSONRepresentation] options:0 error:&error];
+    [NSJSONSerialization JSONObjectWithData:[metaData JSONRepresentation] options:0 error:&error];
     return metaDataDictionary;
 }
 

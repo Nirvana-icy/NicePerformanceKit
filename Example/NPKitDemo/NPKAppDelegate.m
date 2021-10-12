@@ -75,18 +75,21 @@ NPKMetricKitManagerDelegate
     
 }
 
-- (void)handleNPKDiagnosticReport {
+- (void)handleNPKDiagnosticPayloads:(NSArray<NPKDiagnosticPayloadModel *> *)npkDiagnosticPayloads {
     // 线下：本地通知/UI展示
-    [self sendLocalNotification];
+    NSString *subTitle = [NSString stringWithFormat:@"Payload Count: %lu", (unsigned long)npkDiagnosticPayloads.count];
+    [self sendNPKLocalNotificationWithSubTitle:subTitle
+                                          body:@""];
     // 线上：埋点上报/API上传
 }
 
-- (void)sendLocalNotification {
+- (void)sendNPKLocalNotificationWithSubTitle:(NSString *)subTitle
+                                        body:(NSString *)body {
     
     UNMutableNotificationContent *content = [[UNMutableNotificationContent alloc] init];
-    content.title = @"[NPK]性能诊断报告";
-    content.subtitle = @"这是通知subtitle";
-    content.body = @"这是通知body这是通知body这是通知body这是通知body这是通知body这是通知body";
+    content.title = @"[NPK] 性能诊断报告";
+    content.subtitle = subTitle;
+//    content.body = @"这是通知body这是通知body这是通知body这是通知body这是通知body这是通知body";
     // 通知的提示声音，这里用的默认的声音
     content.sound = [UNNotificationSound defaultSound];
     // 标识符

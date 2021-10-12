@@ -6,7 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "NPKBaseDefine.h"
+#import <NicePerformanceKit/NPKBaseDefine.h>
 
 #if NPK_METRICKIT_SUPPORTED
 #import <MetricKit/MetricKit.h>

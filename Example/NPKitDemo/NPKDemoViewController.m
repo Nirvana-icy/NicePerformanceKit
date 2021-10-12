@@ -75,7 +75,11 @@ NPKLagMonitorDelegate
 }
 
 - (void)mockMetricKitReportBtnTapped {
-    
+    if (@available(iOS 14, *)) {
+        MXDiagnosticPayload *mockPayload = [MXDiagnosticPayload new];
+        
+        [[NPKMetricKitManager sharedInstance] didReceiveDiagnosticPayloads:@[mockPayload]];
+    }
 }
 
 #pragma mark -- UI

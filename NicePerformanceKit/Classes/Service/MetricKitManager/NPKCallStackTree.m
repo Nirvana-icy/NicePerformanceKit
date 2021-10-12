@@ -36,7 +36,7 @@
 @interface NPKCallStackTree ()
 
 @property NSArray<NPKThread *> *threads;
-@property(nonatomic) BOOL callStackPerThread;
+@property (nonatomic) BOOL callStackPerThread;
 
 @end
 

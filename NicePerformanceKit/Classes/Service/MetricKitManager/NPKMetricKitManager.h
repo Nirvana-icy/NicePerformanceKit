@@ -7,6 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import "NPKBaseDefine.h"
+#import "NPKDiagnosticPayloadModel.h"
 
 #if NPK_METRICKIT_SUPPORTED
 #import <MetricKit/MetricKit.h>
@@ -16,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 @protocol NPKMetricKitManagerDelegate <NSObject>
 
 - (void)handleNPKMetricPayloads;
-- (void)handleNPKDiagnosticReport;
+- (void)handleNPKDiagnosticPayloads:(NSArray<NPKDiagnosticPayloadModel *> *)npkDiagnosticPayloads;
 
 @end
 
