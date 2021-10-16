@@ -29,6 +29,12 @@
 		E005B8F127119F1A000BDA26 /* NPKitDemo_ExampleUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E005B8F027119F1A000BDA26 /* NPKitDemo_ExampleUITestsLaunchTests.m */; };
 		E020C01827035DEB00D7D446 /* NPKitDemoLaunchConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = E020C01727035DEB00D7D446 /* NPKitDemoLaunchConfig.m */; };
 		E03640302706AB9D00BA1904 /* NPKDemoViewController+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = E036402F2706AB9D00BA1904 /* NPKDemoViewController+Test.m */; };
+		E081CF5D27182BC500A563DF /* NPKMockLaunchTaskA.m in Sources */ = {isa = PBXBuildFile; fileRef = E081CF5C27182BC500A563DF /* NPKMockLaunchTaskA.m */; };
+		E081CF6027182D6F00A563DF /* NPKMockLaunchTaskB.m in Sources */ = {isa = PBXBuildFile; fileRef = E081CF5F27182D6F00A563DF /* NPKMockLaunchTaskB.m */; };
+		E081CF6327182FA900A563DF /* NPKPerfMonitorInitTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E081CF6227182FA800A563DF /* NPKPerfMonitorInitTask.m */; };
+		E081CF66271833EF00A563DF /* NPKMockLaunchTaskC.m in Sources */ = {isa = PBXBuildFile; fileRef = E081CF65271833EF00A563DF /* NPKMockLaunchTaskC.m */; };
+		E081CF692718342800A563DF /* NPKMockLaunchTaskD.m in Sources */ = {isa = PBXBuildFile; fileRef = E081CF682718342800A563DF /* NPKMockLaunchTaskD.m */; };
+		E081CF6C2719275900A563DF /* NPKMockLaunchTaskE.m in Sources */ = {isa = PBXBuildFile; fileRef = E081CF6B2719275900A563DF /* NPKMockLaunchTaskE.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +94,18 @@
 		E020C01727035DEB00D7D446 /* NPKitDemoLaunchConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NPKitDemoLaunchConfig.m; sourceTree = "<group>"; };
 		E036402E2706AB9D00BA1904 /* NPKDemoViewController+Test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NPKDemoViewController+Test.h"; sourceTree = "<group>"; };
 		E036402F2706AB9D00BA1904 /* NPKDemoViewController+Test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NPKDemoViewController+Test.m"; sourceTree = "<group>"; };
+		E081CF5B27182BC500A563DF /* NPKMockLaunchTaskA.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NPKMockLaunchTaskA.h; sourceTree = "<group>"; };
+		E081CF5C27182BC500A563DF /* NPKMockLaunchTaskA.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NPKMockLaunchTaskA.m; sourceTree = "<group>"; };
+		E081CF5E27182D6F00A563DF /* NPKMockLaunchTaskB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NPKMockLaunchTaskB.h; sourceTree = "<group>"; };
+		E081CF5F27182D6F00A563DF /* NPKMockLaunchTaskB.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NPKMockLaunchTaskB.m; sourceTree = "<group>"; };
+		E081CF6127182FA800A563DF /* NPKPerfMonitorInitTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NPKPerfMonitorInitTask.h; sourceTree = "<group>"; };
+		E081CF6227182FA800A563DF /* NPKPerfMonitorInitTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NPKPerfMonitorInitTask.m; sourceTree = "<group>"; };
+		E081CF64271833EF00A563DF /* NPKMockLaunchTaskC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NPKMockLaunchTaskC.h; sourceTree = "<group>"; };
+		E081CF65271833EF00A563DF /* NPKMockLaunchTaskC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NPKMockLaunchTaskC.m; sourceTree = "<group>"; };
+		E081CF672718342800A563DF /* NPKMockLaunchTaskD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NPKMockLaunchTaskD.h; sourceTree = "<group>"; };
+		E081CF682718342800A563DF /* NPKMockLaunchTaskD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NPKMockLaunchTaskD.m; sourceTree = "<group>"; };
+		E081CF6A2719275900A563DF /* NPKMockLaunchTaskE.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NPKMockLaunchTaskE.h; sourceTree = "<group>"; };
+		E081CF6B2719275900A563DF /* NPKMockLaunchTaskE.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NPKMockLaunchTaskE.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -245,6 +263,18 @@
 			children = (
 				E020C01627035DEB00D7D446 /* NPKitDemoLaunchConfig.h */,
 				E020C01727035DEB00D7D446 /* NPKitDemoLaunchConfig.m */,
+				E081CF5B27182BC500A563DF /* NPKMockLaunchTaskA.h */,
+				E081CF5C27182BC500A563DF /* NPKMockLaunchTaskA.m */,
+				E081CF5E27182D6F00A563DF /* NPKMockLaunchTaskB.h */,
+				E081CF5F27182D6F00A563DF /* NPKMockLaunchTaskB.m */,
+				E081CF6127182FA800A563DF /* NPKPerfMonitorInitTask.h */,
+				E081CF6227182FA800A563DF /* NPKPerfMonitorInitTask.m */,
+				E081CF64271833EF00A563DF /* NPKMockLaunchTaskC.h */,
+				E081CF65271833EF00A563DF /* NPKMockLaunchTaskC.m */,
+				E081CF672718342800A563DF /* NPKMockLaunchTaskD.h */,
+				E081CF682718342800A563DF /* NPKMockLaunchTaskD.m */,
+				E081CF6A2719275900A563DF /* NPKMockLaunchTaskE.h */,
+				E081CF6B2719275900A563DF /* NPKMockLaunchTaskE.m */,
 			);
 			path = NPKLaunchBiz;
 			sourceTree = "<group>";
@@ -455,9 +485,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				6003F59E195388D20070C39A /* NPKAppDelegate.m in Sources */,
+				E081CF6327182FA900A563DF /* NPKPerfMonitorInitTask.m in Sources */,
+				E081CF5D27182BC500A563DF /* NPKMockLaunchTaskA.m in Sources */,
+				E081CF692718342800A563DF /* NPKMockLaunchTaskD.m in Sources */,
+				E081CF66271833EF00A563DF /* NPKMockLaunchTaskC.m in Sources */,
 				6003F5A7195388D20070C39A /* NPKDemoViewController.m in Sources */,
+				E081CF6027182D6F00A563DF /* NPKMockLaunchTaskB.m in Sources */,
 				E020C01827035DEB00D7D446 /* NPKitDemoLaunchConfig.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				E081CF6C2719275900A563DF /* NPKMockLaunchTaskE.m in Sources */,
 				E005B8E427116FCF000BDA26 /* SlowLargeTableViewController.m in Sources */,
 				E03640302706AB9D00BA1904 /* NPKDemoViewController+Test.m in Sources */,
 			);

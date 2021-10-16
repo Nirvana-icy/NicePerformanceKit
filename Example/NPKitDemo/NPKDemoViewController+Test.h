@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NPKDemoViewController (Test)
 
+- (void)sendMockMetricKitReport;
+
 @end
 
 NS_ASSUME_NONNULL_END

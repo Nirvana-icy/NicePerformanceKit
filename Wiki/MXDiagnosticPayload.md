@@ -9,17 +9,6 @@
 | timeStampBegin| NSDate | |
 | timeStampEnd | NSDate | | 
 
-> NPKDiagnosticPayload
-
-|字段| 类型 | 备注 |
-| :-:| :-: | :-: |
-| cpuExceptionDiagnostics| NSArray<NPKCPUExceptionDiagnostic *>  | | 
-| diskWriteExceptionDiagnostics| NSArray<NPKDiskWriteExceptionDiagnostic *>  | | 
-| hangDiagnostics| NSArray<NPKHangDiagnostic *>  | |
-| crashDiagnostics| NSArray<NPKCrashDiagnostic *>  | | 
-| timeStampBegin| NSDate | |
-| timeStampEnd | NSDate | | 
-
 ---
 
 > MXMetaData : NSObject
@@ -52,21 +41,6 @@
 | exceptionCode| NSNumber |Processor specific information about the exception encoded into one or more 64-bit hexadecimal numbers |
 | signal| NSNumber |The signal associated with this crash. |
 
-> NPKCrashDiagnosticModel
-
-|字段| 类型 | 备注 |
-| :-:| :-: | :-: |
-| appVersion| NSString  | | 
-| buildVersion| NSString  | | 
-| binaryUUID| NSString  | | 
-| exceptionName| NSString  |[self getExceptionName:crashDiagnostic.exceptionType] | 
-| exceptionCode| NSNumber |Processor specific information about the exception encoded into one or more 64-bit hexadecimal numbers |
-| signal| NSNumber |The signal associated with this crash. |
-| terminationReason| NSString  | The termination reason associated with this crash.| 
-| threads| NSArray     | [self convertThreadsToArray:crashDiagnostic.callStackTree] | 
-| virtualMemoryRegionInfo| NSString |This property is set when a bad memory access crash occurs. |
-
-
 > MXHangDiagnostic : MXDiagnostic
 
 |字段| 类型 | 备注 |
@@ -74,7 +48,36 @@
 | callStackTree| MXCallStackTree  | The application call stack tree associated with the hang.| 
 | hangDuration| NSMeasurement<NSUnitDuration *>  | Total hang duration for this diagnostic.| 
 
-NPK扩展
+---
+
+> NPKDiagnosticReportModel : NSObject
+
 |字段| 类型 | 备注 |
 | :-:| :-: | :-: |
+| npkDiagnosticPayloadModelArr| NSArray<NPKDiagnosticPayloadModel *>  | | 
+| diskWriteExceptionDiagnostics| NSArray<NPKDiskWriteExceptionDiagnostic *>  | | 
+| hangDiagnostics| NSArray<NPKHangDiagnostic *>  | |
+| crashDiagnostics| NSArray<NPKCrashDiagnostic *>  | | 
+| timeStampBegin| NSDate | |
+| timeStampEnd | NSDate | | 
+
+---
+
+> NPKBaseDiagnosticModel
+
+|字段| 类型 | 备注 |
+| :-:| :-: | :-: |
+| appVersion| NSString  | | 
+| buildVersion| NSString  | | 
+| stack| NSArray  | | 
+
+> NPKCrashDiagnosticModel : NPKBaseDiagnosticModel
+
+|字段| 类型 | 备注 |
+| :-:| :-: | :-: |
+| exceptionName| NSString  |[self getExceptionName:crashDiagnostic.exceptionType] | 
+| exceptionCode| NSNumber |Processor specific information about the exception encoded into one or more 64-bit hexadecimal numbers |
+| signal| NSNumber |The signal associated with this crash. |
+| terminationReason| NSString  | The termination reason associated with this crash.| 
 | threads| NSArray     | [self convertThreadsToArray:crashDiagnostic.callStackTree] | 
+| virtualMemoryRegionInfo| NSString |This property is set when a bad memory access crash occurs. |

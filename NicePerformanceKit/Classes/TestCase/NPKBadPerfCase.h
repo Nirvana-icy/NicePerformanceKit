@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface NPKBadPerfCase : NSObject
 
 + (void)generateMainThreadLag;
++ (void)generateLagWithTime:(NSTimeInterval)time;
 
 @end
 

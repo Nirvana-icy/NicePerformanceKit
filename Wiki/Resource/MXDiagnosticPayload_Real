@@ -1,0 +1,1401 @@
+{
+    crashDiagnostics =     (
+                {
+            callStackTree =             {
+                callStackPerThread = 1;
+                callStacks =                 (
+                                        {
+                        callStackRootFrames =                         (
+                                                        {
+                                address = 4366129472;
+                                binaryName = "NPKitDemo_Example";
+                                binaryUUID = "8679CD71-B69D-3790-AD24-7F909B683C5B";
+                                offsetIntoBinaryTextSegment = 4366106624;
+                                sampleCount = 1;
+                                subFrames =                                 (
+                                                                        {
+                                        address = 6665630332;
+                                        binaryName = UIKitCore;
+                                        binaryUUID = "71B59F62-19DA-3CFF-89E1-DACF333BAB0D";
+                                        offsetIntoBinaryTextSegment = 6653886464;
+                                        sampleCount = 1;
+                                        subFrames =                                         (
+                                                                                        {
+                                                address = 6658900564;
+                                                binaryName = UIKitCore;
+                                                binaryUUID = "71B59F62-19DA-3CFF-89E1-DACF333BAB0D";
+                                                offsetIntoBinaryTextSegment = 6653886464;
+                                                sampleCount = 1;
+                                                subFrames =                                                 (
+                                                                                                        {
+                                                        address = 6658901400;
+                                                        binaryName = UIKitCore;
+                                                        binaryUUID = "71B59F62-19DA-3CFF-89E1-DACF333BAB0D";
+                                                        offsetIntoBinaryTextSegment = 6653886464;
+                                                        sampleCount = 1;
+                                                        subFrames =                                                         (
+                                                                                                                        {
+                                                                address = 6658895568;
+                                                                binaryName = UIKitCore;
+                                                                binaryUUID = "71B59F62-19DA-3CFF-89E1-DACF333BAB0D";
+                                                                offsetIntoBinaryTextSegment = 6653886464;
+                                                                sampleCount = 1;
+                                                                subFrames =                                                                 (
+                                                                                                                                        {
+                                                                        address = 6665871244;
+                                                                        binaryName = UIKitCore;
+                                                                        binaryUUID = "71B59F62-19DA-3CFF-89E1-DACF333BAB0D";
+                                                                        offsetIntoBinaryTextSegment = 6653886464;
+                                                                        sampleCount = 1;
+                                                                        subFrames =                                                                         (
+                                                                                                                                                        {
+                                                                                address = 6665877684;
+                                                                                binaryName = UIKitCore;
+                                                                                binaryUUID = "71B59F62-19DA-3CFF-89E1-DACF333BAB0D";
+                                                                                offsetIntoBinaryTextSegment = 6653886464;
+                                                                                sampleCount = 1;
+                                                                                subFrames =                                                                                 (
+                                                                                                                                                                        {
+                                                                                        address = 6665727568;
+                                                                                        binaryName = UIKitCore;
+                                                                                        binaryUUID = "71B59F62-19DA-3CFF-89E1-DACF333BAB0D";
+                                                                                        offsetIntoBinaryTextSegment = 6653886464;
+                                                                                        sampleCount = 1;
+                                                                                        subFrames =                                                                                         (
+                                                                                                                                                                                        {
+                                                                                                address = 6666261596;
+                                                                                                binaryName = UIKitCore;
+                                                                                                binaryUUID = "71B59F62-19DA-3CFF-89E1-DACF333BAB0D";
+                                                                                                offsetIntoBinaryTextSegment = 6653886464;
+                                                                                                sampleCount = 1;
+                                                                                                subFrames =                                                                                                 (
+                                                                                                                                                                                                        {
+                                                                                                        address = 6666279932;
+                                                                                                        binaryName = UIKitCore;
+                                                                                                        binaryUUID = "71B59F62-19DA-3CFF-89E1-DACF333BAB0D";
+                                                                                                        offsetIntoBinaryTextSegment = 6653886464;
+                                                                                                        sampleCount = 1;
+                                                                                                        subFrames =                                                                                                         (
+                                                                                                                                                                                                                        {
+                                                                                                                address = 6666243808;
+                                                                                                                binaryName = UIKitCore;
+                                                                                                                binaryUUID = "71B59F62-19DA-3CFF-89E1-DACF333BAB0D";
+                                                                                                                offsetIntoBinaryTextSegment = 6653886464;
+                                                                                                                sampleCount = 1;
+                                                                                                                subFrames =                                                                                                                 (
+                                                                                                                                                                                                                                        {
+                                                                                                                        address = 6622731232;
+                                                                                                                        binaryName = CoreFoundation;
+                                                                                                                        binaryUUID = "96F8386D-D88A-3C89-A323-A17975C3317F";
+                                                                                                                        offsetIntoBinaryTextSegment = 6622097408;
+                                                                                                                        sampleCount = 1;
+                                                                                                                        subFrames =                                                                                                                         (
+                                                                                                                                                                                                                                                        {
+                                                                                                                                address = 6622730976;
+                                                                                                                                binaryName = CoreFoundation;
+                                                                                                                                binaryUUID = "96F8386D-D88A-3C89-A323-A17975C3317F";
+                                                                                                                                offsetIntoBinaryTextSegment = 6622097408;
+                                                                                                                                sampleCount = 1;
+                                                                                                                                subFrames =                                                                                                                                 (
+                                                                                                                                                                                                                                                                        {
+                                                                                                                                        address = 6622727720;
+                                                                                                                                        binaryName = CoreFoundation;
+                                                                                                                                        binaryUUID = "96F8386D-D88A-3C89-A323-A17975C3317F";
+                                                                                                                                        offsetIntoBinaryTextSegment = 6622097408;
+                                                                                                                                        sampleCount = 1;
+                                                                                                                                        subFrames =                                                                                                                                         (
+                                                                                                                                                                                                                                                                                        {
+                                                                                                                                                address = 6622704592;
+                                                                                                                                                binaryName = CoreFoundation;
+                                                                                                                                                binaryUUID = "96F8386D-D88A-3C89-A323-A17975C3317F";
+                                                                                                                                                offsetIntoBinaryTextSegment = 6622097408;
+                                                                                                                                                sampleCount = 1;
+                                                                                                                                                subFrames =                                                                                                                                                 (
+                                                                                                                                                                                                                                                                                                        {
+                                                                                                                                                        address = 6622702480;
+                                                                                                                                                        binaryName = CoreFoundation;
+                                                                                                                                                        binaryUUID = "96F8386D-D88A-3C89-A323-A17975C3317F";
+                                                                                                                                                        offsetIntoBinaryTextSegment = 6622097408;
+                                                                                                                                                        sampleCount = 1;
+                                                                                                                                                        subFrames =                                                                                                                                                         (
+                                                                                                                                                                                                                                                                                                                        {
+                                                                                                                                                                address = 6995088792;
+                                                                                                                                                                binaryName = GraphicsServices;
+                                                                                                                                                                binaryUUID = "CE670BB4-73BA-34DB-90FB-722F8706DE7C";
+                                                                                                                                                                offsetIntoBinaryTextSegment = 6995075072;
+                                                                                                                                                                sampleCount = 1;
+                                                                                                                                                                subFrames =                                                                                                                                                                 (
+                                                                                                                                                                                                                                                                                                                                        {
+                                                                                                                                                                        address = 6665602616;
+                                                                                                                                                                        binaryName = UIKitCore;
+                                                                                                                                                                        binaryUUID = "71B59F62-19DA-3CFF-89E1-DACF333BAB0D";
+                                                                                                                                                                        offsetIntoBinaryTextSegment = 6653886464;
+                                                                                                                                                                        sampleCount = 1;
+                                                                                                                                                                        subFrames =                                                                                                                                                                         (
+                                                                                                                                                                                                                                                                                                                                                        {
+                                                                                                                                                                                address = 6665624504;
+                                                                                                                                                                                binaryName = UIKitCore;
+                                                                                                                                                                                binaryUUID = "71B59F62-19DA-3CFF-89E1-DACF333BAB0D";
+                                                                                                                                                                                offsetIntoBinaryTextSegment = 6653886464;
+                                                                                                                                                                                sampleCount = 1;
+                                                                                                                                                                                subFrames =                                                                                                                                                                                 (
+                                                                                                                                                                                                                                                                                                                                                                        {
+                                                                                                                                                                                        address = 4366141320;
+                                                                                                                                                                                        binaryName = "NPKitDemo_Example";
+                                                                                                                                                                                        binaryUUID = "8679CD71-B69D-3790-AD24-7F909B683C5B";
+                                                                                                                                                                                        offsetIntoBinaryTextSegment = 4366106624;
+                                                                                                                                                                                        sampleCount = 1;
+                                                                                                                                                                                        subFrames =                                                                                                                                                                                         (
+                                                                                                                                                                                                                                                                                                                                                                                        {
+                                                                                                                                                                                                address = 6619420040;
+                                                                                                                                                                                                binaryName = "libdyld.dylib";
+                                                                                                                                                                                                binaryUUID = "E31C0887-C999-3047-9B80-203248EC2396";
+                                                                                                                                                                                                offsetIntoBinaryTextSegment = 6619414528;
+                                                                                                                                                                                                sampleCount = 1;
+                                                                                                                                                                                            }
+                                                                                                                                                                                        );
+                                                                                                                                                                                    }
+                                                                                                                                                                                );
+                                                                                                                                                                            }
+                                                                                                                                                                        );
+                                                                                                                                                                    }
+                                                                                                                                                                );
+                                                                                                                                                            }
+                                                                                                                                                        );
+                                                                                                                                                    }
+                                                                                                                                                );
+                                                                                                                                            }
+                                                                                                                                        );
+                                                                                                                                    }
+                                                                                                                                );
+                                                                                                                            }
+                                                                                                                        );
+                                                                                                                    }
+                                                                                                                );
+                                                                                                            }
+                                                                                                        );
+                                                                                                    }
+                                                                                                );
+                                                                                            }
+                                                                                        );
+                                                                                    }
+                                                                                );
+                                                                            }
+                                                                        );
+                                                                    }
+                                                                );
+                                                            }
+                                                        );
+                                                    }
+                                                );
+                                            }
+                                        );
+                                    }
+                                );
+                            }
+                        );
+                        threadAttributed = 1;
+                    },
+                                        {
+                        callStackRootFrames =                         (
+                                                        {
+                                address = 7804016748;
+                                binaryName = "libsystem_pthread.dylib";
+                                binaryUUID = "93C7F0DC-89F1-3162-A119-6FC88028D027";
+                                offsetIntoBinaryTextSegment = 7803957248;
+                                sampleCount = 1;
+                            }
+                        );
+                        threadAttributed = 0;
+                    },
+                                        {
+                        callStackRootFrames =                         (
+                                                        {
+                                address = 7345495024;
+                                binaryName = "libsystem_kernel.dylib";
+                                binaryUUID = "8BCB6FF9-5162-3657-A2E2-5CE5704353E6";
+                                offsetIntoBinaryTextSegment = 7345332224;
+                                sampleCount = 1;
+                                subFrames =                                 (
+                                                                        {
+                                        address = 6770747092;
+                                        binaryName = "libsystem_c.dylib";
+                                        binaryUUID = "EDF3E843-A62A-3DD0-92CC-EBE94D5A83E3";
+                                        offsetIntoBinaryTextSegment = 6770286592;
+                                        sampleCount = 1;
+                                        subFrames =                                         (
+                                                                                        {
+                                                address = 6642051684;
+                                                binaryName = Foundation;
+                                                binaryUUID = "F1BC26A1-F5BB-36F7-A65A-D5F232DBF902";
+                                                offsetIntoBinaryTextSegment = 6641668096;
+                                                sampleCount = 1;
+                                                subFrames =                                                 (
+                                                                                                        {
+                                                        address = 4366548352;
+                                                        binaryName = NicePerformanceKit;
+                                                        binaryUUID = "C8E940B1-90B7-3422-8C34-B5223E596F7C";
+                                                        offsetIntoBinaryTextSegment = 4366516224;
+                                                        sampleCount = 1;
+                                                        subFrames =                                                         (
+                                                                                                                        {
+                                                                address = 6619288216;
+                                                                binaryName = "libdispatch.dylib";
+                                                                binaryUUID = "6C143C51-288F-3CD0-84DD-17B9A0AAEE62";
+                                                                offsetIntoBinaryTextSegment = 6618894336;
+                                                                sampleCount = 1;
+                                                                subFrames =                                                                 (
+                                                                                                                                        {
+                                                                        address = 6619292288;
+                                                                        binaryName = "libdispatch.dylib";
+                                                                        binaryUUID = "6C143C51-288F-3CD0-84DD-17B9A0AAEE62";
+                                                                        offsetIntoBinaryTextSegment = 6618894336;
+                                                                        sampleCount = 1;
+                                                                        subFrames =                                                                         (
+                                                                                                                                                        {
+                                                                                address = 6619145456;
+                                                                                binaryName = "libdispatch.dylib";
+                                                                                binaryUUID = "6C143C51-288F-3CD0-84DD-17B9A0AAEE62";
+                                                                                offsetIntoBinaryTextSegment = 6618894336;
+                                                                                sampleCount = 1;
+                                                                                subFrames =                                                                                 (
+                                                                                                                                                                        {
+                                                                                        address = 6619148252;
+                                                                                        binaryName = "libdispatch.dylib";
+                                                                                        binaryUUID = "6C143C51-288F-3CD0-84DD-17B9A0AAEE62";
+                                                                                        offsetIntoBinaryTextSegment = 6618894336;
+                                                                                        sampleCount = 1;
+                                                                                        subFrames =                                                                                         (
+                                                                                                                                                                                        {
+                                                                                                address = 6619187200;
+                                                                                                binaryName = "libdispatch.dylib";
+                                                                                                binaryUUID = "6C143C51-288F-3CD0-84DD-17B9A0AAEE62";
+                                                                                                offsetIntoBinaryTextSegment = 6618894336;
+                                                                                                sampleCount = 1;
+                                                                                                subFrames =                                                                                                 (
+                                                                                                                                                                                                        {
+                                                                                                        address = 7804003748;
+                                                                                                        binaryName = "libsystem_pthread.dylib";
+                                                                                                        binaryUUID = "93C7F0DC-89F1-3162-A119-6FC88028D027";
+                                                                                                        offsetIntoBinaryTextSegment = 7803957248;
+                                                                                                        sampleCount = 1;
+                                                                                                        subFrames =                                                                                                         (
+                                                                                                                                                                                                                        {
+                                                                                                                address = 7804016756;
+                                                                                                                binaryName = "libsystem_pthread.dylib";
+                                                                                                                binaryUUID = "93C7F0DC-89F1-3162-A119-6FC88028D027";
+                                                                                                                offsetIntoBinaryTextSegment = 7803957248;
+                                                                                                                sampleCount = 1;
+                                                                                                            }
+                                                                                                        );
+                                                                                                    }
+                                                                                                );
+                                                                                            }
+                                                                                        );
+                                                                                    }
+                                                                                );
+                                                                            }
+                                                                        );
+                                                                    }
+                                                                );
+                                                            }
+                                                        );
+                                                    }
+                                                );
+                                            }
+                                        );
+                                    }
+                                );
+                            }
+                        );
+                        threadAttributed = 0;
+                    },
+                                        {
+                        callStackRootFrames =                         (
+                                                        {
+                                address = 7804016748;
+                                binaryName = "libsystem_pthread.dylib";
+                                binaryUUID = "93C7F0DC-89F1-3162-A119-6FC88028D027";
+                                offsetIntoBinaryTextSegment = 7803957248;
+                                sampleCount = 1;
+                            }
+                        );
+                        threadAttributed = 0;
+                    },
+                                        {
+                        callStackRootFrames =                         (
+                                                        {
+                                address = 7804016748;
+                                binaryName = "libsystem_pthread.dylib";
+                                binaryUUID = "93C7F0DC-89F1-3162-A119-6FC88028D027";
+                                offsetIntoBinaryTextSegment = 7803957248;
+                                sampleCount = 1;
+                            }
+                        );
+                        threadAttributed = 0;
+                    },
+                                        {
+                        callStackRootFrames =                         (
+                                                        {
+                                address = 7345350212;
+                                binaryName = "libsystem_kernel.dylib";
+                                binaryUUID = "8BCB6FF9-5162-3657-A2E2-5CE5704353E6";
+                                offsetIntoBinaryTextSegment = 7345332224;
+                                sampleCount = 1;
+                                subFrames =                                 (
+                                                                        {
+                                        address = 7345347144;
+                                        binaryName = "libsystem_kernel.dylib";
+                                        binaryUUID = "8BCB6FF9-5162-3657-A2E2-5CE5704353E6";
+                                        offsetIntoBinaryTextSegment = 7345332224;
+                                        sampleCount = 1;
+                                        subFrames =                                         (
+                                                                                        {
+                                                address = 6622728428;
+                                                binaryName = CoreFoundation;
+                                                binaryUUID = "96F8386D-D88A-3C89-A323-A17975C3317F";
+                                                offsetIntoBinaryTextSegment = 6622097408;
+                                                sampleCount = 1;
+                                                subFrames =                                                 (
+                                                                                                        {
+                                                        address = 6622704992;
+                                                        binaryName = CoreFoundation;
+                                                        binaryUUID = "96F8386D-D88A-3C89-A323-A17975C3317F";
+                                                        offsetIntoBinaryTextSegment = 6622097408;
+                                                        sampleCount = 1;
+                                                        subFrames =                                                         (
+                                                                                                                        {
+                                                                address = 6622702480;
+                                                                binaryName = CoreFoundation;
+                                                                binaryUUID = "96F8386D-D88A-3C89-A323-A17975C3317F";
+                                                                offsetIntoBinaryTextSegment = 6622097408;
+                                                                sampleCount = 1;
+                                                                subFrames =                                                                 (
+                                                                                                                                        {
+                                                                        address = 6641698808;
+                                                                        binaryName = Foundation;
+                                                                        binaryUUID = "F1BC26A1-F5BB-36F7-A65A-D5F232DBF902";
+                                                                        offsetIntoBinaryTextSegment = 6641668096;
+                                                                        sampleCount = 1;
+                                                                        subFrames =                                                                         (
+                                                                                                                                                        {
+                                                                                address = 6641698520;
+                                                                                binaryName = Foundation;
+                                                                                binaryUUID = "F1BC26A1-F5BB-36F7-A65A-D5F232DBF902";
+                                                                                offsetIntoBinaryTextSegment = 6641668096;
+                                                                                sampleCount = 1;
+                                                                                subFrames =                                                                                 (
+                                                                                                                                                                        {
+                                                                                        address = 6666306616;
+                                                                                        binaryName = UIKitCore;
+                                                                                        binaryUUID = "71B59F62-19DA-3CFF-89E1-DACF333BAB0D";
+                                                                                        offsetIntoBinaryTextSegment = 6653886464;
+                                                                                        sampleCount = 1;
+                                                                                        subFrames =                                                                                         (
+                                                                                                                                                                                        {
+                                                                                                address = 6643127484;
+                                                                                                binaryName = Foundation;
+                                                                                                binaryUUID = "F1BC26A1-F5BB-36F7-A65A-D5F232DBF902";
+                                                                                                offsetIntoBinaryTextSegment = 6641668096;
+                                                                                                sampleCount = 1;
+                                                                                                subFrames =                                                                                                 (
+                                                                                                                                                                                                        {
+                                                                                                        address = 7803996988;
+                                                                                                        binaryName = "libsystem_pthread.dylib";
+                                                                                                        binaryUUID = "93C7F0DC-89F1-3162-A119-6FC88028D027";
+                                                                                                        offsetIntoBinaryTextSegment = 7803957248;
+                                                                                                        sampleCount = 1;
+                                                                                                        subFrames =                                                                                                         (
+                                                                                                                                                                                                                        {
+                                                                                                                address = 7804016768;
+                                                                                                                binaryName = "libsystem_pthread.dylib";
+                                                                                                                binaryUUID = "93C7F0DC-89F1-3162-A119-6FC88028D027";
+                                                                                                                offsetIntoBinaryTextSegment = 7803957248;
+                                                                                                                sampleCount = 1;
+                                                                                                            }
+                                                                                                        );
+                                                                                                    }
+                                                                                                );
+                                                                                            }
+                                                                                        );
+                                                                                    }
+                                                                                );
+                                                                            }
+                                                                        );
+                                                                    }
+                                                                );
+                                                            }
+                                                        );
+                                                    }
+                                                );
+                                            }
+                                        );
+                                    }
+                                );
+                            }
+                        );
+                        threadAttributed = 0;
+                    },
+                                        {
+                        callStackRootFrames =                         (
+                                                        {
+                                address = 7804016748;
+                                binaryName = "libsystem_pthread.dylib";
+                                binaryUUID = "93C7F0DC-89F1-3162-A119-6FC88028D027";
+                                offsetIntoBinaryTextSegment = 7803957248;
+                                sampleCount = 1;
+                            }
+                        );
+                        threadAttributed = 0;
+                    }
+                );
+            };
+            diagnosticMetaData =             {
+                appBuildVersion = "1.0";
+                appVersion = "1.0";
+                deviceType = "iPhone10,3";
+                exceptionCode = 1;
+                exceptionType = 1;
+                osVersion = "iPhone OS 14.2 (18B92)";
+                platformArchitecture = arm64;
+                regionFormat = CN;
+                signal = 11;X SHRMOD  REGION DETAIL\n      UNUSED SPACE AT START\n--->  \n      __TEXT                   1043d8000-1043e4000 [   48K] r-x/r-x SM=COW  ...tDemo_Example";
+                terminationReason = "Namespace SIGNAL, Code 0xb";
+                virtualMemoryRegionInfo = "0 is not in any region.  Bytes before following region: 4366106624\n      REGION TYPE                 START - END      [ VSIZE] PRT/MA
+            };
+            version = "1.0.0";
+        },
+                {
+            callStackTree =             {
+                callStackPerThread = 1;
+                callStacks =                 (
+                                        {
+                        callStackRootFrames =                         (
+                                                        {
+                                address = 4297677120;
+                                binaryName = "NPKitDemo_Example";
+                                binaryUUID = "8679CD71-B69D-3790-AD24-7F909B683C5B";
+                                offsetIntoBinaryTextSegment = 4297654272;
+                                sampleCount = 1;
+                                subFrames =                                 (
+                                                                        {
+                                        address = 6665630332;
+                                        binaryName = UIKitCore;
+                                        binaryUUID = "71B59F62-19DA-3CFF-89E1-DACF333BAB0D";
+                                        offsetIntoBinaryTextSegment = 6653886464;
+                                        sampleCount = 1;
+                                        subFrames =                                         (
+                                                                                        {
+                                                address = 6658900564;
+                                                binaryName = UIKitCore;
+                                                binaryUUID = "71B59F62-19DA-3CFF-89E1-DACF333BAB0D";
+                                                offsetIntoBinaryTextSegment = 6653886464;
+                                                sampleCount = 1;
+                                                subFrames =                                                 (
+                                                                                                        {
+                                                        address = 6658901400;
+                                                        binaryName = UIKitCore;
+                                                        binaryUUID = "71B59F62-19DA-3CFF-89E1-DACF333BAB0D";
+                                                        offsetIntoBinaryTextSegment = 6653886464;
+                                                        sampleCount = 1;
+                                                        subFrames =                                                         (
+                                                                                                                        {
+                                                                address = 6658895568;
+                                                                binaryName = UIKitCore;
+                                                                binaryUUID = "71B59F62-19DA-3CFF-89E1-DACF333BAB0D";
+                                                                offsetIntoBinaryTextSegment = 6653886464;
+                                                                sampleCount = 1;
+                                                                subFrames =                                                                 (
+                                                                                                                                        {
+                                                                        address = 6665871244;
+                                                                        binaryName = UIKitCore;
+                                                                        binaryUUID = "71B59F62-19DA-3CFF-89E1-DACF333BAB0D";
+                                                                        offsetIntoBinaryTextSegment = 6653886464;
+                                                                        sampleCount = 1;
+                                                                        subFrames =                                                                         (
+                                                                                                                                                        {
+                                                                                address = 6665877684;
+                                                                                binaryName = UIKitCore;
+                                                                                binaryUUID = "71B59F62-19DA-3CFF-89E1-DACF333BAB0D";
+                                                                                offsetIntoBinaryTextSegment = 6653886464;
+                                                                                sampleCount = 1;
+                                                                                subFrames =                                                                                 (
+                                                                                                                                                                        {
+                                                                                        address = 6665727568;
+                                                                                        binaryName = UIKitCore;
+                                                                                        binaryUUID = "71B59F62-19DA-3CFF-89E1-DACF333BAB0D";
+                                                                                        offsetIntoBinaryTextSegment = 6653886464;
+                                                                                        sampleCount = 1;
+                                                                                        subFrames =                                                                                         (
+                                                                                                                                                                                        {
+                                                                                                address = 6666261596;
+                                                                                                binaryName = UIKitCore;
+                                                                                                binaryUUID = "71B59F62-19DA-3CFF-89E1-DACF333BAB0D";
+                                                                                                offsetIntoBinaryTextSegment = 6653886464;
+                                                                                                sampleCount = 1;
+                                                                                                subFrames =                                                                                                 (
+                                                                                                                                                                                                        {
+                                                                                                        address = 6666279932;
+                                                                                                        binaryName = UIKitCore;
+                                                                                                        binaryUUID = "71B59F62-19DA-3CFF-89E1-DACF333BAB0D";
+                                                                                                        offsetIntoBinaryTextSegment = 6653886464;
+                                                                                                        sampleCount = 1;
+                                                                                                        subFrames =                                                                                                         (
+                                                                                                                                                                                                                        {
+                                                                                                                address = 6666243808;
+                                                                                                                binaryName = UIKitCore;
+                                                                                                                binaryUUID = "71B59F62-19DA-3CFF-89E1-DACF333BAB0D";
+                                                                                                                offsetIntoBinaryTextSegment = 6653886464;
+                                                                                                                sampleCount = 1;
+                                                                                                                subFrames =                                                                                                                 (
+                                                                                                                                                                                                                                        {
+                                                                                                                        address = 6622731232;
+                                                                                                                        binaryName = CoreFoundation;
+                                                                                                                        binaryUUID = "96F8386D-D88A-3C89-A323-A17975C3317F";
+                                                                                                                        offsetIntoBinaryTextSegment = 6622097408;
+                                                                                                                        sampleCount = 1;
+                                                                                                                        subFrames =                                                                                                                         (
+                                                                                                                                                                                                                                                        {
+                                                                                                                                address = 6622730976;
+                                                                                                                                binaryName = CoreFoundation;
+                                                                                                                                binaryUUID = "96F8386D-D88A-3C89-A323-A17975C3317F";
+                                                                                                                                offsetIntoBinaryTextSegment = 6622097408;
+                                                                                                                                sampleCount = 1;
+                                                                                                                                subFrames =                                                                                                                                 (
+                                                                                                                                                                                                                                                                        {
+                                                                                                                                        address = 6622727720;
+                                                                                                                                        binaryName = CoreFoundation;
+                                                                                                                                        binaryUUID = "96F8386D-D88A-3C89-A323-A17975C3317F";
+                                                                                                                                        offsetIntoBinaryTextSegment = 6622097408;
+                                                                                                                                        sampleCount = 1;
+                                                                                                                                        subFrames =                                                                                                                                         (
+                                                                                                                                                                                                                                                                                        {
+                                                                                                                                                address = 6622704592;
+                                                                                                                                                binaryName = CoreFoundation;
+                                                                                                                                                binaryUUID = "96F8386D-D88A-3C89-A323-A17975C3317F";
+                                                                                                                                                offsetIntoBinaryTextSegment = 6622097408;
+                                                                                                                                                sampleCount = 1;
+                                                                                                                                                subFrames =                                                                                                                                                 (
+                                                                                                                                                                                                                                                                                                        {
+                                                                                                                                                        address = 6622702480;
+                                                                                                                                                        binaryName = CoreFoundation;
+                                                                                                                                                        binaryUUID = "96F8386D-D88A-3C89-A323-A17975C3317F";
+                                                                                                                                                        offsetIntoBinaryTextSegment = 6622097408;
+                                                                                                                                                        sampleCount = 1;
+                                                                                                                                                        subFrames =                                                                                                                                                         (
+                                                                                                                                                                                                                                                                                                                        {
+                                                                                                                                                                address = 6995088792;
+                                                                                                                                                                binaryName = GraphicsServices;
+                                                                                                                                                                binaryUUID = "CE670BB4-73BA-34DB-90FB-722F8706DE7C";
+                                                                                                                                                                offsetIntoBinaryTextSegment = 6995075072;
+                                                                                                                                                                sampleCount = 1;
+                                                                                                                                                                subFrames =                                                                                                                                                                 (
+                                                                                                                                                                                                                                                                                                                                        {
+                                                                                                                                                                        address = 6665602616;
+                                                                                                                                                                        binaryName = UIKitCore;
+                                                                                                                                                                        binaryUUID = "71B59F62-19DA-3CFF-89E1-DACF333BAB0D";
+                                                                                                                                                                        offsetIntoBinaryTextSegment = 6653886464;
+                                                                                                                                                                        sampleCount = 1;
+                                                                                                                                                                        subFrames =                                                                                                                                                                         (
+                                                                                                                                                                                                                                                                                                                                                        {
+                                                                                                                                                                                address = 6665624504;
+                                                                                                                                                                                binaryName = UIKitCore;
+                                                                                                                                                                                binaryUUID = "71B59F62-19DA-3CFF-89E1-DACF333BAB0D";
+                                                                                                                                                                                offsetIntoBinaryTextSegment = 6653886464;
+                                                                                                                                                                                sampleCount = 1;
+                                                                                                                                                                                subFrames =                                                                                                                                                                                 (
+                                                                                                                                                                                                                                                                                                                                                                        {
+                                                                                                                                                                                        address = 4297688968;
+                                                                                                                                                                                        binaryName = "NPKitDemo_Example";
+                                                                                                                                                                                        binaryUUID = "8679CD71-B69D-3790-AD24-7F909B683C5B";
+                                                                                                                                                                                        offsetIntoBinaryTextSegment = 4297654272;
+                                                                                                                                                                                        sampleCount = 1;
+                                                                                                                                                                                        subFrames =                                                                                                                                                                                         (
+                                                                                                                                                                                                                                                                                                                                                                                        {
+                                                                                                                                                                                                address = 6619420040;
+                                                                                                                                                                                                binaryName = "libdyld.dylib";
+                                                                                                                                                                                                binaryUUID = "E31C0887-C999-3047-9B80-203248EC2396";
+                                                                                                                                                                                                offsetIntoBinaryTextSegment = 6619414528;
+                                                                                                                                                                                                sampleCount = 1;
+                                                                                                                                                                                            }
+                                                                                                                                                                                        );
+                                                                                                                                                                                    }
+                                                                                                                                                                                );
+                                                                                                                                                                            }
+                                                                                                                                                                        );
+                                                                                                                                                                    }
+                                                                                                                                                                );
+                                                                                                                                                            }
+                                                                                                                                                        );
+                                                                                                                                                    }
+                                                                                                                                                );
+                                                                                                                                            }
+                                                                                                                                        );
+                                                                                                                                    }
+                                                                                                                                );
+                                                                                                                            }
+                                                                                                                        );
+                                                                                                                    }
+                                                                                                                );
+                                                                                                            }
+                                                                                                        );
+                                                                                                    }
+                                                                                                );
+                                                                                            }
+                                                                                        );
+                                                                                    }
+                                                                                );
+                                                                            }
+                                                                        );
+                                                                    }
+                                                                );
+                                                            }
+                                                        );
+                                                    }
+                                                );
+                                            }
+                                        );
+                                    }
+                                );
+                            }
+                        );
+                        threadAttributed = 1;
+                    },
+                                        {
+                        callStackRootFrames =                         (
+                                                        {
+                                address = 7804016748;
+                                binaryName = "libsystem_pthread.dylib";
+                                binaryUUID = "93C7F0DC-89F1-3162-A119-6FC88028D027";
+                                offsetIntoBinaryTextSegment = 7803957248;
+                                sampleCount = 1;
+                            }
+                        );
+                        threadAttributed = 0;
+                    },
+                                        {
+                        callStackRootFrames =                         (
+                                                        {
+                                address = 7804016748;
+                                binaryName = "libsystem_pthread.dylib";
+                                binaryUUID = "93C7F0DC-89F1-3162-A119-6FC88028D027";
+                                offsetIntoBinaryTextSegment = 7803957248;
+                                sampleCount = 1;
+                            }
+                        );
+                        threadAttributed = 0;
+                    },
+                                        {
+                        callStackRootFrames =                         (
+                                                        {
+                                address = 7804016748;
+                                binaryName = "libsystem_pthread.dylib";
+                                binaryUUID = "93C7F0DC-89F1-3162-A119-6FC88028D027";
+                                offsetIntoBinaryTextSegment = 7803957248;
+                                sampleCount = 1;
+                            }
+                        );
+                        threadAttributed = 0;
+                    },
+                                        {
+                        callStackRootFrames =                         (
+                                                        {
+                                address = 7345495024;
+                                binaryName = "libsystem_kernel.dylib";
+                                binaryUUID = "8BCB6FF9-5162-3657-A2E2-5CE5704353E6";
+                                offsetIntoBinaryTextSegment = 7345332224;
+                                sampleCount = 1;
+                                subFrames =                                 (
+                                                                        {
+                                        address = 6770747092;
+                                        binaryName = "libsystem_c.dylib";
+                                        binaryUUID = "EDF3E843-A62A-3DD0-92CC-EBE94D5A83E3";
+                                        offsetIntoBinaryTextSegment = 6770286592;
+                                        sampleCount = 1;
+                                        subFrames =                                         (
+                                                                                        {
+                                                address = 6642051684;
+                                                binaryName = Foundation;
+                                                binaryUUID = "F1BC26A1-F5BB-36F7-A65A-D5F232DBF902";
+                                                offsetIntoBinaryTextSegment = 6641668096;
+                                                sampleCount = 1;
+                                                subFrames =                                                 (
+                                                                                                        {
+                                                        address = 4298079616;
+                                                        binaryName = NicePerformanceKit;
+                                                        binaryUUID = "C8E940B1-90B7-3422-8C34-B5223E596F7C";
+                                                        offsetIntoBinaryTextSegment = 4298047488;
+                                                        sampleCount = 1;
+                                                        subFrames =                                                         (
+                                                                                                                        {
+                                                                address = 6619288216;
+                                                                binaryName = "libdispatch.dylib";
+                                                                binaryUUID = "6C143C51-288F-3CD0-84DD-17B9A0AAEE62";
+                                                                offsetIntoBinaryTextSegment = 6618894336;
+                                                                sampleCount = 1;
+                                                                subFrames =                                                                 (
+                                                                                                                                        {
+                                                                        address = 6619292288;
+                                                                        binaryName = "libdispatch.dylib";
+                                                                        binaryUUID = "6C143C51-288F-3CD0-84DD-17B9A0AAEE62";
+                                                                        offsetIntoBinaryTextSegment = 6618894336;
+                                                                        sampleCount = 1;
+                                                                        subFrames =                                                                         (
+                                                                                                                                                        {
+                                                                                address = 6619145456;
+                                                                                binaryName = "libdispatch.dylib";
+                                                                                binaryUUID = "6C143C51-288F-3CD0-84DD-17B9A0AAEE62";
+                                                                                offsetIntoBinaryTextSegment = 6618894336;
+                                                                                sampleCount = 1;
+                                                                                subFrames =                                                                                 (
+                                                                                                                                                                        {
+                                                                                        address = 6619148252;
+                                                                                        binaryName = "libdispatch.dylib";
+                                                                                        binaryUUID = "6C143C51-288F-3CD0-84DD-17B9A0AAEE62";
+                                                                                        offsetIntoBinaryTextSegment = 6618894336;
+                                                                                        sampleCount = 1;
+                                                                                        subFrames =                                                                                         (
+                                                                                                                                                                                        {
+                                                                                                address = 6619187200;
+                                                                                                binaryName = "libdispatch.dylib";
+                                                                                                binaryUUID = "6C143C51-288F-3CD0-84DD-17B9A0AAEE62";
+                                                                                                offsetIntoBinaryTextSegment = 6618894336;
+                                                                                                sampleCount = 1;
+                                                                                                subFrames =                                                                                                 (
+                                                                                                                                                                                                        {
+                                                                                                        address = 7804003748;
+                                                                                                        binaryName = "libsystem_pthread.dylib";
+                                                                                                        binaryUUID = "93C7F0DC-89F1-3162-A119-6FC88028D027";
+                                                                                                        offsetIntoBinaryTextSegment = 7803957248;
+                                                                                                        sampleCount = 1;
+                                                                                                        subFrames =                                                                                                         (
+                                                                                                                                                                                                                        {
+                                                                                                                address = 7804016756;
+                                                                                                                binaryName = "libsystem_pthread.dylib";
+                                                                                                                binaryUUID = "93C7F0DC-89F1-3162-A119-6FC88028D027";
+                                                                                                                offsetIntoBinaryTextSegment = 7803957248;
+                                                                                                                sampleCount = 1;
+                                                                                                            }
+                                                                                                        );
+                                                                                                    }
+                                                                                                );
+                                                                                            }
+                                                                                        );
+                                                                                    }
+                                                                                );
+                                                                            }
+                                                                        );
+                                                                    }
+                                                                );
+                                                            }
+                                                        );
+                                                    }
+                                                );
+                                            }
+                                        );
+                                    }
+                                );
+                            }
+                        );
+                        threadAttributed = 0;
+                    },
+                                        {
+                        callStackRootFrames =                         (
+                                                        {
+                                address = 7345350212;
+                                binaryName = "libsystem_kernel.dylib";
+                                binaryUUID = "8BCB6FF9-5162-3657-A2E2-5CE5704353E6";
+                                offsetIntoBinaryTextSegment = 7345332224;
+                                sampleCount = 1;
+                                subFrames =                                 (
+                                                                        {
+                                        address = 7345347144;
+                                        binaryName = "libsystem_kernel.dylib";
+                                        binaryUUID = "8BCB6FF9-5162-3657-A2E2-5CE5704353E6";
+                                        offsetIntoBinaryTextSegment = 7345332224;
+                                        sampleCount = 1;
+                                        subFrames =                                         (
+                                                                                        {
+                                                address = 6622728428;
+                                                binaryName = CoreFoundation;
+                                                binaryUUID = "96F8386D-D88A-3C89-A323-A17975C3317F";
+                                                offsetIntoBinaryTextSegment = 6622097408;
+                                                sampleCount = 1;
+                                                subFrames =                                                 (
+                                                                                                        {
+                                                        address = 6622704992;
+                                                        binaryName = CoreFoundation;
+                                                        binaryUUID = "96F8386D-D88A-3C89-A323-A17975C3317F";
+                                                        offsetIntoBinaryTextSegment = 6622097408;
+                                                        sampleCount = 1;
+                                                        subFrames =                                                         (
+                                                                                                                        {
+                                                                address = 6622702480;
+                                                                binaryName = CoreFoundation;
+                                                                binaryUUID = "96F8386D-D88A-3C89-A323-A17975C3317F";
+                                                                offsetIntoBinaryTextSegment = 6622097408;
+                                                                sampleCount = 1;
+                                                                subFrames =                                                                 (
+                                                                                                                                        {
+                                                                        address = 6641698808;
+                                                                        binaryName = Foundation;
+                                                                        binaryUUID = "F1BC26A1-F5BB-36F7-A65A-D5F232DBF902";
+                                                                        offsetIntoBinaryTextSegment = 6641668096;
+                                                                        sampleCount = 1;
+                                                                        subFrames =                                                                         (
+                                                                                                                                                        {
+                                                                                address = 6641698520;
+                                                                                binaryName = Foundation;
+                                                                                binaryUUID = "F1BC26A1-F5BB-36F7-A65A-D5F232DBF902";
+                                                                                offsetIntoBinaryTextSegment = 6641668096;
+                                                                                sampleCount = 1;
+                                                                                subFrames =                                                                                 (
+                                                                                                                                                                        {
+                                                                                        address = 6666306616;
+                                                                                        binaryName = UIKitCore;
+                                                                                        binaryUUID = "71B59F62-19DA-3CFF-89E1-DACF333BAB0D";
+                                                                                        offsetIntoBinaryTextSegment = 6653886464;
+                                                                                        sampleCount = 1;
+                                                                                        subFrames =                                                                                         (
+                                                                                                                                                                                        {
+                                                                                                address = 6643127484;
+                                                                                                binaryName = Foundation;
+                                                                                                binaryUUID = "F1BC26A1-F5BB-36F7-A65A-D5F232DBF902";
+                                                                                                offsetIntoBinaryTextSegment = 6641668096;
+                                                                                                sampleCount = 1;
+                                                                                                subFrames =                                                                                                 (
+                                                                                                                                                                                                        {
+                                                                                                        address = 7803996988;
+                                                                                                        binaryName = "libsystem_pthread.dylib";
+                                                                                                        binaryUUID = "93C7F0DC-89F1-3162-A119-6FC88028D027";
+                                                                                                        offsetIntoBinaryTextSegment = 7803957248;
+                                                                                                        sampleCount = 1;
+                                                                                                        subFrames =                                                                                                         (
+                                                                                                                                                                                                                        {
+                                                                                                                address = 7804016768;
+                                                                                                                binaryName = "libsystem_pthread.dylib";
+                                                                                                                binaryUUID = "93C7F0DC-89F1-3162-A119-6FC88028D027";
+                                                                                                                offsetIntoBinaryTextSegment = 7803957248;
+                                                                                                                sampleCount = 1;
+                                                                                                            }
+                                                                                                        );
+                                                                                                    }
+                                                                                                );
+                                                                                            }
+                                                                                        );
+                                                                                    }
+                                                                                );
+                                                                            }
+                                                                        );
+                                                                    }
+                                                                );
+                                                            }
+                                                        );
+                                                    }
+                                                );
+                                            }
+                                        );
+                                    }
+                                );
+                            }
+                        );
+                        threadAttributed = 0;
+                    },
+                                        {
+                        callStackRootFrames =                         (
+                                                        {
+                                address = 7804016748;
+                                binaryName = "libsystem_pthread.dylib";
+                                binaryUUID = "93C7F0DC-89F1-3162-A119-6FC88028D027";
+                                offsetIntoBinaryTextSegment = 7803957248;
+                                sampleCount = 1;
+                            }
+                        );
+                        threadAttributed = 0;
+                    },
+                                        {
+                        callStackRootFrames =                         (
+                                                        {
+                                address = 7804016748;
+                                binaryName = "libsystem_pthread.dylib";
+                                binaryUUID = "93C7F0DC-89F1-3162-A119-6FC88028D027";
+                                offsetIntoBinaryTextSegment = 7803957248;
+                                sampleCount = 1;
+                            }
+                        );
+                        threadAttributed = 0;
+                    }
+                );
+            };
+            diagnosticMetaData =             {
+                appBuildVersion = "1.0";
+                appVersion = "1.0";
+                deviceType = "iPhone10,3";
+                exceptionCode = 1;
+                exceptionType = 1;
+                osVersion = "iPhone OS 14.2 (18B92)";
+                platformArchitecture = arm64;
+                regionFormat = CN;
+                signal = 11;
+                terminationReason = "Namespace SIGNAL, Code 0xb";
+                virtualMemoryRegionInfo = "0 is not in any region.  Bytes before following region: 4297654272\n      REGION TYPE                 START - END      [ VSIZE] PRT/MAX SHRMOD  REGION DETAIL\n      UNUSED SPACE AT START\n--->  \n      __TEXT                   100290000-10029c000 [   48K] r-x/r-x SM=COW  ...tDemo_Example";
+            };
+            version = "1.0.0";
+        },
+                {
+            callStackTree =             {
+                callStackPerThread = 1;
+                callStacks =                 (
+                                        {
+                        callStackRootFrames =                         (
+                                                        {
+                                address = 4378386548;
+                                binaryName = "NPKitDemo_Example";
+                                binaryUUID = "22D0859C-91B8-3433-84B2-7248C66041B8";
+                                offsetIntoBinaryTextSegment = 4378361856;
+                                sampleCount = 1;
+                                subFrames =                                 (
+                                                                        {
+                                        address = 6665630332;
+                                        binaryName = UIKitCore;
+                                        binaryUUID = "71B59F62-19DA-3CFF-89E1-DACF333BAB0D";
+                                        offsetIntoBinaryTextSegment = 6653886464;
+                                        sampleCount = 1;
+                                        subFrames =                                         (
+                                                                                        {
+                                                address = 6658900564;
+                                                binaryName = UIKitCore;
+                                                binaryUUID = "71B59F62-19DA-3CFF-89E1-DACF333BAB0D";
+                                                offsetIntoBinaryTextSegment = 6653886464;
+                                                sampleCount = 1;
+                                                subFrames =                                                 (
+                                                                                                        {
+                                                        address = 6658901400;
+                                                        binaryName = UIKitCore;
+                                                        binaryUUID = "71B59F62-19DA-3CFF-89E1-DACF333BAB0D";
+                                                        offsetIntoBinaryTextSegment = 6653886464;
+                                                        sampleCount = 1;
+                                                        subFrames =                                                         (
+                                                                                                                        {
+                                                                address = 6658895568;
+                                                                binaryName = UIKitCore;
+                                                                binaryUUID = "71B59F62-19DA-3CFF-89E1-DACF333BAB0D";
+                                                                offsetIntoBinaryTextSegment = 6653886464;
+                                                                sampleCount = 1;
+                                                                subFrames =                                                                 (
+                                                                                                                                        {
+                                                                        address = 6665871244;
+                                                                        binaryName = UIKitCore;
+                                                                        binaryUUID = "71B59F62-19DA-3CFF-89E1-DACF333BAB0D";
+                                                                        offsetIntoBinaryTextSegment = 6653886464;
+                                                                        sampleCount = 1;
+                                                                        subFrames =                                                                         (
+                                                                                                                                                        {
+                                                                                address = 6665877684;
+                                                                                binaryName = UIKitCore;
+                                                                                binaryUUID = "71B59F62-19DA-3CFF-89E1-DACF333BAB0D";
+                                                                                offsetIntoBinaryTextSegment = 6653886464;
+                                                                                sampleCount = 1;
+                                                                                subFrames =                                                                                 (
+                                                                                                                                                                        {
+                                                                                        address = 6665727568;
+                                                                                        binaryName = UIKitCore;
+                                                                                        binaryUUID = "71B59F62-19DA-3CFF-89E1-DACF333BAB0D";
+                                                                                        offsetIntoBinaryTextSegment = 6653886464;
+                                                                                        sampleCount = 1;
+                                                                                        subFrames =                                                                                         (
+                                                                                                                                                                                        {
+                                                                                                address = 6666261596;
+                                                                                                binaryName = UIKitCore;
+                                                                                                binaryUUID = "71B59F62-19DA-3CFF-89E1-DACF333BAB0D";
+                                                                                                offsetIntoBinaryTextSegment = 6653886464;
+                                                                                                sampleCount = 1;
+                                                                                                subFrames =                                                                                                 (
+                                                                                                                                                                                                        {
+                                                                                                        address = 6666279932;
+                                                                                                        binaryName = UIKitCore;
+                                                                                                        binaryUUID = "71B59F62-19DA-3CFF-89E1-DACF333BAB0D";
+                                                                                                        offsetIntoBinaryTextSegment = 6653886464;
+                                                                                                        sampleCount = 1;
+                                                                                                        subFrames =                                                                                                         (
+                                                                                                                                                                                                                        {
+                                                                                                                address = 6666243608;
+                                                                                                                binaryName = UIKitCore;
+                                                                                                                binaryUUID = "71B59F62-19DA-3CFF-89E1-DACF333BAB0D";
+                                                                                                                offsetIntoBinaryTextSegment = 6653886464;
+                                                                                                                sampleCount = 1;
+                                                                                                                subFrames =                                                                                                                 (
+                                                                                                                                                                                                                                        {
+                                                                                                                        address = 6622731232;
+                                                                                                                        binaryName = CoreFoundation;
+                                                                                                                        binaryUUID = "96F8386D-D88A-3C89-A323-A17975C3317F";
+                                                                                                                        offsetIntoBinaryTextSegment = 6622097408;
+                                                                                                                        sampleCount = 1;
+                                                                                                                        subFrames =                                                                                                                         (
+                                                                                                                                                                                                                                                        {
+                                                                                                                                address = 6622730976;
+                                                                                                                                binaryName = CoreFoundation;
+                                                                                                                                binaryUUID = "96F8386D-D88A-3C89-A323-A17975C3317F";
+                                                                                                                                offsetIntoBinaryTextSegment = 6622097408;
+                                                                                                                                sampleCount = 1;
+                                                                                                                                subFrames =                                                                                                                                 (
+                                                                                                                                                                                                                                                                        {
+                                                                                                                                        address = 6622727720;
+                                                                                                                                        binaryName = CoreFoundation;
+                                                                                                                                        binaryUUID = "96F8386D-D88A-3C89-A323-A17975C3317F";
+                                                                                                                                        offsetIntoBinaryTextSegment = 6622097408;
+                                                                                                                                        sampleCount = 1;
+                                                                                                                                        subFrames =                                                                                                                                         (
+                                                                                                                                                                                                                                                                                        {
+                                                                                                                                                address = 6622704592;
+                                                                                                                                                binaryName = CoreFoundation;
+                                                                                                                                                binaryUUID = "96F8386D-D88A-3C89-A323-A17975C3317F";
+                                                                                                                                                offsetIntoBinaryTextSegment = 6622097408;
+                                                                                                                                                sampleCount = 1;
+                                                                                                                                                subFrames =                                                                                                                                                 (
+                                                                                                                                                                                                                                                                                                        {
+                                                                                                                                                        address = 6622702480;
+                                                                                                                                                        binaryName = CoreFoundation;
+                                                                                                                                                        binaryUUID = "96F8386D-D88A-3C89-A323-A17975C3317F";
+                                                                                                                                                        offsetIntoBinaryTextSegment = 6622097408;
+                                                                                                                                                        sampleCount = 1;
+                                                                                                                                                        subFrames =                                                                                                                                                         (
+                                                                                                                                                                                                                                                                                                                        {
+                                                                                                                                                                address = 6995088792;
+                                                                                                                                                                binaryName = GraphicsServices;
+                                                                                                                                                                binaryUUID = "CE670BB4-73BA-34DB-90FB-722F8706DE7C";
+                                                                                                                                                                offsetIntoBinaryTextSegment = 6995075072;
+                                                                                                                                                                sampleCount = 1;
+                                                                                                                                                                subFrames =                                                                                                                                                                 (
+                                                                                                                                                                                                                                                                                                                                        {
+                                                                                                                                                                        address = 6665602616;
+                                                                                                                                                                        binaryName = UIKitCore;
+                                                                                                                                                                        binaryUUID = "71B59F62-19DA-3CFF-89E1-DACF333BAB0D";
+                                                                                                                                                                        offsetIntoBinaryTextSegment = 6653886464;
+                                                                                                                                                                        sampleCount = 1;
+                                                                                                                                                                        subFrames =                                                                                                                                                                         (
+                                                                                                                                                                                                                                                                                                                                                        {
+                                                                                                                                                                                address = 6665624504;
+                                                                                                                                                                                binaryName = UIKitCore;
+                                                                                                                                                                                binaryUUID = "71B59F62-19DA-3CFF-89E1-DACF333BAB0D";
+                                                                                                                                                                                offsetIntoBinaryTextSegment = 6653886464;
+                                                                                                                                                                                sampleCount = 1;
+                                                                                                                                                                                subFrames =                                                                                                                                                                                 (
+                                                                                                                                                                                                                                                                                                                                                                        {
+                                                                                                                                                                                        address = 4378398396;
+                                                                                                                                                                                        binaryName = "NPKitDemo_Example";
+                                                                                                                                                                                        binaryUUID = "22D0859C-91B8-3433-84B2-7248C66041B8";
+                                                                                                                                                                                        offsetIntoBinaryTextSegment = 4378361856;
+                                                                                                                                                                                        sampleCount = 1;
+                                                                                                                                                                                        subFrames =                                                                                                                                                                                         (
+                                                                                                                                                                                                                                                                                                                                                                                        {
+                                                                                                                                                                                                address = 6619420040;
+                                                                                                                                                                                                binaryName = "libdyld.dylib";
+                                                                                                                                                                                                binaryUUID = "E31C0887-C999-3047-9B80-203248EC2396";
+                                                                                                                                                                                                offsetIntoBinaryTextSegment = 6619414528;
+                                                                                                                                                                                                sampleCount = 1;
+                                                                                                                                                                                            }
+                                                                                                                                                                                        );
+                                                                                                                                                                                    }
+                                                                                                                                                                                );
+                                                                                                                                                                            }
+                                                                                                                                                                        );
+                                                                                                                                                                    }
+                                                                                                                                                                );
+                                                                                                                                                            }
+                                                                                                                                                        );
+                                                                                                                                                    }
+                                                                                                                                                );
+                                                                                                                                            }
+                                                                                                                                        );
+                                                                                                                                    }
+                                                                                                                                );
+                                                                                                                            }
+                                                                                                                        );
+                                                                                                                    }
+                                                                                                                );
+                                                                                                            }
+                                                                                                        );
+                                                                                                    }
+                                                                                                );
+                                                                                            }
+                                                                                        );
+                                                                                    }
+                                                                                );
+                                                                            }
+                                                                        );
+                                                                    }
+                                                                );
+                                                            }
+                                                        );
+                                                    }
+                                                );
+                                            }
+                                        );
+                                    }
+                                );
+                            }
+                        );
+                        threadAttributed = 1;
+                    },
+                                        {
+                        callStackRootFrames =                         (
+                                                        {
+                                address = 7804016748;
+                                binaryName = "libsystem_pthread.dylib";
+                                binaryUUID = "93C7F0DC-89F1-3162-A119-6FC88028D027";
+                                offsetIntoBinaryTextSegment = 7803957248;
+                                sampleCount = 1;
+                            }
+                        );
+                        threadAttributed = 0;
+                    },
+                                        {
+                        callStackRootFrames =                         (
+                                                        {
+                                address = 7345495024;
+                                binaryName = "libsystem_kernel.dylib";
+                                binaryUUID = "8BCB6FF9-5162-3657-A2E2-5CE5704353E6";
+                                offsetIntoBinaryTextSegment = 7345332224;
+                                sampleCount = 1;
+                                subFrames =                                 (
+                                                                        {
+                                        address = 6770747092;
+                                        binaryName = "libsystem_c.dylib";
+                                        binaryUUID = "EDF3E843-A62A-3DD0-92CC-EBE94D5A83E3";
+                                        offsetIntoBinaryTextSegment = 6770286592;
+                                        sampleCount = 1;
+                                        subFrames =                                         (
+                                                                                        {
+                                                address = 6642051684;
+                                                binaryName = Foundation;
+                                                binaryUUID = "F1BC26A1-F5BB-36F7-A65A-D5F232DBF902";
+                                                offsetIntoBinaryTextSegment = 6641668096;
+                                                sampleCount = 1;
+                                                subFrames =                                                 (
+                                                                                                        {
+                                                        address = 4378788016;
+                                                        binaryName = NicePerformanceKit;
+                                                        binaryUUID = "61816FCE-0DEB-3946-9EB6-881FAF633ACC";
+                                                        offsetIntoBinaryTextSegment = 4378755072;
+                                                        sampleCount = 1;
+                                                        subFrames =                                                         (
+                                                                                                                        {
+                                                                address = 6619288216;
+                                                                binaryName = "libdispatch.dylib";
+                                                                binaryUUID = "6C143C51-288F-3CD0-84DD-17B9A0AAEE62";
+                                                                offsetIntoBinaryTextSegment = 6618894336;
+                                                                sampleCount = 1;
+                                                                subFrames =                                                                 (
+                                                                                                                                        {
+                                                                        address = 6619292288;
+                                                                        binaryName = "libdispatch.dylib";
+                                                                        binaryUUID = "6C143C51-288F-3CD0-84DD-17B9A0AAEE62";
+                                                                        offsetIntoBinaryTextSegment = 6618894336;
+                                                                        sampleCount = 1;
+                                                                        subFrames =                                                                         (
+                                                                                                                                                        {
+                                                                                address = 6619145456;
+                                                                                binaryName = "libdispatch.dylib";
+                                                                                binaryUUID = "6C143C51-288F-3CD0-84DD-17B9A0AAEE62";
+                                                                                offsetIntoBinaryTextSegment = 6618894336;
+                                                                                sampleCount = 1;
+                                                                                subFrames =                                                                                 (
+                                                                                                                                                                        {
+                                                                                        address = 6619148252;
+                                                                                        binaryName = "libdispatch.dylib";
+                                                                                        binaryUUID = "6C143C51-288F-3CD0-84DD-17B9A0AAEE62";
+                                                                                        offsetIntoBinaryTextSegment = 6618894336;
+                                                                                        sampleCount = 1;
+                                                                                        subFrames =                                                                                         (
+                                                                                                                                                                                        {
+                                                                                                address = 6619187200;
+                                                                                                binaryName = "libdispatch.dylib";
+                                                                                                binaryUUID = "6C143C51-288F-3CD0-84DD-17B9A0AAEE62";
+                                                                                                offsetIntoBinaryTextSegment = 6618894336;
+                                                                                                sampleCount = 1;
+                                                                                                subFrames =                                                                                                 (
+                                                                                                                                                                                                        {
+                                                                                                        address = 7804003748;
+                                                                                                        binaryName = "libsystem_pthread.dylib";
+                                                                                                        binaryUUID = "93C7F0DC-89F1-3162-A119-6FC88028D027";
+                                                                                                        offsetIntoBinaryTextSegment = 7803957248;
+                                                                                                        sampleCount = 1;
+                                                                                                        subFrames =                                                                                                         (
+                                                                                                                                                                                                                        {
+                                                                                                                address = 7804016756;
+                                                                                                                binaryName = "libsystem_pthread.dylib";
+                                                                                                                binaryUUID = "93C7F0DC-89F1-3162-A119-6FC88028D027";
+                                                                                                                offsetIntoBinaryTextSegment = 7803957248;
+                                                                                                                sampleCount = 1;
+                                                                                                            }
+                                                                                                        );
+                                                                                                    }
+                                                                                                );
+                                                                                            }
+                                                                                        );
+                                                                                    }
+                                                                                );
+                                                                            }
+                                                                        );
+                                                                    }
+                                                                );
+                                                            }
+                                                        );
+                                                    }
+                                                );
+                                            }
+                                        );
+                                    }
+                                );
+                            }
+                        );
+                        threadAttributed = 0;
+                    },
+                                        {
+                        callStackRootFrames =                         (
+                                                        {
+                                address = 7804016748;
+                                binaryName = "libsystem_pthread.dylib";
+                                binaryUUID = "93C7F0DC-89F1-3162-A119-6FC88028D027";
+                                offsetIntoBinaryTextSegment = 7803957248;
+                                sampleCount = 1;
+                            }
+                        );
+                        threadAttributed = 0;
+                    },
+                                        {
+                        callStackRootFrames =                         (
+                                                        {
+                                address = 7345350212;
+                                binaryName = "libsystem_kernel.dylib";
+                                binaryUUID = "8BCB6FF9-5162-3657-A2E2-5CE5704353E6";
+                                offsetIntoBinaryTextSegment = 7345332224;
+                                sampleCount = 1;
+                                subFrames =                                 (
+                                                                        {
+                                        address = 7345347144;
+                                        binaryName = "libsystem_kernel.dylib";
+                                        binaryUUID = "8BCB6FF9-5162-3657-A2E2-5CE5704353E6";
+                                        offsetIntoBinaryTextSegment = 7345332224;
+                                        sampleCount = 1;
+                                        subFrames =                                         (
+                                                                                        {
+                                                address = 6622728428;
+                                                binaryName = CoreFoundation;
+                                                binaryUUID = "96F8386D-D88A-3C89-A323-A17975C3317F";
+                                                offsetIntoBinaryTextSegment = 6622097408;
+                                                sampleCount = 1;
+                                                subFrames =                                                 (
+                                                                                                        {
+                                                        address = 6622704992;
+                                                        binaryName = CoreFoundation;
+                                                        binaryUUID = "96F8386D-D88A-3C89-A323-A17975C3317F";
+                                                        offsetIntoBinaryTextSegment = 6622097408;
+                                                        sampleCount = 1;
+                                                        subFrames =                                                         (
+                                                                                                                        {
+                                                                address = 6622702480;
+                                                                binaryName = CoreFoundation;
+                                                                binaryUUID = "96F8386D-D88A-3C89-A323-A17975C3317F";
+                                                                offsetIntoBinaryTextSegment = 6622097408;
+                                                                sampleCount = 1;
+                                                                subFrames =                                                                 (
+                                                                                                                                        {
+                                                                        address = 6641698808;
+                                                                        binaryName = Foundation;
+                                                                        binaryUUID = "F1BC26A1-F5BB-36F7-A65A-D5F232DBF902";
+                                                                        offsetIntoBinaryTextSegment = 6641668096;
+                                                                        sampleCount = 1;
+                                                                        subFrames =                                                                         (
+                                                                                                                                                        {
+                                                                                address = 6641698520;
+                                                                                binaryName = Foundation;
+                                                                                binaryUUID = "F1BC26A1-F5BB-36F7-A65A-D5F232DBF902";
+                                                                                offsetIntoBinaryTextSegment = 6641668096;
+                                                                                sampleCount = 1;
+                                                                                subFrames =                                                                                 (
+                                                                                                                                                                        {
+                                                                                        address = 6666306616;
+                                                                                        binaryName = UIKitCore;
+                                                                                        binaryUUID = "71B59F62-19DA-3CFF-89E1-DACF333BAB0D";
+                                                                                        offsetIntoBinaryTextSegment = 6653886464;
+                                                                                        sampleCount = 1;
+                                                                                        subFrames =                                                                                         (
+                                                                                                                                                                                        {
+                                                                                                address = 6643127484;
+                                                                                                binaryName = Foundation;
+                                                                                                binaryUUID = "F1BC26A1-F5BB-36F7-A65A-D5F232DBF902";
+                                                                                                offsetIntoBinaryTextSegment = 6641668096;
+                                                                                                sampleCount = 1;
+                                                                                                subFrames =                                                                                                 (
+                                                                                                                                                                                                        {
+                                                                                                        address = 7803996988;
+                                                                                                        binaryName = "libsystem_pthread.dylib";
+                                                                                                        binaryUUID = "93C7F0DC-89F1-3162-A119-6FC88028D027";
+                                                                                                        offsetIntoBinaryTextSegment = 7803957248;
+                                                                                                        sampleCount = 1;
+                                                                                                        subFrames =                                                                                                         (
+                                                                                                                                                                                                                        {
+                                                                                                                address = 7804016768;
+                                                                                                                binaryName = "libsystem_pthread.dylib";
+                                                                                                                binaryUUID = "93C7F0DC-89F1-3162-A119-6FC88028D027";
+                                                                                                                offsetIntoBinaryTextSegment = 7803957248;
+                                                                                                                sampleCount = 1;
+                                                                                                            }
+                                                                                                        );
+                                                                                                    }
+                                                                                                );
+                                                                                            }
+                                                                                        );
+                                                                                    }
+                                                                                );
+                                                                            }
+                                                                        );
+                                                                    }
+                                                                );
+                                                            }
+                                                        );
+                                                    }
+                                                );
+                                            }
+                                        );
+                                    }
+                                );
+                            }
+                        );
+                        threadAttributed = 0;
+                    },
+                                        {
+                        callStackRootFrames =                         (
+                                                        {
+                                address = 7804016748;
+                                binaryName = "libsystem_pthread.dylib";
+                                binaryUUID = "93C7F0DC-89F1-3162-A119-6FC88028D027";
+                                offsetIntoBinaryTextSegment = 7803957248;
+                                sampleCount = 1;
+                            }
+                        );
+                        threadAttributed = 0;
+                    }
+                );
+            };
+            diagnosticMetaData =             {
+                appBuildVersion = "1.0";
+                appVersion = "1.0";
+                deviceType = "iPhone10,3";
+                exceptionCode = 1;
+                exceptionType = 1;
+                osVersion = "iPhone OS 14.2 (18B92)";
+                platformArchitecture = arm64;
+                regionFormat = CN;
+                signal = 11;
+                terminationReason = "Namespace SIGNAL, Code 0xb";
+                virtualMemoryRegionInfo = "0 is not in any region.  Bytes before following region: 4378361856\n      REGION TYPE                 START - END      [ VSIZE] PRT/MAX SHRMOD  REGION DETAIL\n      UNUSED SPACE AT START\n--->  \n      __TEXT                   104f88000-104f94000 [   48K] r-x/r-x SM=COW  ...tDemo_Example";
+            };
+            version = "1.0.0";
+        }
+    );
+    timeStampBegin = "2021-10-11 16:00:00 +0000";
+    timeStampEnd = "2021-10-12 15:59:00 +0000";
+}

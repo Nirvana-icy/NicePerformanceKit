@@ -17,7 +17,7 @@
 #import <NicePerformanceKit/NPKLagMonitor.h>
 #import <NicePerformanceKit/NPKPerfEntryWindow.h>
 #import "SlowLargeTableViewController.h"
-#import "NPKMetricKitManager.h"
+#import "NPKDemoViewController+Test.h"
 
 @interface NPKDemoViewController ()
 
@@ -26,7 +26,8 @@ NPKLagMonitorDelegate
 >
 
 @property (nonatomic, strong) UIButton *triggerLagBtn;
-@property (nonatomic, strong) UIButton *triggerGCDTestBtn;
+@property (nonatomic, strong) UIButton *asyncToConcurrentQueueBtn;
+@property (nonatomic, strong) UIButton *asynToQueuePoolTestBtn;
 @property (nonatomic, strong) UIButton *costCPUAlotBtn;
 @property (nonatomic, strong) UIButton *slowLargeTableBtn;
 @property (nonatomic, strong) UIButton *makeCrashBtn;
@@ -56,8 +57,12 @@ NPKLagMonitorDelegate
     [NPKBadPerfCase generateMainThreadLag];
 }
 
-- (void)triggerGCDTestBtnTapped {
+- (void)asyncToConcurrentQueueBtnTapped {
     [NPKPerfTestCase gcdDispatchAsyncToConcurrentQueue];
+}
+
+- (void)asyncToQueuePoolBtnTapped {
+    [NPKPerfTestCase gcdDispatchAsyncToQueuePool];
 }
 
 - (void)costCPUALotBtnTapped {
@@ -75,18 +80,15 @@ NPKLagMonitorDelegate
 }
 
 - (void)mockMetricKitReportBtnTapped {
-    if (@available(iOS 14, *)) {
-        MXDiagnosticPayload *mockPayload = [MXDiagnosticPayload new];
-        
-        [[NPKMetricKitManager sharedInstance] didReceiveDiagnosticPayloads:@[mockPayload]];
-    }
+    [self sendMockMetricKitReport];
 }
 
 #pragma mark -- UI
 
 - (void)setupView {
     [self.view addSubview:self.triggerLagBtn];
-    [self.view addSubview:self.triggerGCDTestBtn];
+    [self.view addSubview:self.asyncToConcurrentQueueBtn];
+    [self.view addSubview:self.asynToQueuePoolTestBtn];
     [self.view addSubview:self.costCPUAlotBtn];
     [self.view addSubview:self.slowLargeTableBtn];
     [self.view addSubview:self.makeCrashBtn];
@@ -98,14 +100,20 @@ NPKLagMonitorDelegate
         make.size.mas_equalTo(CGSizeMake(300, 50));
     }];
 
-    [self.triggerGCDTestBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self.asyncToConcurrentQueueBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.triggerLagBtn.mas_bottom).offset(20);
         make.centerX.equalTo(self.view);
         make.size.mas_equalTo(CGSizeMake(300, 50));
     }];
-
+    
+    [self.asynToQueuePoolTestBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.asyncToConcurrentQueueBtn.mas_bottom).offset(20);
+        make.centerX.equalTo(self.view);
+        make.size.mas_equalTo(CGSizeMake(300, 50));
+    }];
+    
     [self.costCPUAlotBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.triggerGCDTestBtn.mas_bottom).offset(20);
+        make.top.equalTo(self.asynToQueuePoolTestBtn.mas_bottom).offset(20);
         make.centerX.equalTo(self.view);
         make.size.mas_equalTo(CGSizeMake(300, 50));
     }];
@@ -144,17 +152,30 @@ NPKLagMonitorDelegate
     return _triggerLagBtn;
 }
 
-- (UIButton *)triggerGCDTestBtn {
-    if (!_triggerGCDTestBtn) {
-        _triggerGCDTestBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_triggerGCDTestBtn setBackgroundColor:[UIColor systemGreenColor]];
-        [_triggerGCDTestBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        [_triggerGCDTestBtn setTitle:@"Thread Count Test" forState:UIControlStateNormal];
-        _triggerGCDTestBtn.layer.cornerRadius = 4.f;
-        _triggerGCDTestBtn.clipsToBounds = YES;
-        [_triggerGCDTestBtn addTarget:self action:@selector(triggerGCDTestBtnTapped) forControlEvents:UIControlEventTouchUpInside];
+- (UIButton *)asyncToConcurrentQueueBtn {
+    if (!_asyncToConcurrentQueueBtn) {
+        _asyncToConcurrentQueueBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_asyncToConcurrentQueueBtn setBackgroundColor:[UIColor redColor]];
+        [_asyncToConcurrentQueueBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [_asyncToConcurrentQueueBtn setTitle:@"Threads Storm Test" forState:UIControlStateNormal];
+        _asyncToConcurrentQueueBtn.layer.cornerRadius = 4.f;
+        _asyncToConcurrentQueueBtn.clipsToBounds = YES;
+        [_asyncToConcurrentQueueBtn addTarget:self action:@selector(asyncToConcurrentQueueBtnTapped) forControlEvents:UIControlEventTouchUpInside];
     }
-    return _triggerGCDTestBtn;
+    return _asyncToConcurrentQueueBtn;
+}
+
+- (UIButton *)asynToQueuePoolTestBtn {
+    if (!_asynToQueuePoolTestBtn) {
+        _asynToQueuePoolTestBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_asynToQueuePoolTestBtn setBackgroundColor:[UIColor systemGreenColor]];
+        [_asynToQueuePoolTestBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [_asynToQueuePoolTestBtn setTitle:@"Async To Queue Pool" forState:UIControlStateNormal];
+        _asynToQueuePoolTestBtn.layer.cornerRadius = 4.f;
+        _asynToQueuePoolTestBtn.clipsToBounds = YES;
+        [_asynToQueuePoolTestBtn addTarget:self action:@selector(asyncToQueuePoolBtnTapped) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _asynToQueuePoolTestBtn;
 }
 
 - (UIButton *)costCPUAlotBtn {

@@ -112,9 +112,9 @@ Pod::Spec.new do |spec|
       launch_manager.public_header_files = 'NicePerformanceKit/Classes/Service/LaunchManager/**/*.h'
       launch_manager.source_files  = "NicePerformanceKit/Classes/Service/LaunchManager/**/*.{h,m,mm}"
     end
-    service.subspec 'MetricKitManager' do |metric_kit_manager|
-      metric_kit_manager.public_header_files = 'NicePerformanceKit/Classes/Service/MetricKitManager/**/*.h'
-      metric_kit_manager.source_files  = "NicePerformanceKit/Classes/Service/MetricKitManager/**/*.{h,m,mm}"
+    service.subspec 'MetricKitReport' do |metric_kit_report|
+      metric_kit_report.public_header_files = 'NicePerformanceKit/Classes/Service/MetricKitReport/**/*.h'
+      metric_kit_report.source_files  = "NicePerformanceKit/Classes/Service/MetricKitReport/**/*.{h,m,mm}"
     end
     service.subspec 'PerfMonitor' do |perf_monitor|
       perf_monitor.dependency 'NicePerformanceKit/Base'

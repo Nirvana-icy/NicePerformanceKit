@@ -14,11 +14,11 @@
 @implementation NPKSysResCostInfo
 
 + (NSString *)appCostInfo {
-    return [NSString stringWithFormat:@"CPU: %0.1f RAM: %0.1f", [NPKSysResCostInfo currentAppCpuUsage], [NPKSysResCostInfo currentAppMemory]];
+    return [NSString stringWithFormat:@"CPU: %0.1f RAM: %0.1f 线程: %lu", [NPKSysResCostInfo currentAppCpuUsage], [NPKSysResCostInfo currentAppMemory], (unsigned long)[NPKSysResCostInfo currentAppThreadCount]];
 }
 
 + (NSString *)sysLoadInfo {
-    return [NSString stringWithFormat:@"CPU: %0.1f 线程: %lu", [NPKSysResCostInfo currentSystemCpuUsage], (unsigned long)[NPKSysResCostInfo currentAppThreadCount]];
+    return [NSString stringWithFormat:@"CPU: %0.1f", [NPKSysResCostInfo currentSystemCpuUsage]];
 }
 
 + (float)currentAppMemory {

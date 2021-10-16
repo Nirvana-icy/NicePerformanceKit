@@ -3,10 +3,10 @@ PODS:
   - NicePerformanceKit/Base (0.0.1)
   - NicePerformanceKit/Service (0.0.1):
     - NicePerformanceKit/Service/LaunchManager (= 0.0.1)
-    - NicePerformanceKit/Service/MetricKitManager (= 0.0.1)
+    - NicePerformanceKit/Service/MetricKitReport (= 0.0.1)
     - NicePerformanceKit/Service/PerfMonitor (= 0.0.1)
   - NicePerformanceKit/Service/LaunchManager (0.0.1)
-  - NicePerformanceKit/Service/MetricKitManager (0.0.1)
+  - NicePerformanceKit/Service/MetricKitReport (0.0.1)
   - NicePerformanceKit/Service/PerfMonitor (0.0.1):
     - NicePerformanceKit/Base
   - NicePerformanceKit/TestCase (0.0.1)
@@ -33,7 +33,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
-  NicePerformanceKit: d5e0f871d4ce9f8525db7c6f84bec9871bc18112
+  NicePerformanceKit: dd9259cacf8cb9d29bd99d617e130f12a5316621
 
 PODFILE CHECKSUM: a68b409bc576481f30389adde7474a13669617c3
 

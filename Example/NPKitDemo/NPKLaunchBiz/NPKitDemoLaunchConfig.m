@@ -18,33 +18,34 @@ NPK_LAUNCH_PLUGIN(NPKitDemoLaunchConfig)
 - (NSArray *)defaultLaunchList {
     return @[
         @{
-            @"name": @"launch_sync",
+            @"name": @"head_sync_task",
             @"type": @(NPKLaunchTaskTypeSync),
             @"taskClassList":@[
-                    @"NPKitCrashReportInitTask",
-                    @"NPKitLoginInitTask",
-                ]
-        },
-        @{
-            @"name": @"async_barrier",
-            @"type": @(NPKLaunchTaskTypeBarrier),
-            @"taskClassList":@[
-                    @"NPKitLoggerInitTask",
-                    @"NPKitAmapInitTask",
+                    @"NPKLaunchHeadTaskA",
+                    @"NPKLaunchHeadTaskB",
                 ]
         },
         @{
             @"name": @"sync_tasks",
-            @"type": @(NPKLaunchTaskTypeSync),
+            @"type": @(NPKLaunchTaskTypeAsync),
             @"taskClassList":@[
-                    @"NPKitXXXXInitTask",
+                    @"NPKLaunchHeadTaskA",
+                    @"NPKLaunchHeadTaskB",
                 ]
         },
         @{
-            @"name": @"free_time_async",
+            @"name": @"async_barrier_task",
+            @"type": @(NPKLaunchTaskTypeBarrier),
+            @"taskClassList":@[
+                    @"NPKLaunchHeadTaskA",
+                    @"NPKLaunchHeadTaskB",
+                ]
+        },
+        @{
+            @"name": @"tail_task",
             @"type": @(NPKLaunchTaskTypeAsyncAfterRender),
             @"taskClassList":@[
-                    @"NPKitXXXXInitTask",
+                    @"NPKLaunchHeadTaskA",
                 ]
         },
     ];

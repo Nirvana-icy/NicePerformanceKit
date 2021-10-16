@@ -8,15 +8,14 @@
 
 #import "NPKAppDelegate.h"
 #import <UserNotifications/UserNotifications.h>
-#import "NPKLagMonitor.h"
-#import "NPKPerfMonitor.h"
-#import "NPKMetricKitManager.h"
+#import "NPKLaunchManager.h"
+#import "NPKMetricKitReport.h"
 
 @interface NPKAppDelegate ()
 
 <
 UNUserNotificationCenterDelegate,
-NPKMetricKitManagerDelegate
+NPKMetricKitReportDelegate
 >
 
 @end
@@ -26,11 +25,11 @@ NPKMetricKitManagerDelegate
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    [[NPKLagMonitor sharedInstance] start];
-    [[NPKPerfMonitor sharedInstance] start];
+    
+    [[NPKLaunchManager sharedManager] startWithOptions:launchOptions];
     
     if (@available(iOS 14, *)) {
-        [[NPKMetricKitManager sharedInstance] bind:self];
+        [[NPKMetricKitReport sharedInstance] bind:self];
     }
     
     UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
@@ -75,10 +74,9 @@ NPKMetricKitManagerDelegate
     
 }
 
-- (void)handleNPKDiagnosticPayloads:(NSArray<NPKDiagnosticPayloadModel *> *)npkDiagnosticPayloads {
+- (void)didReceiveNPKDiagnosticReportModel:(NPKDiagnosticReportModel *)npkDiagnosticReportModel {
     // 线下：本地通知/UI展示
-    NSString *subTitle = [NSString stringWithFormat:@"Payload Count: %lu", (unsigned long)npkDiagnosticPayloads.count];
-    [self sendNPKLocalNotificationWithSubTitle:subTitle
+    [self sendNPKLocalNotificationWithSubTitle:npkDiagnosticReportModel.reportSummary
                                           body:@""];
     // 线上：埋点上报/API上传
 }

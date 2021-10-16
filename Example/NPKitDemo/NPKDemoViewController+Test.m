@@ -10,8 +10,20 @@
 #import <NicePerformanceKit/NPKBaseDefine.h>
 #import <NicePerformanceKit/NPKBadPerfCase.h>
 #import <NicePerformanceKit/NPKPerfTestCase.h>
+#import <NicePerformanceKit/NPKDiagnosticReportModel.h>
+#import "NPKMetricKitReport.h"
+#import "NPKMetricKitReportTestCase.h"
 
 @implementation NPKDemoViewController (Test)
+
+- (void)sendMockMetricKitReport {
+    if (@available(iOS 14, *)) {
+        
+        NPKMetricKitReportTestCase *npkMXReportTests = [NPKMetricKitReportTestCase new];
+        NPKMockMXDiagnosticPayload *mockPayload = [npkMXReportTests createCrashDiagnosticPayload];
+        [[NPKMetricKitReport sharedInstance] didReceiveDiagnosticPayloads:@[mockPayload, mockPayload, mockPayload]];
+    }
+}
 
 - (void)runloopTest {
     sleep(1);

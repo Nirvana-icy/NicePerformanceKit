@@ -29,19 +29,48 @@
     if (self) {
         self.appVersion = crashDiagnostic.applicationVersion;
         self.buildVersion = crashDiagnostic.metaData.applicationBuildVersion;
-        self.stack = [NPKBaseDiagnosticModel convertThreadsToArray:crashDiagnostic.callStackTree];
+        self.threadTraceArr = [NPKBaseDiagnosticModel convertThreadsToArray:crashDiagnostic.callStackTree];
         
-        self.exceptionName = [NPKCrashDiagnosticModel getExceptionName:crashDiagnostic.exceptionType];
+        self.exceptionType = crashDiagnostic.exceptionType;
+        self.exceptionTypeName = [NPKCrashDiagnosticModel getExceptionName:crashDiagnostic.exceptionType];
         self.exceptionCode = crashDiagnostic.exceptionCode;
+        
         self.signal = crashDiagnostic.signal;
+        self.signalName = [NPKCrashDiagnosticModel getSignalName:crashDiagnostic.signal];
+        
         self.terminationReason = crashDiagnostic.terminationReason;
         self.virtualMemoryRegionInfo = crashDiagnostic.virtualMemoryRegionInfo;
     }
     return self;
 }
 
+// @see    sys/exception_types.h
 + (NSString *)getExceptionName:(NSNumber *)exceptionType {
   int exception = [exceptionType intValue];
+  switch (exception) {
+    case EXC_BAD_ACCESS:
+      return @"EXC_BAD_ACCESS";
+    case EXC_BAD_INSTRUCTION:
+      return @"EXC_BAD_INSTRUCTION";
+    case EXC_ARITHMETIC:
+      return @"EXC_ARITHMETIC";
+    case EXC_SOFTWARE:
+      return @"EXC_SOFTWARE";
+    case EXC_CRASH:
+      return @"EXC_CRASH";
+    case SIGSYS:
+      return @"SIGSYS";
+    case EXC_RESOURCE:
+      return @"EXC_RESOURCE";
+    default:
+      return @"UNKNOWN";
+  }
+  return @"UNKNOWN";
+}
+
+// @see    sys/signal.h
++ (NSString *)getSignalName:(NSNumber *)signal {
+  int exception = [signal intValue];
   switch (exception) {
     case SIGABRT:
       return @"SIGABRT";
@@ -57,6 +86,8 @@
       return @"SIGSYS";
     case SIGTRAP:
       return @"SIGTRAP";
+    case SIGHUP:
+      return @"SIGHUP";
     default:
       return @"UNKNOWN";
   }

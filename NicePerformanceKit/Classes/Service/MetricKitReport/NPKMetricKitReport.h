@@ -1,5 +1,5 @@
 //
-//  NPKMetricKitManager.h
+//  NPKMetricKitReport.h
 //  NicePerformanceKit
 //
 //  Created by JinglongBi on 2021/10/11.
@@ -7,21 +7,21 @@
 
 #import <Foundation/Foundation.h>
 #import "NPKBaseDefine.h"
-#import "NPKDiagnosticPayloadModel.h"
+#import "NPKDiagnosticReportModel.h"
 
 #if NPK_METRICKIT_SUPPORTED
 #import <MetricKit/MetricKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@protocol NPKMetricKitManagerDelegate <NSObject>
+@protocol NPKMetricKitReportDelegate <NSObject>
 
 - (void)handleNPKMetricPayloads;
-- (void)handleNPKDiagnosticPayloads:(NSArray<NPKDiagnosticPayloadModel *> *)npkDiagnosticPayloads;
+- (void)didReceiveNPKDiagnosticReportModel:(NPKDiagnosticReportModel *)npkDiagnosticReportModel;
 
 @end
 
-@interface NPKMetricKitManager : NSObject <MXMetricManagerSubscriber>
+@interface NPKMetricKitReport : NSObject <MXMetricManagerSubscriber>
 
 + (instancetype)sharedInstance API_AVAILABLE(ios(14));
 
@@ -31,13 +31,13 @@ NS_ASSUME_NONNULL_BEGIN
  *  例如，线下：本地通知/UI展示；线上：埋点上报/API上传
  *  @param obj npk metric kit report 数据接收对象
  */
-- (void)bind:(id<NPKMetricKitManagerDelegate>)obj;
+- (void)bind:(id<NPKMetricKitReportDelegate>)obj;
 
 /*!
  *  @brief 解绑数据接受对象
  *  @param obj npk metric kit report 数据接收对象
  */
-- (void)unbind:(id<NPKMetricKitManagerDelegate>)obj;
+- (void)unbind:(id<NPKMetricKitReportDelegate>)obj;
 
 @end
 

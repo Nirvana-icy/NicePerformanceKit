@@ -8,10 +8,10 @@
 #import "NPKPerfEntryWindow.h"
 #import "NPKBaseDefine.h"
 
-static CGFloat const kDefaultEntryWidth = 120;
-static CGFloat const kDefaultEntryHeight = 40;
+static CGFloat const kDefaultEntryWidth = 190;
+static CGFloat const kDefaultEntryHeight = 18;
 
-#define   kDefaultEntryStartPosition     CGPointMake(NPKScreenWidth - kDefaultEntryWidth - 10, 40)
+#define   kDefaultEntryStartPosition     CGPointMake(NPKScreenWidth - kDefaultEntryWidth - 10, 36)
 
 @interface NPKPerfEntryWindow ()
 
@@ -69,13 +69,13 @@ static CGFloat const kDefaultEntryHeight = 40;
 
 - (UILabel *)perfInfoLabel {
     if (!_perfInfoLabel) {
-        _perfInfoLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, kDefaultEntryWidth - 5, kDefaultEntryHeight)];
+        _perfInfoLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, kDefaultEntryWidth, kDefaultEntryHeight)];
+        _perfInfoLabel.textAlignment = NSTextAlignmentCenter;
         _perfInfoLabel.backgroundColor = [UIColor grayColor];
         _perfInfoLabel.textColor = [UIColor whiteColor];
         _perfInfoLabel.font = [UIFont systemFontOfSize:11.f];
         _perfInfoLabel.adjustsFontSizeToFitWidth = YES;
         _perfInfoLabel.minimumScaleFactor = 0.6f;
-        _perfInfoLabel.numberOfLines = 2;
     }
     return _perfInfoLabel;
 }

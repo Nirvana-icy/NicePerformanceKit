@@ -27,4 +27,14 @@
     });
 }
 
++ (void)generateLagWithTime:(NSTimeInterval)time {
+    NSDate *lastDate = [NSDate date];
+    while (1) {
+        NSDate *currentDate = [NSDate date];
+        if (([currentDate timeIntervalSince1970] - [lastDate timeIntervalSince1970]) > time) {
+            break;
+        }
+    }
+}
+
 @end

@@ -105,12 +105,12 @@
 
 - (NSDictionary *)getDictionaryRepresentation:(NPKThread *)thread {
     NSMutableDictionary *dictionary = [[NSMutableDictionary alloc] init];
-    [dictionary setObject:@{} forKey:@"registers"];
-    NSMutableArray *frameArray = [[NSMutableArray alloc] init];
-    for (NPKFrame *frame in thread.frames) {
-        [frameArray addObject:[NSNumber numberWithLong:frame.address]];
-    }
-    [dictionary setObject:frameArray forKey:@"stacktrace"];
+//    [dictionary setObject:@{} forKey:@"registers"];
+//    NSMutableArray *frameArray = [[NSMutableArray alloc] init];
+//    for (NPKFrame *frame in thread.frames) {
+//        [frameArray addObject:[NSNumber numberWithLong:frame.address]];
+//    }
+    [dictionary setObject:thread.frames forKey:@"stacktrace"];
     [dictionary setObject:[NSNumber numberWithBool:thread.threadBlamed] forKey:@"crashed"];
     return dictionary;
 }

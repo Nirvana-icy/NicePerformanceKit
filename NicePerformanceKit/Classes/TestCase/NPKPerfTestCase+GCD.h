@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface NPKPerfTestCase (GCD)
 
 + (void)gcdDispatchAsyncToConcurrentQueue;
++ (void)gcdDispatchAsyncToQueuePool;
 + (void)gcdDispatchAsyncToSerialQueue;
 + (void)gcdDispatchSyncToSerialQueue;
 
