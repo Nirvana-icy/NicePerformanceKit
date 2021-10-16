@@ -9,13 +9,15 @@
 | Feature | 优先级 | 时间 |
 | :-: | :-: |:-: |
 | XCMetrics Workflow | 🌟🌟🌟🌟| 10.13 |
-| XCMetrics Test | 🌟🌟🌟🌟| 10.15 |
-| 启动器 | 🌟🌟🌟🌟🌟 | 10.18 |
+| 启动器 | 🌟🌟🌟🌟🌟 | 10.16 |
+| XCMetrics Test | 🌟🌟🌟🌟| 10.21 |
 | 初级性能问题诊断 | 🌟🌟🌟 | |
 | ANR count & bt & 内存警告提示  | 🌟| |
 |  展开详情 轨迹/弹幕 or Toast   | 🌟🌟| |
 | 展开功能控制面板  | 🌟| |
 | 拖拽 摇一摇隐藏 | 🌟| |
+
+![image](https://mmbiz.qpic.cn/mmbiz_jpg/M54fjP2zXtHCDkeVu2kiaUOg27SumB5oMUmdhaAVXC2du7zwyAneFljhXFN71drZaEUFe3nmBqVcGEiaArzp1Akw/0?wx_fmt=jpeg)
 
 ### Basic Workflow
 
