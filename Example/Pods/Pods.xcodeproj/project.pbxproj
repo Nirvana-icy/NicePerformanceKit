@@ -7,78 +7,99 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		011852CE1FA48F8B60D283BA08A011B1 /* NPKPerfEntryWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 5883C6B72B594DB61BDCF5E581432D42 /* NPKPerfEntryWindow.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		015D1FF0AB9FB872864ADB861DF84CAC /* NPKPerfEntryWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 22AB2F99E75B1587759FA00B32A8574B /* NPKPerfEntryWindow.m */; };
-		017C5EEA06ABBD7001E978F8C79EC869 /* NPKSysResCostInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = ACB5CC80EED947E52BC675F33C03FEFF /* NPKSysResCostInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		03F4D30B69716833CDA978A3C12E038D /* NPKBaseDefine.h in Headers */ = {isa = PBXBuildFile; fileRef = 4474F8148A1DF8444F3DCCE14B18F0A0 /* NPKBaseDefine.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		00FA434C7D6BCD4E0E88CB906E1B5E64 /* NPKPerfMonitor.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C892AE0D8D9136B1E6DE03E11282951 /* NPKPerfMonitor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0272502F8A7A1AAC8691DC4FE241D64D /* NPKLaunchProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D826C2CDC8CE4E2DDB091F3934DBB04 /* NPKLaunchProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		05A040F35BF1C88F869404E1A940B493 /* NSArray+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = DF48D82622C6D1FFAC5752C7BB004472 /* NSArray+MASShorthandAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05AF1B4459A8643531C7D909C6170EB5 /* appletrace.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5C24ED8D3134287DA0FAA809B2A439C4 /* appletrace.mm */; };
 		05EA1447EEA0EB669F8DEE73964A7C60 /* NSArray+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = F20A7188ABF123273A3C22C4340688AC /* NSArray+MASAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0967598607D521318F69D7D39D517B20 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 071ABA9DA4A53122DD0382E7C7F6CBEB /* ViewController+MASAdditions.m */; };
 		098630ECDB64ED7B89F5F687C82B4AC3 /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BB2E40FA7314FFFF244B2FD839A658 /* NSArray+MASAdditions.m */; };
+		0ACE8219F5C5E8A54EBC66E59F6922C2 /* NPKLagMonitor.h in Headers */ = {isa = PBXBuildFile; fileRef = DDA01E372DE5EF502FEF6B8C5FEF355C /* NPKLagMonitor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0AF1AD35706D90B1A91F291B899EF8C0 /* NSLayoutConstraint+MASDebugAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CD1AD2192C246BE568B6CFBA7EB9C68 /* NSLayoutConstraint+MASDebugAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0BBD53DB2075CDB2FC3514F5C689791B /* NPKLaunchConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = A1A81C759A690358C4EDE8EDA9B61FE9 /* NPKLaunchConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0FF96F48974492F74067B4A1396833D8 /* NPKDispatchQueuePool.h in Headers */ = {isa = PBXBuildFile; fileRef = 672579821BB66B3922EB060E4641E12B /* NPKDispatchQueuePool.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		13212464C1239B34BF76FCAB8AE26F35 /* NPKPerfTestCase+GCD.m in Sources */ = {isa = PBXBuildFile; fileRef = 769AAF043F5D7CFE72C32803796DDACC /* NPKPerfTestCase+GCD.m */; };
+		188BA6C1FE49C120CEA36E9DDE28803E /* NPKMockMXCallStackTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 948DA03D08D85E9093969A4ADAD4EC40 /* NPKMockMXCallStackTree.m */; };
 		1972E85F0FCD0F3EAF28ED7CD036286E /* Masonry-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E476E5DC364B11085C84F8770A12FD3B /* Masonry-dummy.m */; };
+		1B8395F8E41F81858A284A0FF2CD34BC /* NPKMockMXCrashDiagnostic.m in Sources */ = {isa = PBXBuildFile; fileRef = C51FB3518FBDFB2BE48CAE232D6A63E1 /* NPKMockMXCrashDiagnostic.m */; };
 		1C27A93A79E79847F368FD8E8022E9BF /* Pods-NPKitDemo_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7105D90F396FBBF7EFA957336EB621F5 /* Pods-NPKitDemo_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1C53C555949D669398D891AD3A6B5907 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
-		1D306F09BF2DCEB7D993C6535A6E652F /* NPKLaunchTaskService.h in Headers */ = {isa = PBXBuildFile; fileRef = D88EDCD056284D8A0260AEA0E92D2D54 /* NPKLaunchTaskService.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		22B1EF97078A4CDA828E9BBEF967AA5D /* NPKLagMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = B195F2B30A9705B51924CE85019ACA31 /* NPKLagMonitor.m */; };
+		219C0C6EFB2033B17827200873512BC2 /* NPKSysResCostInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = F00A550B1EACF76EC152651CE59F0F2F /* NPKSysResCostInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		22EE6A0CF471C2A277B2430A89ACCFAF /* NPKLaunchManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 27751440E9EA98BEC929BC5CE6AE8FFC /* NPKLaunchManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		280D36330BAC5715615FF4A8B42D60D6 /* MASUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 86DFFE3C8ABE515058DCF105EB608F37 /* MASUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		297A3627CF2F032CBFDC61D1A3786E63 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB7B80D58CFA003C25B538A405A341D /* MASViewAttribute.m */; };
+		2B40B0D749780BD32E51675FDB310647 /* NPKCallStackTree.h in Headers */ = {isa = PBXBuildFile; fileRef = F745AA8B5D7184663A478A671AA05378 /* NPKCallStackTree.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C6422BB1B462ABCE2283EE384708C0C /* NPKLagMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAD2CF7FAE8FA1DF0AD9596E6150666 /* NPKLagMonitor.m */; };
+		2D107B1D31491C07D57597B33EAEE0C7 /* NPKMockMXCallStackTree.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C4557655492207CA35A9CF02D75330C /* NPKMockMXCallStackTree.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		312D3C4B666F6DED0783B24302AD8C40 /* NPKPerfEntryWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = DC5CEBF5A20CCCAED635896A4CA0C2CB /* NPKPerfEntryWindow.m */; };
 		346080C0D1CA23399ADD739D722D7CEF /* Masonry.h in Headers */ = {isa = PBXBuildFile; fileRef = F05C6EDBC8E4591F89BD9F1E17FBFC97 /* Masonry.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		34CB5BCC0B28BDB603C8B14A2F7133FF /* NPKLaunchTaskService.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C3EAA73B5463C4878E175521F258D9E /* NPKLaunchTaskService.m */; };
+		37CFFD41B378CF7446AA0B76E0083B44 /* NPKPerfEntryWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 69B59B053EA43D8F31B56D97BDC49212 /* NPKPerfEntryWindow.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3ABB971B9CB3DABF60258D212F2C0C26 /* NPKMetricKitReportTestCase.h in Headers */ = {isa = PBXBuildFile; fileRef = F8F58C80C8B19120760E0A07E4BD8459 /* NPKMetricKitReportTestCase.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3DA5F1D8E51CDD102A871C2F37770C7B /* MASViewAttribute.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F5718E89E4E5165AA49B980D89CBCF8 /* MASViewAttribute.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3DEA8C8DBA80C8BE5F5E3A5CDE933BEF /* NPKImageCompressTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CC6F7743CA644E634C9AB6E4FAAAB88 /* NPKImageCompressTool.m */; };
-		3DEC08C80E7EA1B628FE0C6E5B882E05 /* NPKBadPerfCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 70965BC0F9AFD58F7E087627F281AD87 /* NPKBadPerfCase.m */; };
-		3F893D67F53254F646BF6906392E6DA6 /* NPKPerfTestCase+GCD.h in Headers */ = {isa = PBXBuildFile; fileRef = 6948B0851686C97DA2AED45926F5A711 /* NPKPerfTestCase+GCD.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		40421B338F5A0B032209A3AF4121F45A /* NPKLaunchManager.h in Headers */ = {isa = PBXBuildFile; fileRef = A49C446358B3B67EBD51ABDEF25DBB90 /* NPKLaunchManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		49DA89C50D5898085F0AA3F95545FBAF /* NPKLagMonitor.h in Headers */ = {isa = PBXBuildFile; fileRef = C9F31633567C98199C4619D9D31BE060 /* NPKLagMonitor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3E7306CBF12316C9700162622CB198BE /* NPKMetricKitReportTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = D347B96FCC49F1CEB1BF54750D99FDC9 /* NPKMetricKitReportTestCase.m */; };
+		40F2D17CD03C105BC13C04DD6D5C6B5D /* NPKSignpostLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 81308C05D65FF528F226721A42DFFFA9 /* NPKSignpostLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		424F00EAF2EADC8B6783F8C2CC06BDF4 /* NPKBadPerfCase.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B18664E2C9118B26A8156F2DB1DDA19 /* NPKBadPerfCase.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4323E8214B267536A93AD7E05185D5A6 /* NPKPerfTestCase.h in Headers */ = {isa = PBXBuildFile; fileRef = AA845E8A3A8E91D4CC274014C57D08F8 /* NPKPerfTestCase.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		45B31B7CBA0962766D451B17C21E45D3 /* NPKDiagnosticPayloadModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 52EF0BFF9182481E07F01C1BF72A544E /* NPKDiagnosticPayloadModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4ABC623DED101FC37B1245613CF327A4 /* NPKSignpostLog.mm in Sources */ = {isa = PBXBuildFile; fileRef = 76C4AAE13796CF0FC8CBAD797B116755 /* NPKSignpostLog.mm */; };
 		4B0981F9AC628CF5100C50FF4A163A4A /* View+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 896A4BCB5B3DBC78E1CF6EBF5AC2862F /* View+MASAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		54B087C2BD6A1783B1D08619D7ACDB0E /* NPKLaunchConfigPluginDefinition.h in Headers */ = {isa = PBXBuildFile; fileRef = 0207A6F17E235C76AD548EB097F151C4 /* NPKLaunchConfigPluginDefinition.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		56AC3CF9571B90DC50020B2CB21D6C05 /* NPKLaunchManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 240FF5D077DA6243E6AD4FB24331490D /* NPKLaunchManager.m */; };
+		4EA238E947F624580219EE57123CB03A /* NPKMockMXDiagnosticPayload.m in Sources */ = {isa = PBXBuildFile; fileRef = 03FBF314BAEC20DCC676A66F1944C5F0 /* NPKMockMXDiagnosticPayload.m */; };
+		54D94D0CEF1B6B44EB64E97C2C3577ED /* NPKMockMXCrashDiagnostic.h in Headers */ = {isa = PBXBuildFile; fileRef = 5ECC7B005D47F960DFB8DF9F4BD5BB0D /* NPKMockMXCrashDiagnostic.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5C52ECAEF1B6E473739C9F5E39D99192 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
-		5DD2693721C28E26BA6BA1AC98140065 /* NPKDispatchQueuePool.h in Headers */ = {isa = PBXBuildFile; fileRef = D7AF2B2B769B2A53D4BCBBA3FC866FB0 /* NPKDispatchQueuePool.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		66DDB4DA0747360833438537491CE150 /* NPKImageCompressTool.h in Headers */ = {isa = PBXBuildFile; fileRef = A2D38CC28A65FDAA9D9DC9922A80839F /* NPKImageCompressTool.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5C5D5667BA77AE5449C6EB4CA848F7CC /* NPKLaunchTaskModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E0BB1729CF0BE27BA9AA0A7D8AB5C6AB /* NPKLaunchTaskModel.m */; };
+		60721F04E967B5A3E23EED903894B7ED /* NPKLaunchConfigPluginDefinition.h in Headers */ = {isa = PBXBuildFile; fileRef = C2E918F5CE1A6063D30AD628AFAC90F4 /* NPKLaunchConfigPluginDefinition.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		614E0F8E8CF0C6596BC17EA78407BB90 /* NicePerformanceKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EB6CCA9E3E58C2AB9391BC9FC011AD91 /* NicePerformanceKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6487397D05AF5E1624F0C55FB5E8FC10 /* NPKImageCompressTool.m in Sources */ = {isa = PBXBuildFile; fileRef = DA14A16980F69A41AF3A7636E040F967 /* NPKImageCompressTool.m */; };
 		6A6AD3A5BBDBFD0B4AF936BD518EC0B1 /* Masonry-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D4CA7B92265A15B80B1666634FF46C0 /* Masonry-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6B1BA96018D82848330ABB30AC9B4DDA /* NPKLaunchManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B0155EC537EEB2C6E9F98F9B91409029 /* NPKLaunchManager.m */; };
+		77C9C58A4FED039500431C61B53E6727 /* NPKLaunchTaskModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EFEC155C9E5CF54FCCF8697A21C53F1 /* NPKLaunchTaskModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		78B2727EE5D693F58D019DB098005101 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D9333B00F315696855ADE85C3E6D15 /* MASConstraintMaker.m */; };
 		7BFF65958F014760B6AC4742824892EB /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = B377289AFAE7DF9945B981F14B4AF95C /* MASCompositeConstraint.m */; };
-		7EC8BC3CA84C1080E6FA60C5F1A98324 /* NPKPerfTestCase.h in Headers */ = {isa = PBXBuildFile; fileRef = 2256C2FA0C6D73EDC5EFA42C2471C477 /* NPKPerfTestCase.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		84615D4A86917EE2852A7ABDE1F73B18 /* NPKPerfTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8AA461DDA90B590B2EAFC0CFF151F9 /* NPKPerfTestCase.m */; };
+		846F34E1E69047EDCAC1AF61C5C0F0D6 /* NPKMockMXDiagnosticPayload.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D0A89C374A1AB8384EDE67FFBD2FEF6 /* NPKMockMXDiagnosticPayload.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8539B851E01A58467BE49CA3FA77223C /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FADB5EBFADA2A419371CF5E6C927F1E /* MASLayoutConstraint.m */; };
-		89C0D4AF01D8BE86F9DE9B28E116AC29 /* NPKLaunchConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F0B0A0DCE407BDA8F5E76FDC1C8C917 /* NPKLaunchConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		86E4C7E9A3CA7374A00D8C2439BF25F0 /* NPKSysResCostInfo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 78D7CCBE7C071A12DFDDA6B26F53162B /* NPKSysResCostInfo.mm */; };
+		898343AB0C38FF65CE4A8D178F095D65 /* NPKPerfTestCase+GCD.h in Headers */ = {isa = PBXBuildFile; fileRef = CD5883712D39B26DCEFC0B6523BCC27D /* NPKPerfTestCase+GCD.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8B92011C9373001132C8148BFC8F50B3 /* ViewController+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E780607D798BC01DDE3031621C51501 /* ViewController+MASAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C3E4746ECAF3FFB38EED2085B2A951C /* NPKCallStackTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C2A5374F18A5C485D884B1686DED51 /* NPKCallStackTree.m */; };
 		8D4D1F6E4709EBB13974E95DC1059DDC /* MASLayoutConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 115A4EA8F789344C790FEA5CDC507FB7 /* MASLayoutConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8D65CE579E516BDD5FB36CAA21D693F6 /* MASCompositeConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E5709CED54C3B8DC4B50B19520F6771 /* MASCompositeConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8F42ABDA03E48F96395D4571835AA3C5 /* NPKPerfMonitor.h in Headers */ = {isa = PBXBuildFile; fileRef = B3AC56DDBA5DD61BB4D2E6B157A56918 /* NPKPerfMonitor.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9337432E2CA6A062D49921885E968BAD /* NPKLaunchTaskModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B7ACCC731C917AA4887277912368D58 /* NPKLaunchTaskModel.m */; };
+		8F3BFE2BE09FA045658F890A8AA357A9 /* NPKLaunchTaskService.m in Sources */ = {isa = PBXBuildFile; fileRef = 78561E0240DE28BBC04B471ABC17F781 /* NPKLaunchTaskService.m */; };
+		917A834E65A88D9ED2553C4B6EBDB347 /* NPKDiagnosticReportModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AE8CE28F627E1F33CE500555DD67BF8 /* NPKDiagnosticReportModel.m */; };
+		92804703F8851E7A8150D904179B10CA /* NPKDiagnosticPayloadModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E50BDBFDBB559CE73449D9841D84F575 /* NPKDiagnosticPayloadModel.m */; };
 		941955A19C40899D275604E6E9C21A6D /* MASConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 130F3B92BAB28630295F57E8AAC12EA1 /* MASConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		96EC67FA2D5FDC3E4CFC4FB485E98C05 /* NPKDispatchQueuePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AA6A1D473AC7F4216834CAED83F2834 /* NPKDispatchQueuePool.m */; };
-		96F4ABBBC8E9F6AD0D5ABF1C369E2C74 /* NPKPerfTestCase+GCD.m in Sources */ = {isa = PBXBuildFile; fileRef = 870BE711519FB8D21BBF019D2158013D /* NPKPerfTestCase+GCD.m */; };
 		9D546E1168C04B0B2EAE005D9275D18B /* MASConstraint+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = D100F47F5FECCA555C616F7D93D7CB4B /* MASConstraint+Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9FD96404CAEB574D50311860803D1965 /* NPKImageCompressTool.h in Headers */ = {isa = PBXBuildFile; fileRef = 0CEBE24C308898426A21E6AC7E901139 /* NPKImageCompressTool.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A1B93CC9066EFB9C1A027B22160F697A /* NicePerformanceKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D9EDFE277A5AB8E0A6E677EEBECF57EF /* NicePerformanceKit-dummy.m */; };
 		A35FBEEC7D088AEC05297E8292A32C77 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = FE7A0F064F168E6660B03C9639A19329 /* View+MASAdditions.m */; };
 		A5EC0C1304449DE3F34F292F256FC13C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
 		A5F8DE232620FAE3CA0BE6F34374BE9E /* Pods-NPKitDemo_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C0FDEB4D898F61923F516B19474B1154 /* Pods-NPKitDemo_Example-dummy.m */; };
-		B4AA3D6D7D508AC3257AE331893EDD62 /* NicePerformanceKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A1565A85499478B9547C2ADDDEC8DC9F /* NicePerformanceKit-dummy.m */; };
+		A855D27C345BDE420BA9FF0FD48F836F /* NPKLaunchTaskService.h in Headers */ = {isa = PBXBuildFile; fileRef = 3832B63FB19F2AE79071442CC272B249 /* NPKLaunchTaskService.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B6B6E3E8441012559F21A6D458C3F40E /* NPKFPSMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C0AE0ED693E3B7347A2ABE3AE6470F1 /* NPKFPSMonitor.m */; };
 		B7D645EC004610E8A581E532D28771EC /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = A17EAC4713F6B85A6124DB11F111B072 /* MASViewConstraint.m */; };
-		BC99F7D973C251CC259F0EFDA03DC49C /* appletrace.mm in Sources */ = {isa = PBXBuildFile; fileRef = E1D50A56B09E528B4AAE7CF8D39099CA /* appletrace.mm */; };
+		BA56FF8BB6858E48EC803710805DBB5C /* NPKBaseDefine.h in Headers */ = {isa = PBXBuildFile; fileRef = CB8891658BB07446F9B411C23A93073F /* NPKBaseDefine.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDA1CC14DAB4B2D87EDAF426C8E35FF3 /* NPKMetricKitReport.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EA18CE1B7993E4EA0BFAA2B41145AAC /* NPKMetricKitReport.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C0861ADB4C5FA30F4F9E051F7638A264 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 62890C896C598E9650B511A4A9BA249A /* NSLayoutConstraint+MASDebugAdditions.m */; };
+		C54804C923A08A164C655F6978375760 /* NPKMetricKitReport.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C767A6436B1A23C69C35FC12B4FBEB2 /* NPKMetricKitReport.m */; };
+		C5FD05A279E464E2C114D7D38E461EE7 /* NPKLaunchConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 897DF25CAD32FF889C8FAAD7660CFDAC /* NPKLaunchConfig.m */; };
 		C8ECE6809B6E3987B9CC64DABE97A60B /* Pods-NPKitDemo_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 66F37ECE0D4CBAE494420DF53C9E2C98 /* Pods-NPKitDemo_Tests-dummy.m */; };
-		C97E3BEC30BE73D481EC3791D53D63CF /* NPKBadPerfCase.h in Headers */ = {isa = PBXBuildFile; fileRef = 88D654B693B39FA6E3A1A5E4E7658E55 /* NPKBadPerfCase.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CE93C54413259B4AC3683B6EB874D466 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 312B988EF117AE4DE76A268D970131FE /* UIKit.framework */; };
-		D23878733A636D395C119701CD660F14 /* NPKLaunchTaskModel.h in Headers */ = {isa = PBXBuildFile; fileRef = FA0BFE35B4260A763590C029B410DD81 /* NPKLaunchTaskModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D361CE5161674DAB8F79EEE3CABC84D7 /* NPKWeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 128B7D9C099710E60AAED4C7F32B8624 /* NPKWeakProxy.m */; };
-		D9E2C2A523EFFC7A931E8CE378B7EEA9 /* NPKPerfMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = D7F0FCC1C458A6C8D323B1A7449AD9F3 /* NPKPerfMonitor.m */; };
-		E1514434A7C22A8D86AD1DF6854E5E55 /* NPKSysResCostInfo.mm in Sources */ = {isa = PBXBuildFile; fileRef = F81F7E8411B2FD77F716F87193F909F8 /* NPKSysResCostInfo.mm */; };
+		CF87C201DB1D896154F8E0770DCD3D50 /* NPKBadPerfCase.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D75C39A31591F0C450A9B3B3BB0DF9 /* NPKBadPerfCase.m */; };
+		D0784EE1D42615ADF7FD33D1D7030631 /* NPKMockMXMetaData.m in Sources */ = {isa = PBXBuildFile; fileRef = 850729EB3BDEE0269BF19F8D8FEB36A9 /* NPKMockMXMetaData.m */; };
+		D6CA3D58633BE003E76C37C93CA5B45B /* NPKDispatchQueuePool.m in Sources */ = {isa = PBXBuildFile; fileRef = D9CEE4B7B71F1BCEA5AA930C2B41CC42 /* NPKDispatchQueuePool.m */; };
+		D7AD010CB228B8DAA573372EC8F17C57 /* NPKDiagnosticReportModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F34DDC4281F07F96843C4386E023DA0 /* NPKDiagnosticReportModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E51F496BDC6ACADE04FDA059C6CB2342 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
 		E7CA20228B3583F41927813EE904CAD3 /* View+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C783239D12541FA278CBEBA15780CE4 /* View+MASShorthandAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E8DD5D1D406150E1C80AD015271B6848 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F1BF5683BFFCF57BA0C385B36CC0BE2 /* MASConstraint.m */; };
-		EA2F1EEB260A19C1743ECD897D4909E7 /* NicePerformanceKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 88C5FC55DB11F626914B6045C603EE83 /* NicePerformanceKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E983753BA9074F5246C5A5680909DD02 /* NPKPerfMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = A31171BF0614D0E3151E0554B72FC9FA /* NPKPerfMonitor.m */; };
 		EAE8B0895956885A752B173683A0D889 /* MASViewConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = B47E0CCE07C313DF7CE5A32C063379DF /* MASViewConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EAEDFB57796EA4BEDA6F444D06869589 /* NPKLaunchConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 53BF4CA0F59190FCB3DEEC9DF10D840F /* NPKLaunchConfig.m */; };
-		EF050B0709DD0A5BEE5047FBDEF0FF1E /* NPKWeakProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B4086838790FB53D6503F692A7EA963 /* NPKWeakProxy.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F182B219DA8118572A8DD6705CAEAF2A /* NPKSignpostLog.mm in Sources */ = {isa = PBXBuildFile; fileRef = C2AF432434C904165E92C848E4742BA2 /* NPKSignpostLog.mm */; };
+		EB362D9941827C9AE4C34B7A7ABEEBD8 /* NPKWeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 76AB460DB1243E2630C2B6D7D167E601 /* NPKWeakProxy.m */; };
+		EDDCBB3D3B4C5D57DB10DB217350440C /* appletrace.h in Headers */ = {isa = PBXBuildFile; fileRef = 5959E19247490A0B85CEECA22B6B5BAF /* appletrace.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F38DCFB77CB3352624FDB3C1CA8CC375 /* Pods-NPKitDemo_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 18CF0B6982ECFF92A51719B5A7BC4A8A /* Pods-NPKitDemo_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F54EAD42E6748C28A027C15D1975938C /* NPKPerfTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 828B2C023D40BD340C9E6932F9962A1D /* NPKPerfTestCase.m */; };
-		FA63FA329B877CFFB9A75732DA697E76 /* appletrace.h in Headers */ = {isa = PBXBuildFile; fileRef = 336E46412014B62D5D8B32A06BA89F1D /* appletrace.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F4F4E8E13E0E8EE13F0732350480D7C6 /* NPKFPSMonitor.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A28646C68B85C35F6BAF8791AF3644C /* NPKFPSMonitor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F50D934ABE9C8E4488607BCA6A79190A /* NPKMockMXMetaData.h in Headers */ = {isa = PBXBuildFile; fileRef = 315E46FD5C154BDC869968C6E8671F5D /* NPKMockMXMetaData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F844DF63E2FB95CB9F24CAAC7CF9CF84 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
+		F9A3B83EA31757A0A93D36644DB0A707 /* NPKWeakProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 16CB54017BE73A40842145F0049F36C1 /* NPKWeakProxy.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FAFBFA90F7BC3E7CF50F8A5CF0A8B264 /* MASConstraintMaker.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BCF93F338546FCB058B68A5B6F26B32 /* MASConstraintMaker.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FE397B68850F238A0B4A302A16C8F394 /* NPKSignpostLog.h in Headers */ = {isa = PBXBuildFile; fileRef = CACF206C56F84D032DA9F95A41C1322A /* NPKSignpostLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,101 +128,122 @@
 
 /* Begin PBXFileReference section */
 		002BF3DDD89C177475702379D618BDA2 /* Masonry.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Masonry.xcconfig; sourceTree = "<group>"; };
-		0207A6F17E235C76AD548EB097F151C4 /* NPKLaunchConfigPluginDefinition.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NPKLaunchConfigPluginDefinition.h; path = NicePerformanceKit/Classes/Tool/Launch/NPKLaunchConfigPluginDefinition.h; sourceTree = "<group>"; };
 		025EB543E67AF6218FBFEFBEC406E598 /* Masonry-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Masonry-Info.plist"; sourceTree = "<group>"; };
-		030C1200B8CDA7756365ED11025C2D42 /* NicePerformanceKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = NicePerformanceKit.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		03FBF314BAEC20DCC676A66F1944C5F0 /* NPKMockMXDiagnosticPayload.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = NPKMockMXDiagnosticPayload.m; sourceTree = "<group>"; };
 		071ABA9DA4A53122DD0382E7C7F6CBEB /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "ViewController+MASAdditions.m"; path = "Masonry/ViewController+MASAdditions.m"; sourceTree = "<group>"; };
+		08EB851257FBA429D8A44A49D9C3C17F /* NicePerformanceKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "NicePerformanceKit-Info.plist"; sourceTree = "<group>"; };
+		0AE8CE28F627E1F33CE500555DD67BF8 /* NPKDiagnosticReportModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = NPKDiagnosticReportModel.m; sourceTree = "<group>"; };
+		0CEBE24C308898426A21E6AC7E901139 /* NPKImageCompressTool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NPKImageCompressTool.h; path = NicePerformanceKit/Classes/Tool/Image/NPKImageCompressTool.h; sourceTree = "<group>"; };
+		0D0A89C374A1AB8384EDE67FFBD2FEF6 /* NPKMockMXDiagnosticPayload.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = NPKMockMXDiagnosticPayload.h; sourceTree = "<group>"; };
+		0EA18CE1B7993E4EA0BFAA2B41145AAC /* NPKMetricKitReport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NPKMetricKitReport.h; path = NicePerformanceKit/Classes/Service/MetricKitReport/NPKMetricKitReport.h; sourceTree = "<group>"; };
 		0F5718E89E4E5165AA49B980D89CBCF8 /* MASViewAttribute.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASViewAttribute.h; path = Masonry/MASViewAttribute.h; sourceTree = "<group>"; };
 		115A4EA8F789344C790FEA5CDC507FB7 /* MASLayoutConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASLayoutConstraint.h; path = Masonry/MASLayoutConstraint.h; sourceTree = "<group>"; };
-		128B7D9C099710E60AAED4C7F32B8624 /* NPKWeakProxy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NPKWeakProxy.m; path = NicePerformanceKit/Classes/Base/NPKWeakProxy.m; sourceTree = "<group>"; };
 		130F3B92BAB28630295F57E8AAC12EA1 /* MASConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASConstraint.h; path = Masonry/MASConstraint.h; sourceTree = "<group>"; };
+		16CB54017BE73A40842145F0049F36C1 /* NPKWeakProxy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NPKWeakProxy.h; path = NicePerformanceKit/Classes/Base/NPKWeakProxy.h; sourceTree = "<group>"; };
 		18CF0B6982ECFF92A51719B5A7BC4A8A /* Pods-NPKitDemo_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NPKitDemo_Tests-umbrella.h"; sourceTree = "<group>"; };
-		1CC6F7743CA644E634C9AB6E4FAAAB88 /* NPKImageCompressTool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NPKImageCompressTool.m; path = NicePerformanceKit/Classes/Tool/Image/NPKImageCompressTool.m; sourceTree = "<group>"; };
+		1D826C2CDC8CE4E2DDB091F3934DBB04 /* NPKLaunchProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NPKLaunchProtocol.h; path = NicePerformanceKit/Classes/Service/LaunchManager/NPKLaunchProtocol.h; sourceTree = "<group>"; };
 		1E780607D798BC01DDE3031621C51501 /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ViewController+MASAdditions.h"; path = "Masonry/ViewController+MASAdditions.h"; sourceTree = "<group>"; };
 		1F1BF5683BFFCF57BA0C385B36CC0BE2 /* MASConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASConstraint.m; path = Masonry/MASConstraint.m; sourceTree = "<group>"; };
-		1FFED36A657123030ABB700256D73F15 /* Masonry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Masonry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2256C2FA0C6D73EDC5EFA42C2471C477 /* NPKPerfTestCase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NPKPerfTestCase.h; path = NicePerformanceKit/Classes/TestCase/NPKPerfTestCase.h; sourceTree = "<group>"; };
-		22AB2F99E75B1587759FA00B32A8574B /* NPKPerfEntryWindow.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NPKPerfEntryWindow.m; path = NicePerformanceKit/Classes/Tool/PerfMonitor/NPKPerfEntryWindow.m; sourceTree = "<group>"; };
-		240FF5D077DA6243E6AD4FB24331490D /* NPKLaunchManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NPKLaunchManager.m; path = NicePerformanceKit/Classes/Tool/Launch/NPKLaunchManager.m; sourceTree = "<group>"; };
-		2B3733006769EAAB7483482EBE45EBC5 /* NicePerformanceKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = NicePerformanceKit.modulemap; sourceTree = "<group>"; };
-		311F694F633D1AE0C6A42BDAAF6DC503 /* Pods_NPKitDemo_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NPKitDemo_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FFED36A657123030ABB700256D73F15 /* Masonry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Masonry.framework; path = Masonry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		27751440E9EA98BEC929BC5CE6AE8FFC /* NPKLaunchManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NPKLaunchManager.h; path = NicePerformanceKit/Classes/Service/LaunchManager/NPKLaunchManager.h; sourceTree = "<group>"; };
+		2F34DDC4281F07F96843C4386E023DA0 /* NPKDiagnosticReportModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = NPKDiagnosticReportModel.h; sourceTree = "<group>"; };
+		311F694F633D1AE0C6A42BDAAF6DC503 /* Pods_NPKitDemo_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_NPKitDemo_Example.framework; path = "Pods-NPKitDemo_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		312B988EF117AE4DE76A268D970131FE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		31BD32171221A1787C4B6FA0D44C0C30 /* NicePerformanceKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NicePerformanceKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		315E46FD5C154BDC869968C6E8671F5D /* NPKMockMXMetaData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = NPKMockMXMetaData.h; sourceTree = "<group>"; };
+		31BD32171221A1787C4B6FA0D44C0C30 /* NicePerformanceKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = NicePerformanceKit.framework; path = NicePerformanceKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		32463F59CA93557167A7588E56DADD2C /* Pods-NPKitDemo_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NPKitDemo_Example.release.xcconfig"; sourceTree = "<group>"; };
-		336E46412014B62D5D8B32A06BA89F1D /* appletrace.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = appletrace.h; path = NicePerformanceKit/Classes/Tool/TimeProfile/appletrace.h; sourceTree = "<group>"; };
 		36D9333B00F315696855ADE85C3E6D15 /* MASConstraintMaker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASConstraintMaker.m; path = Masonry/MASConstraintMaker.m; sourceTree = "<group>"; };
+		3832B63FB19F2AE79071442CC272B249 /* NPKLaunchTaskService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NPKLaunchTaskService.h; path = NicePerformanceKit/Classes/Service/LaunchManager/NPKLaunchTaskService.h; sourceTree = "<group>"; };
 		3BCF93F338546FCB058B68A5B6F26B32 /* MASConstraintMaker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASConstraintMaker.h; path = Masonry/MASConstraintMaker.h; sourceTree = "<group>"; };
 		41755246319CDCDD18A8398FC7B206A7 /* Pods-NPKitDemo_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-NPKitDemo_Example.modulemap"; sourceTree = "<group>"; };
 		42C1BE1C76FD2BDEAF3992643388EDA5 /* Pods-NPKitDemo_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NPKitDemo_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		4474F8148A1DF8444F3DCCE14B18F0A0 /* NPKBaseDefine.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NPKBaseDefine.h; path = NicePerformanceKit/Classes/Base/NPKBaseDefine.h; sourceTree = "<group>"; };
+		4B18664E2C9118B26A8156F2DB1DDA19 /* NPKBadPerfCase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NPKBadPerfCase.h; path = NicePerformanceKit/Classes/TestCase/NPKBadPerfCase.h; sourceTree = "<group>"; };
+		4E4AF5840DA74C5A3B9E0DF329FC17AB /* NicePerformanceKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NicePerformanceKit-prefix.pch"; sourceTree = "<group>"; };
 		4E5709CED54C3B8DC4B50B19520F6771 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASCompositeConstraint.h; path = Masonry/MASCompositeConstraint.h; sourceTree = "<group>"; };
-		53BF4CA0F59190FCB3DEEC9DF10D840F /* NPKLaunchConfig.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NPKLaunchConfig.m; path = NicePerformanceKit/Classes/Tool/Launch/NPKLaunchConfig.m; sourceTree = "<group>"; };
-		5883C6B72B594DB61BDCF5E581432D42 /* NPKPerfEntryWindow.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NPKPerfEntryWindow.h; path = NicePerformanceKit/Classes/Tool/PerfMonitor/NPKPerfEntryWindow.h; sourceTree = "<group>"; };
+		52EF0BFF9182481E07F01C1BF72A544E /* NPKDiagnosticPayloadModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = NPKDiagnosticPayloadModel.h; sourceTree = "<group>"; };
+		5959E19247490A0B85CEECA22B6B5BAF /* appletrace.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = appletrace.h; path = NicePerformanceKit/Classes/Tool/TimeProfile/appletrace.h; sourceTree = "<group>"; };
 		5BBD793DFF179C707492A8C53952D765 /* Pods-NPKitDemo_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NPKitDemo_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		5C24ED8D3134287DA0FAA809B2A439C4 /* appletrace.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = appletrace.mm; path = NicePerformanceKit/Classes/Tool/TimeProfile/appletrace.mm; sourceTree = "<group>"; };
+		5ECC7B005D47F960DFB8DF9F4BD5BB0D /* NPKMockMXCrashDiagnostic.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = NPKMockMXCrashDiagnostic.h; sourceTree = "<group>"; };
 		5FADB5EBFADA2A419371CF5E6C927F1E /* MASLayoutConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASLayoutConstraint.m; path = Masonry/MASLayoutConstraint.m; sourceTree = "<group>"; };
 		61A5D85C2F00F47F903C2A2D635646EE /* Pods-NPKitDemo_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-NPKitDemo_Tests.modulemap"; sourceTree = "<group>"; };
 		62890C896C598E9650B511A4A9BA249A /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSLayoutConstraint+MASDebugAdditions.m"; path = "Masonry/NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
 		66F37ECE0D4CBAE494420DF53C9E2C98 /* Pods-NPKitDemo_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NPKitDemo_Tests-dummy.m"; sourceTree = "<group>"; };
-		6948B0851686C97DA2AED45926F5A711 /* NPKPerfTestCase+GCD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NPKPerfTestCase+GCD.h"; path = "NicePerformanceKit/Classes/TestCase/NPKPerfTestCase+GCD.h"; sourceTree = "<group>"; };
-		6C3EAA73B5463C4878E175521F258D9E /* NPKLaunchTaskService.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NPKLaunchTaskService.m; path = NicePerformanceKit/Classes/Tool/Launch/NPKLaunchTaskService.m; sourceTree = "<group>"; };
+		672579821BB66B3922EB060E4641E12B /* NPKDispatchQueuePool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NPKDispatchQueuePool.h; path = NicePerformanceKit/Classes/Base/NPKDispatchQueuePool.h; sourceTree = "<group>"; };
+		69B59B053EA43D8F31B56D97BDC49212 /* NPKPerfEntryWindow.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NPKPerfEntryWindow.h; path = NicePerformanceKit/Classes/Service/PerfMonitor/NPKPerfEntryWindow.h; sourceTree = "<group>"; };
+		6A28646C68B85C35F6BAF8791AF3644C /* NPKFPSMonitor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NPKFPSMonitor.h; path = NicePerformanceKit/Classes/Service/PerfMonitor/NPKFPSMonitor.h; sourceTree = "<group>"; };
+		6EFEC155C9E5CF54FCCF8697A21C53F1 /* NPKLaunchTaskModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NPKLaunchTaskModel.h; path = NicePerformanceKit/Classes/Service/LaunchManager/NPKLaunchTaskModel.h; sourceTree = "<group>"; };
 		6F682C5C0D9F143827144151E70C3529 /* Pods-NPKitDemo_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NPKitDemo_Example-Info.plist"; sourceTree = "<group>"; };
-		70965BC0F9AFD58F7E087627F281AD87 /* NPKBadPerfCase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NPKBadPerfCase.m; path = NicePerformanceKit/Classes/TestCase/NPKBadPerfCase.m; sourceTree = "<group>"; };
 		7105D90F396FBBF7EFA957336EB621F5 /* Pods-NPKitDemo_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NPKitDemo_Example-umbrella.h"; sourceTree = "<group>"; };
+		72BE0372F8A572E1748C28A1B19D8B3C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		7347BEB25103D30A05B3AAAE8CADD09F /* Pods-NPKitDemo_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NPKitDemo_Example-frameworks.sh"; sourceTree = "<group>"; };
+		769AAF043F5D7CFE72C32803796DDACC /* NPKPerfTestCase+GCD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NPKPerfTestCase+GCD.m"; path = "NicePerformanceKit/Classes/TestCase/NPKPerfTestCase+GCD.m"; sourceTree = "<group>"; };
+		76AB460DB1243E2630C2B6D7D167E601 /* NPKWeakProxy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NPKWeakProxy.m; path = NicePerformanceKit/Classes/Base/NPKWeakProxy.m; sourceTree = "<group>"; };
+		76C4AAE13796CF0FC8CBAD797B116755 /* NPKSignpostLog.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = NPKSignpostLog.mm; path = NicePerformanceKit/Classes/Tool/TimeProfile/NPKSignpostLog.mm; sourceTree = "<group>"; };
 		77F930654D329E0454C63635AE0D1EA2 /* Pods-NPKitDemo_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NPKitDemo_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		7AA6A1D473AC7F4216834CAED83F2834 /* NPKDispatchQueuePool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NPKDispatchQueuePool.m; path = NicePerformanceKit/Classes/Base/NPKDispatchQueuePool.m; sourceTree = "<group>"; };
-		7B4086838790FB53D6503F692A7EA963 /* NPKWeakProxy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NPKWeakProxy.h; path = NicePerformanceKit/Classes/Base/NPKWeakProxy.h; sourceTree = "<group>"; };
-		7B7ACCC731C917AA4887277912368D58 /* NPKLaunchTaskModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NPKLaunchTaskModel.m; path = NicePerformanceKit/Classes/Tool/Launch/NPKLaunchTaskModel.m; sourceTree = "<group>"; };
-		7F0B0A0DCE407BDA8F5E76FDC1C8C917 /* NPKLaunchConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NPKLaunchConfig.h; path = NicePerformanceKit/Classes/Tool/Launch/NPKLaunchConfig.h; sourceTree = "<group>"; };
-		828B2C023D40BD340C9E6932F9962A1D /* NPKPerfTestCase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NPKPerfTestCase.m; path = NicePerformanceKit/Classes/TestCase/NPKPerfTestCase.m; sourceTree = "<group>"; };
+		78561E0240DE28BBC04B471ABC17F781 /* NPKLaunchTaskService.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NPKLaunchTaskService.m; path = NicePerformanceKit/Classes/Service/LaunchManager/NPKLaunchTaskService.m; sourceTree = "<group>"; };
+		78D7CCBE7C071A12DFDDA6B26F53162B /* NPKSysResCostInfo.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = NPKSysResCostInfo.mm; path = NicePerformanceKit/Classes/Service/PerfMonitor/NPKSysResCostInfo.mm; sourceTree = "<group>"; };
+		81308C05D65FF528F226721A42DFFFA9 /* NPKSignpostLog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NPKSignpostLog.h; path = NicePerformanceKit/Classes/Tool/TimeProfile/NPKSignpostLog.h; sourceTree = "<group>"; };
+		850729EB3BDEE0269BF19F8D8FEB36A9 /* NPKMockMXMetaData.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = NPKMockMXMetaData.m; sourceTree = "<group>"; };
+		85360AF55BD3313409CE0BE2AE3FC913 /* NicePerformanceKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NicePerformanceKit.xcconfig; sourceTree = "<group>"; };
 		86DFFE3C8ABE515058DCF105EB608F37 /* MASUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASUtilities.h; path = Masonry/MASUtilities.h; sourceTree = "<group>"; };
 		870570EFE09B8657023DC7C42C33BE4B /* Masonry.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Masonry.modulemap; sourceTree = "<group>"; };
-		870BE711519FB8D21BBF019D2158013D /* NPKPerfTestCase+GCD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NPKPerfTestCase+GCD.m"; path = "NicePerformanceKit/Classes/TestCase/NPKPerfTestCase+GCD.m"; sourceTree = "<group>"; };
-		88C5FC55DB11F626914B6045C603EE83 /* NicePerformanceKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NicePerformanceKit-umbrella.h"; sourceTree = "<group>"; };
-		88D654B693B39FA6E3A1A5E4E7658E55 /* NPKBadPerfCase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NPKBadPerfCase.h; path = NicePerformanceKit/Classes/TestCase/NPKBadPerfCase.h; sourceTree = "<group>"; };
 		896A4BCB5B3DBC78E1CF6EBF5AC2862F /* View+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "View+MASAdditions.h"; path = "Masonry/View+MASAdditions.h"; sourceTree = "<group>"; };
+		897DF25CAD32FF889C8FAAD7660CFDAC /* NPKLaunchConfig.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NPKLaunchConfig.m; path = NicePerformanceKit/Classes/Service/LaunchManager/NPKLaunchConfig.m; sourceTree = "<group>"; };
+		89C2A5374F18A5C485D884B1686DED51 /* NPKCallStackTree.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = NPKCallStackTree.m; sourceTree = "<group>"; };
+		8A6961ECF7BED78849A315A2AAA6B1F3 /* NicePerformanceKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = NicePerformanceKit.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		8C4557655492207CA35A9CF02D75330C /* NPKMockMXCallStackTree.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = NPKMockMXCallStackTree.h; sourceTree = "<group>"; };
+		8C892AE0D8D9136B1E6DE03E11282951 /* NPKPerfMonitor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NPKPerfMonitor.h; path = NicePerformanceKit/Classes/Service/PerfMonitor/NPKPerfMonitor.h; sourceTree = "<group>"; };
 		8D4CA7B92265A15B80B1666634FF46C0 /* Masonry-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Masonry-umbrella.h"; sourceTree = "<group>"; };
+		948DA03D08D85E9093969A4ADAD4EC40 /* NPKMockMXCallStackTree.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = NPKMockMXCallStackTree.m; sourceTree = "<group>"; };
+		9C0AE0ED693E3B7347A2ABE3AE6470F1 /* NPKFPSMonitor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NPKFPSMonitor.m; path = NicePerformanceKit/Classes/Service/PerfMonitor/NPKFPSMonitor.m; sourceTree = "<group>"; };
+		9C767A6436B1A23C69C35FC12B4FBEB2 /* NPKMetricKitReport.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NPKMetricKitReport.m; path = NicePerformanceKit/Classes/Service/MetricKitReport/NPKMetricKitReport.m; sourceTree = "<group>"; };
 		9C783239D12541FA278CBEBA15780CE4 /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "View+MASShorthandAdditions.h"; path = "Masonry/View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		9CAD2CF7FAE8FA1DF0AD9596E6150666 /* NPKLagMonitor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NPKLagMonitor.m; path = NicePerformanceKit/Classes/Service/PerfMonitor/NPKLagMonitor.m; sourceTree = "<group>"; };
 		9CD1AD2192C246BE568B6CFBA7EB9C68 /* NSLayoutConstraint+MASDebugAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSLayoutConstraint+MASDebugAdditions.h"; path = "Masonry/NSLayoutConstraint+MASDebugAdditions.h"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A0C6580CE2E24DE38201C08D47457BC5 /* Pods-NPKitDemo_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NPKitDemo_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		A1565A85499478B9547C2ADDDEC8DC9F /* NicePerformanceKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NicePerformanceKit-dummy.m"; sourceTree = "<group>"; };
 		A17EAC4713F6B85A6124DB11F111B072 /* MASViewConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASViewConstraint.m; path = Masonry/MASViewConstraint.m; sourceTree = "<group>"; };
-		A2D38CC28A65FDAA9D9DC9922A80839F /* NPKImageCompressTool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NPKImageCompressTool.h; path = NicePerformanceKit/Classes/Tool/Image/NPKImageCompressTool.h; sourceTree = "<group>"; };
-		A49C446358B3B67EBD51ABDEF25DBB90 /* NPKLaunchManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NPKLaunchManager.h; path = NicePerformanceKit/Classes/Tool/Launch/NPKLaunchManager.h; sourceTree = "<group>"; };
-		ACB5CC80EED947E52BC675F33C03FEFF /* NPKSysResCostInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NPKSysResCostInfo.h; path = NicePerformanceKit/Classes/Tool/PerfMonitor/NPKSysResCostInfo.h; sourceTree = "<group>"; };
+		A1A81C759A690358C4EDE8EDA9B61FE9 /* NPKLaunchConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NPKLaunchConfig.h; path = NicePerformanceKit/Classes/Service/LaunchManager/NPKLaunchConfig.h; sourceTree = "<group>"; };
+		A31171BF0614D0E3151E0554B72FC9FA /* NPKPerfMonitor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NPKPerfMonitor.m; path = NicePerformanceKit/Classes/Service/PerfMonitor/NPKPerfMonitor.m; sourceTree = "<group>"; };
+		A9D75C39A31591F0C450A9B3B3BB0DF9 /* NPKBadPerfCase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NPKBadPerfCase.m; path = NicePerformanceKit/Classes/TestCase/NPKBadPerfCase.m; sourceTree = "<group>"; };
+		AA845E8A3A8E91D4CC274014C57D08F8 /* NPKPerfTestCase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NPKPerfTestCase.h; path = NicePerformanceKit/Classes/TestCase/NPKPerfTestCase.h; sourceTree = "<group>"; };
 		ACB7B80D58CFA003C25B538A405A341D /* MASViewAttribute.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASViewAttribute.m; path = Masonry/MASViewAttribute.m; sourceTree = "<group>"; };
-		B195F2B30A9705B51924CE85019ACA31 /* NPKLagMonitor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NPKLagMonitor.m; path = NicePerformanceKit/Classes/Tool/PerfMonitor/NPKLagMonitor.m; sourceTree = "<group>"; };
+		B0155EC537EEB2C6E9F98F9B91409029 /* NPKLaunchManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NPKLaunchManager.m; path = NicePerformanceKit/Classes/Service/LaunchManager/NPKLaunchManager.m; sourceTree = "<group>"; };
+		B0D55440A762DD012EE6C4359D554A35 /* NicePerformanceKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = NicePerformanceKit.modulemap; sourceTree = "<group>"; };
 		B377289AFAE7DF9945B981F14B4AF95C /* MASCompositeConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASCompositeConstraint.m; path = Masonry/MASCompositeConstraint.m; sourceTree = "<group>"; };
-		B3AC56DDBA5DD61BB4D2E6B157A56918 /* NPKPerfMonitor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NPKPerfMonitor.h; path = NicePerformanceKit/Classes/Tool/PerfMonitor/NPKPerfMonitor.h; sourceTree = "<group>"; };
 		B47E0CCE07C313DF7CE5A32C063379DF /* MASViewConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASViewConstraint.h; path = Masonry/MASViewConstraint.h; sourceTree = "<group>"; };
-		B84F895468AD0D819C2D463F720BCBB3 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		BD97077EC018B1AA3E24F18FE1365F9B /* Pods-NPKitDemo_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NPKitDemo_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		C0FDEB4D898F61923F516B19474B1154 /* Pods-NPKitDemo_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NPKitDemo_Example-dummy.m"; sourceTree = "<group>"; };
-		C2AF432434C904165E92C848E4742BA2 /* NPKSignpostLog.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = NPKSignpostLog.mm; path = NicePerformanceKit/Classes/Tool/TimeProfile/NPKSignpostLog.mm; sourceTree = "<group>"; };
-		C2B187B5E5241E0C4FC49596E0954EDD /* NicePerformanceKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NicePerformanceKit-prefix.pch"; sourceTree = "<group>"; };
+		C2E918F5CE1A6063D30AD628AFAC90F4 /* NPKLaunchConfigPluginDefinition.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NPKLaunchConfigPluginDefinition.h; path = NicePerformanceKit/Classes/Service/LaunchManager/NPKLaunchConfigPluginDefinition.h; sourceTree = "<group>"; };
+		C51FB3518FBDFB2BE48CAE232D6A63E1 /* NPKMockMXCrashDiagnostic.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = NPKMockMXCrashDiagnostic.m; sourceTree = "<group>"; };
 		C6BB2E40FA7314FFFF244B2FD839A658 /* NSArray+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+MASAdditions.m"; path = "Masonry/NSArray+MASAdditions.m"; sourceTree = "<group>"; };
-		C9F31633567C98199C4619D9D31BE060 /* NPKLagMonitor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NPKLagMonitor.h; path = NicePerformanceKit/Classes/Tool/PerfMonitor/NPKLagMonitor.h; sourceTree = "<group>"; };
-		CACF206C56F84D032DA9F95A41C1322A /* NPKSignpostLog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NPKSignpostLog.h; path = NicePerformanceKit/Classes/Tool/TimeProfile/NPKSignpostLog.h; sourceTree = "<group>"; };
 		CB6843D4F8A025D2C222AB5205414096 /* Pods-NPKitDemo_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NPKitDemo_Tests-Info.plist"; sourceTree = "<group>"; };
+		CB8891658BB07446F9B411C23A93073F /* NPKBaseDefine.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NPKBaseDefine.h; path = NicePerformanceKit/Classes/Base/NPKBaseDefine.h; sourceTree = "<group>"; };
+		CD5883712D39B26DCEFC0B6523BCC27D /* NPKPerfTestCase+GCD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NPKPerfTestCase+GCD.h"; path = "NicePerformanceKit/Classes/TestCase/NPKPerfTestCase+GCD.h"; sourceTree = "<group>"; };
 		D100F47F5FECCA555C616F7D93D7CB4B /* MASConstraint+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MASConstraint+Private.h"; path = "Masonry/MASConstraint+Private.h"; sourceTree = "<group>"; };
-		D7AF2B2B769B2A53D4BCBBA3FC866FB0 /* NPKDispatchQueuePool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NPKDispatchQueuePool.h; path = NicePerformanceKit/Classes/Base/NPKDispatchQueuePool.h; sourceTree = "<group>"; };
-		D7F0FCC1C458A6C8D323B1A7449AD9F3 /* NPKPerfMonitor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NPKPerfMonitor.m; path = NicePerformanceKit/Classes/Tool/PerfMonitor/NPKPerfMonitor.m; sourceTree = "<group>"; };
-		D88EDCD056284D8A0260AEA0E92D2D54 /* NPKLaunchTaskService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NPKLaunchTaskService.h; path = NicePerformanceKit/Classes/Tool/Launch/NPKLaunchTaskService.h; sourceTree = "<group>"; };
-		DAFB4851E8E91C11659F549272E3443C /* NicePerformanceKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "NicePerformanceKit-Info.plist"; sourceTree = "<group>"; };
+		D347B96FCC49F1CEB1BF54750D99FDC9 /* NPKMetricKitReportTestCase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = NPKMetricKitReportTestCase.m; sourceTree = "<group>"; };
+		D9CEE4B7B71F1BCEA5AA930C2B41CC42 /* NPKDispatchQueuePool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NPKDispatchQueuePool.m; path = NicePerformanceKit/Classes/Base/NPKDispatchQueuePool.m; sourceTree = "<group>"; };
+		D9EDFE277A5AB8E0A6E677EEBECF57EF /* NicePerformanceKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NicePerformanceKit-dummy.m"; sourceTree = "<group>"; };
+		DA14A16980F69A41AF3A7636E040F967 /* NPKImageCompressTool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NPKImageCompressTool.m; path = NicePerformanceKit/Classes/Tool/Image/NPKImageCompressTool.m; sourceTree = "<group>"; };
+		DC5CEBF5A20CCCAED635896A4CA0C2CB /* NPKPerfEntryWindow.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NPKPerfEntryWindow.m; path = NicePerformanceKit/Classes/Service/PerfMonitor/NPKPerfEntryWindow.m; sourceTree = "<group>"; };
+		DDA01E372DE5EF502FEF6B8C5FEF355C /* NPKLagMonitor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NPKLagMonitor.h; path = NicePerformanceKit/Classes/Service/PerfMonitor/NPKLagMonitor.h; sourceTree = "<group>"; };
 		DF48D82622C6D1FFAC5752C7BB004472 /* NSArray+MASShorthandAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MASShorthandAdditions.h"; path = "Masonry/NSArray+MASShorthandAdditions.h"; sourceTree = "<group>"; };
-		E1D50A56B09E528B4AAE7CF8D39099CA /* appletrace.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = appletrace.mm; path = NicePerformanceKit/Classes/Tool/TimeProfile/appletrace.mm; sourceTree = "<group>"; };
+		E0BB1729CF0BE27BA9AA0A7D8AB5C6AB /* NPKLaunchTaskModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NPKLaunchTaskModel.m; path = NicePerformanceKit/Classes/Service/LaunchManager/NPKLaunchTaskModel.m; sourceTree = "<group>"; };
 		E476E5DC364B11085C84F8770A12FD3B /* Masonry-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Masonry-dummy.m"; sourceTree = "<group>"; };
+		E50BDBFDBB559CE73449D9841D84F575 /* NPKDiagnosticPayloadModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = NPKDiagnosticPayloadModel.m; sourceTree = "<group>"; };
 		E6225045F2DF7AF603D15E0A59933930 /* Masonry-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Masonry-prefix.pch"; sourceTree = "<group>"; };
-		EF74C76C7E15FFFDB7634F250BB47393 /* NicePerformanceKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NicePerformanceKit.xcconfig; sourceTree = "<group>"; };
+		EB6CCA9E3E58C2AB9391BC9FC011AD91 /* NicePerformanceKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NicePerformanceKit-umbrella.h"; sourceTree = "<group>"; };
+		F00A550B1EACF76EC152651CE59F0F2F /* NPKSysResCostInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NPKSysResCostInfo.h; path = NicePerformanceKit/Classes/Service/PerfMonitor/NPKSysResCostInfo.h; sourceTree = "<group>"; };
 		F05C6EDBC8E4591F89BD9F1E17FBFC97 /* Masonry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Masonry.h; path = Masonry/Masonry.h; sourceTree = "<group>"; };
 		F20A7188ABF123273A3C22C4340688AC /* NSArray+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MASAdditions.h"; path = "Masonry/NSArray+MASAdditions.h"; sourceTree = "<group>"; };
-		F81F7E8411B2FD77F716F87193F909F8 /* NPKSysResCostInfo.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = NPKSysResCostInfo.mm; path = NicePerformanceKit/Classes/Tool/PerfMonitor/NPKSysResCostInfo.mm; sourceTree = "<group>"; };
+		F745AA8B5D7184663A478A671AA05378 /* NPKCallStackTree.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = NPKCallStackTree.h; sourceTree = "<group>"; };
 		F840F020AB51B451079589B8BDDA79B1 /* Pods-NPKitDemo_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NPKitDemo_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		F8F58C80C8B19120760E0A07E4BD8459 /* NPKMetricKitReportTestCase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = NPKMetricKitReportTestCase.h; sourceTree = "<group>"; };
 		F9BC353F9015EBDDFFF454AB53133512 /* Pods-NPKitDemo_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NPKitDemo_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		FA0BFE35B4260A763590C029B410DD81 /* NPKLaunchTaskModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NPKLaunchTaskModel.h; path = NicePerformanceKit/Classes/Tool/Launch/NPKLaunchTaskModel.h; sourceTree = "<group>"; };
-		FA7ABD073C4C5E325766E2BE3F0E12A2 /* Pods_NPKitDemo_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NPKitDemo_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA7ABD073C4C5E325766E2BE3F0E12A2 /* Pods_NPKitDemo_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_NPKitDemo_Tests.framework; path = "Pods-NPKitDemo_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA8AA461DDA90B590B2EAFC0CFF151F9 /* NPKPerfTestCase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NPKPerfTestCase.m; path = NicePerformanceKit/Classes/TestCase/NPKPerfTestCase.m; sourceTree = "<group>"; };
 		FE7A0F064F168E6660B03C9639A19329 /* View+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "View+MASAdditions.m"; path = "Masonry/View+MASAdditions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -223,11 +265,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7CB5124BE98C00E764ABA93DA1102FA3 /* Frameworks */ = {
+		816D712099AFC19AFC4C24B38AFC811B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C53C555949D669398D891AD3A6B5907 /* Foundation.framework in Frameworks */,
+				F844DF63E2FB95CB9F24CAAC7CF9CF84 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,26 +284,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		001DDD6C7DFB765913DFB58E42A874BB /* Development Pods */ = {
+		03DFFC1C2FECC9C38A91B34AFA381254 /* PerfMonitor */ = {
 			isa = PBXGroup;
 			children = (
-				5C7E09A79EE3295D3E93899F0E05F0CB /* NicePerformanceKit */,
+				6A28646C68B85C35F6BAF8791AF3644C /* NPKFPSMonitor.h */,
+				9C0AE0ED693E3B7347A2ABE3AE6470F1 /* NPKFPSMonitor.m */,
+				DDA01E372DE5EF502FEF6B8C5FEF355C /* NPKLagMonitor.h */,
+				9CAD2CF7FAE8FA1DF0AD9596E6150666 /* NPKLagMonitor.m */,
+				69B59B053EA43D8F31B56D97BDC49212 /* NPKPerfEntryWindow.h */,
+				DC5CEBF5A20CCCAED635896A4CA0C2CB /* NPKPerfEntryWindow.m */,
+				8C892AE0D8D9136B1E6DE03E11282951 /* NPKPerfMonitor.h */,
+				A31171BF0614D0E3151E0554B72FC9FA /* NPKPerfMonitor.m */,
+				F00A550B1EACF76EC152651CE59F0F2F /* NPKSysResCostInfo.h */,
+				78D7CCBE7C071A12DFDDA6B26F53162B /* NPKSysResCostInfo.mm */,
 			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		02677ABFC6F1406DAF979DCB0BD68E68 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				2B3733006769EAAB7483482EBE45EBC5 /* NicePerformanceKit.modulemap */,
-				EF74C76C7E15FFFDB7634F250BB47393 /* NicePerformanceKit.xcconfig */,
-				A1565A85499478B9547C2ADDDEC8DC9F /* NicePerformanceKit-dummy.m */,
-				DAFB4851E8E91C11659F549272E3443C /* NicePerformanceKit-Info.plist */,
-				C2B187B5E5241E0C4FC49596E0954EDD /* NicePerformanceKit-prefix.pch */,
-				88C5FC55DB11F626914B6045C603EE83 /* NicePerformanceKit-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/NicePerformanceKit";
+			name = PerfMonitor;
 			sourceTree = "<group>";
 		};
 		1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */ = {
@@ -272,43 +309,86 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		25088C9262EAEA1D644F47E3B39CB154 /* PerfMonitor */ = {
+		1973259F960F01E790B193BC7D810A6A /* MetricKitReport */ = {
 			isa = PBXGroup;
 			children = (
-				C9F31633567C98199C4619D9D31BE060 /* NPKLagMonitor.h */,
-				B195F2B30A9705B51924CE85019ACA31 /* NPKLagMonitor.m */,
-				5883C6B72B594DB61BDCF5E581432D42 /* NPKPerfEntryWindow.h */,
-				22AB2F99E75B1587759FA00B32A8574B /* NPKPerfEntryWindow.m */,
-				B3AC56DDBA5DD61BB4D2E6B157A56918 /* NPKPerfMonitor.h */,
-				D7F0FCC1C458A6C8D323B1A7449AD9F3 /* NPKPerfMonitor.m */,
-				ACB5CC80EED947E52BC675F33C03FEFF /* NPKSysResCostInfo.h */,
-				F81F7E8411B2FD77F716F87193F909F8 /* NPKSysResCostInfo.mm */,
+				0EA18CE1B7993E4EA0BFAA2B41145AAC /* NPKMetricKitReport.h */,
+				9C767A6436B1A23C69C35FC12B4FBEB2 /* NPKMetricKitReport.m */,
+				5DA50D4FFDB7AE5E4D8EB2EBC13F793F /* Model */,
 			);
-			name = PerfMonitor;
+			name = MetricKitReport;
 			sourceTree = "<group>";
 		};
-		5B503F685EC223E215522EF5CCBB3DBF /* Tool */ = {
+		1B24D4EE85F4B3834656E574A4B2AA87 /* NicePerformanceKit */ = {
 			isa = PBXGroup;
 			children = (
-				C6B682AE2F753BA56A7E98BCBD28F4B1 /* Image */,
-				886CAAF6DFE6975644E9E896B559443A /* LaunchManager */,
-				25088C9262EAEA1D644F47E3B39CB154 /* PerfMonitor */,
-				827482F7B8E61DAE41FF23830D1B9084 /* TimeProfile */,
+				783047C423AF6B606A9F92D994A4C936 /* Base */,
+				F7DC544A4AB3F81CF04A7E6466C77057 /* Pod */,
+				8AAD226C260EB831ECC27CA0086AA068 /* Service */,
+				EF300C4C42E0ABE69532B46578FAD2D4 /* Support Files */,
+				8773A7AB925A788B608548650486A8D6 /* TestCase */,
+				4C448F86E10244E1D87C28E212BF2338 /* Tool */,
+			);
+			name = NicePerformanceKit;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		4792570F40FCFFC97EE8DD399ECB4FCF /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				0CEBE24C308898426A21E6AC7E901139 /* NPKImageCompressTool.h */,
+				DA14A16980F69A41AF3A7636E040F967 /* NPKImageCompressTool.m */,
+			);
+			name = Image;
+			sourceTree = "<group>";
+		};
+		4C448F86E10244E1D87C28E212BF2338 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				4792570F40FCFFC97EE8DD399ECB4FCF /* Image */,
+				87777DF9BD9BC09EDB3D61C1F55B7BEB /* TimeProfile */,
 			);
 			name = Tool;
 			sourceTree = "<group>";
 		};
-		5C7E09A79EE3295D3E93899F0E05F0CB /* NicePerformanceKit */ = {
+		5290D49D507C0D6442CEF3843973149F /* NPKMetricKitReport */ = {
 			isa = PBXGroup;
 			children = (
-				B98D12F6A7276A87E9B3EAE0AEF57DD0 /* Base */,
-				F47D159D0259655AA1098FA4255415F9 /* Pod */,
-				02677ABFC6F1406DAF979DCB0BD68E68 /* Support Files */,
-				A6EB607105DF48ABCB0273993020E26F /* TestCase */,
-				5B503F685EC223E215522EF5CCBB3DBF /* Tool */,
+				F8F58C80C8B19120760E0A07E4BD8459 /* NPKMetricKitReportTestCase.h */,
+				D347B96FCC49F1CEB1BF54750D99FDC9 /* NPKMetricKitReportTestCase.m */,
+				8C4557655492207CA35A9CF02D75330C /* NPKMockMXCallStackTree.h */,
+				948DA03D08D85E9093969A4ADAD4EC40 /* NPKMockMXCallStackTree.m */,
+				5ECC7B005D47F960DFB8DF9F4BD5BB0D /* NPKMockMXCrashDiagnostic.h */,
+				C51FB3518FBDFB2BE48CAE232D6A63E1 /* NPKMockMXCrashDiagnostic.m */,
+				0D0A89C374A1AB8384EDE67FFBD2FEF6 /* NPKMockMXDiagnosticPayload.h */,
+				03FBF314BAEC20DCC676A66F1944C5F0 /* NPKMockMXDiagnosticPayload.m */,
+				315E46FD5C154BDC869968C6E8671F5D /* NPKMockMXMetaData.h */,
+				850729EB3BDEE0269BF19F8D8FEB36A9 /* NPKMockMXMetaData.m */,
 			);
-			name = NicePerformanceKit;
-			path = ../..;
+			name = NPKMetricKitReport;
+			path = NicePerformanceKit/Classes/TestCase/NPKMetricKitReport;
+			sourceTree = "<group>";
+		};
+		5583FBEC85CBB6CE99DB63B812F20378 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1B24D4EE85F4B3834656E574A4B2AA87 /* NicePerformanceKit */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		5DA50D4FFDB7AE5E4D8EB2EBC13F793F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F745AA8B5D7184663A478A671AA05378 /* NPKCallStackTree.h */,
+				89C2A5374F18A5C485D884B1686DED51 /* NPKCallStackTree.m */,
+				52EF0BFF9182481E07F01C1BF72A544E /* NPKDiagnosticPayloadModel.h */,
+				E50BDBFDBB559CE73449D9841D84F575 /* NPKDiagnosticPayloadModel.m */,
+				2F34DDC4281F07F96843C4386E023DA0 /* NPKDiagnosticReportModel.h */,
+				0AE8CE28F627E1F33CE500555DD67BF8 /* NPKDiagnosticReportModel.m */,
+			);
+			name = Model;
+			path = NicePerformanceKit/Classes/Service/MetricKitReport/Model;
 			sourceTree = "<group>";
 		};
 		5F8FCD1AB7817CC5B2AE8C355029CF88 /* Pods-NPKitDemo_Tests */ = {
@@ -357,6 +437,7 @@
 				071ABA9DA4A53122DD0382E7C7F6CBEB /* ViewController+MASAdditions.m */,
 				BDFB34A12FABD70C59DCE49920774B47 /* Support Files */,
 			);
+			name = Masonry;
 			path = Masonry;
 			sourceTree = "<group>";
 		};
@@ -366,6 +447,18 @@
 				641727D7EBF7D099C436C5885417E360 /* Masonry */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		783047C423AF6B606A9F92D994A4C936 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				CB8891658BB07446F9B411C23A93073F /* NPKBaseDefine.h */,
+				672579821BB66B3922EB060E4641E12B /* NPKDispatchQueuePool.h */,
+				D9CEE4B7B71F1BCEA5AA930C2B41CC42 /* NPKDispatchQueuePool.m */,
+				16CB54017BE73A40842145F0049F36C1 /* NPKWeakProxy.h */,
+				76AB460DB1243E2630C2B6D7D167E601 /* NPKWeakProxy.m */,
+			);
+			name = Base;
 			sourceTree = "<group>";
 		};
 		795A8DCB4247AD0BBD51F47E9F09EC9E /* Products */ = {
@@ -379,56 +472,56 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		827482F7B8E61DAE41FF23830D1B9084 /* TimeProfile */ = {
+		8773A7AB925A788B608548650486A8D6 /* TestCase */ = {
 			isa = PBXGroup;
 			children = (
-				336E46412014B62D5D8B32A06BA89F1D /* appletrace.h */,
-				E1D50A56B09E528B4AAE7CF8D39099CA /* appletrace.mm */,
-				CACF206C56F84D032DA9F95A41C1322A /* NPKSignpostLog.h */,
-				C2AF432434C904165E92C848E4742BA2 /* NPKSignpostLog.mm */,
-			);
-			name = TimeProfile;
-			sourceTree = "<group>";
-		};
-		886CAAF6DFE6975644E9E896B559443A /* LaunchManager */ = {
-			isa = PBXGroup;
-			children = (
-				7F0B0A0DCE407BDA8F5E76FDC1C8C917 /* NPKLaunchConfig.h */,
-				53BF4CA0F59190FCB3DEEC9DF10D840F /* NPKLaunchConfig.m */,
-				0207A6F17E235C76AD548EB097F151C4 /* NPKLaunchConfigPluginDefinition.h */,
-				A49C446358B3B67EBD51ABDEF25DBB90 /* NPKLaunchManager.h */,
-				240FF5D077DA6243E6AD4FB24331490D /* NPKLaunchManager.m */,
-				FA0BFE35B4260A763590C029B410DD81 /* NPKLaunchTaskModel.h */,
-				7B7ACCC731C917AA4887277912368D58 /* NPKLaunchTaskModel.m */,
-				D88EDCD056284D8A0260AEA0E92D2D54 /* NPKLaunchTaskService.h */,
-				6C3EAA73B5463C4878E175521F258D9E /* NPKLaunchTaskService.m */,
-			);
-			name = LaunchManager;
-			sourceTree = "<group>";
-		};
-		A6EB607105DF48ABCB0273993020E26F /* TestCase */ = {
-			isa = PBXGroup;
-			children = (
-				88D654B693B39FA6E3A1A5E4E7658E55 /* NPKBadPerfCase.h */,
-				70965BC0F9AFD58F7E087627F281AD87 /* NPKBadPerfCase.m */,
-				2256C2FA0C6D73EDC5EFA42C2471C477 /* NPKPerfTestCase.h */,
-				828B2C023D40BD340C9E6932F9962A1D /* NPKPerfTestCase.m */,
-				6948B0851686C97DA2AED45926F5A711 /* NPKPerfTestCase+GCD.h */,
-				870BE711519FB8D21BBF019D2158013D /* NPKPerfTestCase+GCD.m */,
+				4B18664E2C9118B26A8156F2DB1DDA19 /* NPKBadPerfCase.h */,
+				A9D75C39A31591F0C450A9B3B3BB0DF9 /* NPKBadPerfCase.m */,
+				AA845E8A3A8E91D4CC274014C57D08F8 /* NPKPerfTestCase.h */,
+				FA8AA461DDA90B590B2EAFC0CFF151F9 /* NPKPerfTestCase.m */,
+				CD5883712D39B26DCEFC0B6523BCC27D /* NPKPerfTestCase+GCD.h */,
+				769AAF043F5D7CFE72C32803796DDACC /* NPKPerfTestCase+GCD.m */,
+				5290D49D507C0D6442CEF3843973149F /* NPKMetricKitReport */,
 			);
 			name = TestCase;
 			sourceTree = "<group>";
 		};
-		B98D12F6A7276A87E9B3EAE0AEF57DD0 /* Base */ = {
+		87777DF9BD9BC09EDB3D61C1F55B7BEB /* TimeProfile */ = {
 			isa = PBXGroup;
 			children = (
-				4474F8148A1DF8444F3DCCE14B18F0A0 /* NPKBaseDefine.h */,
-				D7AF2B2B769B2A53D4BCBBA3FC866FB0 /* NPKDispatchQueuePool.h */,
-				7AA6A1D473AC7F4216834CAED83F2834 /* NPKDispatchQueuePool.m */,
-				7B4086838790FB53D6503F692A7EA963 /* NPKWeakProxy.h */,
-				128B7D9C099710E60AAED4C7F32B8624 /* NPKWeakProxy.m */,
+				5959E19247490A0B85CEECA22B6B5BAF /* appletrace.h */,
+				5C24ED8D3134287DA0FAA809B2A439C4 /* appletrace.mm */,
+				81308C05D65FF528F226721A42DFFFA9 /* NPKSignpostLog.h */,
+				76C4AAE13796CF0FC8CBAD797B116755 /* NPKSignpostLog.mm */,
 			);
-			name = Base;
+			name = TimeProfile;
+			sourceTree = "<group>";
+		};
+		8AAD226C260EB831ECC27CA0086AA068 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				A1329598664B00DC2F5EE9BC90E50632 /* LaunchManager */,
+				1973259F960F01E790B193BC7D810A6A /* MetricKitReport */,
+				03DFFC1C2FECC9C38A91B34AFA381254 /* PerfMonitor */,
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
+		A1329598664B00DC2F5EE9BC90E50632 /* LaunchManager */ = {
+			isa = PBXGroup;
+			children = (
+				A1A81C759A690358C4EDE8EDA9B61FE9 /* NPKLaunchConfig.h */,
+				897DF25CAD32FF889C8FAAD7660CFDAC /* NPKLaunchConfig.m */,
+				C2E918F5CE1A6063D30AD628AFAC90F4 /* NPKLaunchConfigPluginDefinition.h */,
+				27751440E9EA98BEC929BC5CE6AE8FFC /* NPKLaunchManager.h */,
+				B0155EC537EEB2C6E9F98F9B91409029 /* NPKLaunchManager.m */,
+				1D826C2CDC8CE4E2DDB091F3934DBB04 /* NPKLaunchProtocol.h */,
+				6EFEC155C9E5CF54FCCF8697A21C53F1 /* NPKLaunchTaskModel.h */,
+				E0BB1729CF0BE27BA9AA0A7D8AB5C6AB /* NPKLaunchTaskModel.m */,
+				3832B63FB19F2AE79071442CC272B249 /* NPKLaunchTaskService.h */,
+				78561E0240DE28BBC04B471ABC17F781 /* NPKLaunchTaskService.m */,
+			);
+			name = LaunchManager;
 			sourceTree = "<group>";
 		};
 		BDFB34A12FABD70C59DCE49920774B47 /* Support Files */ = {
@@ -443,15 +536,6 @@
 			);
 			name = "Support Files";
 			path = "../Target Support Files/Masonry";
-			sourceTree = "<group>";
-		};
-		C6B682AE2F753BA56A7E98BCBD28F4B1 /* Image */ = {
-			isa = PBXGroup;
-			children = (
-				A2D38CC28A65FDAA9D9DC9922A80839F /* NPKImageCompressTool.h */,
-				1CC6F7743CA644E634C9AB6E4FAAAB88 /* NPKImageCompressTool.m */,
-			);
-			name = Image;
 			sourceTree = "<group>";
 		};
 		CA62F7311D0BF8D8D39A972438E92345 /* Pods-NPKitDemo_Example */ = {
@@ -475,7 +559,7 @@
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				001DDD6C7DFB765913DFB58E42A874BB /* Development Pods */,
+				5583FBEC85CBB6CE99DB63B812F20378 /* Development Pods */,
 				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
 				7529FD53BCE26816CCD46658378AAF1B /* Pods */,
 				795A8DCB4247AD0BBD51F47E9F09EC9E /* Products */,
@@ -501,11 +585,25 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		F47D159D0259655AA1098FA4255415F9 /* Pod */ = {
+		EF300C4C42E0ABE69532B46578FAD2D4 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				030C1200B8CDA7756365ED11025C2D42 /* NicePerformanceKit.podspec */,
-				B84F895468AD0D819C2D463F720BCBB3 /* README.md */,
+				B0D55440A762DD012EE6C4359D554A35 /* NicePerformanceKit.modulemap */,
+				85360AF55BD3313409CE0BE2AE3FC913 /* NicePerformanceKit.xcconfig */,
+				D9EDFE277A5AB8E0A6E677EEBECF57EF /* NicePerformanceKit-dummy.m */,
+				08EB851257FBA429D8A44A49D9C3C17F /* NicePerformanceKit-Info.plist */,
+				4E4AF5840DA74C5A3B9E0DF329FC17AB /* NicePerformanceKit-prefix.pch */,
+				EB6CCA9E3E58C2AB9391BC9FC011AD91 /* NicePerformanceKit-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/NicePerformanceKit";
+			sourceTree = "<group>";
+		};
+		F7DC544A4AB3F81CF04A7E6466C77057 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				8A6961ECF7BED78849A315A2AAA6B1F3 /* NicePerformanceKit.podspec */,
+				72BE0372F8A572E1748C28A1B19D8B3C /* README.md */,
 			);
 			name = Pod;
 			sourceTree = "<group>";
@@ -513,6 +611,43 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		1F2F10D2A3C2EBA7EB909E19A905FA35 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDDCBB3D3B4C5D57DB10DB217350440C /* appletrace.h in Headers */,
+				614E0F8E8CF0C6596BC17EA78407BB90 /* NicePerformanceKit-umbrella.h in Headers */,
+				424F00EAF2EADC8B6783F8C2CC06BDF4 /* NPKBadPerfCase.h in Headers */,
+				BA56FF8BB6858E48EC803710805DBB5C /* NPKBaseDefine.h in Headers */,
+				2B40B0D749780BD32E51675FDB310647 /* NPKCallStackTree.h in Headers */,
+				45B31B7CBA0962766D451B17C21E45D3 /* NPKDiagnosticPayloadModel.h in Headers */,
+				D7AD010CB228B8DAA573372EC8F17C57 /* NPKDiagnosticReportModel.h in Headers */,
+				0FF96F48974492F74067B4A1396833D8 /* NPKDispatchQueuePool.h in Headers */,
+				F4F4E8E13E0E8EE13F0732350480D7C6 /* NPKFPSMonitor.h in Headers */,
+				9FD96404CAEB574D50311860803D1965 /* NPKImageCompressTool.h in Headers */,
+				0ACE8219F5C5E8A54EBC66E59F6922C2 /* NPKLagMonitor.h in Headers */,
+				0BBD53DB2075CDB2FC3514F5C689791B /* NPKLaunchConfig.h in Headers */,
+				60721F04E967B5A3E23EED903894B7ED /* NPKLaunchConfigPluginDefinition.h in Headers */,
+				22EE6A0CF471C2A277B2430A89ACCFAF /* NPKLaunchManager.h in Headers */,
+				0272502F8A7A1AAC8691DC4FE241D64D /* NPKLaunchProtocol.h in Headers */,
+				77C9C58A4FED039500431C61B53E6727 /* NPKLaunchTaskModel.h in Headers */,
+				A855D27C345BDE420BA9FF0FD48F836F /* NPKLaunchTaskService.h in Headers */,
+				BDA1CC14DAB4B2D87EDAF426C8E35FF3 /* NPKMetricKitReport.h in Headers */,
+				3ABB971B9CB3DABF60258D212F2C0C26 /* NPKMetricKitReportTestCase.h in Headers */,
+				2D107B1D31491C07D57597B33EAEE0C7 /* NPKMockMXCallStackTree.h in Headers */,
+				54D94D0CEF1B6B44EB64E97C2C3577ED /* NPKMockMXCrashDiagnostic.h in Headers */,
+				846F34E1E69047EDCAC1AF61C5C0F0D6 /* NPKMockMXDiagnosticPayload.h in Headers */,
+				F50D934ABE9C8E4488607BCA6A79190A /* NPKMockMXMetaData.h in Headers */,
+				37CFFD41B378CF7446AA0B76E0083B44 /* NPKPerfEntryWindow.h in Headers */,
+				00FA434C7D6BCD4E0E88CB906E1B5E64 /* NPKPerfMonitor.h in Headers */,
+				898343AB0C38FF65CE4A8D178F095D65 /* NPKPerfTestCase+GCD.h in Headers */,
+				4323E8214B267536A93AD7E05185D5A6 /* NPKPerfTestCase.h in Headers */,
+				40F2D17CD03C105BC13C04DD6D5C6B5D /* NPKSignpostLog.h in Headers */,
+				219C0C6EFB2033B17827200873512BC2 /* NPKSysResCostInfo.h in Headers */,
+				F9A3B83EA31757A0A93D36644DB0A707 /* NPKWeakProxy.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		396A432BC00A10806676160A159B2B5E /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -549,32 +684,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C27A93A79E79847F368FD8E8022E9BF /* Pods-NPKitDemo_Example-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A6B53AC9A816AB4C1F6F430D748AFEDF /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FA63FA329B877CFFB9A75732DA697E76 /* appletrace.h in Headers */,
-				EA2F1EEB260A19C1743ECD897D4909E7 /* NicePerformanceKit-umbrella.h in Headers */,
-				C97E3BEC30BE73D481EC3791D53D63CF /* NPKBadPerfCase.h in Headers */,
-				03F4D30B69716833CDA978A3C12E038D /* NPKBaseDefine.h in Headers */,
-				5DD2693721C28E26BA6BA1AC98140065 /* NPKDispatchQueuePool.h in Headers */,
-				66DDB4DA0747360833438537491CE150 /* NPKImageCompressTool.h in Headers */,
-				49DA89C50D5898085F0AA3F95545FBAF /* NPKLagMonitor.h in Headers */,
-				89C0D4AF01D8BE86F9DE9B28E116AC29 /* NPKLaunchConfig.h in Headers */,
-				54B087C2BD6A1783B1D08619D7ACDB0E /* NPKLaunchConfigPluginDefinition.h in Headers */,
-				40421B338F5A0B032209A3AF4121F45A /* NPKLaunchManager.h in Headers */,
-				D23878733A636D395C119701CD660F14 /* NPKLaunchTaskModel.h in Headers */,
-				1D306F09BF2DCEB7D993C6535A6E652F /* NPKLaunchTaskService.h in Headers */,
-				011852CE1FA48F8B60D283BA08A011B1 /* NPKPerfEntryWindow.h in Headers */,
-				8F42ABDA03E48F96395D4571835AA3C5 /* NPKPerfMonitor.h in Headers */,
-				3F893D67F53254F646BF6906392E6DA6 /* NPKPerfTestCase+GCD.h in Headers */,
-				7EC8BC3CA84C1080E6FA60C5F1A98324 /* NPKPerfTestCase.h in Headers */,
-				FE397B68850F238A0B4A302A16C8F394 /* NPKSignpostLog.h in Headers */,
-				017C5EEA06ABBD7001E978F8C79EC869 /* NPKSysResCostInfo.h in Headers */,
-				EF050B0709DD0A5BEE5047FBDEF0FF1E /* NPKWeakProxy.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -621,12 +730,12 @@
 		};
 		8327482FEEA7EEFF393684091BFCDF4C /* NicePerformanceKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9D8DB0AE89220724A0471E2A1568CD56 /* Build configuration list for PBXNativeTarget "NicePerformanceKit" */;
+			buildConfigurationList = AB2D7B214E07D21EF1D1E37D69D8A4D6 /* Build configuration list for PBXNativeTarget "NicePerformanceKit" */;
 			buildPhases = (
-				A6B53AC9A816AB4C1F6F430D748AFEDF /* Headers */,
-				0C28458F5E84F66E1FEC2D72AC41768C /* Sources */,
-				7CB5124BE98C00E764ABA93DA1102FA3 /* Frameworks */,
-				EA93A19693A3F10641026228E3D232EE /* Resources */,
+				1F2F10D2A3C2EBA7EB909E19A905FA35 /* Headers */,
+				FFFA6E084466D29BF81FEB2DA967F3FD /* Sources */,
+				816D712099AFC19AFC4C24B38AFC811B /* Frameworks */,
+				8CFA762E0ABBD43EC739BDD624B7FB33 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -663,7 +772,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1300;
+				LastUpgradeCheck = 1100;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -701,14 +810,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B6B3594F4F5885CA30C33F75AA5127F7 /* Resources */ = {
+		8CFA762E0ABBD43EC739BDD624B7FB33 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EA93A19693A3F10641026228E3D232EE /* Resources */ = {
+		B6B3594F4F5885CA30C33F75AA5127F7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -736,30 +845,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0C28458F5E84F66E1FEC2D72AC41768C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BC99F7D973C251CC259F0EFDA03DC49C /* appletrace.mm in Sources */,
-				B4AA3D6D7D508AC3257AE331893EDD62 /* NicePerformanceKit-dummy.m in Sources */,
-				3DEC08C80E7EA1B628FE0C6E5B882E05 /* NPKBadPerfCase.m in Sources */,
-				96EC67FA2D5FDC3E4CFC4FB485E98C05 /* NPKDispatchQueuePool.m in Sources */,
-				3DEA8C8DBA80C8BE5F5E3A5CDE933BEF /* NPKImageCompressTool.m in Sources */,
-				22B1EF97078A4CDA828E9BBEF967AA5D /* NPKLagMonitor.m in Sources */,
-				EAEDFB57796EA4BEDA6F444D06869589 /* NPKLaunchConfig.m in Sources */,
-				56AC3CF9571B90DC50020B2CB21D6C05 /* NPKLaunchManager.m in Sources */,
-				9337432E2CA6A062D49921885E968BAD /* NPKLaunchTaskModel.m in Sources */,
-				34CB5BCC0B28BDB603C8B14A2F7133FF /* NPKLaunchTaskService.m in Sources */,
-				015D1FF0AB9FB872864ADB861DF84CAC /* NPKPerfEntryWindow.m in Sources */,
-				D9E2C2A523EFFC7A931E8CE378B7EEA9 /* NPKPerfMonitor.m in Sources */,
-				96F4ABBBC8E9F6AD0D5ABF1C369E2C74 /* NPKPerfTestCase+GCD.m in Sources */,
-				F54EAD42E6748C28A027C15D1975938C /* NPKPerfTestCase.m in Sources */,
-				F182B219DA8118572A8DD6705CAEAF2A /* NPKSignpostLog.mm in Sources */,
-				E1514434A7C22A8D86AD1DF6854E5E55 /* NPKSysResCostInfo.mm in Sources */,
-				D361CE5161674DAB8F79EEE3CABC84D7 /* NPKWeakProxy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		1872B0C3407DA8C5A6F5DE04F522F73D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -773,6 +858,40 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5F8DE232620FAE3CA0BE6F34374BE9E /* Pods-NPKitDemo_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FFFA6E084466D29BF81FEB2DA967F3FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05AF1B4459A8643531C7D909C6170EB5 /* appletrace.mm in Sources */,
+				A1B93CC9066EFB9C1A027B22160F697A /* NicePerformanceKit-dummy.m in Sources */,
+				CF87C201DB1D896154F8E0770DCD3D50 /* NPKBadPerfCase.m in Sources */,
+				8C3E4746ECAF3FFB38EED2085B2A951C /* NPKCallStackTree.m in Sources */,
+				92804703F8851E7A8150D904179B10CA /* NPKDiagnosticPayloadModel.m in Sources */,
+				917A834E65A88D9ED2553C4B6EBDB347 /* NPKDiagnosticReportModel.m in Sources */,
+				D6CA3D58633BE003E76C37C93CA5B45B /* NPKDispatchQueuePool.m in Sources */,
+				B6B6E3E8441012559F21A6D458C3F40E /* NPKFPSMonitor.m in Sources */,
+				6487397D05AF5E1624F0C55FB5E8FC10 /* NPKImageCompressTool.m in Sources */,
+				2C6422BB1B462ABCE2283EE384708C0C /* NPKLagMonitor.m in Sources */,
+				C5FD05A279E464E2C114D7D38E461EE7 /* NPKLaunchConfig.m in Sources */,
+				6B1BA96018D82848330ABB30AC9B4DDA /* NPKLaunchManager.m in Sources */,
+				5C5D5667BA77AE5449C6EB4CA848F7CC /* NPKLaunchTaskModel.m in Sources */,
+				8F3BFE2BE09FA045658F890A8AA357A9 /* NPKLaunchTaskService.m in Sources */,
+				C54804C923A08A164C655F6978375760 /* NPKMetricKitReport.m in Sources */,
+				3E7306CBF12316C9700162622CB198BE /* NPKMetricKitReportTestCase.m in Sources */,
+				188BA6C1FE49C120CEA36E9DDE28803E /* NPKMockMXCallStackTree.m in Sources */,
+				1B8395F8E41F81858A284A0FF2CD34BC /* NPKMockMXCrashDiagnostic.m in Sources */,
+				4EA238E947F624580219EE57123CB03A /* NPKMockMXDiagnosticPayload.m in Sources */,
+				D0784EE1D42615ADF7FD33D1D7030631 /* NPKMockMXMetaData.m in Sources */,
+				312D3C4B666F6DED0783B24302AD8C40 /* NPKPerfEntryWindow.m in Sources */,
+				E983753BA9074F5246C5A5680909DD02 /* NPKPerfMonitor.m in Sources */,
+				13212464C1239B34BF76FCAB8AE26F35 /* NPKPerfTestCase+GCD.m in Sources */,
+				84615D4A86917EE2852A7ABDE1F73B18 /* NPKPerfTestCase.m in Sources */,
+				4ABC623DED101FC37B1245613CF327A4 /* NPKSignpostLog.mm in Sources */,
+				86E4C7E9A3CA7374A00D8C2439BF25F0 /* NPKSysResCostInfo.mm in Sources */,
+				EB362D9941827C9AE4C34B7A7ABEEBD8 /* NPKWeakProxy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -800,6 +919,38 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		0CD906FDFE69F41CF766EBAA8EC1B813 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85360AF55BD3313409CE0BE2AE3FC913 /* NicePerformanceKit.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/NicePerformanceKit/NicePerformanceKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/NicePerformanceKit/NicePerformanceKit-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/NicePerformanceKit/NicePerformanceKit.modulemap";
+				PRODUCT_MODULE_NAME = NicePerformanceKit;
+				PRODUCT_NAME = NicePerformanceKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		196DFA3E4A09A28224918543529A1885 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -826,7 +977,6 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -852,7 +1002,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -882,7 +1032,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-NPKitDemo_Example/Pods-NPKitDemo_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-NPKitDemo_Example/Pods-NPKitDemo_Example.modulemap";
@@ -916,11 +1066,44 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Masonry/Masonry-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Masonry/Masonry-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Masonry/Masonry.modulemap";
 				PRODUCT_MODULE_NAME = Masonry;
 				PRODUCT_NAME = Masonry;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7C93EA2CF080F90125CC7FA4A0EBA8A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85360AF55BD3313409CE0BE2AE3FC913 /* NicePerformanceKit.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/NicePerformanceKit/NicePerformanceKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/NicePerformanceKit/NicePerformanceKit-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/NicePerformanceKit/NicePerformanceKit.modulemap";
+				PRODUCT_MODULE_NAME = NicePerformanceKit;
+				PRODUCT_NAME = NicePerformanceKit;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
@@ -948,7 +1131,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Masonry/Masonry-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Masonry/Masonry-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Masonry/Masonry.modulemap";
 				PRODUCT_MODULE_NAME = Masonry;
@@ -980,7 +1163,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-NPKitDemo_Tests/Pods-NPKitDemo_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-NPKitDemo_Tests/Pods-NPKitDemo_Tests.modulemap";
@@ -1014,7 +1197,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-NPKitDemo_Example/Pods-NPKitDemo_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-NPKitDemo_Example/Pods-NPKitDemo_Example.modulemap";
@@ -1030,71 +1213,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
-		};
-		9B53E76D84D4C90290E1612E3B4F47E5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = EF74C76C7E15FFFDB7634F250BB47393 /* NicePerformanceKit.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/NicePerformanceKit/NicePerformanceKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/NicePerformanceKit/NicePerformanceKit-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/NicePerformanceKit/NicePerformanceKit.modulemap";
-				PRODUCT_MODULE_NAME = NicePerformanceKit;
-				PRODUCT_NAME = NicePerformanceKit;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		9C7354E2B12F2120C9E3A06D81FEDD90 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = EF74C76C7E15FFFDB7634F250BB47393 /* NicePerformanceKit.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/NicePerformanceKit/NicePerformanceKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/NicePerformanceKit/NicePerformanceKit-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/NicePerformanceKit/NicePerformanceKit.modulemap";
-				PRODUCT_MODULE_NAME = NicePerformanceKit;
-				PRODUCT_NAME = NicePerformanceKit;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
 		};
 		ACF435F77B9A7599A30CD6638F068797 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -1113,7 +1231,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-NPKitDemo_Tests/Pods-NPKitDemo_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-NPKitDemo_Tests/Pods-NPKitDemo_Tests.modulemap";
@@ -1157,7 +1275,6 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1180,12 +1297,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
@@ -1221,11 +1339,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9D8DB0AE89220724A0471E2A1568CD56 /* Build configuration list for PBXNativeTarget "NicePerformanceKit" */ = {
+		AB2D7B214E07D21EF1D1E37D69D8A4D6 /* Build configuration list for PBXNativeTarget "NicePerformanceKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9B53E76D84D4C90290E1612E3B4F47E5 /* Debug */,
-				9C7354E2B12F2120C9E3A06D81FEDD90 /* Release */,
+				0CD906FDFE69F41CF766EBAA8EC1B813 /* Debug */,
+				7C93EA2CF080F90125CC7FA4A0EBA8A4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -24,6 +24,8 @@ typedef NS_ENUM(NSUInteger, NPKLaunchTaskType) {
 @property (nonatomic, copy) NSArray <NSString *> *taskClassList;
 @property (nonatomic, assign) NPKLaunchTaskType type;
 
+- (instancetype)initWithDict:(NSDictionary *)dict;
+
 @end
 
 NS_ASSUME_NONNULL_END

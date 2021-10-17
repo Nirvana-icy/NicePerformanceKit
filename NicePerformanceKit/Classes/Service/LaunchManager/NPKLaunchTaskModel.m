@@ -9,4 +9,14 @@
 
 @implementation NPKLaunchTaskModel
 
+- (instancetype)initWithDict:(NSDictionary *)dict {
+    self = [super init];
+    if (self) {
+        _name = dict[@"name"];
+        _type = [dict[@"type"] integerValue];
+        _taskClassList = dict[@"taskClassList"];
+    }
+    return self;
+}
+
 @end
