@@ -27,8 +27,6 @@ register/monitor -> process -> report -> UI
 
 2. Metrics payloads
 
-![image](https://mmbiz.qpic.cn/mmbiz_jpg/M54fjP2zXtGicfL9mZ9DdHSVIyhXLnJicWS1sR6G1WSKOPJtibnNYgsSFvrf2XuvP6WrrtCbiaq8BfpQicaasSGA4iaA/0?wx_fmt=jpeg)
-
 [Demo Video](https://mp.weixin.qq.com/mp/readtemplate?t=pages/video_player_tmpl&action=mpvideo&vid=wxv_2098255507995131905&auto=1)
 
 ---
