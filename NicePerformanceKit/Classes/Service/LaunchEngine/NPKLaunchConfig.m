@@ -10,12 +10,17 @@
 
 @implementation NPKLaunchConfig
 
-//- (NSArray *)defaultLaunchList {
-//    NSAssert(NO, @"You should override this method after inheriting NPKLaunchConfig.");
-//    return nil;
-//}
-
 - (NSArray *)defaultLaunchList {
+    BOOL b_optimEnable = YES;
+    
+    if (b_optimEnable) {
+        return [self newLaunchList];
+    } else {
+        return [self oldLaunchList];
+    }
+}
+
+- (NSArray *)oldLaunchList {
     return @[
         @{
             @"name": @"head_sync_task",
@@ -53,39 +58,39 @@
     ];
 }
 
-//- (NSArray *)defaultLaunchList {
-//    return @[
-//        @{
-//            @"name": @"head_sync_task",
-//            @"type": @(NPKLaunchTaskTypeSync),
-//            @"taskClassList":@[
-//                    @"NPKMockLaunchTaskA",
-//                ]
-//        },
-//        @{
-//            @"name": @"async_tasks",
-//            @"type": @(NPKLaunchTaskTypeAsync),
-//            @"taskClassList":@[
-//                    @"NPKMockLaunchTaskB",
-//                    @"NPKPerfMonitorInitTask",
-//                    @"NPKMockLaunchTaskC",
-//                ]
-//        },
-//        @{
-//            @"name": @"async_barrier_task",
-//            @"type": @(NPKLaunchTaskTypeBarrier),
-//            @"taskClassList":@[
-//                @"NPKMockLaunchTaskD",
-//                ]
-//        },
-//        @{
-//            @"name": @"tail_task",
-//            @"type": @(NPKLaunchTaskTypeAsyncAfterRender),
-//            @"taskClassList":@[
-//                @"NPKMockLaunchTaskE"
-//                ]
-//        },
-//    ];
-//}
+- (NSArray *)newLaunchList {
+    return @[
+        @{
+            @"name": @"head_sync_task",
+            @"type": @(NPKLaunchTaskTypeSync),
+            @"taskClassList":@[
+                ]
+        },
+        @{
+            @"name": @"async_tasks",
+            @"type": @(NPKLaunchTaskTypeAsync),
+            @"taskClassList":@[
+                ]
+        },
+        @{
+            @"name": @"tail_async_barrier_task",
+            @"type": @(NPKLaunchTaskTypeBarrier),
+            @"taskClassList":@[
+                @"NPKMockLaunchTaskA",
+                @"NPKMockLaunchTaskB",
+                @"NPKPerfMonitorInitTask",
+                @"NPKMockLaunchTaskC",
+                @"NPKMockLaunchTaskD",
+                ]
+        },
+        @{
+            @"name": @"idle_task",
+            @"type": @(NPKLaunchTaskTypeAsyncAfterRender),
+            @"taskClassList":@[
+                @"NPKMockLaunchTaskE"
+                ]
+        },
+    ];
+}
 
 @end

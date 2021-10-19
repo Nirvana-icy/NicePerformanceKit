@@ -8,8 +8,9 @@
 
 #import "NPKAppDelegate.h"
 #import <UserNotifications/UserNotifications.h>
-#import "NPKLaunchManager.h"
+#import "NPKLaunchEngine.h"
 #import "NPKMetricKitReport.h"
+
 
 @interface NPKAppDelegate ()
 
@@ -26,7 +27,7 @@ NPKMetricKitReportDelegate
 {
     // Override point for customization after application launch.
     
-    [[NPKLaunchManager sharedManager] startWithOptions:launchOptions];
+    [[NPKLaunchEngine sharedInstance] startWithOptions:launchOptions];
     
     if (@available(iOS 14, *)) {
         [[NPKMetricKitReport sharedInstance] bind:self];
@@ -38,6 +39,7 @@ NPKMetricKitReportDelegate
                           completionHandler:^(BOOL granted, NSError * _Nullable error) {
         
     }];
+    
     return YES;
 }
 

@@ -6,6 +6,7 @@
 //
 
 #import "NPKFPSMonitor.h"
+#import "NPKWeakProxy.h"
 
 @interface NPKFPSMonitor ()
 
@@ -26,35 +27,43 @@
     return _sharedInstance;
 }
 
-- (instancetype)init{
-    self = [super init];
-    if (self) {
-        _displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(displayLinkTick:)];
-        [_displayLink setPaused:YES];
-        [_displayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
-    }
-    return self;
-}
-
 #pragma mark -- Help Methods
 
-- (void)startMonitoring{
-     _displayLink.paused = NO;
+- (void)startMonitoring {
+    if ([NSThread isMainThread]) {
+        [self _startMonitoring];
+    } else {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self _startMonitoring];
+        });
+    }
 }
 
-- (void)pauseMonitoring{
-    _displayLink.paused = YES;
+- (void)_startMonitoring {
+    if (self.displayLink.paused) {
+        self.displayLink.paused = NO;
+        [self.displayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
+    }
 }
 
-- (void)removeMonitoring{
-    [self pauseMonitoring];
-    [_displayLink removeFromRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
-    [_displayLink invalidate];
+- (void)stopMonitoring {
+    if (self.displayLink.paused == NO) {
+        self.displayLink.paused = YES;
+        [self.displayLink invalidate];
+    }
+}
+
+- (CADisplayLink *)displayLink {
+    if (!_displayLink) {
+        _displayLink = [CADisplayLink displayLinkWithTarget:[NPKWeakProxy proxyWithTarget:self] selector:@selector(displayLinkTick:)];
+        _displayLink.paused = YES;
+    }
+    return _displayLink;
 }
 
 #pragma mark -- Event Handle
 
-- (void)displayLinkTick:(CADisplayLink *)link{
+- (void)displayLinkTick:(CADisplayLink *)link {
     if (_beginTime == 0) {
         _beginTime = link.timestamp;
         return;
@@ -70,10 +79,6 @@
     
     _beginTime = link.timestamp;
     _count = 0;
-}
-
-- (void)dealloc{
-    [self removeMonitoring];
 }
 
 @end

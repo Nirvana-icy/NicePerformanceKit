@@ -9,10 +9,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NPKLaunchManager : NSObject
+@interface NPKLaunchEngine : NSObject
 
 // 获取单例实例
-+ (NPKLaunchManager *)sharedManager;
++ (NPKLaunchEngine *)sharedInstance;
 
 // did_launch    > root_onload       >   view_appear > idle_time
 //     first runloop                 |   second runloop

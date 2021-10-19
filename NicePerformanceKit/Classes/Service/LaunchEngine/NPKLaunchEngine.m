@@ -5,18 +5,18 @@
 //  Created by JinglongBi on 2021/9/6.
 //
 
-#import "NPKLaunchManager.h"
+#import "NPKLaunchEngine.h"
 #import <dlfcn.h>
 #import <mach-o/getsect.h>
 #import <objc/runtime.h>
 #import "NPKLaunchConfig.h"
-#import "NPKLaunchConfigPluginDefinition.h"
 #import "NPKLaunchTaskModel.h"
 #import "NPKLaunchProtocol.h"
+#import "AAAANPKLaunchTimeProfile.h"
+#import "NPKitDisplayWindow.h"
 
-@interface NPKLaunchManager()
+@interface NPKLaunchEngine()
 
-/// 启动配置 (通过NPK_LAUNCH_MANAGER_CONFIFG_REGISTER()动态注入)
 @property (nonatomic, strong, readonly) __kindof NPKLaunchConfig *launchConfig;
 @property (nonatomic, strong) NSDictionary *appOptions;
 @property (nonatomic, strong) NSMutableArray *taskArray;
@@ -27,10 +27,12 @@
 
 @end
 
-@implementation NPKLaunchManager
+@implementation NPKLaunchEngine
 @synthesize launchConfig = _launchConfig;
 
 - (void)startWithOptions:(NSDictionary *)options {
+    [AAAANPKLaunchTimeProfile setDidFinishLaunchCallbackTime:CACurrentMediaTime()];
+    
     NSAssert([NSThread currentThread] == [NSThread mainThread], @"NPKLaunchManager should launch with main thread!");
     
     if (!self.launchConfig) {
@@ -39,6 +41,10 @@
     }
     self.appOptions = options;
     [self startLaunchTasks:[self.launchConfig defaultLaunchList]];
+    
+    [AAAANPKLaunchTimeProfile setDidFinishLaunchFinishTime:CACurrentMediaTime()];
+    
+    [[NPKitDisplayWindow sharedInstance] showToast:[AAAANPKLaunchTimeProfile launchTimeSummary] withDuration:10.f];
 }
 
 #pragma mark - Private Methods
@@ -149,7 +155,7 @@
 
 #pragma mark - Getter
 
-static NPKLaunchManager * _sharedManager = nil;
+static NPKLaunchEngine * _sharedManager = nil;
 
 //- (NPKLaunchTaskService *)launchService {
 //    if (!_launchService) {
@@ -219,10 +225,10 @@ static NPKLaunchManager * _sharedManager = nil;
     return _launchConfig;
 }
 
-+ (NPKLaunchManager *)sharedManager {
++ (NPKLaunchEngine *)sharedInstance {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _sharedManager = [NPKLaunchManager new];
+        _sharedManager = [NPKLaunchEngine new];
     });
     return _sharedManager;
 }

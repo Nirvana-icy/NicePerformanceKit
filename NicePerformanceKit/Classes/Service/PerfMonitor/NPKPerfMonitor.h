@@ -17,9 +17,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign, readonly) float gpuUsage;
 @property (nonatomic, assign, readonly) float fps;
 //@property (nonatomic, copy, readonly) NSString *gpuInfo;
-@property (nonatomic, assign) double timeInterval;
 
 + (instancetype)sharedInstance;
+
 - (void)start;
 - (void)stop;
 

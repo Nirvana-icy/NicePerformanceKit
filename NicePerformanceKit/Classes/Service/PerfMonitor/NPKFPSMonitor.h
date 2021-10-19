@@ -18,9 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)startMonitoring;
 
-- (void)pauseMonitoring;
-
-- (void)removeMonitoring;
+- (void)stopMonitoring;
 
 @end
 

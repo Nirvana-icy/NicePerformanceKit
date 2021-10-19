@@ -19,5 +19,4 @@
     npk_time_profile_end("TaskA", spid + 1);
 }
 
-
 @end

@@ -6,9 +6,10 @@
 //
 
 #import "NPKPerfMonitor.h"
-#import "NPKPerfEntryWindow.h"
+#import "NPKitDisplayWindow.h"
 #import "NPKSysResCostInfo.h"
 #import "NPKFPSMonitor.h"
+#import "NPKLagMonitor.h"
 
 @interface NPKPerfMonitor ()
 
@@ -44,21 +45,47 @@
         [[NPKFPSMonitor sharedInstance] startMonitoring];
 
         dispatch_source_set_event_handler(_timer, ^{
-            NSString *currentPerfInfo = [NSString stringWithFormat:@"%@ FPS:%0.f", [NPKSysResCostInfo appCostInfo], [NPKFPSMonitor sharedInstance].currentFPS];
-            
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [[NPKPerfEntryWindow sharedInstance] updatePerfInfo:currentPerfInfo];
-            });
+            [self renderUIWithCurrentSystemInfo];
         });
         
         dispatch_resume(_timer);
     }
 }
 
+- (void)renderUIWithCurrentSystemInfo {
+    float currentFPS = [NPKFPSMonitor sharedInstance].currentFPS;
+    float currentAppCpuUsage = [NPKSysResCostInfo currentAppCpuUsage];
+    float currentAppMemory = [NPKSysResCostInfo currentAppMemory];
+    NSUInteger currentThreadCount = [NPKSysResCostInfo currentAppThreadCount];
+    NSUInteger currentLagCount = [[NPKLagMonitor sharedInstance] lagCount];
+    // 基础性能信息
+    NSString *currentPerfInfo = [NSString stringWithFormat:@"CPU: %0.1f RAM: %0.1f ANR: %lu FPS:%0.1f", currentAppCpuUsage, currentAppMemory, currentLagCount, currentFPS];
+    // 性能告警信息生成
+    NSString *warningInfo = @"";
+    if (currentAppCpuUsage > 80.f) {
+        warningInfo = [warningInfo stringByAppendingFormat:@"%@" , [NSString stringWithFormat:@"CPU: %0.1f", currentAppCpuUsage]];
+    }
+    if (currentFPS < 45.f) {
+        warningInfo = [warningInfo stringByAppendingFormat:@"%@" , [NSString stringWithFormat:@"FPS: %0.f", currentFPS]];
+    }
+    if (currentAppMemory > 150.f) {
+        warningInfo = [warningInfo stringByAppendingFormat:@"%@" , [NSString stringWithFormat:@"RAM: %0.f", currentAppMemory]];
+    }
+    if (currentThreadCount > 12) {
+        warningInfo = [warningInfo stringByAppendingFormat:@"%@" , [NSString stringWithFormat:@"线程: %0lu", (unsigned long)currentThreadCount]];
+    }
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [[NPKitDisplayWindow sharedInstance] updatePerfInfo:currentPerfInfo];
+        if (warningInfo.length > 0) {
+            [[NPKitDisplayWindow sharedInstance] showToast:warningInfo];
+        }
+    });
+}
+
 - (void)stop {
     if (_timer) {
         dispatch_source_cancel(_timer);
-        [_fpsMonitor pauseMonitoring];
+        [_fpsMonitor stopMonitoring];
         _timer = nil;
         _queue = nil;
     }

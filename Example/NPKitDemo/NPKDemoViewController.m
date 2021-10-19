@@ -15,7 +15,7 @@
 #import <NicePerformanceKit/NPKPerfTestCase+GCD.h>
 #import <NicePerformanceKit/NPKSysResCostInfo.h>
 #import <NicePerformanceKit/NPKLagMonitor.h>
-#import <NicePerformanceKit/NPKPerfEntryWindow.h>
+#import <NicePerformanceKit/NPKitDisplayWindow.h>
 #import "SlowLargeTableViewController.h"
 #import "NPKDemoViewController+Test.h"
 
@@ -48,7 +48,7 @@ NPKLagMonitorDelegate
 
 - (void)lagDetectWithStackInfo:(NSString *)stackInfo
                       lagCount:(NSUInteger)lagCount {
-    [[NPKPerfEntryWindow sharedInstance] updatePerfInfo:[NSString stringWithFormat:@"ANR: %lu", (unsigned long)lagCount] withFlash:YES];
+    [[NPKitDisplayWindow sharedInstance] showToast:[NSString stringWithFormat:@"ANR: %lu", (unsigned long)lagCount]];
 }
 
 #pragma mark -- Action

@@ -93,7 +93,32 @@ Pod::Spec.new do |spec|
     base.public_header_files = 'NicePerformanceKit/Classes/Base/**/*.h'
     base.source_files  = "NicePerformanceKit/Classes/Base/**/*.{h,m,mm}"
   end
-  
+
+  spec.subspec 'View' do |view|
+    view.public_header_files = 'NicePerformanceKit/Classes/View/**/*.h'
+    view.source_files  = "NicePerformanceKit/Classes/View/*.{h,m,mm}"
+  end
+
+  spec.subspec 'Service' do |service|
+    service.subspec 'LaunchEngine' do |launch_engine|
+      launch_engine.dependency 'NicePerformanceKit/Base'
+      launch_engine.dependency 'NicePerformanceKit/View'
+      launch_engine.public_header_files = 'NicePerformanceKit/Classes/Service/LaunchEngine/**/*.h'
+      launch_engine.source_files  = "NicePerformanceKit/Classes/Service/LaunchEngine/**/*.{h,m,mm}"
+    end
+    service.subspec 'MetricKitReport' do |metric_kit_report|
+      metric_kit_report.dependency 'NicePerformanceKit/Base'
+      metric_kit_report.public_header_files = 'NicePerformanceKit/Classes/Service/MetricKitReport/**/*.h'
+      metric_kit_report.source_files  = "NicePerformanceKit/Classes/Service/MetricKitReport/**/*.{h,m,mm}"
+    end
+    service.subspec 'PerfMonitor' do |perf_monitor|
+      perf_monitor.dependency 'NicePerformanceKit/Base'
+      perf_monitor.dependency 'NicePerformanceKit/View'
+      perf_monitor.public_header_files = 'NicePerformanceKit/Classes/Service/PerfMonitor/**/*.h'
+      perf_monitor.source_files  = "NicePerformanceKit/Classes/Service/PerfMonitor/**/*.{h,m,mm}"
+    end
+  end
+
   spec.subspec 'Tool' do |tool|
     tool.subspec 'TimeProfile' do |time_profile|
       time_profile.dependency 'NicePerformanceKit/Base'
@@ -104,22 +129,6 @@ Pod::Spec.new do |spec|
     tool.subspec 'Image' do |image|
       image.public_header_files = 'NicePerformanceKit/Classes/Tool/Image/**/*.h'
       image.source_files  = "NicePerformanceKit/Classes/Tool/Image/**/*.{h,m,mm}"
-    end
-  end
-
-  spec.subspec 'Service' do |service|
-    service.subspec 'LaunchManager' do |launch_manager|
-      launch_manager.public_header_files = 'NicePerformanceKit/Classes/Service/LaunchManager/**/*.h'
-      launch_manager.source_files  = "NicePerformanceKit/Classes/Service/LaunchManager/**/*.{h,m,mm}"
-    end
-    service.subspec 'MetricKitReport' do |metric_kit_report|
-      metric_kit_report.public_header_files = 'NicePerformanceKit/Classes/Service/MetricKitReport/**/*.h'
-      metric_kit_report.source_files  = "NicePerformanceKit/Classes/Service/MetricKitReport/**/*.{h,m,mm}"
-    end
-    service.subspec 'PerfMonitor' do |perf_monitor|
-      perf_monitor.dependency 'NicePerformanceKit/Base'
-      perf_monitor.public_header_files = 'NicePerformanceKit/Classes/Service/PerfMonitor/**/*.h'
-      perf_monitor.source_files  = "NicePerformanceKit/Classes/Service/PerfMonitor/**/*.{h,m,mm}"
     end
   end
 
