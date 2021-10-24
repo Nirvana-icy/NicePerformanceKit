@@ -14,6 +14,9 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)generateMainThreadLag;
 + (void)generateLagWithTime:(NSTimeInterval)time;
 
++ (nullable UIImage *)resizeImageWithImageURL:(NSURL *)imageURL
+                                   expectSize:(CGSize)expectSize;
+
 @end
 
 NS_ASSUME_NONNULL_END

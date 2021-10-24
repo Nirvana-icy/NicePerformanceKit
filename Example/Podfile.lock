@@ -2,13 +2,17 @@ PODS:
   - Masonry (1.1.0)
   - NicePerformanceKit/Base (0.0.1)
   - NicePerformanceKit/Service (0.0.1):
-    - NicePerformanceKit/Service/LaunchManager (= 0.0.1)
+    - NicePerformanceKit/Service/LaunchEngine (= 0.0.1)
     - NicePerformanceKit/Service/MetricKitReport (= 0.0.1)
     - NicePerformanceKit/Service/PerfMonitor (= 0.0.1)
-  - NicePerformanceKit/Service/LaunchManager (0.0.1)
-  - NicePerformanceKit/Service/MetricKitReport (0.0.1)
+  - NicePerformanceKit/Service/LaunchEngine (0.0.1):
+    - NicePerformanceKit/Base
+    - NicePerformanceKit/View
+  - NicePerformanceKit/Service/MetricKitReport (0.0.1):
+    - NicePerformanceKit/Base
   - NicePerformanceKit/Service/PerfMonitor (0.0.1):
     - NicePerformanceKit/Base
+    - NicePerformanceKit/View
   - NicePerformanceKit/TestCase (0.0.1)
   - NicePerformanceKit/Tool (0.0.1):
     - NicePerformanceKit/Tool/Image (= 0.0.1)
@@ -16,6 +20,7 @@ PODS:
   - NicePerformanceKit/Tool/Image (0.0.1)
   - NicePerformanceKit/Tool/TimeProfile (0.0.1):
     - NicePerformanceKit/Base
+  - NicePerformanceKit/View (0.0.1)
 
 DEPENDENCIES:
   - Masonry
@@ -33,7 +38,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
-  NicePerformanceKit: dd9259cacf8cb9d29bd99d617e130f12a5316621
+  NicePerformanceKit: b17fe9918ec1420e25022740cae814ce462d65b4
 
 PODFILE CHECKSUM: a68b409bc576481f30389adde7474a13669617c3
 

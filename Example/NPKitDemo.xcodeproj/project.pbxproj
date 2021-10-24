@@ -27,7 +27,6 @@
 		E005B8E427116FCF000BDA26 /* SlowLargeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E005B8E327116FCE000BDA26 /* SlowLargeTableViewController.m */; };
 		E005B8EF27119F1A000BDA26 /* NPKitDemo_ExampleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E005B8EE27119F1A000BDA26 /* NPKitDemo_ExampleUITests.m */; };
 		E005B8F127119F1A000BDA26 /* NPKitDemo_ExampleUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E005B8F027119F1A000BDA26 /* NPKitDemo_ExampleUITestsLaunchTests.m */; };
-		E020C01827035DEB00D7D446 /* NPKitDemoLaunchConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = E020C01727035DEB00D7D446 /* NPKitDemoLaunchConfig.m */; };
 		E03640302706AB9D00BA1904 /* NPKDemoViewController+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = E036402F2706AB9D00BA1904 /* NPKDemoViewController+Test.m */; };
 		E081CF5D27182BC500A563DF /* NPKMockLaunchTaskA.m in Sources */ = {isa = PBXBuildFile; fileRef = E081CF5C27182BC500A563DF /* NPKMockLaunchTaskA.m */; };
 		E081CF6027182D6F00A563DF /* NPKMockLaunchTaskB.m in Sources */ = {isa = PBXBuildFile; fileRef = E081CF5F27182D6F00A563DF /* NPKMockLaunchTaskB.m */; };
@@ -35,6 +34,11 @@
 		E081CF66271833EF00A563DF /* NPKMockLaunchTaskC.m in Sources */ = {isa = PBXBuildFile; fileRef = E081CF65271833EF00A563DF /* NPKMockLaunchTaskC.m */; };
 		E081CF692718342800A563DF /* NPKMockLaunchTaskD.m in Sources */ = {isa = PBXBuildFile; fileRef = E081CF682718342800A563DF /* NPKMockLaunchTaskD.m */; };
 		E081CF6C2719275900A563DF /* NPKMockLaunchTaskE.m in Sources */ = {isa = PBXBuildFile; fileRef = E081CF6B2719275900A563DF /* NPKMockLaunchTaskE.m */; };
+		E08210EA2720053B00067774 /* NPKitMetricsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08210E92720053B00067774 /* NPKitMetricsUITests.swift */; };
+		E08210F22720194B00067774 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E08210F12720194B00067774 /* ImageIO.framework */; };
+		E08210F42720195400067774 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E08210F32720195400067774 /* CoreServices.framework */; };
+		E08210F6272146AC00067774 /* IMG_6340.png in Resources */ = {isa = PBXBuildFile; fileRef = E08210F5272146AB00067774 /* IMG_6340.png */; };
+		E08210FC2721513D00067774 /* NPKImageProcessTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E08210FB2721513D00067774 /* NPKImageProcessTestVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,8 +94,6 @@
 		E005B8EC27119F19000BDA26 /* NPKitDemo_ExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NPKitDemo_ExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E005B8EE27119F1A000BDA26 /* NPKitDemo_ExampleUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NPKitDemo_ExampleUITests.m; sourceTree = "<group>"; };
 		E005B8F027119F1A000BDA26 /* NPKitDemo_ExampleUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NPKitDemo_ExampleUITestsLaunchTests.m; sourceTree = "<group>"; };
-		E020C01627035DEB00D7D446 /* NPKitDemoLaunchConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NPKitDemoLaunchConfig.h; sourceTree = "<group>"; };
-		E020C01727035DEB00D7D446 /* NPKitDemoLaunchConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NPKitDemoLaunchConfig.m; sourceTree = "<group>"; };
 		E036402E2706AB9D00BA1904 /* NPKDemoViewController+Test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NPKDemoViewController+Test.h"; sourceTree = "<group>"; };
 		E036402F2706AB9D00BA1904 /* NPKDemoViewController+Test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NPKDemoViewController+Test.m"; sourceTree = "<group>"; };
 		E081CF5B27182BC500A563DF /* NPKMockLaunchTaskA.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NPKMockLaunchTaskA.h; sourceTree = "<group>"; };
@@ -106,6 +108,13 @@
 		E081CF682718342800A563DF /* NPKMockLaunchTaskD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NPKMockLaunchTaskD.m; sourceTree = "<group>"; };
 		E081CF6A2719275900A563DF /* NPKMockLaunchTaskE.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NPKMockLaunchTaskE.h; sourceTree = "<group>"; };
 		E081CF6B2719275900A563DF /* NPKMockLaunchTaskE.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NPKMockLaunchTaskE.m; sourceTree = "<group>"; };
+		E08210E92720053B00067774 /* NPKitMetricsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NPKitMetricsUITests.swift; sourceTree = "<group>"; };
+		E08210F027200F1C00067774 /* NPKitDemo_ExampleUITests-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NPKitDemo_ExampleUITests-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		E08210F12720194B00067774 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		E08210F32720195400067774 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
+		E08210F5272146AB00067774 /* IMG_6340.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_6340.png; sourceTree = "<group>"; };
+		E08210FA2721513D00067774 /* NPKImageProcessTestVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NPKImageProcessTestVC.h; sourceTree = "<group>"; };
+		E08210FB2721513D00067774 /* NPKImageProcessTestVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NPKImageProcessTestVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +122,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E08210F42720195400067774 /* CoreServices.framework in Frameworks */,
+				E08210F22720194B00067774 /* ImageIO.framework in Frameworks */,
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
@@ -178,6 +189,8 @@
 		6003F58C195388D20070C39A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E08210F32720195400067774 /* CoreServices.framework */,
+				E08210F12720194B00067774 /* ImageIO.framework */,
 				6003F58D195388D20070C39A /* Foundation.framework */,
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
@@ -195,14 +208,11 @@
 				6003F59C195388D20070C39A /* NPKAppDelegate.h */,
 				6003F59D195388D20070C39A /* NPKAppDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
-				6003F5A5195388D20070C39A /* NPKDemoViewController.h */,
-				6003F5A6195388D20070C39A /* NPKDemoViewController.m */,
-				E036402E2706AB9D00BA1904 /* NPKDemoViewController+Test.h */,
-				E036402F2706AB9D00BA1904 /* NPKDemoViewController+Test.m */,
-				E005B8E227116FCE000BDA26 /* SlowLargeTableViewController.h */,
-				E005B8E327116FCE000BDA26 /* SlowLargeTableViewController.m */,
+				E08210F727214C8B00067774 /* DemoBiz */,
+				E08210F027200F1C00067774 /* NPKitDemo_ExampleUITests-Bridging-Header.h */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
+				E08210F5272146AB00067774 /* IMG_6340.png */,
 				6003F594195388D20070C39A /* Supporting Files */,
 			);
 			name = "Example for NPKitDemo";
@@ -252,6 +262,7 @@
 		E005B8ED27119F1A000BDA26 /* NPKitDemo_ExampleUITests */ = {
 			isa = PBXGroup;
 			children = (
+				E08210E92720053B00067774 /* NPKitMetricsUITests.swift */,
 				E005B8EE27119F1A000BDA26 /* NPKitDemo_ExampleUITests.m */,
 				E005B8F027119F1A000BDA26 /* NPKitDemo_ExampleUITestsLaunchTests.m */,
 			);
@@ -261,8 +272,6 @@
 		E071D1F526F86C350048321D /* NPKLaunchBiz */ = {
 			isa = PBXGroup;
 			children = (
-				E020C01627035DEB00D7D446 /* NPKitDemoLaunchConfig.h */,
-				E020C01727035DEB00D7D446 /* NPKitDemoLaunchConfig.m */,
 				E081CF5B27182BC500A563DF /* NPKMockLaunchTaskA.h */,
 				E081CF5C27182BC500A563DF /* NPKMockLaunchTaskA.m */,
 				E081CF5E27182D6F00A563DF /* NPKMockLaunchTaskB.h */,
@@ -277,6 +286,21 @@
 				E081CF6B2719275900A563DF /* NPKMockLaunchTaskE.m */,
 			);
 			path = NPKLaunchBiz;
+			sourceTree = "<group>";
+		};
+		E08210F727214C8B00067774 /* DemoBiz */ = {
+			isa = PBXGroup;
+			children = (
+				6003F5A5195388D20070C39A /* NPKDemoViewController.h */,
+				6003F5A6195388D20070C39A /* NPKDemoViewController.m */,
+				E036402E2706AB9D00BA1904 /* NPKDemoViewController+Test.h */,
+				E036402F2706AB9D00BA1904 /* NPKDemoViewController+Test.m */,
+				E005B8E227116FCE000BDA26 /* SlowLargeTableViewController.h */,
+				E005B8E327116FCE000BDA26 /* SlowLargeTableViewController.m */,
+				E08210FA2721513D00067774 /* NPKImageProcessTestVC.h */,
+				E08210FB2721513D00067774 /* NPKImageProcessTestVC.m */,
+			);
+			path = DemoBiz;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -358,6 +382,7 @@
 					E005B8EB27119F19000BDA26 = {
 						CreatedOnToolsVersion = 13.0;
 						DevelopmentTeam = A83729LRD6;
+						LastSwiftMigration = 1300;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -392,6 +417,7 @@
 				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
+				E08210F6272146AC00067774 /* IMG_6340.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -490,8 +516,8 @@
 				E081CF692718342800A563DF /* NPKMockLaunchTaskD.m in Sources */,
 				E081CF66271833EF00A563DF /* NPKMockLaunchTaskC.m in Sources */,
 				6003F5A7195388D20070C39A /* NPKDemoViewController.m in Sources */,
+				E08210FC2721513D00067774 /* NPKImageProcessTestVC.m in Sources */,
 				E081CF6027182D6F00A563DF /* NPKMockLaunchTaskB.m in Sources */,
-				E020C01827035DEB00D7D446 /* NPKitDemoLaunchConfig.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 				E081CF6C2719275900A563DF /* NPKMockLaunchTaskE.m in Sources */,
 				E005B8E427116FCF000BDA26 /* SlowLargeTableViewController.m in Sources */,
@@ -512,6 +538,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E005B8EF27119F1A000BDA26 /* NPKitDemo_ExampleUITests.m in Sources */,
+				E08210EA2720053B00067774 /* NPKitMetricsUITests.swift in Sources */,
 				E005B8F127119F1A000BDA26 /* NPKitDemo_ExampleUITestsLaunchTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -607,7 +634,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -655,7 +682,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -668,11 +695,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = A83729LRD6;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NPKitDemo/NPKitDemo-Prefix.pch";
 				INFOPLIST_FILE = "NPKitDemo/NPKitDemo-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tangyuan.NPKitDemo-Example";
@@ -690,11 +718,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = A83729LRD6;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NPKitDemo/NPKitDemo-Prefix.pch";
 				INFOPLIST_FILE = "NPKitDemo/NPKitDemo-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tangyuan.NPKitDemo-Example";
@@ -757,6 +786,7 @@
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
@@ -766,7 +796,7 @@
 				DEVELOPMENT_TEAM = A83729LRD6;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MARKETING_VERSION = 1.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -774,6 +804,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tangyuan.npkit.demo.uitest.NPKitDemo-ExampleUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "NPKitDemo_ExampleUITests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = NPKitDemo_Example;
 			};
@@ -785,6 +818,7 @@
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
@@ -795,7 +829,7 @@
 				DEVELOPMENT_TEAM = A83729LRD6;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MARKETING_VERSION = 1.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -803,6 +837,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tangyuan.npkit.demo.uitest.NPKitDemo-ExampleUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "NPKitDemo_ExampleUITests-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = NPKitDemo_Example;
 			};

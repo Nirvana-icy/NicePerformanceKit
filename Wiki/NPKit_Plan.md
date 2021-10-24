@@ -50,4 +50,13 @@ _checkAndDeliverDiagnosticReports
 ### hangDiagnostics
 ### crashDiagnostics 
 
+1. MetricKit框架详细解析（一） —— 基本概览（一）
+2. MetricKit框架详细解析（二） —— Improving Your App's Performance（一）
+3. MetricKit框架详细解析（三） —— Reducing Your App's Memory Use（一）
+4. MetricKit框架详细解析（四） —— Gathering Information About Memory Use（一）
+5. MetricKit框架详细解析（五） —— Making Changes to Reduce Memory Use（一）
+6. MetricKit框架详细解析（六） —— Preventing Memory-Use Regressions & Responding to Low-Memory Warnings（一）
+
+https://developer.apple.com/videos/play/wwdc2020/10081/
+
 

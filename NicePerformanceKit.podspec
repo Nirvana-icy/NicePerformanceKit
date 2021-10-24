@@ -163,7 +163,7 @@ Pod::Spec.new do |spec|
   #
 
   # spec.framework  = "SomeFramework"
-  # spec.frameworks = "SomeFramework", "AnotherFramework"
+  spec.frameworks = "CoreServices", "ImageIO"
 
    spec.library   = "c++"
   # spec.libraries = "iconv", "xml2"

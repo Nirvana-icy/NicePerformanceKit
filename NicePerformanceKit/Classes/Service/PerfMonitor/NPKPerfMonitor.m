@@ -24,6 +24,8 @@
 //@property (nonatomic, copy, readwrite) NSString *gpuInfo;
 @property (nonatomic, strong) NPKFPSMonitor *fpsMonitor;
 
+@property (nonatomic, assign) NSUInteger lastLagCount;
+
 @end
 
 @implementation NPKPerfMonitor
@@ -33,6 +35,7 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         _sharedInstance = [NPKPerfMonitor new];
+        _sharedInstance.lastLagCount = 0;
     });
     return _sharedInstance;
 }
@@ -59,20 +62,25 @@
     NSUInteger currentThreadCount = [NPKSysResCostInfo currentAppThreadCount];
     NSUInteger currentLagCount = [[NPKLagMonitor sharedInstance] lagCount];
     // 基础性能信息
-    NSString *currentPerfInfo = [NSString stringWithFormat:@"CPU: %0.1f RAM: %0.1f ANR: %lu FPS:%0.1f", currentAppCpuUsage, currentAppMemory, currentLagCount, currentFPS];
+    NSString *currentPerfInfo = [NSString stringWithFormat:@"CPU: %0.1f RAM: %0.1f 线程: %lu FPS:%0.1f", currentAppCpuUsage, currentAppMemory, (unsigned long)currentThreadCount, currentFPS];
     // 性能告警信息生成
+    // todo 可配置
     NSString *warningInfo = @"";
+    if (currentLagCount > self.lastLagCount) {
+        self.lastLagCount = currentLagCount;
+        warningInfo = [warningInfo stringByAppendingFormat:@"%@" , [NSString stringWithFormat:@"卡顿: %0lu", (unsigned long)currentLagCount]];
+    }
     if (currentAppCpuUsage > 80.f) {
-        warningInfo = [warningInfo stringByAppendingFormat:@"%@" , [NSString stringWithFormat:@"CPU: %0.1f", currentAppCpuUsage]];
+        warningInfo = [warningInfo stringByAppendingFormat:@" %@" , [NSString stringWithFormat:@"CPU: %0.1f", currentAppCpuUsage]];
     }
     if (currentFPS < 45.f) {
-        warningInfo = [warningInfo stringByAppendingFormat:@"%@" , [NSString stringWithFormat:@"FPS: %0.f", currentFPS]];
+        warningInfo = [warningInfo stringByAppendingFormat:@" %@" , [NSString stringWithFormat:@"FPS: %0.f", currentFPS]];
     }
     if (currentAppMemory > 150.f) {
-        warningInfo = [warningInfo stringByAppendingFormat:@"%@" , [NSString stringWithFormat:@"RAM: %0.f", currentAppMemory]];
+        warningInfo = [warningInfo stringByAppendingFormat:@" %@" , [NSString stringWithFormat:@"RAM: %0.f", currentAppMemory]];
     }
-    if (currentThreadCount > 12) {
-        warningInfo = [warningInfo stringByAppendingFormat:@"%@" , [NSString stringWithFormat:@"线程: %0lu", (unsigned long)currentThreadCount]];
+    if (currentThreadCount > 36) {
+        warningInfo = [warningInfo stringByAppendingFormat:@" %@" , [NSString stringWithFormat:@"线程: %0lu", (unsigned long)currentThreadCount]];
     }
     dispatch_async(dispatch_get_main_queue(), ^{
         [[NPKitDisplayWindow sharedInstance] updatePerfInfo:currentPerfInfo];

@@ -37,4 +37,21 @@
     }
 }
 
++ (nullable UIImage *)resizeImageWithImageURL:(NSURL *)imageURL
+                                   expectSize:(CGSize)expectSize {
+    if (nil == imageURL || expectSize.width <= 0 || expectSize.height <= 0) {
+        return nil;
+    }
+    
+    UIImage *image = [[UIImage alloc] initWithContentsOfFile:imageURL.path];
+    UIImage *resultImage = nil;
+    
+    UIGraphicsBeginImageContext(expectSize);
+    [image drawInRect:CGRectMake(0, 0, expectSize.width, expectSize.height)];
+    resultImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return resultImage;
+}
+
 @end

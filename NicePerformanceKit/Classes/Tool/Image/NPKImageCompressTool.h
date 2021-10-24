@@ -12,15 +12,18 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NPKImageCompressTool : NSObject
 
-/// 压缩图片并保存在指定路径，压缩失败返回nil。
++ (nullable UIImage *)resizeImageWithImageURL:(NSURL *)imageURL
+                                   expectSize:(CGSize)expectSize;
+
+/// 压缩图片并保存在指定路径，成功返回 YES。
 /// @param image 待压缩的UIImage
 /// @param outputImageURL 保存压缩后图片的磁盘地址
 /// @param expectSize 压缩后图片的尺寸
 /// @param quality 压缩质量
-+ (BOOL)saveCompressedImage:(UIImage *)image
-             outputImageURL:(NSURL *)outputImageURL
-             withExpectSize:(CGSize)expectSize
-                    quality:(CGFloat)quality;
++ (BOOL)compresseImage:(UIImage *)image
+    withOutputImageURL:(NSURL *)outputImageURL
+            expectSize:(CGSize)expectSize
+               quality:(CGFloat)quality;
 
 @end
 
