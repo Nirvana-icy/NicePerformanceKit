@@ -79,6 +79,7 @@ class NPKitMetricsUITests: XCTestCase {
         }
     }
     
+    @available(iOS 13.0, *)
     func testImageProcess_ResizedImage() throws {
         let app = XCUIApplication()
         app.launch()
@@ -106,6 +107,7 @@ class NPKitMetricsUITests: XCTestCase {
         }
     }
 
+    @available(iOS 13.0, *)
     func testThreadsStorm() throws {
         let app = XCUIApplication()
         app.launch()
@@ -122,6 +124,7 @@ class NPKitMetricsUITests: XCTestCase {
         }
     }
     
+    @available(iOS 13.0, *)
     func testThreadsPool() throws {
         let app = XCUIApplication()
         app.launch()
@@ -138,6 +141,7 @@ class NPKitMetricsUITests: XCTestCase {
         }
     }
     
+    @available(iOS 13.0, *)
     private func signpostMetric(for name: StaticString) -> XCTOSSignpostMetric {
         return XCTOSSignpostMetric(subsystem: "com.npk.metrics.test", category: "scrollOperations", name: String(describing: name))
     }

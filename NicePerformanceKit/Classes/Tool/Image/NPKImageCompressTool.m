@@ -22,14 +22,19 @@
         return nil;
     }
     
-    CFDictionaryRef compressedOptionsRef = (__bridge CFDictionaryRef)@{
+    CFDictionaryRef resizedImgOptionRef = (__bridge CFDictionaryRef)@{
         (id)kCGImageSourceThumbnailMaxPixelSize : @(MAX(expectSize.width, expectSize.height)),
         (id)kCGImageSourceCreateThumbnailWithTransform : @(YES),
         (id)kCGImageSourceCreateThumbnailFromImageAlways : @(YES)
     };
     
-    CGImageRef compressedImgRef = CGImageSourceCreateThumbnailAtIndex(imgSrcRef, 0, compressedOptionsRef);
-    return [[UIImage alloc] initWithCGImage:compressedImgRef];
+    CGImageRef resizedImgRef = CGImageSourceCreateThumbnailAtIndex(imgSrcRef, 0, resizedImgOptionRef);
+    UIImage *resizedImg = [[UIImage alloc] initWithCGImage:resizedImgRef];
+    
+    CFRelease(imgSrcRef);
+    CFRelease(resizedImgRef);
+    
+    return resizedImg;
 }
 
 + (BOOL)compresseImage:(UIImage *)image
@@ -47,24 +52,26 @@
 
     if (image.size.width > expectSize.width ) {
         CGImageSourceRef jpgImageSrcRef = CGImageSourceCreateWithData((__bridge CFTypeRef)(jpgImageData), NULL);
-        CFDictionaryRef dicOptionsRef = (__bridge CFDictionaryRef) @{(id)kCGImageSourceCreateThumbnailFromImageIfAbsent : @(YES),
-                                                                     (id)kCGImageSourceThumbnailMaxPixelSize : @(MAX(expectSize.width, expectSize.height)),
-                                                                     (id)kCGImageSourceShouldCache : @(YES), // Specifies whether the image should be cached in a decoded form.
-                                                                     (id)kCGImageSourceCreateThumbnailWithTransform: @(YES)
+        CFDictionaryRef resizedImgOptionRef = (__bridge CFDictionaryRef) @{
+            (id)kCGImageSourceCreateThumbnailFromImageIfAbsent : @(YES),
+            (id)kCGImageSourceThumbnailMaxPixelSize : @(MAX(expectSize.width, expectSize.height)),
+//            (id)kCGImageSourceShouldCache : @(YES), // Specifies whether the image should be cached in a decoded form.
+            (id)kCGImageSourceCreateThumbnailWithTransform: @(YES)
         };
 
-        CGImageRef imageRef = CGImageSourceCreateThumbnailAtIndex(jpgImageSrcRef, 0, dicOptionsRef);
+        CGImageRef imageRef = CGImageSourceCreateThumbnailAtIndex(jpgImageSrcRef, 0, resizedImgOptionRef);
+        CFRelease(jpgImageSrcRef);
+        
         NSDictionary *options = @{(id)kCGImageDestinationLossyCompressionQuality : @(quality)};
         CGImageDestinationRef destImageRef = CGImageDestinationCreateWithURL((__bridge CFURLRef)outputImageURL, kUTTypeJPEG, 1, nil);
 
         CGImageDestinationAddImage(destImageRef, imageRef, (CFDictionaryRef)options);
         bResult = CGImageDestinationFinalize(destImageRef);
-        CFRelease(destImageRef);
-
+        
         if (imageRef != nil) {
             CFRelease(imageRef);
         }
-        CFRelease(jpgImageSrcRef);
+        CFRelease(destImageRef);
     } else {
         bResult = [jpgImageData writeToFile:outputImageURL.path atomically:YES];
     }
