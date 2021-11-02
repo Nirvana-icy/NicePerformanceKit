@@ -8,6 +8,7 @@
 ## 内存
 ### 内存泄露
 ### 内存峰值(Top)页面 & 堆栈
+### OOM治理 - 线上MemoryGraph抓取、上传、符号化
 ## 线程
 ###  线程峰值(Top)页面 & 堆栈
 ## CPU/GPU/耗电
@@ -16,12 +17,12 @@
 
 | Feature | 优先级 | 时间 |
 | :-: | :-: |:-: |
-| XCMetrics Workflow | 🌟🌟🌟🌟| 10.13 |
-| XCMetrics Test | 🌟🌟🌟🌟| 10.15 |
-| 启动器 | 🌟🌟🌟🌟🌟 | 10.18 |
-| 初级性能问题诊断 | 🌟🌟🌟 | |
-| ANR count & bt & 内存警告提示  | 🌟| |
-|  展开详情 轨迹/弹幕 or Toast   | 🌟🌟| |
+| Perf Monitor | 🌟🌟🌟🌟| Done |
+| iOS启动引擎 | 🌟🌟🌟🌟🌟 | Done |
+| XCMetrics Reportor | 🌟🌟🌟 | Hold |
+| Online MemoryGraph | 🌟🌟🌟🌟 | Process |
+| ANR count & bt & 内存警告提示  | 🌟| Done |
+|  展开详情 轨迹/弹幕  | 🌟🌟| |
 | 展开功能控制面板  | 🌟| |
 | 拖拽 摇一摇隐藏 | 🌟| |
 
@@ -58,5 +59,7 @@ _checkAndDeliverDiagnosticReports
 6. MetricKit框架详细解析（六） —— Preventing Memory-Use Regressions & Responding to Low-Memory Warnings（一）
 
 https://developer.apple.com/videos/play/wwdc2020/10081/
+
+[WWDC iOS 电量优化综述](https://www.jianshu.com/p/ec5631ec5164)
 
 
