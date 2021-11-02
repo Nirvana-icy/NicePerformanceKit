@@ -76,7 +76,7 @@
     if (currentFPS < 45.f) {
         warningInfo = [warningInfo stringByAppendingFormat:@" %@" , [NSString stringWithFormat:@"FPS: %0.f", currentFPS]];
     }
-    if (currentAppMemory > 150.f) {
+    if (currentAppMemory / [NPKSysResCostInfo totalAvailableMemoryForApp] > 0.75f) {
         warningInfo = [warningInfo stringByAppendingFormat:@" %@" , [NSString stringWithFormat:@"RAM: %0.f", currentAppMemory]];
     }
     if (currentThreadCount > 36) {

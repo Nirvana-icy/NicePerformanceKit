@@ -17,6 +17,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (float)currentAppMemory;
 
++ (float)totalAvailableMemoryForApp;
+
++ (float)totalMemoryForDevice;
+
 /// Current System CPU usage, 15.0 means 15%. (-1 when error occurs)
 + (float)currentSystemCpuUsage;
 

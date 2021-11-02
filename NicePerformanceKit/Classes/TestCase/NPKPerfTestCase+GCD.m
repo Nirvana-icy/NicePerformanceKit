@@ -18,6 +18,7 @@
         NSLog(@"npk__调度");
         
         dispatch_async(queue, ^{
+            sleep(1);
             NSLog(@"npk__%@  %d   Thread Count:%lu", [NSThread currentThread], i, (unsigned long)[NPKSysResCostInfo currentAppThreadCount]);
         });
     }

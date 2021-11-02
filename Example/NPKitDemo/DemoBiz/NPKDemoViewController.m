@@ -16,6 +16,7 @@
 #import <NicePerformanceKit/NPKSysResCostInfo.h>
 #import <NicePerformanceKit/NPKLagMonitor.h>
 #import <NicePerformanceKit/NPKitDisplayWindow.h>
+#import <NicePerformanceKit/NPKSignpostLog.h>
 #import "SlowLargeTableViewController.h"
 #import "NPKDemoViewController+Test.h"
 #import "NPKImageProcessTestVC.h"
@@ -60,11 +61,17 @@ NPKLagMonitorDelegate
 }
 
 - (void)asyncToConcurrentQueueBtnTapped {
+    os_signpost_id_t spid = _npk_time_profile_spid_generate();
+    npk_time_profile_begin("Thread Storm Test", spid);
     [NPKPerfTestCase gcdDispatchAsyncToConcurrentQueue];
+    npk_time_profile_end("Thread Storm Test", spid);
 }
 
 - (void)asyncToQueuePoolBtnTapped {
+    os_signpost_id_t spid = _npk_time_profile_spid_generate();
+    npk_time_profile_begin("Thread Pool Test", spid);
     [NPKPerfTestCase gcdDispatchAsyncToQueuePool];
+    npk_time_profile_end("Thread Pool Test", spid);
 }
 
 - (void)costCPUALotBtnTapped {

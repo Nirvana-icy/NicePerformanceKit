@@ -8,6 +8,7 @@
 
 import XCTest
 
+@available(iOS 13.0, *)
 class NPKitMetricsUITests: XCTestCase {
 
     override func setUpWithError() throws {
@@ -79,7 +80,6 @@ class NPKitMetricsUITests: XCTestCase {
         }
     }
     
-    @available(iOS 13.0, *)
     func testImageProcess_ResizedImage() throws {
         let app = XCUIApplication()
         app.launch()
@@ -107,7 +107,6 @@ class NPKitMetricsUITests: XCTestCase {
         }
     }
 
-    @available(iOS 13.0, *)
     func testThreadsStorm() throws {
         let app = XCUIApplication()
         app.launch()
@@ -117,14 +116,14 @@ class NPKitMetricsUITests: XCTestCase {
         
         let memoryMetric = XCTMemoryMetric(application: app)
         let cpuMetric = XCTCPUMetric(application: app)
-        let metrics: [XCTMetric] = [memoryMetric, cpuMetric]
+        let clockMetric = XCTClockMetric.init()
+        let metrics: [XCTMetric] = [memoryMetric, cpuMetric, clockMetric]
         
         measure(metrics: metrics, options: measureOptions) {
             app.buttons["Threads Storm Test"].tap()
         }
     }
     
-    @available(iOS 13.0, *)
     func testThreadsPool() throws {
         let app = XCUIApplication()
         app.launch()
@@ -134,14 +133,14 @@ class NPKitMetricsUITests: XCTestCase {
         
         let memoryMetric = XCTMemoryMetric(application: app)
         let cpuMetric = XCTCPUMetric(application: app)
-        let metrics: [XCTMetric] = [memoryMetric, cpuMetric]
+        let clockMetric = XCTClockMetric.init()
+        let metrics: [XCTMetric] = [memoryMetric, cpuMetric, clockMetric]
         
         measure(metrics: metrics, options: measureOptions) {
             app.buttons["Async To Queue Pool"].tap()
         }
     }
     
-    @available(iOS 13.0, *)
     private func signpostMetric(for name: StaticString) -> XCTOSSignpostMetric {
         return XCTOSSignpostMetric(subsystem: "com.npk.metrics.test", category: "scrollOperations", name: String(describing: name))
     }

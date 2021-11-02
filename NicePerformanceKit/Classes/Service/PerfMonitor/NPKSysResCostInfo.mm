@@ -8,7 +8,8 @@
 #import "NPKSysResCostInfo.h"
 
 #if TARGET_OS_IPHONE
-#include <mach/mach.h>
+#import <mach/mach.h>
+#import <os/proc.h>
 #endif
 
 @implementation NPKSysResCostInfo
@@ -116,6 +117,36 @@
     vm_deallocate(this_task, (vm_address_t)threads, sizeof(thread_t) * thread_count);
     
     return thread_count;
+}
+
++ (float)totalMemoryForDevice {
+    return (float)([NSProcessInfo processInfo].physicalMemory / 1024 / 1024);
+}
+
++ (float)totalAvailableMemoryForApp {
+    if (@available(iOS 13.0, *)) {
+        task_vm_info_data_t taskInfo;
+        mach_msg_type_number_t infoCount = TASK_VM_INFO_COUNT;
+        kern_return_t kernReturn = task_info(mach_task_self(), TASK_VM_INFO, (task_info_t)&taskInfo, &infoCount);
+
+        if (kernReturn != KERN_SUCCESS) {
+            return 0;
+        }
+        return (taskInfo.phys_footprint + os_proc_available_memory()) / 1024.0 / 1024.0;
+    } else {
+        float totalMemory = [NPKSysResCostInfo totalMemoryForDevice];
+        float limitMemory;
+        if (totalMemory <= 1024) {
+            limitMemory = totalMemory * 0.45;
+        } else if (totalMemory >= 1024 && totalMemory <= 2048) {
+            limitMemory = totalMemory * 0.45;
+        } else if (totalMemory >= 2048 && totalMemory <= 3072) {
+            limitMemory = totalMemory * 0.50;
+        } else {
+            limitMemory = totalMemory * 0.55;
+        }
+        return limitMemory;
+    }
 }
 
 @end

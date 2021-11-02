@@ -21,13 +21,14 @@
 		6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
-		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
+		6003F5BC195388D20070C39A /* NPKCommonUnitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* NPKCommonUnitTests.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		E005B8E427116FCF000BDA26 /* SlowLargeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E005B8E327116FCE000BDA26 /* SlowLargeTableViewController.m */; };
 		E005B8EF27119F1A000BDA26 /* NPKitDemo_ExampleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E005B8EE27119F1A000BDA26 /* NPKitDemo_ExampleUITests.m */; };
 		E005B8F127119F1A000BDA26 /* NPKitDemo_ExampleUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E005B8F027119F1A000BDA26 /* NPKitDemo_ExampleUITestsLaunchTests.m */; };
 		E03640302706AB9D00BA1904 /* NPKDemoViewController+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = E036402F2706AB9D00BA1904 /* NPKDemoViewController+Test.m */; };
+		E06104672727D80F003341F7 /* NPKitDemoThreadsUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06104662727D80F003341F7 /* NPKitDemoThreadsUnitTest.swift */; };
 		E081CF5D27182BC500A563DF /* NPKMockLaunchTaskA.m in Sources */ = {isa = PBXBuildFile; fileRef = E081CF5C27182BC500A563DF /* NPKMockLaunchTaskA.m */; };
 		E081CF6027182D6F00A563DF /* NPKMockLaunchTaskB.m in Sources */ = {isa = PBXBuildFile; fileRef = E081CF5F27182D6F00A563DF /* NPKMockLaunchTaskB.m */; };
 		E081CF6327182FA900A563DF /* NPKPerfMonitorInitTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E081CF6227182FA800A563DF /* NPKPerfMonitorInitTask.m */; };
@@ -80,7 +81,7 @@
 		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		6003F5B7195388D20070C39A /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
+		6003F5BB195388D20070C39A /* NPKCommonUnitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NPKCommonUnitTests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		6363ACC0D105F53CCB262A29 /* Pods-NPKitDemo_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NPKitDemo_Tests.release.xcconfig"; path = "Target Support Files/Pods-NPKitDemo_Tests/Pods-NPKitDemo_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		65C69FA7A8A02BA4FBA2CDC0 /* Pods-NPKitDemo_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NPKitDemo_Example.debug.xcconfig"; path = "Target Support Files/Pods-NPKitDemo_Example/Pods-NPKitDemo_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -96,6 +97,8 @@
 		E005B8F027119F1A000BDA26 /* NPKitDemo_ExampleUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NPKitDemo_ExampleUITestsLaunchTests.m; sourceTree = "<group>"; };
 		E036402E2706AB9D00BA1904 /* NPKDemoViewController+Test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NPKDemoViewController+Test.h"; sourceTree = "<group>"; };
 		E036402F2706AB9D00BA1904 /* NPKDemoViewController+Test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NPKDemoViewController+Test.m"; sourceTree = "<group>"; };
+		E06104652727D80F003341F7 /* NPKitDemo_Tests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NPKitDemo_Tests-Bridging-Header.h"; sourceTree = "<group>"; };
+		E06104662727D80F003341F7 /* NPKitDemoThreadsUnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NPKitDemoThreadsUnitTest.swift; sourceTree = "<group>"; };
 		E081CF5B27182BC500A563DF /* NPKMockLaunchTaskA.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NPKMockLaunchTaskA.h; sourceTree = "<group>"; };
 		E081CF5C27182BC500A563DF /* NPKMockLaunchTaskA.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NPKMockLaunchTaskA.m; sourceTree = "<group>"; };
 		E081CF5E27182D6F00A563DF /* NPKMockLaunchTaskB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NPKMockLaunchTaskB.h; sourceTree = "<group>"; };
@@ -233,8 +236,10 @@
 		6003F5B5195388D20070C39A /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				6003F5BB195388D20070C39A /* Tests.m */,
+				E06104662727D80F003341F7 /* NPKitDemoThreadsUnitTest.swift */,
+				6003F5BB195388D20070C39A /* NPKCommonUnitTests.m */,
 				6003F5B6195388D20070C39A /* Supporting Files */,
+				E06104652727D80F003341F7 /* NPKitDemo_Tests-Bridging-Header.h */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -377,6 +382,7 @@
 						LastSwiftMigration = 1300;
 					};
 					6003F5AD195388D20070C39A = {
+						LastSwiftMigration = 1300;
 						TestTargetID = 6003F589195388D20070C39A;
 					};
 					E005B8EB27119F19000BDA26 = {
@@ -529,7 +535,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6003F5BC195388D20070C39A /* Tests.m in Sources */,
+				6003F5BC195388D20070C39A /* NPKCommonUnitTests.m in Sources */,
+				E06104672727D80F003341F7 /* NPKitDemoThreadsUnitTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -739,6 +746,7 @@
 			baseConfigurationReference = 47A218CD27A06782AABDD0DC /* Pods-NPKitDemo_Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -751,8 +759,11 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "Tests/Tests-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Tests/NPKitDemo_Tests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NPKitDemo_Example.app/NPKitDemo_Example";
 				WRAPPER_EXTENSION = xctest;
@@ -764,6 +775,7 @@
 			baseConfigurationReference = 6363ACC0D105F53CCB262A29 /* Pods-NPKitDemo_Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -772,8 +784,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Tests/Tests-Prefix.pch";
 				INFOPLIST_FILE = "Tests/Tests-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Tests/NPKitDemo_Tests-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NPKitDemo_Example.app/NPKitDemo_Example";
 				WRAPPER_EXTENSION = xctest;
