@@ -6,23 +6,25 @@
 //
 
 #import "AAAANPKLaunchTimeProfile.h"
+#import <sys/sysctl.h>
+#import <mach/mach.h>
 
-static double loadTime;
-static double didFinishLaunchCallbackTime;
-static double didFinishLaunchFinishTime;
+static NSTimeInterval _loadTime;
+static NSTimeInterval _didFinishLaunchCallbackTime;
+static NSTimeInterval _didFinishLaunchFinishTime;
 
 @implementation AAAANPKLaunchTimeProfile
 
 + (void)load {
-    loadTime = CACurrentMediaTime();
+    _loadTime = NSDate.date.timeIntervalSince1970;
 }
 
 + (void)setDidFinishLaunchCallbackTime:(double)callBacktime {
-    didFinishLaunchCallbackTime = callBacktime;
+    _didFinishLaunchCallbackTime = callBacktime;
 }
 
 + (void)setDidFinishLaunchFinishTime:(double)finishTime {
-    didFinishLaunchFinishTime = finishTime;
+    _didFinishLaunchFinishTime = finishTime;
 }
 
 + (NSString *)launchTimeSummary {
@@ -31,16 +33,35 @@ static double didFinishLaunchFinishTime;
              [AAAANPKLaunchTimeProfile timeT2]];
 }
 
-+ (double)timeT1 {
-    return didFinishLaunchCallbackTime - loadTime;
++ (NSTimeInterval)timeT1 {
+    return _didFinishLaunchCallbackTime - [AAAANPKLaunchTimeProfile processStartTime];
 }
 
-+ (double)timeT2 {
-    return didFinishLaunchFinishTime - didFinishLaunchCallbackTime;
++ (NSTimeInterval)timeT2 {
+    return _didFinishLaunchFinishTime - _didFinishLaunchCallbackTime;
 }
 
-+ (double)launchTime {
-    return didFinishLaunchFinishTime - loadTime;
++ (NSTimeInterval)launchTime {
+    return _didFinishLaunchFinishTime - [AAAANPKLaunchTimeProfile processStartTime];
+}
+
+/// 获取进程创建时间
+/// @discuss 优先取进程创建时间。如果获取失败，以+load方法调用时间兜底。
+/// @ref  https://tech.meituan.com/2018/12/06/waimai-ios-optimizing-startup.html
+/// @return timeIntervalSince1970  单位秒
++ (NSTimeInterval)processStartTime {
+    struct kinfo_proc kProcInfo;
+    if ([self processInfoForPID:[[NSProcessInfo processInfo] processIdentifier] processInfo:&kProcInfo]) {
+        return kProcInfo.kp_proc.p_un.__p_starttime.tv_sec + kProcInfo.kp_proc.p_un.__p_starttime.tv_usec * 0.000001;
+    } else {
+        return _loadTime;
+    }
+}
+
++ (BOOL)processInfoForPID:(int)pid processInfo:(struct kinfo_proc *)processInfo {
+    int cmd[4] = {CTL_KERN, KERN_PROC, KERN_PROC_PID, pid};
+    size_t size = sizeof(* processInfo);
+    return sysctl(cmd, sizeof(cmd)/sizeof(*cmd), processInfo, &size, NULL, 0) == 0;
 }
 
 @end

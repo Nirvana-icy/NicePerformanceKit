@@ -45,6 +45,8 @@ https://mp.weixin.qq.com/s/cbP0QlxVlr5oeTrf6yYfFw
 _checkAndDeliverMetricReports
 _checkAndDeliverDiagnosticReports
 
+[MetricKit](https://developer.apple.com/documentation/metrickit)
+
 ## MXDiagnosticPayload
 ### cpuExceptionDiagnostics
 ### diskWriteExceptionDiagnostics
