@@ -100,7 +100,7 @@ class NPKitMetricsUITests: XCTestCase {
 //            memoryMetric = XCTMemoryMetric(application: app)
 //            cpuMetric = XCTCPUMetric(application: app)
 //        }
-        let processButton = app.buttons["Show Resized Image"]
+        let processButton = app.buttons["Resized Image by ImageIO."]
         
         measure(metrics: metrics, options: measureOptions) {
             processButton.tap()

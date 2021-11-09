@@ -5,50 +5,76 @@
    version = "2.0">
    <Breakpoints>
       <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         BreakpointExtensionID = "Xcode.Breakpoint.SymbolicBreakpoint">
          <BreakpointContent
-            uuid = "5BF882C8-F350-4A2D-BE19-7B4D58D3E2C5"
+            uuid = "E4A09B5C-E1BF-488F-9180-9CB431DF4056"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            symbolName = "_checkAndDeliverDiagnosticReports"
+            moduleName = "">
+            <Locations>
+               <Location
+                  uuid = "E4A09B5C-E1BF-488F-9180-9CB431DF4056 - 176c75cccac1b1b9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[MXMetricManager _checkAndDeliverDiagnosticReports]"
+                  moduleName = "MetricKit"
+                  usesParentBreakpointCondition = "Yes"
+                  offsetFromSymbolStart = "0">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.SymbolicBreakpoint">
+         <BreakpointContent
+            uuid = "3D8A9897-5047-41E0-8A9B-9F7D89916B1D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            symbolName = "_checkAndDeliverMetricReports"
+            moduleName = "">
+            <Locations>
+               <Location
+                  uuid = "3D8A9897-5047-41E0-8A9B-9F7D89916B1D - da385b07085f7212"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[MXMetricManager _checkAndDeliverMetricReports]"
+                  moduleName = "MetricKit"
+                  usesParentBreakpointCondition = "Yes"
+                  offsetFromSymbolStart = "0">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
+         <BreakpointContent
+            uuid = "C9EB3C58-ABC9-4EB6-B0A6-B981DA3BD46A"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "NPKitDemo/NPKViewController.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
-            landmarkName = "-didReceiveMetricPayloads:"
-            landmarkType = "7">
+            breakpointStackSelectionBehavior = "1"
+            scope = "1"
+            stopOnStyle = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "817E9CDA-B795-4D07-944B-F6FC967E9609"
+            uuid = "5A8821EB-D9AF-43D9-8848-28062D9BF93E"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "NPKitDemo/NPKViewController.m"
+            filePath = "3rd/DanmakuKit/DanmakuKit/Classes/Core/DanmakuView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
-            landmarkName = "-didReceiveDiagnosticPayloads:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "17A0B5DA-E581-4E85-9189-3FD240752FD5"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "NPKitDemo/NPKDemoViewController+Biz.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
-            landmarkName = "-didReceiveDiagnosticPayloads:"
+            startingLineNumber = "233"
+            endingLineNumber = "233"
+            landmarkName = "shoot(danmaku:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -68,6 +68,9 @@ NPKMetricKitReportDelegate
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    if (@available(iOS 14, *)) {
+        [[NPKMetricKitReport sharedInstance] unbind:self];
+    }
 }
 
 #pragma mark - NPKMetricKitManagerDelegate

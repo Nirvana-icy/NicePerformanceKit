@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2303FAD3FD1C5FAACBF22609 /* Pods_NPKitDemo_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 284C5F4DF4C93736126179BA /* Pods_NPKitDemo_Tests.framework */; };
-		5B7D4569F5973360C6BEC43F /* Pods_NPKitDemo_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 020DA4E9B4285BB630C40FF6 /* Pods_NPKitDemo_Example.framework */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -24,6 +22,7 @@
 		6003F5BC195388D20070C39A /* NPKCommonUnitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* NPKCommonUnitTests.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
+		C7579D6B12079638D794F646 /* Pods_NPKitDemo_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5136CA4D223B23F6897AC053 /* Pods_NPKitDemo_Example.framework */; };
 		E005B8E427116FCF000BDA26 /* SlowLargeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E005B8E327116FCE000BDA26 /* SlowLargeTableViewController.m */; };
 		E005B8EF27119F1A000BDA26 /* NPKitDemo_ExampleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E005B8EE27119F1A000BDA26 /* NPKitDemo_ExampleUITests.m */; };
 		E005B8F127119F1A000BDA26 /* NPKitDemo_ExampleUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E005B8F027119F1A000BDA26 /* NPKitDemo_ExampleUITestsLaunchTests.m */; };
@@ -40,6 +39,11 @@
 		E08210F42720195400067774 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E08210F32720195400067774 /* CoreServices.framework */; };
 		E08210F6272146AC00067774 /* IMG_6340.png in Resources */ = {isa = PBXBuildFile; fileRef = E08210F5272146AB00067774 /* IMG_6340.png */; };
 		E08210FC2721513D00067774 /* NPKImageProcessTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E08210FB2721513D00067774 /* NPKImageProcessTestVC.m */; };
+		E0ED5C052739099600B86D48 /* NPKDemoImageProcessUnitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E0ED5C042739099600B86D48 /* NPKDemoImageProcessUnitTests.m */; };
+		E0ED5C11273A96E200B86D48 /* NPKDanmakuMsgViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0ED5C10273A96E200B86D48 /* NPKDanmakuMsgViewController.swift */; };
+		E0ED5C13273A9A3200B86D48 /* NPKDanmakuTextCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0ED5C12273A9A3200B86D48 /* NPKDanmakuTextCellModel.swift */; };
+		E0ED5C18273AA03500B86D48 /* NPKDanmakuTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0ED5C17273AA03500B86D48 /* NPKDanmakuTextCell.swift */; };
+		F8A08959D9E74E5A05517059 /* Pods_NPKitDemo_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42C2C6740C707A78F60D63B6 /* Pods_NPKitDemo_Tests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,10 +64,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		020DA4E9B4285BB630C40FF6 /* Pods_NPKitDemo_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NPKitDemo_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C9601AE644C440AF84F8C6F /* Pods-NPKitDemo_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NPKitDemo_Example.release.xcconfig"; path = "Target Support Files/Pods-NPKitDemo_Example/Pods-NPKitDemo_Example.release.xcconfig"; sourceTree = "<group>"; };
-		284C5F4DF4C93736126179BA /* Pods_NPKitDemo_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NPKitDemo_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		42C2C6740C707A78F60D63B6 /* Pods_NPKitDemo_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NPKitDemo_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		47A218CD27A06782AABDD0DC /* Pods-NPKitDemo_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NPKitDemo_Tests.debug.xcconfig"; path = "Target Support Files/Pods-NPKitDemo_Tests/Pods-NPKitDemo_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		5136CA4D223B23F6897AC053 /* Pods_NPKitDemo_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NPKitDemo_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58A195388D20070C39A /* NPKitDemo_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NPKitDemo_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -112,12 +116,17 @@
 		E081CF6A2719275900A563DF /* NPKMockLaunchTaskE.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NPKMockLaunchTaskE.h; sourceTree = "<group>"; };
 		E081CF6B2719275900A563DF /* NPKMockLaunchTaskE.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NPKMockLaunchTaskE.m; sourceTree = "<group>"; };
 		E08210E92720053B00067774 /* NPKitMetricsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NPKitMetricsUITests.swift; sourceTree = "<group>"; };
-		E08210F027200F1C00067774 /* NPKitDemo_ExampleUITests-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NPKitDemo_ExampleUITests-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		E08210F027200F1C00067774 /* NPKitDemo_ExampleUITests-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NPKitDemo_ExampleUITests-Bridging-Header.h"; path = "Tests/NPKitDemo_ExampleUITests-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		E08210F12720194B00067774 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		E08210F32720195400067774 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
 		E08210F5272146AB00067774 /* IMG_6340.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_6340.png; sourceTree = "<group>"; };
 		E08210FA2721513D00067774 /* NPKImageProcessTestVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NPKImageProcessTestVC.h; sourceTree = "<group>"; };
 		E08210FB2721513D00067774 /* NPKImageProcessTestVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NPKImageProcessTestVC.m; sourceTree = "<group>"; };
+		E0ED5C042739099600B86D48 /* NPKDemoImageProcessUnitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = NPKDemoImageProcessUnitTests.m; path = Tests/NPKDemoImageProcessUnitTests.m; sourceTree = SOURCE_ROOT; };
+		E0ED5C10273A96E200B86D48 /* NPKDanmakuMsgViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NPKDanmakuMsgViewController.swift; sourceTree = "<group>"; };
+		E0ED5C12273A9A3200B86D48 /* NPKDanmakuTextCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NPKDanmakuTextCellModel.swift; sourceTree = "<group>"; };
+		E0ED5C16273A9EC300B86D48 /* NPKitDemo_Example-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NPKitDemo_Example-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		E0ED5C17273AA03500B86D48 /* NPKDanmakuTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NPKDanmakuTextCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,7 +139,7 @@
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				5B7D4569F5973360C6BEC43F /* Pods_NPKitDemo_Example.framework in Frameworks */,
+				C7579D6B12079638D794F646 /* Pods_NPKitDemo_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,7 +150,7 @@
 				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
 				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
-				2303FAD3FD1C5FAACBF22609 /* Pods_NPKitDemo_Tests.framework in Frameworks */,
+				F8A08959D9E74E5A05517059 /* Pods_NPKitDemo_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,8 +207,8 @@
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
 				6003F5AF195388D20070C39A /* XCTest.framework */,
-				020DA4E9B4285BB630C40FF6 /* Pods_NPKitDemo_Example.framework */,
-				284C5F4DF4C93736126179BA /* Pods_NPKitDemo_Tests.framework */,
+				5136CA4D223B23F6897AC053 /* Pods_NPKitDemo_Example.framework */,
+				42C2C6740C707A78F60D63B6 /* Pods_NPKitDemo_Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -212,7 +221,6 @@
 				6003F59D195388D20070C39A /* NPKAppDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				E08210F727214C8B00067774 /* DemoBiz */,
-				E08210F027200F1C00067774 /* NPKitDemo_ExampleUITests-Bridging-Header.h */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				E08210F5272146AB00067774 /* IMG_6340.png */,
@@ -225,6 +233,7 @@
 		6003F594195388D20070C39A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E0ED5C16273A9EC300B86D48 /* NPKitDemo_Example-Bridging-Header.h */,
 				6003F595195388D20070C39A /* NPKitDemo-Info.plist */,
 				6003F596195388D20070C39A /* InfoPlist.strings */,
 				6003F599195388D20070C39A /* main.m */,
@@ -236,6 +245,7 @@
 		6003F5B5195388D20070C39A /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				E08210F027200F1C00067774 /* NPKitDemo_ExampleUITests-Bridging-Header.h */,
 				E06104662727D80F003341F7 /* NPKitDemoThreadsUnitTest.swift */,
 				6003F5BB195388D20070C39A /* NPKCommonUnitTests.m */,
 				6003F5B6195388D20070C39A /* Supporting Files */,
@@ -267,6 +277,7 @@
 		E005B8ED27119F1A000BDA26 /* NPKitDemo_ExampleUITests */ = {
 			isa = PBXGroup;
 			children = (
+				E0ED5C042739099600B86D48 /* NPKDemoImageProcessUnitTests.m */,
 				E08210E92720053B00067774 /* NPKitMetricsUITests.swift */,
 				E005B8EE27119F1A000BDA26 /* NPKitDemo_ExampleUITests.m */,
 				E005B8F027119F1A000BDA26 /* NPKitDemo_ExampleUITestsLaunchTests.m */,
@@ -296,16 +307,35 @@
 		E08210F727214C8B00067774 /* DemoBiz */ = {
 			isa = PBXGroup;
 			children = (
-				6003F5A5195388D20070C39A /* NPKDemoViewController.h */,
-				6003F5A6195388D20070C39A /* NPKDemoViewController.m */,
-				E036402E2706AB9D00BA1904 /* NPKDemoViewController+Test.h */,
-				E036402F2706AB9D00BA1904 /* NPKDemoViewController+Test.m */,
+				E0ED5C1A273AA19800B86D48 /* DemoVC */,
+				E0ED5C19273AA16A00B86D48 /* DanmukuMsgView */,
+			);
+			path = DemoBiz;
+			sourceTree = "<group>";
+		};
+		E0ED5C19273AA16A00B86D48 /* DanmukuMsgView */ = {
+			isa = PBXGroup;
+			children = (
+				E0ED5C10273A96E200B86D48 /* NPKDanmakuMsgViewController.swift */,
+				E0ED5C12273A9A3200B86D48 /* NPKDanmakuTextCellModel.swift */,
+				E0ED5C17273AA03500B86D48 /* NPKDanmakuTextCell.swift */,
+			);
+			path = DanmukuMsgView;
+			sourceTree = "<group>";
+		};
+		E0ED5C1A273AA19800B86D48 /* DemoVC */ = {
+			isa = PBXGroup;
+			children = (
 				E005B8E227116FCE000BDA26 /* SlowLargeTableViewController.h */,
 				E005B8E327116FCE000BDA26 /* SlowLargeTableViewController.m */,
 				E08210FA2721513D00067774 /* NPKImageProcessTestVC.h */,
 				E08210FB2721513D00067774 /* NPKImageProcessTestVC.m */,
+				6003F5A5195388D20070C39A /* NPKDemoViewController.h */,
+				6003F5A6195388D20070C39A /* NPKDemoViewController.m */,
+				E036402E2706AB9D00BA1904 /* NPKDemoViewController+Test.h */,
+				E036402F2706AB9D00BA1904 /* NPKDemoViewController+Test.m */,
 			);
-			path = DemoBiz;
+			path = DemoVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -319,7 +349,7 @@
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
-				77AC7D21EE7631BFCA9630CC /* [CP] Embed Pods Frameworks */,
+				E63E94B34C679F9979E36971 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -467,26 +497,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		77AC7D21EE7631BFCA9630CC /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-NPKitDemo_Example/Pods-NPKitDemo_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
-				"${BUILT_PRODUCTS_DIR}/NicePerformanceKit/NicePerformanceKit.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NicePerformanceKit.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NPKitDemo_Example/Pods-NPKitDemo_Example-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		B789171E10FC882D8A7A9FEF /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -509,6 +519,28 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		E63E94B34C679F9979E36971 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NPKitDemo_Example/Pods-NPKitDemo_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/DanmakuKit/DanmakuKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/NicePerformanceKit/NicePerformanceKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DanmakuKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NicePerformanceKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NPKitDemo_Example/Pods-NPKitDemo_Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -518,9 +550,12 @@
 			files = (
 				6003F59E195388D20070C39A /* NPKAppDelegate.m in Sources */,
 				E081CF6327182FA900A563DF /* NPKPerfMonitorInitTask.m in Sources */,
+				E0ED5C11273A96E200B86D48 /* NPKDanmakuMsgViewController.swift in Sources */,
 				E081CF5D27182BC500A563DF /* NPKMockLaunchTaskA.m in Sources */,
+				E0ED5C18273AA03500B86D48 /* NPKDanmakuTextCell.swift in Sources */,
 				E081CF692718342800A563DF /* NPKMockLaunchTaskD.m in Sources */,
 				E081CF66271833EF00A563DF /* NPKMockLaunchTaskC.m in Sources */,
+				E0ED5C13273A9A3200B86D48 /* NPKDanmakuTextCellModel.swift in Sources */,
 				6003F5A7195388D20070C39A /* NPKDemoViewController.m in Sources */,
 				E08210FC2721513D00067774 /* NPKImageProcessTestVC.m in Sources */,
 				E081CF6027182D6F00A563DF /* NPKMockLaunchTaskB.m in Sources */,
@@ -535,6 +570,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0ED5C052739099600B86D48 /* NPKDemoImageProcessUnitTests.m in Sources */,
 				6003F5BC195388D20070C39A /* NPKCommonUnitTests.m in Sources */,
 				E06104672727D80F003341F7 /* NPKitDemoThreadsUnitTest.swift in Sources */,
 			);
@@ -745,6 +781,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 47A218CD27A06782AABDD0DC /* Pods-NPKitDemo_Tests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -774,6 +811,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6363ACC0D105F53CCB262A29 /* Pods-NPKitDemo_Tests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -797,6 +835,7 @@
 		E005B8F527119F1A000BDA26 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -829,6 +868,7 @@
 		E005B8F627119F1A000BDA26 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";

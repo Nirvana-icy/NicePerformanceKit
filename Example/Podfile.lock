@@ -1,4 +1,7 @@
 PODS:
+  - DanmakuKit (1.3.0):
+    - DanmakuKit/Core (= 1.3.0)
+  - DanmakuKit/Core (1.3.0)
   - Masonry (1.1.0)
   - NicePerformanceKit/Base (0.0.1)
   - NicePerformanceKit/Service (0.0.1):
@@ -23,6 +26,7 @@ PODS:
   - NicePerformanceKit/View (0.0.1)
 
 DEPENDENCIES:
+  - DanmakuKit (from `./3rd/DanmakuKit/`)
   - Masonry
   - NicePerformanceKit/Service (from `../`)
   - NicePerformanceKit/TestCase (from `../`)
@@ -33,13 +37,16 @@ SPEC REPOS:
     - Masonry
 
 EXTERNAL SOURCES:
+  DanmakuKit:
+    :path: "./3rd/DanmakuKit/"
   NicePerformanceKit:
     :path: "../"
 
 SPEC CHECKSUMS:
+  DanmakuKit: c1363831b0a66721ce4e9af864d017e187f9d3bd
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   NicePerformanceKit: b17fe9918ec1420e25022740cae814ce462d65b4
 
-PODFILE CHECKSUM: a68b409bc576481f30389adde7474a13669617c3
+PODFILE CHECKSUM: 514a7e2581ee4a6d1231bf166a059178f219e046
 
 COCOAPODS: 1.8.4

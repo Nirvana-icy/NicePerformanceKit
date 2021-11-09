@@ -4,11 +4,10 @@ platform :ios, '10.0'
 
 target 'NPKitDemo_Example' do
   pod 'NicePerformanceKit', :path => '../', :subspecs => ['Service', 'Tool', 'TestCase']
+  pod 'DanmakuKit', :path => './3rd/DanmakuKit/'
   pod 'Masonry'
   
   target 'NPKitDemo_Tests' do
     inherit! :search_paths
-
-    
   end
 end
