@@ -31,7 +31,7 @@
 @synthesize launchConfig = _launchConfig;
 
 - (void)startWithOptions:(NSDictionary *)options {
-    [AAAANPKLaunchTimeProfile setDidFinishLaunchCallbackTime:NSDate.date.timeIntervalSince1970];
+    [AAAANPKLaunchTimeProfile setDidFinishLaunchCallbackTime:CACurrentMediaTime()];
     
     NSAssert([NSThread currentThread] == [NSThread mainThread], @"NPKLaunchManager should launch with main thread!");
     
@@ -42,9 +42,9 @@
     self.appOptions = options;
     [self startLaunchTasks:[self.launchConfig defaultLaunchList]];
     
-    [AAAANPKLaunchTimeProfile setDidFinishLaunchFinishTime:NSDate.date.timeIntervalSince1970];
+    [AAAANPKLaunchTimeProfile setDidFinishLaunchFinishTime:CACurrentMediaTime()];
     
-    [[NPKitDisplayWindow sharedInstance] showToast:[AAAANPKLaunchTimeProfile launchTimeSummary] withDuration:10.f];
+    [[NPKitDisplayWindow sharedInstance] message:[AAAANPKLaunchTimeProfile launchTimeSummary] withMsgLevel:NPKitMsgLevelHigh];
 }
 
 #pragma mark - Private Methods

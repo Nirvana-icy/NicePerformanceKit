@@ -37,13 +37,13 @@
     }
 }
 
-+ (nullable UIImage *)resizeImageWithImageURL:(NSURL *)imageURL
-                                   expectSize:(CGSize)expectSize {
-    if (nil == imageURL || expectSize.width <= 0 || expectSize.height <= 0) {
++ (nullable UIImage *)resizeImageWithContentOfFile:(NSString *)contentOfFile
+                                        expectSize:(CGSize)expectSize {
+    if (contentOfFile.length <= 0 || expectSize.width <= 0 || expectSize.height <= 0) {
         return nil;
     }
     
-    UIImage *image = [[UIImage alloc] initWithContentsOfFile:imageURL.path];
+    UIImage *image = [[UIImage alloc] initWithContentsOfFile:contentOfFile];
     UIImage *resultImage = nil;
     
     UIGraphicsBeginImageContext(expectSize);
