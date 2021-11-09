@@ -59,6 +59,8 @@
     float currentFPS = [NPKFPSMonitor sharedInstance].currentFPS;
     float currentAppCpuUsage = [NPKSysResCostInfo currentAppCpuUsage];
     float currentAppMemory = [NPKSysResCostInfo currentAppMemory];
+    float totalAvailableMemoryForApp = [NPKSysResCostInfo totalAvailableMemoryForApp];
+    float appMemoryUsed = currentAppMemory / totalAvailableMemoryForApp;
     NSUInteger currentThreadCount = [NPKSysResCostInfo currentAppThreadCount];
     NSUInteger currentLagCount = [[NPKLagMonitor sharedInstance] lagCount];
     // 基础性能信息
@@ -76,7 +78,7 @@
     if (currentFPS < 45.f) {
         warningInfo = [warningInfo stringByAppendingFormat:@" %@" , [NSString stringWithFormat:@"FPS: %0.f", currentFPS]];
     }
-    if (currentAppMemory / [NPKSysResCostInfo totalAvailableMemoryForApp] > 0.75f) {
+    if (appMemoryUsed > 0.75f) {
         warningInfo = [warningInfo stringByAppendingFormat:@" %@" , [NSString stringWithFormat:@"RAM: %0.f", currentAppMemory]];
     }
     if (currentThreadCount > 36) {
@@ -85,7 +87,7 @@
     dispatch_async(dispatch_get_main_queue(), ^{
         [[NPKitDisplayWindow sharedInstance] updatePerfInfo:currentPerfInfo];
         if (warningInfo.length > 0) {
-            [[NPKitDisplayWindow sharedInstance] showToast:warningInfo];
+            [[NPKitDisplayWindow sharedInstance] showMessage:warningInfo];
         }
     });
 }

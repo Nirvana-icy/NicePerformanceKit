@@ -28,14 +28,6 @@
     return _sharedInstance;
 }
 
-- (instancetype)init {
-    self = [super init];
-    if (self) {
-        _npkMetricKitReportHandlerArr = [NSMutableArray array];
-    }
-    return self;
-}
-
 - (void)bind:(id<NPKMetricKitReportDelegate>)obj {
     if (![self.npkMetricKitReportHandlerArr containsObject:obj] && obj) {
         [self.npkMetricKitReportHandlerArr addObject:obj];
@@ -76,7 +68,16 @@
     }];
 }
 
-# pragma mark -- helper
+# pragma mark -- Getter
+
+- (NSMutableArray *)npkMetricKitReportHandlerArr {
+    if (!_npkMetricKitReportHandlerArr) {
+        _npkMetricKitReportHandlerArr = [NSMutableArray array];
+    }
+    return _npkMetricKitReportHandlerArr;
+}
+
+# pragma mark -- Helper
 
 /*
  * Helper method to convert metadata for a MetricKit diagnostic event to a dictionary. MXMetadata

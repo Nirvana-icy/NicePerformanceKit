@@ -13,10 +13,12 @@ static CGFloat const kDefaultEntryHeight = 18;
 
 #define   kDefaultEntryStartPosition     CGPointMake(NPKScreenWidth - kDefaultEntryWidth - 10, 36)
 
-@interface NPKitDisplayWindow ()
+@interface NPKitDisplayWindow () <NPKitDisplayWindowDelegate>
 
 @property (nonatomic, strong) UILabel *perfInfoLabel;
-@property (nonatomic, strong) UILabel *toastInfoLabel;
+@property (nonatomic, strong) UILabel *messageInfoLabel;
+
+@property (nonatomic, strong) NSMutableArray *npkToastHandlerArr;
 
 @end
 
@@ -42,10 +44,23 @@ static CGFloat const kDefaultEntryHeight = 18;
         [self.rootViewController.view addSubview:self.perfInfoLabel];
         self.hidden = NO;
         
-        UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(pan:)];
-        [self addGestureRecognizer:pan];
+        [self bind:self];
+//        UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(pan:)];
+//        [self addGestureRecognizer:pan];
     }
     return self;
+}
+
+- (void)bind:(id<NPKitDisplayWindowDelegate>)obj {
+    if (![self.npkToastHandlerArr containsObject:obj] && obj) {
+        [self.npkToastHandlerArr addObject:obj];
+    }
+}
+
+- (void)unbind:(id<NPKitDisplayWindowDelegate>)obj {
+    if ([self.npkToastHandlerArr containsObject:obj]) {
+        [self.npkToastHandlerArr removeObject:obj];
+    }
 }
 
 - (void)updatePerfInfo:(NSString *)perfInfo {
@@ -58,38 +73,56 @@ static CGFloat const kDefaultEntryHeight = 18;
     }
 }
 
-- (void)showToast:(NSString *)toastInfo {
-    [self showToast:toastInfo withDuration:5];
+- (void)showMessage:(NSString *)message {
+    [self message:message withMsgLevel:NPKitMsgLevelDefault];
 }
 
-- (void)showToast:(NSString *)toastInfo withDuration:(NSTimeInterval)duration {
+- (void)message:(NSString *)message withMsgLevel:(NPKitMsgLevel)npkMsgLevel {
     if ([NSThread isMainThread]) {
-        [self _showToast:toastInfo withDuration:duration];
+        [self _showMessage:message withMsgLevel:npkMsgLevel];
     } else {
         dispatch_async(dispatch_get_main_queue(), ^{
-            [self _showToast:toastInfo withDuration:duration];
+            [self _showMessage:message withMsgLevel:npkMsgLevel];
         });
     }
 }
 
-- (void)_showToast:(NSString *)toastInfo withDuration:(NSTimeInterval)duration {
+- (void)_showMessage:(NSString *)message withMsgLevel:(NPKitMsgLevel)npkMsgLevel {
+    [self.npkToastHandlerArr enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        if ([(id<NPKitDisplayWindowDelegate>)obj respondsToSelector:@selector(handleNPKitDisplayMessage:withMsgLevel:)]) {
+            [(id<NPKitDisplayWindowDelegate>)obj handleNPKitDisplayMessage:message withMsgLevel:npkMsgLevel];
+        }
+    }];
+}
+
+// todo  移动控件位置
+//- (void)pan:(UIPanGestureRecognizer *)pan {
+//
+//}
+
+#pragma mark - NPKitDisplayWindowDelegate
+
+- (void)handleNPKitDisplayMessage:(NSString *)message withMsgLevel:(NPKitMsgLevel)npkMsgLevel {
     CGPoint defaultEntryPostion = kDefaultEntryStartPosition;
     self.frame = CGRectMake(defaultEntryPostion.x, defaultEntryPostion.y, kDefaultEntryWidth, 2 * kDefaultEntryHeight);
-    self.toastInfoLabel.text = toastInfo;
-    self.toastInfoLabel.hidden = NO;
-    
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(duration * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        self.toastInfoLabel.text = nil;
-        self.toastInfoLabel.hidden = YES;
+    self.messageInfoLabel.text = message;
+    self.messageInfoLabel.hidden = NO;
+    // 默认展示5秒
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        self.messageInfoLabel.text = nil;
+        self.messageInfoLabel.hidden = YES;
         self.frame = CGRectMake(defaultEntryPostion.x, defaultEntryPostion.y, kDefaultEntryWidth, kDefaultEntryHeight);
     });
 }
 
-- (void)pan:(UIPanGestureRecognizer *)pan {
-    
-}
-
 #pragma mark - Getter
+
+- (NSMutableArray *)npkToastHandlerArr {
+    if (!_npkToastHandlerArr) {
+        _npkToastHandlerArr = [NSMutableArray array];
+    }
+    return _npkToastHandlerArr;
+}
 
 - (UILabel *)perfInfoLabel {
     if (!_perfInfoLabel) {
@@ -104,18 +137,18 @@ static CGFloat const kDefaultEntryHeight = 18;
     return _perfInfoLabel;
 }
 
-- (UILabel *)toastInfoLabel {
-    if (!_toastInfoLabel) {
-        _toastInfoLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, kDefaultEntryHeight, kDefaultEntryWidth, kDefaultEntryHeight)];
-        _toastInfoLabel.textAlignment = NSTextAlignmentCenter;
-        _toastInfoLabel.backgroundColor = [UIColor grayColor];
-        _toastInfoLabel.textColor = [UIColor redColor];
-        _toastInfoLabel.font = [UIFont systemFontOfSize:11.f];
-        _toastInfoLabel.adjustsFontSizeToFitWidth = YES;
-        _toastInfoLabel.minimumScaleFactor = 0.6f;
-        [self.rootViewController.view addSubview:_toastInfoLabel];
+- (UILabel *)messageInfoLabel {
+    if (!_messageInfoLabel) {
+        _messageInfoLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, kDefaultEntryHeight, kDefaultEntryWidth, kDefaultEntryHeight)];
+        _messageInfoLabel.textAlignment = NSTextAlignmentCenter;
+        _messageInfoLabel.backgroundColor = [UIColor grayColor];
+        _messageInfoLabel.textColor = [UIColor redColor];
+        _messageInfoLabel.font = [UIFont systemFontOfSize:11.f];
+        _messageInfoLabel.adjustsFontSizeToFitWidth = YES;
+        _messageInfoLabel.minimumScaleFactor = 0.6f;
+        [self.rootViewController.view addSubview:_messageInfoLabel];
     }
-    return _toastInfoLabel;
+    return _messageInfoLabel;
 }
 
 @end
