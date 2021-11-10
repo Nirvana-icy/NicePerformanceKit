@@ -79,7 +79,7 @@
         warningInfo = [warningInfo stringByAppendingFormat:@" %@" , [NSString stringWithFormat:@"FPS: %0.f", currentFPS]];
     }
     if (appMemoryUsed > 0.75f) {
-        warningInfo = [warningInfo stringByAppendingFormat:@" %@" , [NSString stringWithFormat:@"RAM: %0.f", currentAppMemory]];
+        warningInfo = [warningInfo stringByAppendingFormat:@" %@MB" , [NSString stringWithFormat:@"RAM: %0.1f", currentAppMemory]];
     }
     if (currentThreadCount > 36) {
         warningInfo = [warningInfo stringByAppendingFormat:@" %@" , [NSString stringWithFormat:@"线程: %0lu", (unsigned long)currentThreadCount]];

@@ -224,7 +224,6 @@ public class DanmakuView: UIView {
         }
         return nil
     }
-
 }
 
 public extension DanmakuView {
@@ -294,7 +293,7 @@ public extension DanmakuView {
     }
     
     @objc
-    public func play() {
+    func play() {
         guard status != .play else { return }
         floatingTracks.forEach {
             $0.play()

@@ -8,16 +8,20 @@
 
 #import "NPKAppDelegate.h"
 #import <UserNotifications/UserNotifications.h>
-#import "NPKLaunchEngine.h"
-#import "NPKMetricKitReport.h"
-
+#import <NicePerformanceKit/NPKLaunchEngine.h>
+#import <NicePerformanceKit/NPKMetricKitReport.h>
+#import <NicePerformanceKit/NPKitDisplayWindow.h>
+#import "NPKitDemo_Example-Swift.h"
 
 @interface NPKAppDelegate ()
 
 <
 UNUserNotificationCenterDelegate,
-NPKMetricKitReportDelegate
+NPKMetricKitReportDelegate,
+NPKitDisplayWindowDelegate
 >
+
+@property (nonatomic, strong) NPKDanmakuMsgViewController *npkDanmukuMsgViewController;
 
 @end
 
@@ -26,6 +30,7 @@ NPKMetricKitReportDelegate
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [[NPKitDisplayWindow sharedInstance] bind:self];
     
     [[NPKLaunchEngine sharedInstance] startWithOptions:launchOptions];
     
@@ -71,6 +76,22 @@ NPKMetricKitReportDelegate
     if (@available(iOS 14, *)) {
         [[NPKMetricKitReport sharedInstance] unbind:self];
     }
+    [[NPKitDisplayWindow sharedInstance] unbind:self];
+}
+
+#pragma mark -- NPKitDisplayWindowDelegate
+
+- (void)handleNPKitDisplayMessage:(NSString *)message withMsgLevel:(NPKitMsgLevel)npkMsgLevel {
+    [self.npkDanmukuMsgViewController sendCommonDanmakuWithMsg:message];
+}
+
+- (NPKDanmakuMsgViewController *)npkDanmukuMsgViewController {
+    if (!_npkDanmukuMsgViewController) {
+        _npkDanmukuMsgViewController = [NPKDanmakuMsgViewController new];
+        [[NPKitDisplayWindow sharedInstance] addSubview:_npkDanmukuMsgViewController.danmakuView];
+        [_npkDanmukuMsgViewController.danmakuView play];
+    }
+    return _npkDanmukuMsgViewController;
 }
 
 #pragma mark - NPKMetricKitManagerDelegate

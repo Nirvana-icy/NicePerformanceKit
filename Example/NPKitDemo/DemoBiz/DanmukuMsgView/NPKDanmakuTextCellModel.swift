@@ -15,7 +15,7 @@ class NPKDanmakuTextCellModel: DanmakuCellModel, Equatable {
     
     var text = ""
     
-    var font = UIFont.systemFont(ofSize: 15)
+    var font = UIFont.systemFont(ofSize: 12)
     
     var offsetTime: TimeInterval = 0
     
@@ -35,7 +35,7 @@ class NPKDanmakuTextCellModel: DanmakuCellModel, Equatable {
     
     func calculateSize() {
         size = NSString(string: text).boundingRect(with: CGSize(width: CGFloat(Float.infinity
-            ), height: 20), options: [.usesFontLeading, .usesLineFragmentOrigin], attributes: [.font: font], context: nil).size
+            ), height: 18), options: [.usesFontLeading, .usesLineFragmentOrigin], attributes: [.font: font], context: nil).size
     }
     
     static func == (lhs: NPKDanmakuTextCellModel, rhs: NPKDanmakuTextCellModel) -> Bool {

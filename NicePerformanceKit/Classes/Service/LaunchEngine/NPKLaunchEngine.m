@@ -44,7 +44,9 @@
     
     [AAAANPKLaunchTimeProfile setDidFinishLaunchFinishTime:CACurrentMediaTime()];
     
-    [[NPKitDisplayWindow sharedInstance] message:[AAAANPKLaunchTimeProfile launchTimeSummary] withMsgLevel:NPKitMsgLevelHigh];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [[NPKitDisplayWindow sharedInstance] message:[AAAANPKLaunchTimeProfile launchTimeSummary] withMsgLevel:NPKitMsgLevelHigh];
+    });
 }
 
 #pragma mark - Private Methods

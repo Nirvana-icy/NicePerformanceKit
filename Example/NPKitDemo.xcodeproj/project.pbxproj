@@ -125,7 +125,6 @@
 		E0ED5C042739099600B86D48 /* NPKDemoImageProcessUnitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = NPKDemoImageProcessUnitTests.m; path = Tests/NPKDemoImageProcessUnitTests.m; sourceTree = SOURCE_ROOT; };
 		E0ED5C10273A96E200B86D48 /* NPKDanmakuMsgViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NPKDanmakuMsgViewController.swift; sourceTree = "<group>"; };
 		E0ED5C12273A9A3200B86D48 /* NPKDanmakuTextCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NPKDanmakuTextCellModel.swift; sourceTree = "<group>"; };
-		E0ED5C16273A9EC300B86D48 /* NPKitDemo_Example-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NPKitDemo_Example-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		E0ED5C17273AA03500B86D48 /* NPKDanmakuTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NPKDanmakuTextCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -233,7 +232,6 @@
 		6003F594195388D20070C39A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				E0ED5C16273A9EC300B86D48 /* NPKitDemo_Example-Bridging-Header.h */,
 				6003F595195388D20070C39A /* NPKitDemo-Info.plist */,
 				6003F596195388D20070C39A /* InfoPlist.strings */,
 				6003F599195388D20070C39A /* main.m */,

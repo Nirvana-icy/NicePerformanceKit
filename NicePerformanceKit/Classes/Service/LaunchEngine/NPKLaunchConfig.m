@@ -64,21 +64,21 @@
             @"name": @"head_sync_task",
             @"type": @(NPKLaunchTaskTypeSync),
             @"taskClassList":@[
+                @"NPKMockLaunchTaskA",
                 ]
         },
         @{
             @"name": @"async_tasks",
             @"type": @(NPKLaunchTaskTypeAsync),
             @"taskClassList":@[
+                @"NPKMockLaunchTaskB",
+                @"NPKPerfMonitorInitTask",
                 ]
         },
         @{
             @"name": @"tail_async_barrier_task",
             @"type": @(NPKLaunchTaskTypeBarrier),
             @"taskClassList":@[
-                @"NPKMockLaunchTaskA",
-                @"NPKMockLaunchTaskB",
-                @"NPKPerfMonitorInitTask",
                 @"NPKMockLaunchTaskC",
                 @"NPKMockLaunchTaskD",
                 ]

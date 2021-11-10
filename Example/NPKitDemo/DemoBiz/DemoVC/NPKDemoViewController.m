@@ -25,8 +25,7 @@
 @interface NPKDemoViewController ()
 
 <
-NPKLagMonitorDelegate,
-NPKitDisplayWindowDelegate
+NPKLagMonitorDelegate
 >
 
 @property (nonatomic, strong) UIButton *triggerLagBtn;
@@ -37,7 +36,6 @@ NPKitDisplayWindowDelegate
 @property (nonatomic, strong) UIButton *showImgTestVCBtn;
 @property (nonatomic, strong) UIButton *makeCrashBtn;
 @property (nonatomic, strong) UIButton *mockMetricKitReportBtn;
-@property (nonatomic, strong) NPKDanmakuMsgViewController *npkDanmukuMsgViewController;
 
 @end
 
@@ -48,11 +46,6 @@ NPKitDisplayWindowDelegate
 	// Do any additional setup after loading the view, typically from a nib.
     [self setupView];
     [NPKLagMonitor sharedInstance].delegatet = self;
-    [[NPKitDisplayWindow sharedInstance] bind:self];
-}
-
-- (void)dealloc {
-    [[NPKitDisplayWindow sharedInstance] unbind:self];
 }
 
 #pragma mark -- NPKLagMonitorDelegate
@@ -60,12 +53,6 @@ NPKitDisplayWindowDelegate
 - (void)lagDetectWithStackInfo:(NSString *)stackInfo
                       lagCount:(NSUInteger)lagCount {
     [[NPKitDisplayWindow sharedInstance] showMessage:[NSString stringWithFormat:@"ANR: %lu", (unsigned long)lagCount]];
-}
-
-#pragma mark - NPKitDisplayWindowDelegate
-
-- (void)handleNPKitDisplayMessage:(NSString *)message withMsgLevel:(NPKitMsgLevel)npkMsgLevel {
-    [self.npkDanmukuMsgViewController sendCommonDanmakuWithMsg:message];
 }
 
 #pragma mark -- Action
@@ -121,8 +108,6 @@ NPKitDisplayWindowDelegate
     [self.view addSubview:self.showImgTestVCBtn];
     [self.view addSubview:self.makeCrashBtn];
     [self.view addSubview:self.mockMetricKitReportBtn];
-    [self.view addSubview:self.npkDanmukuMsgViewController.danmakuView];
-    [self.npkDanmukuMsgViewController.danmakuView play];
     
     [self.triggerLagBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.mas_topLayoutGuideBottom).offset(60);
@@ -174,13 +159,6 @@ NPKitDisplayWindowDelegate
 }
 
 #pragma mark -- Getter
-
-- (NPKDanmakuMsgViewController *)npkDanmukuMsgViewController {
-    if (!_npkDanmukuMsgViewController) {
-        _npkDanmukuMsgViewController = [NPKDanmakuMsgViewController new];
-    }
-    return _npkDanmukuMsgViewController;
-}
 
 - (UIButton *)triggerLagBtn {
     if (!_triggerLagBtn) {

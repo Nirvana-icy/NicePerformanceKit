@@ -15,26 +15,20 @@ class NPKDanmakuMsgViewController: NSObject {
     
     @objc
     public func sendCommonDanmaku(msg: String) {
-//        let index = randomIntNumber(lower: 0, upper: contents.count)
-//        let cellModel = DanmakuTextCellModel(json: nil)
-        let cellModel = NPKDanmakuTextCellModel(msg: msg, cellType: .top)
+        let cellModel = NPKDanmakuTextCellModel(msg: msg, cellType: .floating)
         cellModel.displayTime = displayTime
         cellModel.identifier = String(arc4random())
-//        cellModel.calculateSize()
-//        if randomIntNumber(lower: 0, upper: 20) <= 5 {
-//            cellModel.type = .top
-//        } else if randomIntNumber(lower: 0, upper: 20) >= 15 {
-//            cellModel.type = .bottom
-//        }
+        cellModel.calculateSize()
+        
         danmakuView.shoot(danmaku: cellModel)
         danmakus.append(cellModel)
     }
     
     @objc
     public lazy var danmakuView: DanmakuView = {
-        let view = DanmakuView(frame: CGRect(x: 0, y: 100, width: UIScreen.main.bounds.width
-        , height: 80))
-        view.backgroundColor = .black
+//        let view = DanmakuView(frame: CGRect(x: 0, y: 36, width: UIScreen.main.bounds.width, height: 40))
+        let view = DanmakuView(frame: CGRect(x: 0, y: 36, width: 190, height: 40))
+        view.backgroundColor = .clear
         view.delegate = self
         return view
     }()

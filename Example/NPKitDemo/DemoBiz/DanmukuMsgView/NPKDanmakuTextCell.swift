@@ -29,10 +29,10 @@ class NPKDanmakuTextCell: DanmakuCell {
         let text = NSString(string: model.text)
         context.setLineWidth(1)
         context.setLineJoin(.round)
-        context.setStrokeColor(UIColor.white.cgColor)
+        context.setStrokeColor(UIColor.red.cgColor)
         context.saveGState()
         context.setTextDrawingMode(.stroke)
-        let attributes: [NSAttributedString.Key: Any] = [.font: model.font, .foregroundColor: UIColor.white]
+        let attributes: [NSAttributedString.Key: Any] = [.font: model.font, .foregroundColor: UIColor.red]
         text.draw(at: .zero, withAttributes: attributes)
         context.restoreGState()
         
