@@ -6,34 +6,41 @@
 //
 
 #import "NPKLaunchEngine.h"
-#import <dlfcn.h>
-#import <mach-o/getsect.h>
-#import <objc/runtime.h>
 #import "NPKLaunchConfig.h"
 #import "NPKLaunchTaskModel.h"
 #import "NPKLaunchProtocol.h"
-#import "AAAANPKLaunchTimeProfile.h"
-#import "NPKitDisplayWindow.h"
+#import "NPKLaunchTimeProfile.h"
+#import "NPKDispatchQueuePool.h"
+#import "NPKBaseDefine.h"
+
+NSString * const NPKLaunchManagerShouldStartTaskAfterRenderNotification = @"NPKLaunchManagerShouldStartTaskAfterRenderNotification";
 
 @interface NPKLaunchEngine()
 
 @property (nonatomic, strong, readonly) __kindof NPKLaunchConfig *launchConfig;
+@property (nonatomic, strong) Class npkLaunchConfigClazz;
 @property (nonatomic, strong) NSDictionary *appOptions;
 @property (nonatomic, strong) NSMutableArray *taskArray;
 @property (nonatomic, strong) NSMutableDictionary *launchTasks;
-@property (nonatomic, strong) NPKLaunchTaskModel *taskAfterRender;
+@property (nonatomic, strong) NPKLaunchTaskModel *asyncTaskAfterReader;
+@property (nonatomic, strong) NPKLaunchTaskModel *mainThreadIdleTaskAfterRender;
 @property (nonatomic, strong) NSLock *launchLock;
-//@property (nonatomic, strong) NPKLaunchTaskService *launchService;
 
 @end
 
 @implementation NPKLaunchEngine
 @synthesize launchConfig = _launchConfig;
 
-- (void)startWithOptions:(NSDictionary *)options {
-    [AAAANPKLaunchTimeProfile setDidFinishLaunchCallbackTime:CACurrentMediaTime()];
-    
+- (void)startWithConfigClazz:(Class)npkLaunchConfigClazz options:(NSDictionary *)options {
     NSAssert([NSThread currentThread] == [NSThread mainThread], @"NPKLaunchManager should launch with main thread!");
+    [NPKLaunchTimeProfile markDidFinishLaunchTime];
+    
+    self.npkLaunchConfigClazz = npkLaunchConfigClazz;
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(didReceiveAfterRenderNotification:)
+                                                 name:NPKLaunchManagerShouldStartTaskAfterRenderNotification
+                                               object:nil];
     
     if (!self.launchConfig) {
         NSAssert(NO, @"Launch config can not be nil!");
@@ -41,15 +48,45 @@
     }
     self.appOptions = options;
     [self startLaunchTasks:[self.launchConfig defaultLaunchList]];
-    
-    [AAAANPKLaunchTimeProfile setDidFinishLaunchFinishTime:CACurrentMediaTime()];
-    
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [[NPKitDisplayWindow sharedInstance] message:[AAAANPKLaunchTimeProfile launchTimeSummary] withMsgLevel:NPKitMsgLevelHigh];
-    });
+}
+
+#pragma mark - Notifications
+
+- (void)didReceiveAfterRenderNotification:(NSNotification *)notifi {
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:NPKLaunchManagerShouldStartTaskAfterRenderNotification
+                                                  object:nil];
+    [NPKLaunchTimeProfile markDidAppearTime];
+    [self registRunloopIdleCallback];
 }
 
 #pragma mark - Private Methods
+
+- (void)registRunloopIdleCallback {
+    //注册kCFRunLoopBeforeTimers回调
+    CFRunLoopRef mainRunloop = [[NSRunLoop mainRunLoop] getCFRunLoop];
+    CFRunLoopActivity activities = kCFRunLoopAllActivities;
+    CFRunLoopObserverRef observer = CFRunLoopObserverCreateWithHandler(kCFAllocatorDefault, activities, YES, 0, ^(CFRunLoopObserverRef observer, CFRunLoopActivity activity) {
+        
+        if (activity == kCFRunLoopBeforeWaiting) {
+            if (self.asyncTaskAfterReader) {
+                [self startAsyncGroupTask:self.asyncTaskAfterReader];
+            }
+            
+            if (self.mainThreadIdleTaskAfterRender) {
+                [self startSyncGroupTask:self.mainThreadIdleTaskAfterRender];
+            }
+            CFRunLoopRemoveObserver(mainRunloop, observer, kCFRunLoopCommonModes);
+            // 标记此次启动状态
+            [NPKLaunchConfig setLastTimeLaunchSuccess:YES];
+#ifdef DEBUG
+            [self sendMessage:[NPKLaunchTimeProfile launchTimeSummary] withMsgLevel:NPKMsgLevelHigh];
+            NPKLog(@"Launch Time Summary: %@", [NPKLaunchTimeProfile launchTimeSummary]);
+#endif
+        }
+    });
+    CFRunLoopAddObserver(mainRunloop, observer, kCFRunLoopCommonModes);
+}
 
 - (void)startLaunchTasks:(NSArray *)launchTasks {
     if (!launchTasks || !launchTasks.count) {
@@ -76,18 +113,16 @@
                     [self startBarrierGroupTask:task];
                     break;
                 case NPKLaunchTaskTypeAsyncAfterRender:
-                    self.taskAfterRender = task;
+                    self.asyncTaskAfterReader = task;
+                    break;
+                case NPKLaunchTaskTypeMainThreadIdleAfterRender:
+                    self.mainThreadIdleTaskAfterRender = task;
                     break;
                 default:
                     break;
             }
         }
     }];
-    
-    __weak typeof(self) weakSelf = self;
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [weakSelf startSyncGroupTask:weakSelf.taskAfterRender];
-    });
 }
 
 /// 同步执行队列
@@ -99,8 +134,8 @@
 
 /// 异步队列
 - (void)startAsyncGroupTask:(NPKLaunchTaskModel *)task {
-    dispatch_queue_t queue = dispatch_queue_create("com.npk.launchqueue.async",
-                                                   DISPATCH_QUEUE_CONCURRENT);
+    dispatch_queue_t queue = NPKDispatchQueueGetForQoS(NSQualityOfServiceUtility);
+    
     __weak typeof(self) weakSelf = self;
     for (NSString *initTask in task.taskClassList) {
         dispatch_async(queue, ^{
@@ -112,9 +147,10 @@
 
 /// 栅栏队列
 - (void)startBarrierGroupTask:(NPKLaunchTaskModel *)task {
-    dispatch_queue_t queue = dispatch_queue_create("com.npk.launchqueue.barrier",
-                                                   DISPATCH_QUEUE_CONCURRENT);
+    // 高优先级
+    dispatch_queue_t queue = NPKDispatchQueueGetForQoS(NSQualityOfServiceUserInteractive);
     dispatch_group_t group = dispatch_group_create();
+    
     __weak typeof(self) weakSelf = self;
     for (NSString *initTask in task.taskClassList) {
         dispatch_group_enter(group);
@@ -151,13 +187,14 @@
     [self.launchLock unlock];
     
     if ([task respondsToSelector:@selector(runWithOptions:)]) {
+        NSTimeInterval startTime = CACurrentMediaTime();
         [task runWithOptions:self.appOptions];
+        NSTimeInterval endTime = CACurrentMediaTime();
+        NPKLog(@"启动耗时：Launch task %@ cost %0.3fms. %@.", clazz, (endTime - startTime) * 1000, [NSThread currentThread].isMainThread ? @"Main Thread" : @"");
     }
 }
 
 #pragma mark - Getter
-
-static NPKLaunchEngine * _sharedManager = nil;
 
 //- (NPKLaunchTaskService *)launchService {
 //    if (!_launchService) {
@@ -189,60 +226,18 @@ static NPKLaunchEngine * _sharedManager = nil;
 
 - (__kindof NPKLaunchConfig *)launchConfig {
     if (!_launchConfig) {
-        _launchConfig = [NPKLaunchConfig new];
-//        Class configClass = nil;
-//
-//        Dl_info info;
-//        dladdr(&_sharedManager, &info);
-//#ifdef __LP64__
-//        uint64_t addr = 0;
-//        const uint64_t mach_header = (uint64_t)info.dli_fbase;
-//        const struct section_64 *section = getsectbynamefromheader_64((void *)mach_header, "__DATA", "npk_launch_plug");
-//#else
-//        uint32_t addr = 0;
-//        const uint32_t mach_header = (uint32_t)info.dli_fbase;
-//        const struct section *section = getsectbynamefromheader((void *)mach_header, "__DATA", "npk_launch_plug");
-//#endif
-//        if (section == NULL) {
-//            NSAssert(NO, @"Error: [NPKPluginsManager readMachOSectionDataFromObj] can't find Section from Mach-O. Please make sure that you have already write __Data named %s to the Mach-O.", "npk_export_plug");
-//            return nil;
-//        }
-//        for (addr = section->offset; addr < section->offset + section->size; addr += sizeof(NPKLaunchConfigPluginMeta)) {
-//            NPKLaunchConfigPluginMeta *pluginMeta = (NPKLaunchConfigPluginMeta *)(mach_header + addr);
-//            if (!pluginMeta) continue;
-//            NSString *className = [NSString stringWithUTF8String:pluginMeta->cls];
-//            Class class = NSClassFromString(className);
-//            if (!class) {
-//                NSAssert(NO, @"Error: [NPKPluginsManager readMachOSectionDataFromObj]  %@ not exist!", className);
-//                return nil;
-//            } else {
-//                configClass = class;
-//            }
-//        }
-//        if ([configClass conformsToProtocol:@protocol(NPKLaunchConfigProtocol)]) {
-//            _launchConfig = [configClass new];
-//        }
-        
+        _launchConfig = [_npkLaunchConfigClazz new];
+        NSAssert([_launchConfig isKindOfClass:[NPKLaunchConfig class]], @"npkLaunchConfigClazz should be subclass of NPKLaunchConfig.");
     }
     return _launchConfig;
 }
 
 + (NPKLaunchEngine *)sharedInstance {
+    static NPKLaunchEngine * _sharedManager = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         _sharedManager = [NPKLaunchEngine new];
     });
-    return _sharedManager;
-}
-
-+ (instancetype)allocWithZone:(struct _NSZone *)zone {
-    if(_sharedManager == nil){
-        _sharedManager = [super allocWithZone:zone];
-    }
-    return _sharedManager;
-}
-
-- (nonnull id)copyWithZone:(nullable NSZone *)zone{
     return _sharedManager;
 }
 

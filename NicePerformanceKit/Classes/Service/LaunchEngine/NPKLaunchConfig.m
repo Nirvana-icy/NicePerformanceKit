@@ -11,86 +11,60 @@
 @implementation NPKLaunchConfig
 
 - (NSArray *)defaultLaunchList {
-    BOOL b_optimEnable = YES;
-    
-    if (b_optimEnable) {
-        return [self newLaunchList];
-    } else {
-        return [self oldLaunchList];
-    }
-}
-
-- (NSArray *)oldLaunchList {
     return @[
-        @{
-            @"name": @"head_sync_task",
-            @"type": @(NPKLaunchTaskTypeSync),
-            @"taskClassList":@[
-                    @"NPKMockLaunchTaskA",
-                    @"NPKMockLaunchTaskB",
-                    @"NPKPerfMonitorInitTask",
-                    @"NPKMockLaunchTaskC",
-                    @"NPKMockLaunchTaskD",
-                    @"NPKMockLaunchTaskE",
-                ]
-        },
-        @{
-            @"name": @"async_tasks",
-            @"type": @(NPKLaunchTaskTypeAsync),
-            @"taskClassList":@[
-                    
-                ]
-        },
-        @{
-            @"name": @"async_barrier_task",
-            @"type": @(NPKLaunchTaskTypeBarrier),
-            @"taskClassList":@[
-                
-                ]
-        },
-        @{
-            @"name": @"tail_task",
-            @"type": @(NPKLaunchTaskTypeAsyncAfterRender),
-            @"taskClassList":@[
-                
-                ]
-        },
+//        @{
+//            @"name": @"async_tasks",
+//            @"type": @(NPKLaunchTaskTypeAsync),
+//            @"taskClassList":@[
+//                ]
+//        },
+//        @{
+//            @"name": @"head_sync_task",
+//            @"type": @(NPKLaunchTaskTypeSync),
+//            @"taskClassList":@[
+//                ]
+//        },
+//        @{
+//            @"name": @"tail_async_barrier_task",
+//            @"type": @(NPKLaunchTaskTypeBarrier),
+//            @"taskClassList":@[
+//                ]
+//        },
+//        @{
+//            @"name": @"tail_sync_task",
+//            @"type": @(NPKLaunchTaskTypeSync),
+//            @"taskClassList":@[
+//                ]
+//        },
+//        @{
+//            @"name": @"idle_async_task",
+//            @"type": @(NPKLaunchTaskTypeAsyncAfterRender),
+//            @"taskClassList":@[
+//                ]
+//        },
+//        @{
+//            @"name": @"idle_sync_task",
+//            @"type": @(NPKLaunchTaskTypeMainThreadIdle),
+//            @"taskClassList":@[
+//                ]
+//        }
     ];
 }
 
-- (NSArray *)newLaunchList {
-    return @[
-        @{
-            @"name": @"head_sync_task",
-            @"type": @(NPKLaunchTaskTypeSync),
-            @"taskClassList":@[
-                @"NPKMockLaunchTaskA",
-                ]
-        },
-        @{
-            @"name": @"async_tasks",
-            @"type": @(NPKLaunchTaskTypeAsync),
-            @"taskClassList":@[
-                @"NPKMockLaunchTaskB",
-                @"NPKPerfMonitorInitTask",
-                ]
-        },
-        @{
-            @"name": @"tail_async_barrier_task",
-            @"type": @(NPKLaunchTaskTypeBarrier),
-            @"taskClassList":@[
-                @"NPKMockLaunchTaskC",
-                @"NPKMockLaunchTaskD",
-                ]
-        },
-        @{
-            @"name": @"idle_task",
-            @"type": @(NPKLaunchTaskTypeAsyncAfterRender),
-            @"taskClassList":@[
-                @"NPKMockLaunchTaskE"
-                ]
-        },
-    ];
++ (BOOL)isLastLaunchSuccess {
+    return [[[NSUserDefaults standardUserDefaults] objectForKey:@"_npk_last_time_launch_state"] boolValue];
+}
+
++ (void)setLastTimeLaunchSuccess:(BOOL)b_success {
+    [[NSUserDefaults standardUserDefaults] setBool:b_success forKey:@"_npk_last_time_launch_state"];
+}
+
++ (BOOL)isLastLaunchSpeedUp {
+    return [[[NSUserDefaults standardUserDefaults] objectForKey:@"_npk_last_time_speed_up"] boolValue];
+}
+
++ (void)setLastTimeLaunchSpeedUp:(BOOL)b_speedUp {
+    [[NSUserDefaults standardUserDefaults] setBool:b_speedUp forKey:@"_npk_last_time_speed_up"];
 }
 
 @end
