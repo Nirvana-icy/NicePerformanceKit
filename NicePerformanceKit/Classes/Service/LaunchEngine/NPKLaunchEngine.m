@@ -125,19 +125,18 @@ NSString * const NPKLaunchManagerShouldStartTaskAfterRenderNotification = @"NPKL
     }];
 }
 
-/// 同步执行队列
+/// 同步执行任务
 - (void)startSyncGroupTask:(NPKLaunchTaskModel *)task {
     for (NSString *initTask in task.taskClassList) {
         [self executeTask:initTask];
     }
 }
 
-/// 异步队列
+/// 异步任务
 - (void)startAsyncGroupTask:(NPKLaunchTaskModel *)task {
-    dispatch_queue_t queue = NPKDispatchQueueGetForQoS(NSQualityOfServiceUtility);
-    
     __weak typeof(self) weakSelf = self;
     for (NSString *initTask in task.taskClassList) {
+        dispatch_queue_t queue = NPKDispatchQueueGetForQoS(NSQualityOfServiceUtility);
         dispatch_async(queue, ^{
             __strong typeof(self) strongSelf = weakSelf;
             [strongSelf executeTask:initTask];
@@ -145,14 +144,14 @@ NSString * const NPKLaunchManagerShouldStartTaskAfterRenderNotification = @"NPKL
     }
 }
 
-/// 栅栏队列
+/// 异步分组任务
 - (void)startBarrierGroupTask:(NPKLaunchTaskModel *)task {
-    // 高优先级
-    dispatch_queue_t queue = NPKDispatchQueueGetForQoS(NSQualityOfServiceUserInteractive);
     dispatch_group_t group = dispatch_group_create();
     
     __weak typeof(self) weakSelf = self;
     for (NSString *initTask in task.taskClassList) {
+        // 高优先级
+        dispatch_queue_t queue = NPKDispatchQueueGetForQoS(NSQualityOfServiceUserInteractive);
         dispatch_group_enter(group);
         dispatch_group_async(group, queue, ^{
             __strong typeof(self) strongSelf = weakSelf;
